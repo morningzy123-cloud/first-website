@@ -1,0 +1,4 @@
+interface:
+  display_name: "Marketing Buddy Research"
+  short_description: "Research verified auto-market data for staged review"
+  default_prompt: "Use $marketing-buddy-research to research one target market, complete the policy/customs gate, and return staged JSON plus Chinese notes without modifying the website."
