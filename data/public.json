@@ -1,0 +1,4223 @@
+{
+  "schemaVersion": "marketing-buddy-v2-public",
+  "generatedAt": "2026-10-25",
+  "project": {
+    "name": "Marketing Buddy",
+    "scope": "C级 Sedan",
+    "version": "V2"
+  },
+  "globalOverview": {
+    "countryCards": [
+      {
+        "marketCode": "MX",
+        "importantMarketNews": {
+          "status": "confirmed",
+          "value": "INEGI 详细记录显示，墨西哥 2026 年 9 月销售 129,274 辆轻型车；1—9 月的先行统计为 1,144,002 辆，同比增长 5.0%。",
+          "verifiedAt": "2026-10-24T00:00:00+08:00",
+          "sourceIds": [
+            "mx-inegi-raiavl-detail",
+            "mx-inegi-raiavl-release"
+          ]
+        },
+        "importantCompetitorAction": {
+          "status": "confirmed",
+          "value": "Kia K3 Sedan 2027 在 2026 年 10 月提供最高 36 个月免息并延后至 12 月开始还款；活动不含 L MT 版本，有效期至 10 月 31 日。",
+          "verifiedAt": "2026-10-24T00:00:00+08:00",
+          "sourceIds": [
+            "mx-kia-k3-promo-oct"
+          ]
+        }
+      },
+      {
+        "marketCode": "KZ",
+        "importantMarketNews": {
+          "status": "confirmed",
+          "value": "哈萨克斯坦官方经销商在 2026 年 9 月销售 19,309 辆新乘用车和商用车，同比增长 5.2%；1—9 月累计 165,678 辆，同比增长 2.6%。",
+          "verifiedAt": "2026-10-24T23:00:00+08:00",
+          "sourceIds": [
+            "kz-kao-sales-2026-09"
+          ]
+        },
+        "importantCompetitorAction": {
+          "status": "confirmed",
+          "value": "Chevrolet Cobalt 以 2,906 辆成为 2026 年 9 月市场销量第一车型；10 月 17 日，Chevrolet 授权经销商又发布 Cobalt 5,990,000 KZT 起的限量价格活动。",
+          "verifiedAt": "2026-10-24T23:00:00+08:00",
+          "sourceIds": [
+            "kz-kao-sales-2026-09",
+            "kz-chevrolet-cobalt-promo-oct-2026"
+          ]
+        }
+      },
+      {
+        "marketCode": "SA",
+        "importantMarketNews": {
+          "status": "confirmed",
+          "value": "沙特政府产业平台显示，2025 年新车销量约 85.6 万辆；二手/行业数据转引显示 2026 年上半年轻型车销量 313,458 辆，同比下降 23.5%，市场从高位进入调整。",
+          "verifiedAt": "2026-10-24T12:00:00+08:00",
+          "sourceIds": [
+            "sa-daleel-automotive",
+            "sa-h1-2026-market"
+          ]
+        },
+        "importantCompetitorAction": {
+          "status": "confirmed",
+          "value": "Toyota Yaris Sedan 2026 的官方金融页面列示入门版月供 988 SAR，期限最长 60 个月，并提供前 4 期代付、零首付及零管理费（均受条款限制）。",
+          "verifiedAt": "2026-10-24T12:00:00+08:00",
+          "sourceIds": [
+            "sa-toyota-yaris-finance"
+          ]
+        }
+      },
+      {
+        "marketCode": "AE",
+        "importantMarketNews": {
+          "status": "confirmed",
+          "value": "2025年阿联酋新车市场约335,772辆，同比增长5.3%；但2026年前7个月同比下降22.2%，市场由增长转向明显调整。",
+          "verifiedAt": "2026-10-24T16:00:00+08:00",
+          "sourceIds": [
+            "ae-uae-market-2025",
+            "ae-uae-market-2026"
+          ],
+          "note": "阿联酋缺少统一公开的政府车型销量数据库，数字来自专业销量数据提供者。"
+        },
+        "importantCompetitorAction": {
+          "status": "confirmed",
+          "value": "MG5当前官方页面显示“先开车、明年付款”，从AED 855/月起，并附首付支持、免费保养、贴膜、道路救援和注册；Toyota Yaris企业方案从AED 899/月起。",
+          "verifiedAt": "2026-10-24T16:00:00+08:00",
+          "sourceIds": [
+            "ae-mg-offer-pay-next-year",
+            "ae-toyota-yaris-business"
+          ],
+          "note": "两项页面均未给出明确活动起止日期，需每周检查页面是否仍有效。"
+        }
+      }
+    ]
+  },
+  "markets": [
+    {
+      "code": "MX",
+      "basics": {
+        "summary": {
+          "status": "confirmed",
+          "value": "墨西哥轻型车市场在 2026 年继续增长。INEGI 详细记录显示 9 月销售 129,274 辆；1—9 月先行统计为 1,144,002 辆，同比增长 5.0%。9 月 subcompact 销量为 28,501 辆，同比增长 5.8%；compact 为 21,327 辆，同比增长 24.1%。",
+          "verifiedAt": "2026-10-24T00:00:00+08:00",
+          "sourceIds": [
+            "mx-inegi-raiavl-detail",
+            "mx-inegi-raiavl-release",
+            "mx-amda-segments-sep"
+          ]
+        },
+        "taxImportAndPolicy": {
+          "status": "confirmed",
+          "value": "自 2026 年 1 月 1 日起，墨西哥将包括 8703.22.99 在内的多项整车进口税号的一般进口税率调至 50%。政府说明该政策适用于与墨西哥没有贸易协定国家的相关商品。C级 Sedan 1.5L 若以中国原产 CBU 进口并实际归入 8703.22.99，原则上会受影响。",
+          "verifiedAt": "2026-10-24T00:00:00+08:00",
+          "sourceIds": [
+            "mx-dof-tigie-reform-2025-12-29",
+            "mx-economia-tariff-package-2025-12-18"
+          ],
+          "note": "50% 是进口税率，不等于终端售价必然上涨 50%。C级 Sedan 的实际适用需由报关资料确认税号/NICO、原产地与进口安排。"
+        }
+      },
+      "researchV2": {
+        "shippingRoutes": [
+          {
+            "originPort": "Shanghai (Waigaoqiao), China",
+            "destinationPort": "Manzanillo, Colima, Mexico",
+            "seaTransitDays": {
+              "min": 20,
+              "max": 22
+            },
+            "portDwellCustomsReleaseDaysEstimate": {
+              "min": 4,
+              "max": 7
+            },
+            "localDeliveryLaunchPreparationDaysEstimate": {
+              "min": 7,
+              "max": 14
+            },
+            "lowCaseDays": 31,
+            "baseCaseDays": 36,
+            "highCaseDays": 43,
+            "confidence": "low",
+            "note": "仅用于上市计划测算；未取得订舱确认、清关作业单或当地配送计划。海上段来自公开航线/货代信息，后两段为估算。",
+            "sourceIds": [
+              "MX-S11",
+              "MX-S12"
+            ]
+          },
+          {
+            "originPort": "Shanghai / Ningbo, China",
+            "destinationPort": "Lázaro Cárdenas, Michoacán, Mexico",
+            "seaTransitDays": {
+              "min": 22,
+              "max": 24
+            },
+            "portDwellCustomsReleaseDaysEstimate": {
+              "min": 5,
+              "max": 8
+            },
+            "localDeliveryLaunchPreparationDaysEstimate": {
+              "min": 7,
+              "max": 14
+            },
+            "lowCaseDays": 34,
+            "baseCaseDays": 40,
+            "highCaseDays": 46,
+            "confidence": "low",
+            "note": "仅用于上市计划测算；未取得订舱确认、清关作业单或当地配送计划。海上段来自公开航线/货代信息，后两段为估算。",
+            "sourceIds": [
+              "MX-S12",
+              "MX-S11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "code": "KZ",
+      "basics": {
+        "summary": {
+          "status": "confirmed",
+          "value": "哈萨克斯坦 2026 年 1—9 月官方经销商新车销量为 165,678 辆，同比增长 2.6%。三款对标轿车中，Cobalt 依靠本地生产和规模销量领先；C级 Sedan 与 Arrizo 6 的 9 月销量分别为 122 辆和 73 辆。",
+          "verifiedAt": "2026-10-24T23:00:00+08:00",
+          "sourceIds": [
+            "kz-kao-sales-2026-09",
+            "kz-bscb-model-sales-2026-09",
+            "kz-kao-production-2026-09"
+          ]
+        },
+        "taxImportAndPolicy": {
+          "status": "confirmed",
+          "value": "欧亚经济联盟 2026 年统一关税表规定：新汽油乘用车、排量大于 1,000cc 且不超过 1,500cc 的“其他”税号 8703 22 109 9，一般进口关税为 15%。哈萨克斯坦自 2026 年 1 月 1 日起对可税进口适用 16% 增值税。欧亚经济联盟—中国经贸合作协定不提供优惠关税。",
+          "verifiedAt": "2026-10-24T23:00:00+08:00",
+          "sourceIds": [
+            "kz-eaeu-tariff-8703-2026",
+            "kz-kgd-third-country-import",
+            "kz-kgd-vat-2026",
+            "kz-eaeu-china-nonpreferential"
+          ],
+          "note": "法规事实与车型适用分开：根据官方 1,499cc 汽油机规格，中国原产 CBU C级 Sedan 很可能落入 8703 22 109 9，但实际税号、原产地、进口方式与是否享有产业政策必须以报关资料确认。15% 关税与 16% 进口增值税均不能直接换算为零售价涨幅。Cobalt 与 Arrizo 6 已在哈萨克斯坦本地生产，其整车进口税比较不具同口径性。"
+        }
+      },
+      "researchV2": {
+        "shippingRoutes": []
+      }
+    },
+    {
+      "code": "SA",
+      "basics": {
+        "summary": {
+          "status": "confirmed",
+          "value": "沙特是海湾地区最大的汽车市场之一。官方产业平台显示 2025 年新车销量约 85.6 万辆；2026 年上半年行业数据为 313,458 辆，同比下降 23.5%。入门级轿车依然活跃，Yaris、MG5 与 C级 Sedan 分别代表强势日系、成熟中国品牌和低价高配置路线。",
+          "verifiedAt": "2026-10-24T12:00:00+08:00",
+          "sourceIds": [
+            "sa-daleel-automotive",
+            "sa-h1-2026-market",
+            "sa-h1-2026-sedans",
+            "sa-icartea-h1-2025-chinese"
+          ]
+        },
+        "taxImportAndPolicy": {
+          "status": "confirmed",
+          "value": "ZATCA 官方资料显示乘用车关税一般为海关价值的 5%；进口 VAT 为 15%，计税基础包括车辆价值、关税以及适用附加费和服务费。沙特自 2025 年 1 月 1 日执行 GCC 12 位综合税则，并要求进口车辆满足 SASO 技术法规、通过 SABER 取得装运合格证。官方现行自贸协定清单未列中国。",
+          "verifiedAt": "2026-10-24T12:00:00+08:00",
+          "applicableFrom": "2025-01-01",
+          "sourceIds": [
+            "sa-zatca-vehicle-duty",
+            "sa-zatca-vehicle-calculator",
+            "sa-zatca-integrated-tariff",
+            "sa-zatca-import-controls",
+            "sa-saso-saber",
+            "sa-gaft-agreements"
+          ],
+          "note": "1.5L 汽油 C级 Sedan 很可能归入 HS 8703.22，但沙特/GCC 实际 12 位税号、车辆原产地和进口安排未从公开报关文件确认。5% 关税和 15% VAT 不能直接等同为终端售价相同比例上涨。"
+        }
+      },
+      "researchV2": {
+        "shippingRoutes": [
+          {
+            "originPort": "Shanghai, China",
+            "destinationPort": "Jeddah (Jeddah Islamic Port), Saudi Arabia",
+            "seaTransitDays": {
+              "min": 16,
+              "max": 22
+            },
+            "portDwellCustomsReleaseDaysEstimate": {
+              "min": 4,
+              "max": 8
+            },
+            "localDeliveryLaunchPreparationDaysEstimate": {
+              "min": 7,
+              "max": 14
+            },
+            "lowCaseDays": 27,
+            "baseCaseDays": 34,
+            "highCaseDays": 44,
+            "confidence": "low",
+            "note": "仅用于上市计划测算；未取得订舱确认、清关作业单或当地配送计划。海上段来自公开航线/货代信息，后两段为估算。",
+            "sourceIds": [
+              "SA-S09",
+              "SA-S10"
+            ]
+          },
+          {
+            "originPort": "Shanghai, China（经一次转运）",
+            "destinationPort": "Jeddah (Jeddah Islamic Port), Saudi Arabia",
+            "seaTransitDays": {
+              "min": 24,
+              "max": 33
+            },
+            "portDwellCustomsReleaseDaysEstimate": {
+              "min": 5,
+              "max": 9
+            },
+            "localDeliveryLaunchPreparationDaysEstimate": {
+              "min": 7,
+              "max": 14
+            },
+            "lowCaseDays": 36,
+            "baseCaseDays": 44,
+            "highCaseDays": 56,
+            "confidence": "low",
+            "note": "仅用于上市计划测算；未取得订舱确认、清关作业单或当地配送计划。海上段来自公开航线/货代信息，后两段为估算。",
+            "sourceIds": [
+              "SA-S11",
+              "SA-S12"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "code": "AE",
+      "basics": {
+        "summary": {
+          "status": "confirmed",
+          "value": "阿联酋是约33.6万辆规模的开放型新车市场。2025年继续增长，2026年明显回调；SUV仍占主导，但经济型轿车在通勤、车队、租赁和机构采购中保持战略价值。",
+          "verifiedAt": "2026-10-24T16:00:00+08:00",
+          "sourceIds": [
+            "ae-uae-market-2025",
+            "ae-uae-market-2026",
+            "ae-rental-market"
+          ]
+        },
+        "taxImportAndPolicy": {
+          "status": "confirmed",
+          "value": "阿联酋/GCC对联盟外进口外国货物一般征收5%关税；综合税则87.03乘用车税目为5%，境内汽车销售另适用5% VAT。中国目前未出现在阿联酋官方CEPA现行伙伴清单中，因此中国原产CBU通常按一般税率处理。",
+          "verifiedAt": "2026-10-24T16:00:00+08:00",
+          "sourceIds": [
+            "ae-customs-union",
+            "ae-integrated-tariff",
+            "ae-vat-automotive",
+            "ae-cepa-list",
+            "ae-import-guide"
+          ],
+          "note": "C级 Sedan 1.5L汽油两驱私人乘用车若为清关当年或下一年车型，技术特征可能对应12位税号8703 22 11 00 00；但实际税号、原产地证明、车型年份、进口商安排、自由区路径及任何个案优惠尚未取得报关文件确认，车型适用结论必须保留条件。自由区货物进入阿联酋本地市场时仍按当时税则征税。5%关税和5% VAT不等于零售价机械上涨10%。"
+        }
+      },
+      "researchV2": {
+        "shippingRoutes": [
+          {
+            "originPort": "Shanghai, China",
+            "destinationPort": "Jebel Ali (Dubai), UAE",
+            "seaTransitDays": {
+              "min": 16,
+              "max": 18
+            },
+            "portDwellCustomsReleaseDaysEstimate": {
+              "min": 3,
+              "max": 6
+            },
+            "localDeliveryLaunchPreparationDaysEstimate": {
+              "min": 5,
+              "max": 10
+            },
+            "lowCaseDays": 24,
+            "baseCaseDays": 29,
+            "highCaseDays": 34,
+            "confidence": "low",
+            "note": "仅用于上市计划测算；未取得订舱确认、清关作业单或当地配送计划。海上段来自公开航线/货代信息，后两段为估算。",
+            "sourceIds": [
+              "AE-S06",
+              "AE-S07"
+            ]
+          },
+          {
+            "originPort": "Shanghai, China（经一次转运）",
+            "destinationPort": "Jebel Ali (Dubai), UAE",
+            "seaTransitDays": {
+              "min": 20,
+              "max": 26
+            },
+            "portDwellCustomsReleaseDaysEstimate": {
+              "min": 3,
+              "max": 6
+            },
+            "localDeliveryLaunchPreparationDaysEstimate": {
+              "min": 5,
+              "max": 10
+            },
+            "lowCaseDays": 28,
+            "baseCaseDays": 34,
+            "highCaseDays": 42,
+            "confidence": "low",
+            "note": "仅用于上市计划测算；未取得订舱确认、清关作业单或当地配送计划。海上段来自公开航线/货代信息，后两段为估算。",
+            "sourceIds": [
+              "AE-S09",
+              "AE-S08"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "kia-k3-mx",
+      "marketCode": "MX",
+      "brand": "Kia",
+      "model": "K3",
+      "modelYear": "2027",
+      "researchStatus": "confirmed",
+      "prices": [
+        {
+          "id": "kia-k3-mx-v2-price-0",
+          "price": {
+            "status": "confirmed",
+            "amount": 305100,
+            "currency": "MXN",
+            "priceType": "official_configurator_price",
+            "variantId": "L TM (1.4L, manual 6 vel.)",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:33:00+08:00",
+            "sourceIds": [
+              "MX-S02"
+            ]
+          }
+        },
+        {
+          "id": "kia-k3-mx-v2-price-1",
+          "price": {
+            "status": "confirmed",
+            "amount": 335700,
+            "currency": "MXN",
+            "priceType": "official_configurator_price",
+            "variantId": "L TA (1.6L, automática 6 vel.)",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:33:00+08:00",
+            "sourceIds": [
+              "MX-S02"
+            ]
+          }
+        },
+        {
+          "id": "kia-k3-mx-v2-price-2",
+          "price": {
+            "status": "confirmed",
+            "amount": 358800,
+            "currency": "MXN",
+            "priceType": "official_configurator_price",
+            "variantId": "LX TM (1.6L, manual 6 vel.)",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:33:00+08:00",
+            "sourceIds": [
+              "MX-S02"
+            ]
+          }
+        },
+        {
+          "id": "kia-k3-mx-v2-price-3",
+          "price": {
+            "status": "confirmed",
+            "amount": 372800,
+            "currency": "MXN",
+            "priceType": "official_configurator_price",
+            "variantId": "LX TA (1.6L, automática 6 vel.)",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:33:00+08:00",
+            "sourceIds": [
+              "MX-S02"
+            ]
+          }
+        },
+        {
+          "id": "kia-k3-mx-v2-price-4",
+          "price": {
+            "status": "confirmed",
+            "amount": 400500,
+            "currency": "MXN",
+            "priceType": "official_configurator_price",
+            "variantId": "EX (1.6L, automática 6 vel.)",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:33:00+08:00",
+            "sourceIds": [
+              "MX-S02"
+            ]
+          }
+        },
+        {
+          "id": "kia-k3-mx-v2-price-5",
+          "price": {
+            "status": "confirmed",
+            "amount": 446400,
+            "currency": "MXN",
+            "priceType": "official_configurator_price",
+            "variantId": "GT Line (1.6L, automática 6 vel.)",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:33:00+08:00",
+            "sourceIds": [
+              "MX-S02"
+            ]
+          }
+        }
+      ],
+      "financeOffers": [
+        {
+          "id": "k3-2027-msi-oct",
+          "status": "confirmed",
+          "title": "最高 36 个月免息，2026 年 12 月开始还款",
+          "provider": "Kia Finance",
+          "downPaymentPercent": {
+            "status": "confirmed",
+            "value": 30,
+            "unit": "percent",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-kia-k3-promo-oct"
+            ]
+          },
+          "interestRatePercent": {
+            "status": "confirmed",
+            "value": 0,
+            "unit": "percent",
+            "period": "12–36 months",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-kia-k3-promo-oct"
+            ]
+          },
+          "termMonths": 36,
+          "conditions": "适用于 K3 Sedan 2027（L MT 除外）；平均融资金额 234,850 MXN；合同佣金 2%（不含增值税），须符合活动条款。",
+          "validFrom": "2026-10-01",
+          "validTo": "2026-10-31",
+          "sourceIds": [
+            "mx-kia-k3-promo-oct"
+          ],
+          "verifiedAt": "2026-10-24T00:00:00+08:00"
+        }
+      ],
+      "aftersales": [
+        {
+          "id": "k3-basic-warranty",
+          "type": "vehicle_warranty",
+          "detail": {
+            "status": "confirmed",
+            "value": "基础保障 5 年或 100,000 km，以先到者为准。",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-kia-warranty"
+            ]
+          }
+        },
+        {
+          "id": "k3-powertrain-warranty",
+          "type": "vehicle_warranty",
+          "detail": {
+            "status": "confirmed",
+            "value": "动力总成 7 年或 150,000 km，以先到者为准。",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-kia-warranty"
+            ]
+          }
+        },
+        {
+          "id": "k3-road-assistance",
+          "type": "roadside_assistance",
+          "detail": {
+            "status": "confirmed",
+            "value": "Kia 官方保障页说明提供道路救援；具体车型适用条件以保修政策为准。",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-kia-warranty"
+            ]
+          }
+        }
+      ],
+      "salesRecords": [
+        {
+          "id": "k3-sales-2026-09",
+          "volume": {
+            "status": "confirmed",
+            "value": 3753,
+            "unit": "vehicles",
+            "period": "2026-09",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-inegi-model-table"
+            ]
+          }
+        }
+      ],
+      "specifications": [
+        {
+          "key": "body_length_mm",
+          "label": "车身长度",
+          "fact": {
+            "status": "confirmed",
+            "value": 4545,
+            "unit": "mm",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-kia-k3-brochure"
+            ]
+          }
+        },
+        {
+          "key": "wheelbase_mm",
+          "label": "轴距",
+          "fact": {
+            "status": "confirmed",
+            "value": 2670,
+            "unit": "mm",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-kia-k3-brochure"
+            ]
+          }
+        },
+        {
+          "key": "trunk_l",
+          "label": "后备箱容积",
+          "fact": {
+            "status": "confirmed",
+            "value": 544,
+            "unit": "L",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-kia-k3-brochure"
+            ]
+          }
+        }
+      ],
+      "marketingActivities": [],
+      "recentEvents": [
+        {
+          "id": "k3-mx-finance-2026-10",
+          "marketCode": "MX",
+          "vehicleId": "kia-k3-mx",
+          "eventDate": "2026-10-01",
+          "title": "K3 Sedan 2027 推出最高 36 个月免息",
+          "description": "除 L MT 外，K3 Sedan 2027 可享最高 36 个月免息，并延后至 2026 年 12 月开始还款；活动至 10 月 31 日。",
+          "whyItMatters": "K3 以免息降低融资总成本和短期付款压力，对 C级 Sedan 当前以价格和奖励为主的促销形成直接竞争。",
+          "status": "confirmed",
+          "sourceIds": [
+            "mx-kia-k3-promo-oct"
+          ]
+        }
+      ],
+      "researchV2": {
+        "priceNotes": [],
+        "dealerOffers": [],
+        "officialSellingPoints": [
+          {
+            "localText": "Orgullosamente Hecho en México",
+            "chineseSummary": "在墨西哥新莱昂州本地生产（USMCA 区域内制造）",
+            "relatedSpec": "产地：墨西哥 Nuevo León",
+            "sourceIds": [
+              "MX-S01",
+              "MX-S02"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:34:00+08:00"
+          },
+          {
+            "localText": "Sistemas avanzados de asistencia al conductor (ADAS)",
+            "chineseSummary": "同级中较完整的 ADAS 套件（FCA/BCA/RCCA/LKA/LFA/HBA/DAW/SEW/HAC）",
+            "relatedSpec": "ADAS 套件，LX 以上配备",
+            "sourceIds": [
+              "MX-S02",
+              "MX-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:34:00+08:00"
+          },
+          {
+            "localText": "Pantalla panorámica de 10.25\"",
+            "chineseSummary": "10.25 英寸全景中控屏（与仪表连屏设计）",
+            "relatedSpec": "多媒体屏 10.25\"",
+            "sourceIds": [
+              "MX-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:34:00+08:00"
+          },
+          {
+            "localText": "Un referente de seguridad en México – 5 estrellas Latin NCAP",
+            "chineseSummary": "Latin NCAP 五星评价",
+            "relatedSpec": "6 气囊、ESC、ABS、TPMS",
+            "sourceIds": [
+              "MX-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:34:00+08:00"
+          },
+          {
+            "localText": "Modelo a seguir en espacio. Cajuela con apertura automática",
+            "chineseSummary": "行李厢 544 L（VDA）并配自动开启尾门",
+            "relatedSpec": "Capacidad de cajuela 544 L (VDA)",
+            "sourceIds": [
+              "MX-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:34:00+08:00"
+          },
+          {
+            "localText": "Garantía Tren Motriz: 7 años o 150,000 km / Básica 5 años o 100,000 km",
+            "chineseSummary": "动力总成 7 年或 15 万公里、整车基础保修 5 年或 10 万公里",
+            "relatedSpec": "保修政策（以先到者为准）",
+            "sourceIds": [
+              "MX-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:34:00+08:00"
+          }
+        ],
+        "officialSpecifications": [
+          {
+            "originalText": "Motor 1.4 L – Potencia (hp@rpm) 98@600 / Torque (lb.pie@rpm) 98@4,000",
+            "chineseTranslation": "1.4 L 发动机：98 马力 @6,000 rpm；扭矩 98 lb·ft @4,000 rpm",
+            "reference": "MX-S01 K3 Sedán 2027 手册，第 6 页“Esp. técnicas”表，L TM / L TA 列",
+            "modelYear": "2027",
+            "variant": "L TM / L TA",
+            "status": "confirmed",
+            "sourceIds": [
+              "MX-S01"
+            ],
+            "verifiedAt": "2026-10-25T14:34:00+08:00"
+          },
+          {
+            "originalText": "Motor 1.6 L – Potencia (hp@rpm) 121@6,300 / Torque (lb.pie@rpm) 111@4,850",
+            "chineseTranslation": "1.6 L 发动机：121 马力 @6,300 rpm；扭矩 111 lb·ft @4,850 rpm",
+            "reference": "MX-S01 第 6 页，LX / EX / GT-Line 列",
+            "modelYear": "2027",
+            "variant": "LX, EX, GT-Line",
+            "status": "confirmed",
+            "sourceIds": [
+              "MX-S01"
+            ],
+            "verifiedAt": "2026-10-25T14:34:00+08:00"
+          },
+          {
+            "originalText": "Transmisión: Manual 6 velocidades / Automática 6 velocidades",
+            "chineseTranslation": "变速箱：6 速手动 / 6 速自动",
+            "reference": "MX-S01 第 6 页",
+            "modelYear": "2027",
+            "variant": "全系",
+            "status": "confirmed",
+            "sourceIds": [
+              "MX-S01"
+            ],
+            "verifiedAt": "2026-10-25T14:34:00+08:00"
+          },
+          {
+            "originalText": "Dimensiones (mm): Largo total 4,545 / Ancho total 1,765 / Altura total 1,475 / Distancia entre ejes 2,670",
+            "chineseTranslation": "尺寸（mm）：全长 4,545 / 全宽 1,765 / 全高 1,475 / 轴距 2,670",
+            "reference": "MX-S01 第 6 页“Dimensiones”",
+            "modelYear": "2027",
+            "variant": "全系",
+            "status": "confirmed",
+            "sourceIds": [
+              "MX-S01"
+            ],
+            "verifiedAt": "2026-10-25T14:34:00+08:00"
+          },
+          {
+            "originalText": "Rendimiento de combustible combinado (km/L): 20.61 (L TM) / 19.16 (L TA, LX TA, EX, GT-Line) / 19.83 (LX TM)",
+            "chineseTranslation": "综合油耗（km/L）：20.61（L 手动）/ 19.83（LX 手动）/ 19.16（自动挡各版本）；按 NOM-163 实验室工况",
+            "reference": "MX-S01 第 6 页及第 6 页脚注 NOM-163-SEMARNAT-ENER-SCFI",
+            "modelYear": "2027",
+            "variant": "全系",
+            "status": "confirmed",
+            "sourceIds": [
+              "MX-S01"
+            ],
+            "verifiedAt": "2026-10-25T14:34:00+08:00"
+          },
+          {
+            "originalText": "Medidas de llantas: 185/65 R15 (L, LX) / 205/55 R16 (EX) / 205/50 R17 (GT-Line); Tanque de combustible 45 L",
+            "chineseTranslation": "轮胎规格：185/65 R15（L、LX）/ 205/55 R16（EX）/ 205/50 R17（GT-Line）；油箱 45 L",
+            "reference": "MX-S01 第 6 页",
+            "modelYear": "2027",
+            "variant": "按版本",
+            "status": "confirmed",
+            "sourceIds": [
+              "MX-S01"
+            ],
+            "verifiedAt": "2026-10-25T14:34:00+08:00"
+          }
+        ],
+        "consumerFeedback": {
+          "sampleSize": 4,
+          "platforms": [
+            "Reddit r/AutosMexico"
+          ],
+          "positiveThemes": [
+            {
+              "theme": "空间与视野/舒适性受肯定（“muy buena por su espacio, vista y comodidad”）",
+              "threads": 1,
+              "sourceIds": [
+                "MX-S19"
+              ]
+            },
+            {
+              "theme": "城市油耗表现好（“El consumo de gas es bueno en la ciudad”）",
+              "threads": 1,
+              "sourceIds": [
+                "MX-S19"
+              ]
+            },
+            {
+              "theme": "保修政策优于 Toyota 的认知（“la garantía de KIA es mejor que Toyota”）",
+              "threads": 1,
+              "sourceIds": [
+                "MX-S21"
+              ]
+            },
+            {
+              "theme": "常与 Nissan Versa / Mazda 2 / Toyota Yaris 并列比较，被视为合理选项",
+              "threads": 3,
+              "sourceIds": [
+                "MX-S19",
+                "MX-S20",
+                "MX-S21"
+              ]
+            }
+          ],
+          "negativeThemes": [],
+          "limitations": "仅能读取 Reddit 公开搜索结果中的标题、评论数与单条摘要；完整正文在未登录状态下被拦截，因此未做逐条编码。样本为 4 个讨论帖（评论数 10–41），不足 5 条独立负面帖，故不标注任何“高频”负面主题。未检索 Facebook 群组与 YouTube 评论（需登录或反爬限制）。"
+        },
+        "audienceProfile": [
+          {
+            "claim": "首次购车或换购的家庭用户，决策中把后排空间、行李厢与保修年限放在价格之后的第一层",
+            "basis": "hypothesis",
+            "sourceIds": [
+              "MX-S19",
+              "MX-S21"
+            ]
+          },
+          {
+            "claim": "对比集合以 Versa、Mazda 2、Yaris 为主，K3 常被当作“配置更高但价格接近”的选项",
+            "basis": "hypothesis",
+            "sourceIds": [
+              "MX-S19",
+              "MX-S20",
+              "MX-S21"
+            ]
+          },
+          {
+            "claim": "部分买家因本地生产与配件供应稳定性而偏好 K3，但现有样本未直接陈述该动机",
+            "basis": "hypothesis",
+            "validationNeed": "需经销商访谈或 30 条以上车主自述，验证“本地生产/配件可得性”是否为独立购车驱动"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mg5-mx",
+      "marketCode": "MX",
+      "brand": "MG",
+      "model": "MG5",
+      "modelYear": "2027",
+      "researchStatus": "confirmed",
+      "prices": [
+        {
+          "id": "mg5-mx-v2-price-0",
+          "price": {
+            "status": "confirmed",
+            "amount": 299900,
+            "currency": "MXN",
+            "priceType": "manufacturer_list_price",
+            "variantId": "STYLE MT (1.5L, 5MT)",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:31:00+08:00",
+            "sourceIds": [
+              "MX-S05"
+            ]
+          }
+        },
+        {
+          "id": "mg5-mx-v2-price-1",
+          "price": {
+            "status": "confirmed",
+            "amount": 344000,
+            "currency": "MXN",
+            "priceType": "manufacturer_list_price",
+            "variantId": "EXCITE MT (1.5L, 5MT)",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:31:00+08:00",
+            "sourceIds": [
+              "MX-S05"
+            ]
+          }
+        },
+        {
+          "id": "mg5-mx-v2-price-2",
+          "price": {
+            "status": "confirmed",
+            "amount": 378000,
+            "currency": "MXN",
+            "priceType": "manufacturer_list_price",
+            "variantId": "EXCITE CVT (1.5L, I-CVT)",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:31:00+08:00",
+            "sourceIds": [
+              "MX-S05"
+            ]
+          }
+        },
+        {
+          "id": "mg5-mx-v2-price-3",
+          "price": {
+            "status": "confirmed",
+            "amount": 399000,
+            "currency": "MXN",
+            "priceType": "manufacturer_list_price",
+            "variantId": "ELEGANCE CVT (1.5L, I-CVT)",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:31:00+08:00",
+            "sourceIds": [
+              "MX-S05"
+            ]
+          }
+        },
+        {
+          "id": "mg5-mx-v2-price-4",
+          "price": {
+            "status": "confirmed",
+            "amount": 274900,
+            "currency": "MXN",
+            "priceType": "brand_website_promotional_price",
+            "variantId": "STYLE MT – precio especial",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:31:00+08:00",
+            "sourceIds": [
+              "MX-S05"
+            ]
+          }
+        },
+        {
+          "id": "mg5-mx-v2-price-5",
+          "price": {
+            "status": "confirmed",
+            "amount": 339000,
+            "currency": "MXN",
+            "priceType": "brand_website_promotional_price",
+            "variantId": "ELEGANCE CVT – precio especial",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:31:00+08:00",
+            "sourceIds": [
+              "MX-S05"
+            ]
+          }
+        }
+      ],
+      "financeOffers": [
+        {
+          "id": "mg5-finance-current",
+          "status": "unconfirmed",
+          "title": "当前金融细则待核实",
+          "conditions": "官网车型页展示特别价格，但当前可复现的月供、期限、利率和活动有效期未完整确认。",
+          "sourceIds": [
+            "mx-mg5-page"
+          ],
+          "verifiedAt": "2026-10-24T00:00:00+08:00"
+        }
+      ],
+      "aftersales": [
+        {
+          "id": "mg5-basic-warranty",
+          "type": "vehicle_warranty",
+          "detail": {
+            "status": "confirmed",
+            "value": "整车保障 5 年或 100,000 km，以先到者为准。",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-mg-warranty-faq"
+            ]
+          }
+        },
+        {
+          "id": "mg5-powertrain-warranty",
+          "type": "vehicle_warranty",
+          "detail": {
+            "status": "confirmed",
+            "value": "动力总成保障延长至 7 年或 150,000 km，以先到者为准。",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-mg-warranty-faq"
+            ]
+          }
+        },
+        {
+          "id": "mg5-road-assistance",
+          "type": "roadside_assistance",
+          "detail": {
+            "status": "confirmed",
+            "value": "Lucky Seven 提供 7 年道路救援。",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-mg-lucky-seven"
+            ]
+          }
+        }
+      ],
+      "salesRecords": [
+        {
+          "id": "mg5-sales-2026-09",
+          "volume": {
+            "status": "confirmed",
+            "value": 2425,
+            "unit": "vehicles",
+            "period": "2026-09",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-inegi-model-table"
+            ]
+          }
+        }
+      ],
+      "specifications": [
+        {
+          "key": "body_length_mm",
+          "label": "车身长度",
+          "fact": {
+            "status": "confirmed",
+            "value": 4607,
+            "unit": "mm",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-autocosmos-mg5-dimensions"
+            ],
+            "note": "待官方资料复核。"
+          }
+        },
+        {
+          "key": "engine_displacement_l",
+          "label": "发动机排量",
+          "fact": {
+            "status": "confirmed",
+            "value": 1.5,
+            "unit": "L",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-mg5-spec"
+            ]
+          }
+        },
+        {
+          "key": "power_hp",
+          "label": "最大功率",
+          "fact": {
+            "status": "confirmed",
+            "value": 109,
+            "unit": "hp",
+            "verifiedAt": "2026-10-24T00:00:00+08:00",
+            "sourceIds": [
+              "mx-mg5-spec"
+            ]
+          }
+        }
+      ],
+      "marketingActivities": [],
+      "recentEvents": [
+        {
+          "id": "mg-mx-aftersales-2026-10",
+          "marketCode": "MX",
+          "vehicleId": "mg5-mx",
+          "eventDate": "2026-10-20",
+          "title": "MG 强调售后网络与零部件供应能力",
+          "description": "MG 官方称其在墨西哥拥有超过 108 家授权经销商，圣路易斯波托西零部件中心可在三个工作日内向经销商交付，并继续以 Lucky Seven 作为售后保障。",
+          "whyItMatters": "品牌级售后网络和零部件时效增强 MG5 的持有信心，是 C级 Sedan 在质保年限之外需要关注的竞争维度。",
+          "status": "confirmed",
+          "sourceIds": [
+            "mx-mg-network-news"
+          ]
+        }
+      ],
+      "researchV2": {
+        "priceNotes": [],
+        "dealerOffers": [
+          {
+            "channel": "品牌官网（非门店报价）",
+            "variant": "STYLE MT",
+            "listPrice": 299900,
+            "offerPrice": 274900,
+            "currency": "MXN",
+            "validFrom": null,
+            "validTo": null,
+            "conditions": "官网仅显示 specialPrice，未说明适用条件、库存或金融前置要求",
+            "status": "unconfirmed",
+            "sourceIds": [
+              "MX-S05"
+            ],
+            "note": "属品牌级促销价，不等同于任一授权门店的可成交报价；需向门店核实"
+          },
+          {
+            "channel": "品牌官网（非门店报价）",
+            "variant": "EXCITE MT / EXCITE CVT / ELEGANCE CVT",
+            "listPrice": 344000,
+            "offerPrice": 284000,
+            "currency": "MXN",
+            "validFrom": null,
+            "validTo": null,
+            "conditions": "同上；另两版促销价为 318,000 / 339,000 MXN",
+            "status": "unconfirmed",
+            "sourceIds": [
+              "MX-S05"
+            ]
+          }
+        ],
+        "officialSellingPoints": [
+          {
+            "localText": "Motor 1.5 109hp y 105 lb/ft",
+            "chineseSummary": "1.5 L 自然吸气，109 马力 / 105 lb·ft",
+            "relatedSpec": "1.5L 4 缸，Euro V",
+            "sourceIds": [
+              "MX-S05"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:31:00+08:00"
+          },
+          {
+            "localText": "Pantalla Flotante HD con tecnología IPS a color de 10.25”",
+            "chineseSummary": "10.25 英寸 IPS 悬浮式中控屏",
+            "relatedSpec": "全系标配",
+            "sourceIds": [
+              "MX-S05"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:31:00+08:00"
+          },
+          {
+            "localText": "Bolsas de aire (2 Frontales, 2 Laterales y 2 Tipo Cortina)",
+            "chineseSummary": "6 气囊（前双、侧双、气帘双）",
+            "relatedSpec": "全系标配 6 气囊 + 四轮盘刹 + ABS/EBD",
+            "sourceIds": [
+              "MX-S05"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:31:00+08:00"
+          },
+          {
+            "localText": "Cámara 360° con MG render technology 3D & 2D / 4 cámaras HD gran angular",
+            "chineseSummary": "360° 环视影像（3D/2D 渲染，4 颗广角摄像头）",
+            "relatedSpec": "ELEGANCE CVT 专属",
+            "sourceIds": [
+              "MX-S05"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:31:00+08:00"
+          },
+          {
+            "localText": "Quemacocos eléctrico de un solo toque para abrir y cerrar de 3 posiciones",
+            "chineseSummary": "一键式电动天窗（3 段开启）",
+            "relatedSpec": "EXCITE CVT 及以上",
+            "sourceIds": [
+              "MX-S05"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:31:00+08:00"
+          },
+          {
+            "localText": "Panel de instrumentos Virtual Nautilus LCD de 12.3”",
+            "chineseSummary": "12.3 英寸全液晶仪表",
+            "relatedSpec": "ELEGANCE CVT 专属",
+            "sourceIds": [
+              "MX-S05"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:31:00+08:00"
+          }
+        ],
+        "officialSpecifications": [
+          {
+            "originalText": "MG5 MCE 2027 – MOTOR 1.5 L ATKINSON 4 CILINDROS / Normativa de emisiones Euro V",
+            "chineseTranslation": "MG5 MCE 2027：1.5 L 阿特金森循环 4 缸发动机，排放标准 Euro V",
+            "reference": "MX-S04 ficha técnica 第 1 页，表头“MOTOR 1.5 L ATKINSON 4 CILINDROS”",
+            "modelYear": "2027",
+            "variant": "全系",
+            "status": "confirmed",
+            "sourceIds": [
+              "MX-S04"
+            ],
+            "verifiedAt": "2026-10-25T14:30:00+08:00"
+          },
+          {
+            "originalText": "Potencia 109 hp @ 6,000 rpm; Torque máximo 105 lb-ft @ 4,500 rpm",
+            "chineseTranslation": "最大功率 109 马力 @6,000 rpm；最大扭矩 105 lb·ft @4,500 rpm",
+            "reference": "MX-S04 第 1 页“Motor”栏",
+            "modelYear": "2027",
+            "variant": "全系",
+            "status": "confirmed",
+            "sourceIds": [
+              "MX-S04"
+            ],
+            "verifiedAt": "2026-10-25T14:30:00+08:00"
+          },
+          {
+            "originalText": "Transmisión: Manual 5 velocidades / I-CVT 8 velocidades simuladas",
+            "chineseTranslation": "变速箱：5 速手动 / I-CVT（模拟 8 速）",
+            "reference": "MX-S04 第 1 页",
+            "modelYear": "2027",
+            "variant": "STYLE/EXCITE MT 与 CVT 版本",
+            "status": "confirmed",
+            "sourceIds": [
+              "MX-S04"
+            ],
+            "verifiedAt": "2026-10-25T14:30:00+08:00"
+          },
+          {
+            "originalText": "Rendimiento (km/l) Ciudad 14 / Combinado 16.7 / Carretera 19.4 (5MT); 15.4 / 18 / 22.6 (I-CVT)",
+            "chineseTranslation": "油耗（km/L）：手动 市区 14 / 综合 16.7 / 高速 19.4；CVT 市区 15.4 / 综合 18 / 高速 22.6",
+            "reference": "MX-S04 第 2 页底部“Rendimiento”表",
+            "modelYear": "2027",
+            "variant": "5MT 与 I-CVT",
+            "status": "confirmed",
+            "sourceIds": [
+              "MX-S04"
+            ],
+            "verifiedAt": "2026-10-25T14:30:00+08:00"
+          },
+          {
+            "originalText": "Emisiones CO2 (g/km): 170.4 / 109.1 / 142.8 (5MT); 155.1 / 106.1 / 133.1 (I-CVT)",
+            "chineseTranslation": "CO2 排放（g/km）：手动 170.4 / 109.1 / 142.8；CVT 155.1 / 106.1 / 133.1（市区/高速/综合顺序按原表）",
+            "reference": "MX-S04 第 2 页",
+            "modelYear": "2027",
+            "variant": "5MT 与 I-CVT",
+            "status": "confirmed",
+            "sourceIds": [
+              "MX-S04"
+            ],
+            "verifiedAt": "2026-10-25T14:30:00+08:00"
+          },
+          {
+            "originalText": "Tanque de combustible 45 L; Neumáticos 205/55R16; Suspensión McPherson / Beam semi-independiente",
+            "chineseTranslation": "油箱 45 L；轮胎 205/55R16；前麦弗逊、后半独立扭力梁悬架",
+            "reference": "MX-S04 第 1 页",
+            "modelYear": "2027",
+            "variant": "全系",
+            "status": "confirmed",
+            "sourceIds": [
+              "MX-S04"
+            ],
+            "verifiedAt": "2026-10-25T14:30:00+08:00"
+          }
+        ],
+        "consumerFeedback": {
+          "sampleSize": 5,
+          "platforms": [
+            "Reddit r/AutosMexico"
+          ],
+          "positiveThemes": [
+            {
+              "theme": "长期使用未见大问题且售后响应快（匿名引文：“4 años con un MG 5, 85k km, y sin temas… la agencia siempre nos ha respondido rápido”）",
+              "threads": 1,
+              "sourceIds": [
+                "MX-S14"
+              ]
+            },
+            {
+              "theme": "配置与价格比被视为主要卖点（与 C级 Sedan 直接对比）",
+              "threads": 2,
+              "sourceIds": [
+                "MX-S18",
+                "MX-S17"
+              ]
+            }
+          ],
+          "negativeThemes": [
+            {
+              "theme": "起步与爬坡动力偏弱（匿名引文：“le falta potencia al arrancar o en subidas batalla”）",
+              "threads": 1,
+              "sourceIds": [
+                "MX-S15"
+              ]
+            },
+            {
+              "theme": "对维修与总持有成本的担忧（匿名引文：“MG no lo compres… es un pozo financiero esa madre si se te descompone”）",
+              "threads": 1,
+              "sourceIds": [
+                "MX-S18"
+              ]
+            },
+            {
+              "theme": "对车源真伪/水淹车的疑虑出现在购车讨论中",
+              "threads": 1,
+              "sourceIds": [
+                "MX-S17"
+              ]
+            }
+          ],
+          "limitations": "5 个讨论帖（评论数 18–58），仅能读取搜索摘要与单条引用；未做全文编码，因此各主题计数为“出现帖数”，不构成频次统计。样本集中于 r/AutosMexico，偏向已购/拟购的年轻网民，不代表全市场。未纳入 Facebook 车主群与 YouTube 评论。"
+        },
+        "audienceProfile": [
+          {
+            "claim": "价格敏感的首购人群，用“同价位配置更多”做决策，直接对比 C级 Sedan 等中国品牌",
+            "basis": "hypothesis",
+            "sourceIds": [
+              "MX-S18",
+              "MX-S17"
+            ]
+          },
+          {
+            "claim": "城市通勤为主、对动力要求不高，但会在山路/满载场景感到不足",
+            "basis": "hypothesis",
+            "sourceIds": [
+              "MX-S15"
+            ]
+          },
+          {
+            "claim": "存在网约车/租赁车队的批量采购可能（因车价与 6 气囊配置），但样本未出现车队买家自述",
+            "basis": "hypothesis",
+            "validationNeed": "需 MG 经销商车队销售数据或 5 家以上租赁公司采购记录验证"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chevrolet-cobalt-kz",
+      "marketCode": "KZ",
+      "brand": "Chevrolet",
+      "model": "Cobalt",
+      "modelYear": "2026",
+      "researchStatus": "confirmed",
+      "prices": [
+        {
+          "id": "cobalt-kz-optimum-at-msrp",
+          "price": {
+            "status": "confirmed",
+            "currency": "KZT",
+            "amount": 6490000,
+            "priceType": "manufacturer_msrp",
+            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "sourceIds": [
+              "kz-chevrolet-cobalt-page"
+            ],
+            "variantId": "cobalt-kz-optimum-at"
+          }
+        },
+        {
+          "id": "cobalt-kz-elegant-at-msrp",
+          "price": {
+            "status": "confirmed",
+            "currency": "KZT",
+            "amount": 6790000,
+            "priceType": "manufacturer_msrp",
+            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "sourceIds": [
+              "kz-chevrolet-cobalt-page"
+            ],
+            "variantId": "cobalt-kz-elegant-at"
+          }
+        },
+        {
+          "id": "cobalt-kz-optimum-mcm-msrp",
+          "price": {
+            "status": "confirmed",
+            "currency": "KZT",
+            "amount": 6390000,
+            "priceType": "manufacturer_msrp",
+            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "sourceIds": [
+              "kz-chevrolet-cobalt-mcm-page"
+            ],
+            "variantId": "cobalt-kz-optimum-mcm"
+          }
+        },
+        {
+          "id": "cobalt-kz-elegant-mcm-msrp",
+          "price": {
+            "status": "confirmed",
+            "currency": "KZT",
+            "amount": 6490000,
+            "priceType": "manufacturer_msrp",
+            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "sourceIds": [
+              "kz-chevrolet-cobalt-mcm-page"
+            ],
+            "variantId": "cobalt-kz-elegant-mcm"
+          }
+        },
+        {
+          "id": "cobalt-kz-midnight-mcm-msrp",
+          "price": {
+            "status": "confirmed",
+            "currency": "KZT",
+            "amount": 6690000,
+            "priceType": "manufacturer_msrp",
+            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "sourceIds": [
+              "kz-chevrolet-cobalt-mcm-page"
+            ],
+            "variantId": "cobalt-kz-midnight-mcm"
+          }
+        },
+        {
+          "id": "cobalt-kz-dealer-promo-oct",
+          "price": {
+            "status": "confirmed",
+            "currency": "KZT",
+            "amount": 5990000,
+            "priceType": "promotion",
+            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "sourceIds": [
+              "kz-chevrolet-cobalt-promo-oct-2026"
+            ],
+            "variantId": "cobalt-kz-optimum-at",
+            "condition": "Terra Motors 授权经销商限量活动；页面未给出结束日期，以门店库存与审批为准。"
+          }
+        }
+      ],
+      "financeOffers": [],
+      "aftersales": [
+        {
+          "id": "cobalt-kz-warranty",
+          "type": "vehicle_warranty",
+          "detail": {
+            "status": "confirmed",
+            "value": "整车质保 3 年或 100,000 km，以先到者为准。",
+            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "sourceIds": [
+              "kz-chevrolet-warranty"
+            ]
+          }
+        }
+      ],
+      "salesRecords": [
+        {
+          "id": "cobalt-kz-sales-2026-09",
+          "volume": {
+            "status": "confirmed",
+            "value": 2906,
+            "unit": "vehicles",
+            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "sourceIds": [
+              "kz-kao-sales-2026-09"
+            ],
+            "period": "2026-09"
+          }
+        }
+      ],
+      "specifications": [
+        {
+          "key": "body_length_mm",
+          "label": "车身长度",
+          "fact": {
+            "status": "confirmed",
+            "value": 4479,
+            "unit": "mm",
+            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "sourceIds": [
+              "kz-chevrolet-cobalt-page"
+            ]
+          }
+        },
+        {
+          "key": "engine_displacement_cc",
+          "label": "发动机排量",
+          "fact": {
+            "status": "confirmed",
+            "value": 1485,
+            "unit": "cc",
+            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "sourceIds": [
+              "kz-chevrolet-cobalt-page"
+            ]
+          }
+        },
+        {
+          "key": "power_hp",
+          "label": "最大功率",
+          "fact": {
+            "status": "confirmed",
+            "value": 106,
+            "unit": "hp",
+            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "sourceIds": [
+              "kz-chevrolet-cobalt-page"
+            ],
+            "note": "标准 Cobalt 参数；MCM 页面标注 102 hp。"
+          }
+        }
+      ],
+      "marketingActivities": [
+        {
+          "id": "cobalt-kz-price-campaign-2026-10",
+          "channel": "dealer",
+          "title": "Cobalt 5,990,000 KZT 起限量价格活动",
+          "description": "Chevrolet 授权经销商 Terra Motors 发布限量优惠价，未披露活动结束日期。",
+          "activityDate": "2026-10-17",
+          "status": "confirmed",
+          "sourceIds": [
+            "kz-chevrolet-cobalt-promo-oct-2026"
+          ]
+        }
+      ],
+      "recentEvents": [
+        {
+          "id": "cobalt-kz-promo-2026-10",
+          "marketCode": "KZ",
+          "vehicleId": "chevrolet-cobalt-kz",
+          "eventDate": "2026-10-17",
+          "title": "Cobalt 授权经销商价格降至 5,990,000 KZT 起",
+          "description": "Terra Motors 发布 Cobalt 限量价格活动，页面未披露结束日期。",
+          "whyItMatters": "活动价比 C级 Sedan 官方入门价低 1,000,000 KZT，进一步放大 Cobalt 的价格与销量优势。",
+          "status": "confirmed",
+          "sourceIds": [
+            "kz-chevrolet-cobalt-promo-oct-2026"
+          ]
+        }
+      ],
+      "researchV2": {
+        "priceNotes": [
+          {
+            "variant": "2026 1.5L AT – 入门版本（名称待核实）",
+            "amount": 6290000,
+            "currency": "KZT",
+            "sourceIds": [
+              "KZ-S03"
+            ],
+            "note": "第三方价格或条件尚未获得官方确认，仅作线索。"
+          },
+          {
+            "variant": "2026 1.5L AT – 中配（名称待核实）",
+            "amount": 6490000,
+            "currency": "KZT",
+            "sourceIds": [
+              "KZ-S03",
+              "KZ-S08"
+            ],
+            "note": "第三方价格或条件尚未获得官方确认，仅作线索。"
+          },
+          {
+            "variant": "2026 1.5L AT – 高配（名称待核实）",
+            "amount": 6790000,
+            "currency": "KZT",
+            "sourceIds": [
+              "KZ-S03"
+            ],
+            "note": "第三方价格或条件尚未获得官方确认，仅作线索。"
+          }
+        ],
+        "dealerOffers": [],
+        "officialSellingPoints": [],
+        "officialSpecifications": [],
+        "consumerFeedback": {
+          "sampleSize": 0,
+          "platforms": [],
+          "positiveThemes": [],
+          "negativeThemes": [],
+          "limitations": "未取得哈萨克语/俄语的独立车主样本。已尝试 kolesa.kz（418 反爬）、auto.kz（前端渲染）、Reddit（无哈萨克斯坦 Cobalt 车主帖）。不标注任何主题，避免以销量替代口碑。"
+        },
+        "audienceProfile": [
+          {
+            "claim": "以家庭首车与出租/网约车队为主的价格敏感型买家，看重维保便宜与配件可得性",
+            "basis": "hypothesis",
+            "validationNeed": "需 kolesa.kz 二手车挂牌用途标注、或经销商车队销售占比数据验证；现有材料仅支持“该车为销量第一”"
+          },
+          {
+            "claim": "在哈萨克斯坦被视作“本地组装、价格锚点”车型，压制同价位进口车定价空间",
+            "basis": "hypothesis",
+            "validationNeed": "需确认本地组装（CKD/SKD）状态与本地化率，本轮未取得 OEM 或政府公告"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chery-arrizo-6-kz",
+      "marketCode": "KZ",
+      "brand": "Chery",
+      "model": "Arrizo 6",
+      "modelYear": "2026",
+      "researchStatus": "confirmed",
+      "prices": [
+        {
+          "id": "chery-arrizo-6-kz-v2-price-0",
+          "price": {
+            "status": "confirmed",
+            "amount": 7590000,
+            "currency": "KZT",
+            "priceType": "manufacturer_list_price",
+            "variantId": "Comfort",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:44:00+08:00",
+            "sourceIds": [
+              "KZ-S01",
+              "KZ-S02"
+            ]
+          }
+        },
+        {
+          "id": "chery-arrizo-6-kz-v2-price-1",
+          "price": {
+            "status": "confirmed",
+            "amount": 8290000,
+            "currency": "KZT",
+            "priceType": "manufacturer_list_price",
+            "variantId": "Modern",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:44:00+08:00",
+            "sourceIds": [
+              "KZ-S01",
+              "KZ-S02"
+            ]
+          }
+        }
+      ],
+      "financeOffers": [
+        {
+          "id": "arrizo6-kz-downpayment-5pct",
+          "status": "unconfirmed",
+          "title": "Arrizo 6 首付 5% 起",
+          "conditions": "Chery 官方活动页仍列出该方案，但未披露利率、期限、金融机构与结束日期；当前有效性和完整成本待确认。",
+          "sourceIds": [
+            "kz-chery-arrizo6-finance"
+          ],
+          "verifiedAt": "2026-10-24T23:00:00+08:00"
+        }
+      ],
+      "aftersales": [
+        {
+          "id": "arrizo6-kz-warranty",
+          "type": "vehicle_warranty",
+          "detail": {
+            "status": "confirmed",
+            "value": "整车质保 5 年或 150,000 km，以先到者为准。",
+            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "sourceIds": [
+              "kz-chery-arrizo6-pdf"
+            ]
+          }
+        }
+      ],
+      "salesRecords": [],
+      "specifications": [
+        {
+          "key": "body_length_mm",
+          "label": "车身长度",
+          "fact": {
+            "status": "confirmed",
+            "value": 4691,
+            "unit": "mm",
+            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "sourceIds": [
+              "kz-chery-arrizo6-page"
+            ]
+          }
+        },
+        {
+          "key": "engine_displacement_cc",
+          "label": "发动机排量",
+          "fact": {
+            "status": "confirmed",
+            "value": 1498,
+            "unit": "cc",
+            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "sourceIds": [
+              "kz-chery-arrizo6-page",
+              "kz-chery-arrizo6-pdf"
+            ]
+          }
+        },
+        {
+          "key": "power_hp",
+          "label": "最大功率",
+          "fact": {
+            "status": "confirmed",
+            "value": 147,
+            "unit": "hp",
+            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "sourceIds": [
+              "kz-chery-arrizo6-page",
+              "kz-chery-arrizo6-pdf"
+            ]
+          }
+        }
+      ],
+      "marketingActivities": [],
+      "recentEvents": [],
+      "researchV2": {
+        "priceNotes": [],
+        "dealerOffers": [],
+        "officialSellingPoints": [
+          {
+            "localText": "ТЕХНОЛОГИЯЛЫҚ ҚОЗҒАЛТҚЫШ – 1,5 литрлік турбоқозғалтқыш 108 кВт қуат пен 210 Н·м айналу моментін дамытып, 100 км-ге 6,9 л (WLTC) жанармай шығынымен",
+            "chineseSummary": "1.5T 发动机：108 kW / 210 N·m，WLTC 综合油耗 6.9 L/100km",
+            "relatedSpec": "SQRE4T15C，1498 cm³",
+            "sourceIds": [
+              "KZ-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:44:00+08:00"
+          },
+          {
+            "localText": "ЖОҒАРЫ МЫҚТЫ БОЛАТТАН ЖАСАЛҒАН ҚАҢҚА – бес жұлдызды қауіпсіздік тұжырымдамасы, 60%-дан астам жоғары мықты болат, 1300 МПа беріктік",
+            "chineseSummary": "五星安全车身：高强钢占比 >60%，关键部位 1300 MPa",
+            "relatedSpec": "车身高强钢比例、抗拉强度",
+            "sourceIds": [
+              "KZ-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:44:00+08:00"
+          },
+          {
+            "localText": "ЦИФРЛЫҚ КЕҢІСТІК – қос 10,25 дюймдік экран: цифрлық аспаптар тақтасы мен мультимедиа жүйесі",
+            "chineseSummary": "双 10.25 英寸联屏（仪表 + 中控）",
+            "relatedSpec": "10.25\" + 10.25\"",
+            "sourceIds": [
+              "KZ-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:44:00+08:00"
+          },
+          {
+            "localText": "РОБОТТАНДЫРЫЛҒАН БЕРІЛІС ҚОРАБЫ – Magna 6DCT 6 сатылы роботтандырылған беріліс қорабы 97% тиімділік, 260 Н·м-ге дейін",
+            "chineseSummary": "Magna 6DCT 湿式双离合：效率 97%，可承受 260 N·m",
+            "relatedSpec": "DCT6",
+            "sourceIds": [
+              "KZ-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:44:00+08:00"
+          },
+          {
+            "localText": "ПРОЕКЦИЯЛЫҚ ТҮРДЕГІ ЖАРЫҚДИОДТЫ ФАРАЛАР – 185 метрге дейінгі жарық қашықтығы",
+            "chineseSummary": "矩阵式 LED 投影大灯，照射距离最远 185 m",
+            "relatedSpec": "LED 矩阵大灯",
+            "sourceIds": [
+              "KZ-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:44:00+08:00"
+          },
+          {
+            "localText": "«One-touch» терезе көтергіштер, CN95 сүзгісі бар электрлік кондиционер және екінші қатарға арналған ауа арналары",
+            "chineseSummary": "一键升降车窗、CN95 滤芯空调、后排独立出风口",
+            "relatedSpec": "舒适性配置",
+            "sourceIds": [
+              "KZ-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:44:00+08:00"
+          }
+        ],
+        "officialSpecifications": [
+          {
+            "originalText": "Қозғалтқыш моделі SQRE4T15C; Қозғалтқыш көлемі 1498 см³; Максималды қуаты 108/5500 кВт (147 а.к.); Максималды айналдыру моменті 210/(1750~4000) Нм",
+            "chineseTranslation": "发动机型号 SQRE4T15C；排量 1498 cm³；最大功率 108 kW @5,500 rpm（147 马力）；最大扭矩 210 N·m @1,750–4,000 rpm",
+            "reference": "KZ-S02 官方价格表 PDF 第 1 页“КҮШТІК АГРЕГАТ”栏",
+            "modelYear": "2026",
+            "variant": "Comfort / Modern",
+            "status": "confirmed",
+            "sourceIds": [
+              "KZ-S02"
+            ],
+            "verifiedAt": "2026-10-25T14:44:00+08:00"
+          },
+          {
+            "originalText": "Ұзындығы х Ені х Биіктігі 4691x1814x1493 мм; Дөңгелектер базасы 2650 мм; Жүксалғыш көлемі 482 л; Отын багы 48 л; Клиренс 160 мм",
+            "chineseTranslation": "长×宽×高 4,691×1,814×1,493 mm；轴距 2,650 mm；行李厢 482 L；油箱 48 L；离地间隙 160 mm",
+            "reference": "KZ-S02 第 1 页“НЕГІЗГІ ПАРАМЕТРЛЕР”",
+            "modelYear": "2026",
+            "variant": "Comfort / Modern",
+            "status": "confirmed",
+            "sourceIds": [
+              "KZ-S02"
+            ],
+            "verifiedAt": "2026-10-25T14:44:00+08:00"
+          },
+          {
+            "originalText": "Отын шығыны (қала) 9,6 л/100 км; (тасжол) 5,4 л/100 км; (аралас) 6,9 л/100 км; Экологиялық классы Euro 6; Отын АИ-92",
+            "chineseTranslation": "油耗：市区 9.6、高速 5.4、综合 6.9 L/100km；排放 Euro 6；燃油 92 号及以上",
+            "reference": "KZ-S02 第 1 页“ОТЫН”栏",
+            "modelYear": "2026",
+            "variant": "Comfort / Modern",
+            "status": "confirmed",
+            "sourceIds": [
+              "KZ-S02"
+            ],
+            "verifiedAt": "2026-10-25T14:44:00+08:00"
+          },
+          {
+            "originalText": "Шина өлшемі 205/55 R16 (Comfort) / 205/50 R17 (Modern); Трансмиссия түрі Роботтық DCT6",
+            "chineseTranslation": "轮胎 205/55 R16（Comfort）/ 205/50 R17（Modern）；变速箱为 DCT6 双离合",
+            "reference": "KZ-S02 第 1 页",
+            "modelYear": "2026",
+            "variant": "Comfort / Modern",
+            "status": "confirmed",
+            "sourceIds": [
+              "KZ-S02"
+            ],
+            "verifiedAt": "2026-10-25T14:44:00+08:00"
+          }
+        ],
+        "consumerFeedback": {
+          "sampleSize": 0,
+          "platforms": [],
+          "positiveThemes": [],
+          "negativeThemes": [],
+          "limitations": "未取得哈萨克语/俄语的 Arrizo 6 独立车主样本。已检索 kolesa.kz（418 反爬）、auto.kz（前端渲染）、chery.kz 车主专区（无公开评论）、Reddit（无相关帖）。不以厂家卖点替代口碑。"
+        },
+        "audienceProfile": [
+          {
+            "claim": "追求“涡轮动力 + 双联屏”配置密度、预算 750–850 万坚戈的首次购车者",
+            "basis": "hypothesis",
+            "validationNeed": "需 kolesa.kz 挂牌人群画像或 Chery 经销商成交客户结构数据"
+          },
+          {
+            "claim": "对中国品牌接受度较高的年轻城市用户，把 Arrizo 6 与 Cobalt 顶配作直接对比",
+            "basis": "hypothesis",
+            "validationNeed": "需交叉考虑集（consideration set）调研；价格带重叠可由 759–829 万 vs 629–679 万坚戈间接支持，但无直接证据"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mg5-sa",
+      "marketCode": "SA",
+      "brand": "MG",
+      "model": "MG5",
+      "modelYear": "2026",
+      "researchStatus": "confirmed",
+      "prices": [
+        {
+          "id": "sa-mg5-price-base",
+          "price": {
+            "status": "confirmed",
+            "currency": "SAR",
+            "amount": 54450,
+            "priceType": "manufacturer_msrp",
+            "condition": "MG Saudi 官方起售价。",
+            "variantId": "mg5-sa-current-base",
+            "verifiedAt": "2026-10-24T12:00:00+08:00",
+            "sourceIds": [
+              "sa-mg5-model"
+            ]
+          }
+        },
+        {
+          "id": "sa-mg5-price-deluxe-2026",
+          "price": {
+            "status": "confirmed",
+            "currency": "SAR",
+            "amount": 80845,
+            "priceType": "dealer",
+            "condition": "Mohamed Yousuf Naghi 官方商城页面，页面标记 Reserved。",
+            "variantId": "mg5-sa-deluxe-2026",
+            "verifiedAt": "2026-10-24T12:00:00+08:00",
+            "sourceIds": [
+              "sa-mg5-deluxe-mynaghi"
+            ]
+          }
+        }
+      ],
+      "financeOffers": [],
+      "aftersales": [
+        {
+          "id": "sa-mg5-warranty",
+          "type": "vehicle_warranty",
+          "detail": {
+            "status": "confirmed",
+            "value": "大多数 GCC 注册 MG 车型为 6 年或 200,000 公里，以先到者为准；需完整授权保养记录。",
+            "verifiedAt": "2026-10-24T12:00:00+08:00",
+            "sourceIds": [
+              "sa-mg-warranty"
+            ]
+          }
+        },
+        {
+          "id": "sa-mg5-corrosion",
+          "type": "other",
+          "detail": {
+            "status": "confirmed",
+            "value": "车身锈穿保修为 6 年或 200,000 公里，并要求授权维修商年度检查记录。",
+            "verifiedAt": "2026-10-24T12:00:00+08:00",
+            "sourceIds": [
+              "sa-mg-warranty"
+            ]
+          }
+        }
+      ],
+      "salesRecords": [],
+      "specifications": [
+        {
+          "key": "bodyLengthMm",
+          "label": "车长",
+          "fact": {
+            "status": "confirmed",
+            "value": 4607,
+            "unit": "mm",
+            "verifiedAt": "2026-10-24T12:00:00+08:00",
+            "sourceIds": [
+              "sa-mg5-deluxe-mynaghi"
+            ]
+          }
+        },
+        {
+          "key": "engineDisplacementL",
+          "label": "发动机排量",
+          "fact": {
+            "status": "confirmed",
+            "value": 1.5,
+            "unit": "L",
+            "verifiedAt": "2026-10-24T12:00:00+08:00",
+            "sourceIds": [
+              "sa-mg5-model"
+            ]
+          }
+        }
+      ],
+      "marketingActivities": [],
+      "recentEvents": [],
+      "researchV2": {
+        "priceNotes": [
+          {
+            "variant": "2026 入门版（第三方口径）",
+            "amount": 50000,
+            "currency": "SAR",
+            "sourceIds": [
+              "SA-S03"
+            ],
+            "note": "第三方价格或条件尚未获得官方确认，仅作线索。"
+          },
+          {
+            "variant": "2026 入门版（第三方口径）",
+            "amount": 51251,
+            "currency": "SAR",
+            "sourceIds": [
+              "SA-S04"
+            ],
+            "note": "第三方价格或条件尚未获得官方确认，仅作线索。"
+          },
+          {
+            "variant": "2026 入门版（第三方口径）",
+            "amount": 53705,
+            "currency": "SAR",
+            "sourceIds": [
+              "SA-S05"
+            ],
+            "note": "第三方价格或条件尚未获得官方确认，仅作线索。"
+          },
+          {
+            "variant": "2026 入门版（第三方口径）",
+            "amount": 53990,
+            "currency": "SAR",
+            "sourceIds": [
+              "SA-S02"
+            ],
+            "note": "第三方价格或条件尚未获得官方确认，仅作线索。"
+          }
+        ],
+        "dealerOffers": [],
+        "officialSellingPoints": [],
+        "officialSpecifications": [],
+        "consumerFeedback": {
+          "sampleSize": 0,
+          "platforms": [],
+          "positiveThemes": [],
+          "negativeThemes": [],
+          "limitations": "未取得沙特本地 MG5 车主的可追溯独立样本。mgmotor.com.sa 在本环境不可达（连接失败），未取得官方车主社区或本地论坛样本。不以第三方评测替代车主口碑。"
+        },
+        "audienceProfile": [
+          {
+            "claim": "以“同价位配置更高”为首要诉求的价格敏感型买家，把 MG5 与 Yaris Sedan、Sunny 作对比",
+            "basis": "hypothesis",
+            "validationNeed": "需沙特本地考虑集调研；目前仅有第三方价格页把 MG5 与 Yaris/Sunny 并列为竞品"
+          },
+          {
+            "claim": "对品牌保值率与售后网络覆盖存在顾虑，构成购买阻力",
+            "basis": "hypothesis",
+            "validationNeed": "需沙特二手车残值数据与售后网点密度对比；本轮未取得"
+          }
+        ]
+      }
+    },
+    {
+      "id": "toyota-yaris-sa",
+      "marketCode": "SA",
+      "brand": "Toyota",
+      "model": "Yaris",
+      "modelYear": "2026",
+      "researchStatus": "confirmed",
+      "prices": [
+        {
+          "id": "toyota-yaris-sa-v2-price-0",
+          "price": {
+            "status": "confirmed",
+            "amount": 66987.5,
+            "currency": "SAR",
+            "priceType": "official_retail_price_incl_shipping",
+            "variantId": "Y (1.3L CVT)",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:52:00+08:00",
+            "sourceIds": [
+              "SA-S01"
+            ]
+          }
+        },
+        {
+          "id": "toyota-yaris-sa-v2-price-1",
+          "price": {
+            "status": "confirmed",
+            "amount": 72852.5,
+            "currency": "SAR",
+            "priceType": "official_retail_price_incl_shipping",
+            "variantId": "Y Plus (1.3L CVT)",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:52:00+08:00",
+            "sourceIds": [
+              "SA-S01"
+            ]
+          }
+        },
+        {
+          "id": "toyota-yaris-sa-v2-price-2",
+          "price": {
+            "status": "confirmed",
+            "amount": 78832.5,
+            "currency": "SAR",
+            "priceType": "official_retail_price_incl_shipping",
+            "variantId": "YX (1.3L CVT)",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:52:00+08:00",
+            "sourceIds": [
+              "SA-S01"
+            ]
+          }
+        }
+      ],
+      "financeOffers": [
+        {
+          "id": "sa-yaris-aljuf-current",
+          "status": "confirmed",
+          "title": "Yaris Sedan 2026 月供方案",
+          "provider": "Abdul Latif Jameel United Finance",
+          "downPaymentPercent": {
+            "status": "confirmed",
+            "value": 0,
+            "unit": "%",
+            "verifiedAt": "2026-10-24T12:00:00+08:00",
+            "sourceIds": [
+              "sa-toyota-yaris-finance"
+            ]
+          },
+          "monthlyPayment": {
+            "status": "confirmed",
+            "currency": "SAR",
+            "amount": 988,
+            "priceType": "other",
+            "condition": "Y 2026 起始月供",
+            "variantId": "yaris-sa-y-2026",
+            "verifiedAt": "2026-10-24T12:00:00+08:00",
+            "sourceIds": [
+              "sa-toyota-yaris-finance"
+            ]
+          },
+          "termMonths": 60,
+          "conditions": "前 4 期月供由金融公司代付；零管理费、无需担保人，均受条款与审批限制。页面未公开 APR、尾款和保险成本。",
+          "sourceIds": [
+            "sa-toyota-yaris-finance"
+          ],
+          "verifiedAt": "2026-10-24T12:00:00+08:00"
+        }
+      ],
+      "aftersales": [
+        {
+          "id": "sa-yaris-warranty",
+          "type": "vehicle_warranty",
+          "detail": {
+            "status": "confirmed",
+            "value": "基本保修 3 年或 100,000 公里，以先到者为准。",
+            "verifiedAt": "2026-10-24T12:00:00+08:00",
+            "sourceIds": [
+              "sa-toyota-yaris-spec"
+            ]
+          }
+        },
+        {
+          "id": "sa-yaris-free-1000km-service",
+          "type": "free_maintenance",
+          "detail": {
+            "status": "confirmed",
+            "value": "凭保修手册可享一次免费 1,000 公里保养。",
+            "verifiedAt": "2026-10-24T12:00:00+08:00",
+            "sourceIds": [
+              "sa-toyota-warranty"
+            ]
+          }
+        }
+      ],
+      "salesRecords": [],
+      "specifications": [
+        {
+          "key": "bodyLengthMm",
+          "label": "车长",
+          "fact": {
+            "status": "confirmed",
+            "value": 4425,
+            "unit": "mm",
+            "verifiedAt": "2026-10-24T12:00:00+08:00",
+            "sourceIds": [
+              "sa-toyota-yaris-model"
+            ]
+          }
+        },
+        {
+          "key": "engineDisplacementL",
+          "label": "发动机排量",
+          "fact": {
+            "status": "confirmed",
+            "value": 1.3,
+            "unit": "L",
+            "verifiedAt": "2026-10-24T12:00:00+08:00",
+            "sourceIds": [
+              "sa-toyota-yaris-model"
+            ]
+          }
+        }
+      ],
+      "marketingActivities": [],
+      "recentEvents": [],
+      "researchV2": {
+        "priceNotes": [],
+        "dealerOffers": [],
+        "officialSellingPoints": [
+          {
+            "localText": "Adaptive Cruise Control (ACC)",
+            "chineseSummary": "自适应巡航",
+            "relatedSpec": "Toyota Safety Sense 相关功能",
+            "sourceIds": [
+              "SA-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:52:00+08:00"
+          },
+          {
+            "localText": "Pre-collision Warning, Braking Assist & Braking",
+            "chineseSummary": "预碰撞警示与制动辅助/自动刹车",
+            "relatedSpec": "PCS",
+            "sourceIds": [
+              "SA-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:52:00+08:00"
+          },
+          {
+            "localText": "Lane Departure Alert (LDA) – alerts the driver with audible and visual alerts",
+            "chineseSummary": "车道偏离警示（声光提示）",
+            "relatedSpec": "LDA",
+            "sourceIds": [
+              "SA-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:52:00+08:00"
+          },
+          {
+            "localText": "9 inch Touch Screen Audio System with Bluetooth and Apple CarPlay",
+            "chineseSummary": "9 英寸触屏，支持蓝牙与 Apple CarPlay",
+            "relatedSpec": "9\" 屏",
+            "sourceIds": [
+              "SA-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:52:00+08:00"
+          },
+          {
+            "localText": "7 inch TFT Multi Information Display and Digital Speedometer",
+            "chineseSummary": "7 英寸 TFT 行车信息屏 + 数字车速表",
+            "relatedSpec": "7\" TFT MID",
+            "sourceIds": [
+              "SA-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:52:00+08:00"
+          },
+          {
+            "localText": "Rear Ac Vent and Dual Rear USB Charger / Air Conditioner with Automatic Climate Control and Wireless charger",
+            "chineseSummary": "后排空调出风口 + 双后排 USB；自动空调与手机无线充电",
+            "relatedSpec": "舒适性配置",
+            "sourceIds": [
+              "SA-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:52:00+08:00"
+          }
+        ],
+        "officialSpecifications": [
+          {
+            "originalText": "Engine: 1.3L Engine, 4 Cylinder-16 Valve DOHC with Dual VVT-I",
+            "chineseTranslation": "1.3 L 四缸 16 气门 DOHC，带 Dual VVT-i",
+            "reference": "SA-S01 Toyota KSA Yaris 页面“Grades”表，Y 等级 Engine 行",
+            "modelYear": "2026",
+            "variant": "Y / Y Plus / YX（同款动力）",
+            "status": "confirmed",
+            "sourceIds": [
+              "SA-S01"
+            ],
+            "verifiedAt": "2026-10-25T14:52:00+08:00"
+          },
+          {
+            "originalText": "Max Output 97 HP/6,000 RPM; Max Torque 122 Nm/4,200 RPM",
+            "chineseTranslation": "最大功率 97 马力 @6,000 rpm；最大扭矩 122 N·m @4,200 rpm",
+            "reference": "SA-S01 同上",
+            "modelYear": "2026",
+            "variant": "全系",
+            "status": "confirmed",
+            "sourceIds": [
+              "SA-S01"
+            ],
+            "verifiedAt": "2026-10-25T14:52:00+08:00"
+          },
+          {
+            "originalText": "Transmission: Continuously Variable Transmission (CVT) With Manual Sequential Mode",
+            "chineseTranslation": "CVT 无级变速，带手动顺序模式",
+            "reference": "SA-S01 同上",
+            "modelYear": "2026",
+            "variant": "全系",
+            "status": "confirmed",
+            "sourceIds": [
+              "SA-S01"
+            ],
+            "verifiedAt": "2026-10-25T14:52:00+08:00"
+          },
+          {
+            "originalText": "Dimensions L-W-H (mm): 4425 - 1740 - 1480; Fuel Efficiency 22.1 KM/L; Fuel Tank Capacity 40 L",
+            "chineseTranslation": "尺寸 长 4,425 × 宽 1,740 × 高 1,480 mm；油耗 22.1 km/L；油箱 40 L",
+            "reference": "SA-S01 同上",
+            "modelYear": "2026",
+            "variant": "全系",
+            "status": "confirmed",
+            "sourceIds": [
+              "SA-S01"
+            ],
+            "verifiedAt": "2026-10-25T14:52:00+08:00"
+          }
+        ],
+        "consumerFeedback": {
+          "sampleSize": 0,
+          "platforms": [],
+          "positiveThemes": [],
+          "negativeThemes": [],
+          "limitations": "未取得沙特本地 Yaris Sedan 车主的可追溯独立样本。已检索 Reddit（无沙特 Yaris Sedan 车主集中讨论）、沙特本地论坛与 YouTube 阿语评论（未取得可引用条目）。不以官网卖点替代口碑。"
+        },
+        "audienceProfile": [
+          {
+            "claim": "以“低使用成本 + 保值”为首要诉求的家庭与通勤买家；1.3L + CVT 的 22.1 km/L 官方油耗是核心说服点",
+            "basis": "hypothesis",
+            "validationNeed": "需沙特本地购车动机调研或经销商成交访谈；现有材料只有产品参数"
+          },
+          {
+            "claim": "对 ADAS 有基础要求（ACC/LDA/PCS 在同级被列为卖点），说明入门三厢买家已把主动安全纳入比较项",
+            "basis": "hypothesis",
+            "validationNeed": "需竞品配置对比表与买家决策权重调研验证"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mg5-ae",
+      "marketCode": "AE",
+      "brand": "MG",
+      "model": "MG5",
+      "modelYear": "2026",
+      "researchStatus": "unconfirmed",
+      "prices": [
+        {
+          "id": "mg5-ae-start-price",
+          "price": {
+            "status": "confirmed",
+            "currency": "AED",
+            "amount": 56000,
+            "priceType": "manufacturer_msrp",
+            "verifiedAt": "2026-10-24T16:00:00+08:00",
+            "sourceIds": [
+              "ae-mg5-page"
+            ]
+          }
+        }
+      ],
+      "financeOffers": [
+        {
+          "id": "mg5-ae-drive-now-pay-next-year",
+          "status": "confirmed",
+          "title": "Drive now, pay next year",
+          "provider": "MG UAE / IEM",
+          "monthlyPayment": {
+            "status": "confirmed",
+            "currency": "AED",
+            "amount": 855,
+            "priceType": "other",
+            "verifiedAt": "2026-10-24T16:00:00+08:00",
+            "sourceIds": [
+              "ae-mg-offer-pay-next-year"
+            ]
+          },
+          "conditions": "含首付支持、免费保养、贴膜、道路救援和注册；适用于指定车型，有效至库存售罄；利率、期限、费用和资格未公开。",
+          "sourceIds": [
+            "ae-mg-offer-pay-next-year"
+          ],
+          "verifiedAt": "2026-10-24T16:00:00+08:00"
+        }
+      ],
+      "aftersales": [
+        {
+          "id": "mg5-ae-warranty",
+          "type": "vehicle_warranty",
+          "detail": {
+            "status": "confirmed",
+            "value": "6年或200,000公里，以先到者为准。",
+            "verifiedAt": "2026-10-24T16:00:00+08:00",
+            "sourceIds": [
+              "ae-mg-warranty"
+            ]
+          }
+        }
+      ],
+      "salesRecords": [],
+      "specifications": [
+        {
+          "key": "body_length",
+          "label": "车长",
+          "fact": {
+            "status": "unconfirmed",
+            "value": 4607,
+            "unit": "mm",
+            "period": "current UAE listing",
+            "sourceIds": [
+              "ae-mg5-dimensions-secondary"
+            ],
+            "note": "待MG官方UAE规格表复核。"
+          }
+        }
+      ],
+      "marketingActivities": [
+        {
+          "id": "mg5-ae-current-payment-offer",
+          "channel": "dealer",
+          "title": "Drive now, pay next year",
+          "description": "MG5从AED 855/月起，附首付支持和多项免费权益；官方页未显示发布日或固定截止日，故不计入已确认30日新活动。",
+          "status": "unconfirmed",
+          "sourceIds": [
+            "ae-mg-offer-pay-next-year"
+          ]
+        },
+        {
+          "id": "mg5-ae-fazaa-offer",
+          "channel": "dealer",
+          "title": "Fazaa持卡人额外AED 1,000折扣",
+          "description": "适用于2026 MG5 LUX；页面未列固定有效期。",
+          "status": "unconfirmed",
+          "sourceIds": [
+            "ae-mg-fazaa"
+          ]
+        }
+      ],
+      "recentEvents": [
+        {
+          "id": "mg-ae-iem-50000-fleet-mix-2026-10",
+          "marketCode": "AE",
+          "vehicleId": "mg5-ae",
+          "eventDate": "2026-10-21",
+          "title": "IEM披露MG阿联酋累计交付50,000辆及车队客户占比",
+          "description": "行业媒体援引经销商IEM数据称，自2021年起累计MG销量中约55%为零售、45%为车队和机构客户；2025年交付13,265辆。该事件为品牌/渠道层面，不是MG5车型销量。",
+          "whyItMatters": "MG的车队基础会放大MG5在租赁和机构采购中的价格、服务与残值竞争力，C级 Sedan不宜只按零售月供比较。",
+          "status": "confirmed",
+          "sourceIds": [
+            "ae-mg-fleet-mix"
+          ]
+        }
+      ],
+      "researchV2": {
+        "priceNotes": [
+          {
+            "variant": "2026 入门版（第三方口径）",
+            "amount": 54000,
+            "currency": "AED",
+            "sourceIds": [
+              "AE-S02"
+            ],
+            "note": "第三方价格或条件尚未获得官方确认，仅作线索。"
+          },
+          {
+            "variant": "2026 顶配（第三方口径）",
+            "amount": 57500,
+            "currency": "AED",
+            "sourceIds": [
+              "AE-S02"
+            ],
+            "note": "第三方价格或条件尚未获得官方确认，仅作线索。"
+          }
+        ],
+        "dealerOffers": [],
+        "officialSellingPoints": [
+          {
+            "localText": "A naturally aspirated 1.5-litre engine delivers balanced performance, ideal for daily commuting",
+            "chineseSummary": "1.5 L 自然吸气发动机，定位日常通勤与长途均衡表现",
+            "relatedSpec": "1.5L petrol，110 hp",
+            "sourceIds": [
+              "AE-S15"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          },
+          {
+            "localText": "With 140 Nm of torque, the MG 5 offers smooth pull and steady drive feel",
+            "chineseSummary": "140 N·m 扭矩，强调平顺与稳定",
+            "relatedSpec": "140 N·m",
+            "sourceIds": [
+              "AE-S15"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          },
+          {
+            "localText": "Optimised engine and transmission tuning deliver strong efficiency – CONSUMPTION 16.8 km/L",
+            "chineseSummary": "官方油耗 16.8 km/L",
+            "relatedSpec": "16.8 km/L",
+            "sourceIds": [
+              "AE-S15"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          },
+          {
+            "localText": "A large luggage area at the rear keeps cargo convenient – BOOT SPACE 406 L",
+            "chineseSummary": "行李厢 406 L",
+            "relatedSpec": "406 L",
+            "sourceIds": [
+              "AE-S15"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          },
+          {
+            "localText": "A surround-view camera system delivers a complete overhead perspective – CAMERA 360° view",
+            "chineseSummary": "360° 环视影像",
+            "relatedSpec": "360° camera",
+            "sourceIds": [
+              "AE-S15"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          },
+          {
+            "localText": "Advanced systems such as Autohold, EBD and ESP help maintain control; multiple airbags, ISOFIX and TPMS",
+            "chineseSummary": "AutoHold、EBD、ESP，配多气囊、ISOFIX 与胎压监测",
+            "relatedSpec": "安全配置",
+            "sourceIds": [
+              "AE-S15"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          }
+        ],
+        "officialSpecifications": [
+          {
+            "originalText": "ENGINE 1.5L petrol; power 110 hp; TORQUE 140 Nm; CONSUMPTION 16.8 km/L",
+            "chineseTranslation": "1.5 L 汽油发动机；110 马力；扭矩 140 N·m；油耗 16.8 km/L",
+            "reference": "AE-S15 MG Middle East MG5 页面规格卡（区域版，非阿联酋专属页）",
+            "modelYear": "2026",
+            "variant": "区域版（UAE 版本一致性未核实）",
+            "status": "confirmed",
+            "sourceIds": [
+              "AE-S15"
+            ],
+            "verifiedAt": "2026-10-25T14:56:00+08:00",
+            "note": "墨西哥版 MG5 为 109 hp / 105 lb·ft，与本区域版 110 hp / 140 N·m 不同，属不同规格，不可混用"
+          },
+          {
+            "originalText": "DISPLAY 10.25-inch; INSTRUMENT CLUSTER 12.3-inch; BOOT SPACE 406 L; WHEELS 16-inch; HEADLIGHTS LED; ROOF Electric sunroof",
+            "chineseTranslation": "10.25 英寸中控屏；12.3 英寸仪表；行李厢 406 L；16 英寸轮圈；LED 大灯；电动天窗",
+            "reference": "AE-S15 同上",
+            "modelYear": "2026",
+            "variant": "区域版",
+            "status": "confirmed",
+            "sourceIds": [
+              "AE-S15"
+            ],
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          }
+        ],
+        "consumerFeedback": {
+          "sampleSize": 0,
+          "platforms": [],
+          "positiveThemes": [],
+          "negativeThemes": [],
+          "limitations": "未取得阿联酋 MG5 车主的可追溯独立样本。mg-uae.com 为纯前端渲染（HTML 仅含组件 JSON，正文需 JS 执行），无法取得评论模块；Reddit 海湾分区未见 MG5 集中讨论。不以第三方评测替代口碑。"
+        },
+        "audienceProfile": [
+          {
+            "claim": "预算敏感的通勤/家用买家，把 MG5 与 Yaris Sedan、Alsvin 视为同一价格带的三个选项",
+            "basis": "hypothesis",
+            "validationNeed": "需阿联酋本地考虑集调研；现有材料只有第三方价格页的并列关系"
+          },
+          {
+            "claim": "对 360° 影像、双联屏等“配置密度”敏感，愿意用品牌溢价换取配置",
+            "basis": "hypothesis",
+            "validationNeed": "需车主访谈或经销商成交理由记录"
+          }
+        ]
+      }
+    },
+    {
+      "id": "nissan-sunny-ae",
+      "marketCode": "AE",
+      "brand": "Nissan",
+      "model": "Sunny",
+      "modelYear": "2024 (最后在售年款)",
+      "researchStatus": "unconfirmed",
+      "prices": [
+        {
+          "id": "nissan-sunny-ae-start-price",
+          "price": {
+            "status": "unconfirmed",
+            "currency": "AED",
+            "amount": 61500,
+            "priceType": "dealer",
+            "sourceIds": [
+              "ae-nissan-sunny-price-secondary"
+            ],
+            "note": "待区域授权经销商正式报价确认。"
+          }
+        }
+      ],
+      "financeOffers": [],
+      "aftersales": [
+        {
+          "id": "nissan-sunny-ae-warranty",
+          "type": "vehicle_warranty",
+          "detail": {
+            "status": "confirmed",
+            "value": "厂家保修3年/100,000公里，加赠2年零售延保；阿联酋延保页面表述为不限里程。",
+            "verifiedAt": "2026-10-24T16:00:00+08:00",
+            "sourceIds": [
+              "ae-nissan-warranty"
+            ]
+          }
+        },
+        {
+          "id": "nissan-sunny-ae-network",
+          "type": "service_network",
+          "detail": {
+            "status": "confirmed",
+            "value": "阿布扎比及艾因由Al Masaood经营；迪拜和北部酋长国由Arabian Automobiles经营。",
+            "verifiedAt": "2026-10-24T16:00:00+08:00",
+            "sourceIds": [
+              "ae-nissan-abudhabi-network",
+              "ae-nissan-dubai-network"
+            ]
+          }
+        }
+      ],
+      "salesRecords": [],
+      "specifications": [
+        {
+          "key": "body_length",
+          "label": "车长",
+          "fact": {
+            "status": "unconfirmed",
+            "value": 4496,
+            "unit": "mm",
+            "period": "2026 model",
+            "sourceIds": [
+              "ae-nissan-sunny-price-secondary"
+            ]
+          }
+        }
+      ],
+      "marketingActivities": [],
+      "recentEvents": [],
+      "researchV2": {
+        "priceNotes": [
+          {
+            "variant": "2024 车系（S / SV / SL / SL Plus）",
+            "amount": 61500,
+            "currency": "AED",
+            "sourceIds": [
+              "AE-S03"
+            ],
+            "note": "第三方价格或条件尚未获得官方确认，仅作线索。"
+          }
+        ],
+        "dealerOffers": [],
+        "officialSellingPoints": [],
+        "officialSpecifications": [],
+        "consumerFeedback": {
+          "sampleSize": 2,
+          "platforms": [
+            "Reddit r/UAE",
+            "Reddit r/CarsForSaleUAE"
+          ],
+          "positiveThemes": [],
+          "negativeThemes": [
+            {
+              "theme": "实际油耗（全程开空调的迪拜/沙迦路况）是潜在买家最关心的未决问题，说明官方油耗可信度受质疑",
+              "threads": 1,
+              "sourceIds": [
+                "AE-S13"
+              ]
+            }
+          ],
+          "limitations": "仅 2 个讨论帖（评论 5 与 20 条），且为“求建议/二手车选购”语境，非车主长期使用反馈；仅能读取搜索摘要。样本量远低于 5 条独立帖，不标注任何“高频”主题。"
+        },
+        "audienceProfile": [
+          {
+            "claim": "被用作入门代步与工地/外勤用车的低成本选项，买家高度关注空调工况下的实际油耗",
+            "basis": "hypothesis",
+            "sourceIds": [
+              "AE-S13"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "toyota-yaris-ae",
+      "marketCode": "AE",
+      "brand": "Toyota",
+      "model": "Yaris Sedan",
+      "modelYear": "2026",
+      "researchStatus": "unconfirmed",
+      "prices": [
+        {
+          "id": "toyota-yaris-ae-v2-price-0",
+          "price": {
+            "status": "confirmed",
+            "amount": 64900,
+            "currency": "AED",
+            "priceType": "official_retail_price",
+            "variantId": "1.5L Yaris Sedan 2026（入门）",
+            "observedAt": "2026-10-25",
+            "verifiedAt": "2026-10-25T14:56:00+08:00",
+            "sourceIds": [
+              "AE-S01"
+            ]
+          }
+        }
+      ],
+      "financeOffers": [
+        {
+          "id": "toyota-yaris-ae-retail-monthly",
+          "status": "confirmed",
+          "title": "零售月供展示",
+          "provider": "Toyota UAE / Al-Futtaim",
+          "monthlyPayment": {
+            "status": "confirmed",
+            "currency": "AED",
+            "amount": 1017,
+            "priceType": "other",
+            "verifiedAt": "2026-10-24T16:00:00+08:00",
+            "sourceIds": [
+              "ae-toyota-yaris"
+            ]
+          },
+          "conditions": "官方车型页显示的月供；首付、期限、利率和费用需进入金融流程确认。",
+          "sourceIds": [
+            "ae-toyota-yaris"
+          ],
+          "verifiedAt": "2026-10-24T16:00:00+08:00"
+        },
+        {
+          "id": "toyota-yaris-ae-business-offer",
+          "status": "confirmed",
+          "title": "Yaris企业车队方案",
+          "provider": "Toyota UAE / Al-Futtaim",
+          "monthlyPayment": {
+            "status": "confirmed",
+            "currency": "AED",
+            "amount": 899,
+            "priceType": "other",
+            "verifiedAt": "2026-10-24T16:00:00+08:00",
+            "sourceIds": [
+              "ae-toyota-yaris-business"
+            ]
+          },
+          "conditions": "含免费保养合同、延长保修、防锈和注册；企业资格与合同细节适用条款。",
+          "sourceIds": [
+            "ae-toyota-yaris-business"
+          ],
+          "verifiedAt": "2026-10-24T16:00:00+08:00"
+        }
+      ],
+      "aftersales": [
+        {
+          "id": "toyota-yaris-ae-warranty",
+          "type": "vehicle_warranty",
+          "detail": {
+            "status": "confirmed",
+            "value": "乘用车标准保修3年或100,000公里；企业采购车辆以合同条款为准。",
+            "verifiedAt": "2026-10-24T16:00:00+08:00",
+            "sourceIds": [
+              "ae-toyota-warranty"
+            ]
+          }
+        }
+      ],
+      "salesRecords": [],
+      "specifications": [
+        {
+          "key": "body_length",
+          "label": "车长",
+          "fact": {
+            "status": "unconfirmed",
+            "value": 4425,
+            "unit": "mm",
+            "period": "2026 model",
+            "sourceIds": [
+              "ae-toyota-yaris"
+            ],
+            "note": "待UAE官方规格表文件复核。"
+          }
+        }
+      ],
+      "marketingActivities": [],
+      "recentEvents": [],
+      "researchV2": {
+        "priceNotes": [],
+        "dealerOffers": [
+          {
+            "channel": "品牌官网金融入口",
+            "variant": "1.5L Yaris Sedan 2026",
+            "listPrice": 64900,
+            "monthlyPayment": 1017,
+            "currency": "AED",
+            "validFrom": null,
+            "validTo": null,
+            "conditions": "官网仅显示“Monthly 1,017”，未披露首付比例、期限、利率与是否含保险",
+            "status": "unconfirmed",
+            "sourceIds": [
+              "AE-S01"
+            ],
+            "note": "需向 Al-Futtaim 索取完整金融条款后才能作为可比报价"
+          }
+        ],
+        "officialSellingPoints": [
+          {
+            "localText": "Proudful Design with Powerful & Elegant Style – elegant, extended fastback silhouette with a 6-light window design",
+            "chineseSummary": "强调溜背式三厢轮廓与六窗设计",
+            "relatedSpec": "外观设计",
+            "sourceIds": [
+              "AE-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          },
+          {
+            "localText": "A smart safety system that signals the driver with sights and sounds, prompting swift steering or braking",
+            "chineseSummary": "以声光提示驾驶者的主动安全系统（Toyota Safety Sense 表述）",
+            "relatedSpec": "主动安全",
+            "sourceIds": [
+              "AE-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          },
+          {
+            "localText": "8\" Display Audio with Apple CarPlay; Rear View Camera; Rear Parking Sensors; LED Headlamps",
+            "chineseSummary": "8 英寸屏支持 CarPlay、倒车影像、后驻车雷达、LED 大灯",
+            "relatedSpec": "入门配置",
+            "sourceIds": [
+              "AE-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          },
+          {
+            "localText": "1.5L, 4-Cylinder; Continuous Variable Transmission",
+            "chineseSummary": "1.5 L 四缸 + CVT",
+            "relatedSpec": "1.5L CVT",
+            "sourceIds": [
+              "AE-S01"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          }
+        ],
+        "officialSpecifications": [
+          {
+            "originalText": "1.5L YARIS SEDAN 2026 – 1.5L, 4-Cylinder; Continuous Variable Transmission",
+            "chineseTranslation": "2026 款 Yaris 三厢：1.5 L 四缸；CVT 无级变速",
+            "reference": "AE-S01 Toyota UAE Yaris 页面“1.5L YARIS SEDAN 2026”配置卡",
+            "modelYear": "2026",
+            "variant": "1.5L 入门",
+            "status": "confirmed",
+            "sourceIds": [
+              "AE-S01"
+            ],
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          },
+          {
+            "originalText": "LED Headlamps; Automatic Door Mirrors; Rear Parking Sensors; 8\" Display Audio with Apple CarPlay; Rear View Camera",
+            "chineseTranslation": "LED 大灯；电动后视镜；后驻车雷达；8 英寸屏含 Apple CarPlay；倒车影像",
+            "reference": "AE-S01 同上",
+            "modelYear": "2026",
+            "variant": "1.5L 入门",
+            "status": "confirmed",
+            "sourceIds": [
+              "AE-S01"
+            ],
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          }
+        ],
+        "consumerFeedback": {
+          "sampleSize": 0,
+          "platforms": [],
+          "positiveThemes": [],
+          "negativeThemes": [],
+          "limitations": "未取得阿联酋 Yaris Sedan 车主的可追溯独立样本。已检索 Reddit 海湾分区（无 Yaris Sedan 集中讨论）、YouTube 评论（未取得可引用条目）。不以官网卖点替代口碑。"
+        },
+        "audienceProfile": [
+          {
+            "claim": "看重品牌可靠性与残值的家庭/通勤买家，1.5L + CVT 被视为“省心”组合",
+            "basis": "hypothesis",
+            "validationNeed": "需阿联酋二手车残值数据与车主访谈；本轮未取得"
+          },
+          {
+            "claim": "月供 1,017 AED 的金融入口表明其目标客群对现金流敏感、以分期为主要购买方式",
+            "basis": "hypothesis",
+            "validationNeed": "需 Al-Futtaim 金融方案细则（首付、期限、利率）验证"
+          }
+        ]
+      }
+    },
+    {
+      "id": "changan-alsvin-ae",
+      "marketCode": "AE",
+      "brand": "Changan",
+      "model": "Alsvin",
+      "modelYear": "2026",
+      "researchStatus": "unconfirmed",
+      "prices": [
+        {
+          "id": "changan-alsvin-ae-price-lead",
+          "price": {
+            "status": "unconfirmed",
+            "currency": "AED",
+            "amount": 43900,
+            "priceType": "dealer",
+            "variantId": "changan-alsvin-ae-advance",
+            "sourceIds": [
+              "ae-changan-price-secondary"
+            ],
+            "note": "待Union Motors正式含VAT报价确认。"
+          }
+        }
+      ],
+      "financeOffers": [
+        {
+          "id": "changan-alsvin-ae-finance-lead",
+          "status": "unconfirmed",
+          "title": "1.99%年平息率页面估算",
+          "provider": "Changan UAE / Union Motors",
+          "interestRatePercent": {
+            "status": "unconfirmed",
+            "value": 1.99,
+            "unit": "percent_flat_per_year",
+            "period": "current page",
+            "sourceIds": [
+              "ae-changan-alsvin"
+            ],
+            "note": "页面同时显示该购买选项当前不可用。"
+          },
+          "conditions": "月供仅为估算，实际利率取决于客户资料；购买选项当前不可用。",
+          "sourceIds": [
+            "ae-changan-alsvin"
+          ],
+          "verifiedAt": "2026-10-24T16:00:00+08:00"
+        }
+      ],
+      "aftersales": [
+        {
+          "id": "changan-alsvin-ae-warranty-gap",
+          "type": "vehicle_warranty",
+          "detail": {
+            "status": "not_found",
+            "note": "已查官方Alsvin车型页、在线购买页、条款页和Changan UAE保修文章；现有文章只明确CS/UNI系列，不能外推到Alsvin。"
+          }
+        }
+      ],
+      "salesRecords": [],
+      "specifications": [
+        {
+          "key": "body_length",
+          "label": "车长",
+          "fact": {
+            "status": "confirmed",
+            "value": 4390,
+            "unit": "mm",
+            "period": "current UAE model page",
+            "verifiedAt": "2026-10-24T16:00:00+08:00",
+            "sourceIds": [
+              "ae-changan-alsvin"
+            ]
+          }
+        }
+      ],
+      "marketingActivities": [],
+      "recentEvents": [],
+      "researchV2": {
+        "priceNotes": [],
+        "dealerOffers": [],
+        "officialSellingPoints": [
+          {
+            "localText": "Energy-efficient, Powerful and Impeccable engine – high-efficient engine, stable and reliable",
+            "chineseSummary": "强调高效可靠的发动机",
+            "relatedSpec": "1.5 L 发动机",
+            "sourceIds": [
+              "AE-S05"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          },
+          {
+            "localText": "WDCT (Wet Dual Clutch Transmission), smooth and steady – 5 speed dual clutch transmission",
+            "chineseSummary": "5 速湿式双离合，强调平顺",
+            "relatedSpec": "5DCT",
+            "sourceIds": [
+              "AE-S05"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          },
+          {
+            "localText": "Intelligent fuel-saving system with reduced exhaust emissions",
+            "chineseSummary": "智能节油与低排放",
+            "relatedSpec": "ECON 模式",
+            "sourceIds": [
+              "AE-S05"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          },
+          {
+            "localText": "The Alsvin incorporates a system of rear approach sensors, thus increasing the safety in your daily driving",
+            "chineseSummary": "后驻车雷达提升日常安全性",
+            "relatedSpec": "倒车雷达 + 倒车影像",
+            "sourceIds": [
+              "AE-S05"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          },
+          {
+            "localText": "Well-known suppliers, guaranteed best product quality – comprehensive test verification system",
+            "chineseSummary": "强调供应链与整车验证体系",
+            "relatedSpec": "品质表述",
+            "sourceIds": [
+              "AE-S05"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          }
+        ],
+        "officialSpecifications": [
+          {
+            "originalText": "1.5 L Engine; 5DCT Transmission; Maximum Torque 145 N-m",
+            "chineseTranslation": "1.5 L 发动机；5DCT 变速箱；最大扭矩 145 N·m",
+            "reference": "AE-S05 Changan UAE Alsvin 页面顶部规格条",
+            "modelYear": "2026",
+            "variant": "1.5L Advanced AT FWD 4DR",
+            "status": "confirmed",
+            "sourceIds": [
+              "AE-S05"
+            ],
+            "verifiedAt": "2026-10-25T14:56:00+08:00"
+          }
+        ],
+        "consumerFeedback": {
+          "sampleSize": 0,
+          "platforms": [],
+          "positiveThemes": [],
+          "negativeThemes": [],
+          "limitations": "未取得阿联酋 Alsvin 车主的可追溯独立样本。Reddit 海湾分区无 Alsvin 讨论；未检索到本地车主论坛。不以第三方评测替代口碑。"
+        },
+        "audienceProfile": [
+          {
+            "claim": "预算最紧的入门买家，价格明显低于 Yaris（第三方称低约 AED 20,000 以上）",
+            "basis": "hypothesis",
+            "sourceIds": [
+              "AE-S04"
+            ]
+          },
+          {
+            "claim": "以“能开、能装、保修长（6 年/25 万公里）”为决策核心，主动放弃 CarPlay、侧气帘、自动空调等配置",
+            "basis": "hypothesis",
+            "validationNeed": "需车主访谈验证“配置让位于价格”的取舍是否真实成立；现有证据仅为配置表差异"
+          }
+        ]
+      }
+    }
+  ],
+  "competitorPools": [
+    {
+      "marketCode": "MX",
+      "entries": [
+        {
+          "vehicleId": "kia-k3-mx",
+          "decisionStatus": "fixed"
+        },
+        {
+          "vehicleId": "mg5-mx",
+          "decisionStatus": "fixed"
+        }
+      ]
+    },
+    {
+      "marketCode": "KZ",
+      "entries": [
+        {
+          "vehicleId": "chevrolet-cobalt-kz",
+          "decisionStatus": "fixed"
+        },
+        {
+          "vehicleId": "chery-arrizo-6-kz",
+          "decisionStatus": "fixed"
+        }
+      ]
+    },
+    {
+      "marketCode": "SA",
+      "entries": [
+        {
+          "vehicleId": "mg5-sa",
+          "decisionStatus": "fixed"
+        },
+        {
+          "vehicleId": "toyota-yaris-sa",
+          "decisionStatus": "fixed"
+        }
+      ]
+    },
+    {
+      "marketCode": "AE",
+      "entries": [
+        {
+          "vehicleId": "mg5-ae",
+          "decisionStatus": "suggested"
+        },
+        {
+          "vehicleId": "nissan-sunny-ae",
+          "decisionStatus": "suggested"
+        },
+        {
+          "vehicleId": "toyota-yaris-ae",
+          "decisionStatus": "suggested"
+        },
+        {
+          "vehicleId": "changan-alsvin-ae",
+          "decisionStatus": "suggested"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "mx-inegi-raiavl-detail",
+      "url": "https://www.inegi.org.mx/datosprimarios/iavl/",
+      "title": "Registro Administrativo de la Industria Automotriz de Vehículos Ligeros",
+      "publisher": "INEGI",
+      "sourceType": "government_official",
+      "marketCode": "MX",
+      "publishedAt": "2026-10-07T00:00:00-06:00",
+      "accessedAt": "2026-10-24T00:00:00+08:00",
+      "language": "es"
+    },
+    {
+      "id": "mx-inegi-raiavl-release",
+      "url": "https://www.inegi.org.mx/app/saladeprensa/noticia/11258",
+      "title": "RAIAVL. Septiembre de 2026",
+      "publisher": "INEGI",
+      "sourceType": "government_official",
+      "marketCode": "MX",
+      "publishedAt": "2026-10-02T00:00:00-06:00",
+      "accessedAt": "2026-10-24T00:00:00+08:00",
+      "language": "es"
+    },
+    {
+      "id": "mx-inegi-model-table",
+      "url": "https://www.inegi.org.mx/app/tabulados/interactivos/?bd=RAIAVL&px=RAIAVL_8_9",
+      "title": "Venta al público y producción por marca y modelo",
+      "publisher": "INEGI",
+      "sourceType": "sales_data_provider",
+      "marketCode": "MX",
+      "publishedAt": "2026-10-07T00:00:00-06:00",
+      "accessedAt": "2026-10-24T00:00:00+08:00",
+      "language": "es",
+      "notes": "2026 年 9 月销售：C级 Sedan 1,555；Kia K3 Sedan 3,753；MG5 2,425。"
+    },
+    {
+      "id": "mx-amda-segments-sep",
+      "url": "https://www.amda.mx/todos-los-segmentos-de-vehiculos-nuevos-excepto-deportivos-con-variaciones-positivas-durante-septiembre-de-2026/",
+      "title": "Segmentos de vehículos nuevos, septiembre de 2026",
+      "publisher": "AMDA",
+      "sourceType": "industry_association",
+      "marketCode": "MX",
+      "publishedAt": "2026-10-08T00:00:00-06:00",
+      "accessedAt": "2026-10-24T00:00:00+08:00",
+      "language": "es"
+    },
+    {
+      "id": "mx-kia-k3-brochure",
+      "url": "https://www.kia.com/content/dam/kwcms/mx/es/images/fifa2026/ficha-tecnica/Ficha_K3_Sedan_Mundial_Web.pdf",
+      "title": "Ficha técnica Kia K3 Sedán",
+      "publisher": "Kia México",
+      "sourceType": "official_pdf",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-24T00:00:00+08:00",
+      "language": "es"
+    },
+    {
+      "id": "mx-kia-k3-promo-oct",
+      "url": "https://www.kia.com/mx/shopping-tools/promociones-new/promocion-k3-sedan-hatchback-msi.html",
+      "title": "Kia K3 Sedán y Hatchback 2027 — promoción octubre 2026",
+      "publisher": "Kia México",
+      "sourceType": "official_promotion",
+      "marketCode": "MX",
+      "publishedAt": "2026-10-01T00:00:00-06:00",
+      "accessedAt": "2026-10-24T00:00:00+08:00",
+      "language": "es"
+    },
+    {
+      "id": "mx-kia-warranty",
+      "url": "https://www.kia.com/mx/owners/warranty-recalls/warranty.html",
+      "title": "Garantía Kia México",
+      "publisher": "Kia México",
+      "sourceType": "official_aftersales",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-24T00:00:00+08:00",
+      "language": "es"
+    },
+    {
+      "id": "mx-mg5-page",
+      "url": "https://www.mgmotor.com.mx/vehiculos/mg5nuevo",
+      "title": "Nuevo MG5 — versiones y precios",
+      "publisher": "MG Motor México",
+      "sourceType": "local_model_page",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-24T00:00:00+08:00",
+      "language": "es"
+    },
+    {
+      "id": "mx-mg5-spec",
+      "url": "https://cdn.mgmotor.com.mx/storage/fichas-tecnicas/mg-mg5nuevo-ficha-tecnica-nom.pdf",
+      "title": "Ficha técnica Nuevo MG5",
+      "publisher": "MG Motor México",
+      "sourceType": "official_pdf",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-24T00:00:00+08:00",
+      "language": "es"
+    },
+    {
+      "id": "mx-mg-warranty-faq",
+      "url": "https://www.mgmotor.com.mx/preguntas-frecuentes",
+      "title": "Preguntas frecuentes — garantía MG",
+      "publisher": "MG Motor México",
+      "sourceType": "official_aftersales",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-24T00:00:00+08:00",
+      "language": "es"
+    },
+    {
+      "id": "mx-mg-lucky-seven",
+      "url": "https://www.mgmotor.com.mx/servicios/lucky-seven",
+      "title": "Lucky Seven",
+      "publisher": "MG Motor México",
+      "sourceType": "official_aftersales",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-24T00:00:00+08:00",
+      "language": "es"
+    },
+    {
+      "id": "mx-mg-network-news",
+      "url": "https://www.mgmotor.com.mx/noticia/59",
+      "title": "MG Motor México refuerza posventa y red de distribución",
+      "publisher": "MG Motor México",
+      "sourceType": "manufacturer_official",
+      "marketCode": "MX",
+      "publishedAt": "2026-10-20T00:00:00-06:00",
+      "accessedAt": "2026-10-24T00:00:00+08:00",
+      "language": "es"
+    },
+    {
+      "id": "mx-autocosmos-mg5-dimensions",
+      "url": "https://www.autocosmos.com.mx/catalogo/comparar?v1=173437&v2=173440",
+      "title": "MG5 MCE — dimensiones",
+      "publisher": "Autocosmos México",
+      "sourceType": "automotive_media",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-24T00:00:00+08:00",
+      "language": "es",
+      "notes": "暂用于车长 4,607 mm；需用官方资料复核。"
+    },
+    {
+      "id": "mx-dof-tigie-reform-2025-12-29",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5777376",
+      "title": "Decreto por el que se reforman diversas fracciones arancelarias de la TIGIE",
+      "publisher": "Diario Oficial de la Federación",
+      "sourceType": "government_official",
+      "marketCode": "MX",
+      "publishedAt": "2025-12-29T00:00:00-06:00",
+      "accessedAt": "2026-10-24T00:00:00+08:00",
+      "language": "es",
+      "notes": "将 8703.22.99、8703.23.99、8703.24.99、8703.32.99、8703.33.99、8703.40.99、8703.60.99、8703.80.01 等整车税号的进口税率列为 50%。"
+    },
+    {
+      "id": "mx-economia-tariff-package-2025-12-18",
+      "url": "https://podecobi.economia.gob.mx/noticias/paquete-arancelario-para-proteger-empleos-en-industrias-estrategicas/",
+      "title": "Paquete arancelario para proteger empleos en industrias estratégicas",
+      "publisher": "Secretaría de Economía",
+      "sourceType": "government_official",
+      "marketCode": "MX",
+      "publishedAt": "2025-12-18T00:00:00-06:00",
+      "accessedAt": "2026-10-24T00:00:00+08:00",
+      "language": "es",
+      "notes": "说明关税措施自 2026 年 1 月 1 日生效，并排除与墨西哥已有贸易协定国家的适用情形。"
+    },
+    {
+      "id": "kz-kao-sales-2026-09",
+      "url": "https://kao.kz/ru/novosti/102/",
+      "title": "Продажи автомобилей в сентябре 2026 года",
+      "publisher": "Казахстанский автомобильный союз",
+      "sourceType": "industry_association",
+      "marketCode": "KZ",
+      "publishedAt": "2026-10-21T00:00:00+05:00",
+      "accessedAt": "2026-10-24T23:00:00+08:00",
+      "language": "ru",
+      "notes": "9 月 19,309 辆；1—9 月 165,678 辆；Cobalt 9 月 2,906 辆。"
+    },
+    {
+      "id": "kz-kao-production-2026-09",
+      "url": "https://kao.kz/ru/novosti/101/",
+      "title": "Производство автомобилей за январь–сентябрь 2026 года",
+      "publisher": "Казахстанский автомобильный союз",
+      "sourceType": "industry_association",
+      "marketCode": "KZ",
+      "publishedAt": "2026-10-07T00:00:00+05:00",
+      "accessedAt": "2026-10-24T23:00:00+08:00",
+      "language": "ru",
+      "notes": "1—9 月生产 146,541 辆；Cobalt 27,659 辆；Chery 品牌 12,593 辆。"
+    },
+    {
+      "id": "kz-bscb-model-sales-2026-09",
+      "url": "https://bestsellingcarsblog.com/2026/10/kazakhstan-september-2026-changan-127-1-haval-88-3-shine/",
+      "title": "Kazakhstan September 2026: Changan, Haval shine",
+      "publisher": "BestSellingCarsBlog",
+      "sourceType": "sales_data_provider",
+      "marketCode": "KZ",
+      "accessedAt": "2026-10-24T23:00:00+08:00",
+      "language": "en",
+      "notes": "2026 年 9 月/1—9 月：Cobalt 2,906/24,561；C级 Sedan 122/1,079；Arrizo 6 73/1,031。Cobalt 月度值与 KAO 一致。"
+    },
+    {
+      "id": "kz-chevrolet-cobalt-page",
+      "url": "https://chevrolet-auto.kz/models/cobalt",
+      "title": "Chevrolet Cobalt — комплектации и цены",
+      "publisher": "Chevrolet Kazakhstan",
+      "sourceType": "local_model_page",
+      "marketCode": "KZ",
+      "accessedAt": "2026-10-24T23:00:00+08:00",
+      "language": "ru",
+      "notes": "标准 Cobalt：Optimum AT 6,490,000；Elegant AT 6,790,000 KZT；1,485cc/106 hp/车长 4,479 mm。"
+    },
+    {
+      "id": "kz-chevrolet-cobalt-mcm-page",
+      "url": "https://chevrolet-auto.kz/models/cobalt-mcm",
+      "title": "Chevrolet Cobalt MCM — комплектации и цены",
+      "publisher": "Chevrolet Kazakhstan",
+      "sourceType": "local_model_page",
+      "marketCode": "KZ",
+      "accessedAt": "2026-10-24T23:00:00+08:00",
+      "language": "ru",
+      "notes": "MCM 三个配置 6,390,000—6,690,000 KZT；1.5L/102 hp/6AT。"
+    },
+    {
+      "id": "kz-chevrolet-cobalt-promo-oct-2026",
+      "url": "https://terra.chevrolet-auto.kz/news/cobalt-price",
+      "title": "Cobalt по цене от 5 990 000 ₸",
+      "publisher": "Terra Motors / Chevrolet Kazakhstan",
+      "sourceType": "authorized_dealer",
+      "marketCode": "KZ",
+      "publishedAt": "2026-10-17T00:00:00+05:00",
+      "accessedAt": "2026-10-24T23:00:00+08:00",
+      "language": "ru",
+      "notes": "限量活动；页面未披露结束日期。"
+    },
+    {
+      "id": "kz-chevrolet-warranty",
+      "url": "https://terra.chevrolet-auto.kz/owners/warranty",
+      "title": "Гарантия Chevrolet",
+      "publisher": "Terra Motors / Chevrolet Kazakhstan",
+      "sourceType": "official_aftersales",
+      "marketCode": "KZ",
+      "accessedAt": "2026-10-24T23:00:00+08:00",
+      "language": "ru",
+      "notes": "整车 3 年或 100,000 km。"
+    },
+    {
+      "id": "kz-chery-arrizo6-page",
+      "url": "https://chery.kz/ru/cars/arrizo-6/",
+      "title": "Chery ARRIZO 6 — комплектации и цены",
+      "publisher": "Chery Kazakhstan",
+      "sourceType": "local_model_page",
+      "marketCode": "KZ",
+      "accessedAt": "2026-10-24T23:00:00+08:00",
+      "language": "ru",
+      "notes": "MY2026 两个配置 7,590,000 与 8,290,000 KZT；页面注明价格包含营销活动。"
+    },
+    {
+      "id": "kz-chery-arrizo6-pdf",
+      "url": "https://chery.kz/userdata/rubrics/rubrics_202/file_ru.pdf?1771002535=",
+      "title": "Chery ARRIZO 6 — прайс-лист и характеристики",
+      "publisher": "Chery Kazakhstan",
+      "sourceType": "official_pdf",
+      "marketCode": "KZ",
+      "accessedAt": "2026-10-24T23:00:00+08:00",
+      "language": "ru",
+      "notes": "5 年/150,000 km 质保；1,498cc、147 hp。价格以当前网页为准。"
+    },
+    {
+      "id": "kz-chery-arrizo6-finance",
+      "url": "https://chery.kz/ru/promo/218/",
+      "title": "ARRIZO 6 с первоначальным взносом от 5%",
+      "publisher": "Chery Kazakhstan",
+      "sourceType": "official_promotion",
+      "marketCode": "KZ",
+      "accessedAt": "2026-10-24T23:00:00+08:00",
+      "language": "ru",
+      "notes": "官方活动索引仍可访问，但缺利率、期限、金融机构和结束日期，故标为待验证。"
+    },
+    {
+      "id": "kz-eaeu-tariff-8703-2026",
+      "url": "https://eec.eaeunion.org/comission/department/catr/ett/ru.2022/ru.87_2022_22.01.2026.pdf",
+      "title": "Единый таможенный тариф ЕАЭС, группа 87",
+      "publisher": "Евразийская экономическая комиссия",
+      "sourceType": "government_official",
+      "marketCode": "KZ",
+      "publishedAt": "2026-01-22T00:00:00+03:00",
+      "accessedAt": "2026-10-24T23:00:00+08:00",
+      "language": "ru",
+      "notes": "8703 22 109 9：新汽油乘用车，1,000—1,500cc，其他，税率 15%。"
+    },
+    {
+      "id": "kz-kgd-third-country-import",
+      "url": "https://www.gov.kz/org/kgd-kostanay/press/news/details/1113612",
+      "title": "Ввоз автомобилей из третьих стран в коммерческих целях",
+      "publisher": "Комитет государственных доходов Республики Казахстан",
+      "sourceType": "government_official",
+      "marketCode": "KZ",
+      "accessedAt": "2026-10-24T23:00:00+08:00",
+      "language": "ru",
+      "notes": "第三国商业进口需申报并按 EAEU 统一关税或哈萨克斯坦 WTO 清单缴税；页面具体发布日期需复核。"
+    },
+    {
+      "id": "kz-kgd-vat-2026",
+      "url": "https://www.gov.kz/org/kgd-abay/press/news/details/1115507",
+      "title": "Ставка НДС с 1 января 2026 года",
+      "publisher": "Комитет государственных доходов Республики Казахстан",
+      "sourceType": "government_official",
+      "marketCode": "KZ",
+      "accessedAt": "2026-10-24T23:00:00+08:00",
+      "language": "ru",
+      "notes": "2026-01-01 起标准增值税率及可税进口增值税率为 16%。"
+    },
+    {
+      "id": "kz-eaeu-china-nonpreferential",
+      "url": "https://eec.eaeunion.org/upload/iblock/d52/d526cf927bf6f174ad49ba8bd06182ce.pdf",
+      "title": "Соглашение о торгово-экономическом сотрудничестве между ЕАЭС и КНР",
+      "publisher": "Евразийская экономическая комиссия",
+      "sourceType": "government_official",
+      "marketCode": "KZ",
+      "accessedAt": "2026-10-24T23:00:00+08:00",
+      "language": "ru",
+      "notes": "EAEU—中国协定为非优惠经贸合作协定，不取消适用关税。"
+    },
+    {
+      "id": "sa-daleel-automotive",
+      "url": "https://daleel.gov.sa/ar/market-insight/automotive",
+      "title": "دليل | السيارات",
+      "publisher": "Daleel / Saudi industrial platform",
+      "sourceType": "government_official",
+      "marketCode": "SA",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "ar",
+      "notes": "2025 new-vehicle market volume and 2030 outlook."
+    },
+    {
+      "id": "sa-h1-2026-market",
+      "url": "https://blog.halacarly.com/en/car-sales-in-saudi-arabia-h1-2026-the-full-numbers-by-brand/",
+      "title": "Saudi Arabia Car Sales H1 2026",
+      "publisher": "HalaCarly",
+      "sourceType": "automotive_media",
+      "marketCode": "SA",
+      "publishedAt": "2026-09-17T00:00:00+03:00",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "en",
+      "notes": "Corrected article citing Best Selling Cars Blog: 313,458 and -23.5%."
+    },
+    {
+      "id": "sa-h1-2026-sedans",
+      "url": "https://blog.halacarly.com/en/best-selling-sedans-in-saudi-arabia/",
+      "title": "Top-Selling Sedans in Saudi Arabia H1 2026",
+      "publisher": "HalaCarly",
+      "sourceType": "automotive_media",
+      "marketCode": "SA",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "en",
+      "notes": "H1 2026 sedan model ranking including Yaris 15,656."
+    },
+    {
+      "id": "sa-icartea-h1-2025-chinese",
+      "url": "https://www.icartea.com/en/news/list-of-the-best-selling-chinese-cars-in-saudi-arabia-for-the-first-half-of-2025?source=1",
+      "title": "Best Selling Chinese Cars in Saudi Arabia H1 2025",
+      "publisher": "Cartea",
+      "sourceType": "sales_data_provider",
+      "marketCode": "SA",
+      "publishedAt": "2025-08-14T00:00:00+04:00",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "en",
+      "notes": "H1 2025 MG5 4,910 and C级 Sedan 3,213; article says official sales data but does not expose the underlying registry."
+    },
+    {
+      "id": "sa-zatca-vehicle-duty",
+      "url": "https://eservices.zatca.gov.sa/sites/sc/en/CustomsGuideNew/CustomsGuideLandPorts/Pages/Page13.aspx",
+      "title": "Assessment of Vehicles Customs Duty",
+      "publisher": "Zakat, Tax and Customs Authority",
+      "sourceType": "government_official",
+      "marketCode": "SA",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "en",
+      "notes": "States 5% customs duty for motor cars."
+    },
+    {
+      "id": "sa-zatca-vehicle-calculator",
+      "url": "https://eservices.zatca.gov.sa/sites/sc/ar/PublicInquiryServices/Pages/InquiryContentPages/CalcCarFees.aspx",
+      "title": "Vehicle Import Duty Calculator",
+      "publisher": "Zakat, Tax and Customs Authority",
+      "sourceType": "government_official",
+      "marketCode": "SA",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "ar",
+      "notes": "Shows 5% customs and 15% VAT calculation base; calculator is indicative."
+    },
+    {
+      "id": "sa-zatca-integrated-tariff",
+      "url": "https://zatca.gov.sa/en/RulesRegulations/Taxes/Pages/Integrated-Tarrifs.aspx",
+      "title": "Integrated Tariffs",
+      "publisher": "Zakat, Tax and Customs Authority",
+      "sourceType": "government_official",
+      "marketCode": "SA",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "en",
+      "notes": "GCC 12-digit integrated tariff implemented from 2025-01-01."
+    },
+    {
+      "id": "sa-zatca-import-controls",
+      "url": "https://zatca.gov.sa/en/RulesRegulations/Taxes/Pages/customs-individual/import-vehicles.aspx",
+      "title": "Vehicle Import Controls",
+      "publisher": "Zakat, Tax and Customs Authority",
+      "sourceType": "government_official",
+      "marketCode": "SA",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "en",
+      "notes": "Vehicle age, efficiency, prohibited categories, origin documents and GCC first-entry rules."
+    },
+    {
+      "id": "sa-saso-saber",
+      "url": "https://www.saso.gov.sa/ar/eservices/Pages/MainEServicesDetails.aspx?serviceid=458",
+      "title": "استيراد مركبات/دراجات آلية",
+      "publisher": "Saudi Standards, Metrology and Quality Organization",
+      "sourceType": "government_official",
+      "marketCode": "SA",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "ar",
+      "notes": "SABER vehicle shipment conformity certificate process."
+    },
+    {
+      "id": "sa-gaft-agreements",
+      "url": "https://gaft.gov.sa/en/faq",
+      "title": "GAFT FAQ — Trade Agreements",
+      "publisher": "General Authority of Foreign Trade",
+      "sourceType": "government_official",
+      "marketCode": "SA",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "en",
+      "notes": "Lists current Saudi/GCC trade agreements; China is not listed."
+    },
+    {
+      "id": "sa-mg5-model",
+      "url": "https://www.mg-sa.com/ar/models/mg-5/",
+      "title": "إم جي 5",
+      "publisher": "MG Saudi Arabia",
+      "sourceType": "local_model_page",
+      "marketCode": "SA",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "ar",
+      "notes": "Local availability, official starting price and core specifications."
+    },
+    {
+      "id": "sa-mg-warranty",
+      "url": "https://www.mg-sa.com/owners/warranty/",
+      "title": "Warranty Information",
+      "publisher": "MG Saudi Arabia",
+      "sourceType": "official_aftersales",
+      "marketCode": "SA",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "en",
+      "notes": "6y/200k standard warranty for most GCC-registered models and exclusions."
+    },
+    {
+      "id": "sa-mg5-deluxe-mynaghi",
+      "url": "https://mynaghi.sa/en/catalog/cars/687fcf0b4ef6c2b2ea8ccfa258c6c14e",
+      "title": "MG 5 1.5L CVT 2026 DELUXE",
+      "publisher": "Mohamed Yousuf Naghi",
+      "sourceType": "authorized_dealer",
+      "marketCode": "SA",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "en",
+      "notes": "2026 Deluxe listing, price, dimensions and specifications; marked reserved."
+    },
+    {
+      "id": "sa-toyota-yaris-model",
+      "url": "https://www.toyota.com.sa/ar/vehicles/yaris",
+      "title": "تويوتا يارس 2026",
+      "publisher": "Toyota Saudi Arabia / Abdul Latif Jameel Motors",
+      "sourceType": "local_model_page",
+      "marketCode": "SA",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "ar",
+      "notes": "Official variants, prices, shipping fee and specifications."
+    },
+    {
+      "id": "sa-toyota-yaris-spec",
+      "url": "https://www.toyota.com.sa/ar/vehicles/yaris/yaris-specs",
+      "title": "مواصفات تويوتا يارس 2026",
+      "publisher": "Toyota Saudi Arabia / Abdul Latif Jameel Motors",
+      "sourceType": "local_model_page",
+      "marketCode": "SA",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "ar",
+      "notes": "Variant specifications and 3y/100k warranty statement."
+    },
+    {
+      "id": "sa-toyota-yaris-finance",
+      "url": "https://www.aljfinance.com/en/offers/yarisoffer",
+      "title": "Toyota Yaris Offer",
+      "publisher": "Abdul Latif Jameel United Finance",
+      "sourceType": "official_promotion",
+      "marketCode": "SA",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "en",
+      "notes": "Yaris 2026 monthly payments, 60-month term and financing benefits."
+    },
+    {
+      "id": "sa-toyota-warranty",
+      "url": "https://www.toyota.com.sa/en/my-toyota/warranty",
+      "title": "Toyota Warranty",
+      "publisher": "Toyota Saudi Arabia / Abdul Latif Jameel Motors",
+      "sourceType": "official_aftersales",
+      "marketCode": "SA",
+      "accessedAt": "2026-10-24T12:00:00+08:00",
+      "language": "en",
+      "notes": "36 months/100,000 km and free 1,000 km service."
+    },
+    {
+      "id": "ae-mg5-page",
+      "url": "https://www.mg-uae.com/models/mg-5/",
+      "title": "MG 5 UAE model page",
+      "publisher": "MG UAE / Inter Emirates Motors",
+      "sourceType": "local_model_page",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en"
+    },
+    {
+      "id": "ae-mg-warranty",
+      "url": "https://www.mg-uae.com/owners/warranty",
+      "title": "MG UAE warranty information",
+      "publisher": "MG UAE / Inter Emirates Motors",
+      "sourceType": "official_aftersales",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en"
+    },
+    {
+      "id": "ae-mg-offer-pay-next-year",
+      "url": "https://www.mg-uae.com/offers/new-cars/drive-now-pay-next-year.",
+      "title": "Drive now, pay next year",
+      "publisher": "MG UAE / Inter Emirates Motors",
+      "sourceType": "official_promotion",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en",
+      "notes": "当前页面显示MG 5从AED 855/月起，含首付支持、免费保养、贴膜、道路救援和注册；有效至库存售罄，未列固定结束日期。"
+    },
+    {
+      "id": "ae-mg-fazaa",
+      "url": "https://www.mg-uae.com/offers/new-cars/fazaa-offer/",
+      "title": "Fazaa card holder offer",
+      "publisher": "MG UAE / Inter Emirates Motors",
+      "sourceType": "official_promotion",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en",
+      "notes": "MG5 LUX 2026享AED 1,000额外折扣；仅Fazaa持卡人，未列固定结束日期。"
+    },
+    {
+      "id": "ae-toyota-yaris",
+      "url": "https://www.toyota.ae/en/new-cars/yaris/",
+      "title": "Toyota Yaris Sedan 2026 UAE",
+      "publisher": "Toyota UAE / Al-Futtaim Motors",
+      "sourceType": "local_model_page",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en"
+    },
+    {
+      "id": "ae-toyota-warranty",
+      "url": "https://www.toyota.ae/en/owners/warranty/",
+      "title": "Toyota UAE warranty",
+      "publisher": "Toyota UAE / Al-Futtaim Motors",
+      "sourceType": "official_aftersales",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en"
+    },
+    {
+      "id": "ae-toyota-yaris-business",
+      "url": "https://www.toyota.ae/en/offers/business-solutions/business-solutions-yaris/",
+      "title": "Toyota Yaris business offer",
+      "publisher": "Toyota UAE / Al-Futtaim Motors",
+      "sourceType": "official_promotion",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en",
+      "notes": "页面显示Yaris企业方案从AED 899/月起，含保养合同、延长保修、防锈及注册；未列固定起止日期。"
+    },
+    {
+      "id": "ae-nissan-dubai-network",
+      "url": "https://en.nissan-dubai.com/",
+      "title": "Nissan Dubai and Northern Emirates",
+      "publisher": "Nissan / Arabian Automobiles",
+      "sourceType": "authorized_dealer",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en",
+      "notes": "Arabian Automobiles为迪拜及北部酋长国独家经销商。"
+    },
+    {
+      "id": "ae-nissan-abudhabi-network",
+      "url": "https://en.buyonline.nissan-abudhabi.com/about-us/",
+      "title": "Nissan distributor in Abu Dhabi and Al Ain",
+      "publisher": "Nissan / Al Masaood Automobiles",
+      "sourceType": "authorized_dealer",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en"
+    },
+    {
+      "id": "ae-nissan-warranty",
+      "url": "https://www.nissan-me.com/owners/nissan-warranty.html",
+      "title": "Nissan Middle East warranty",
+      "publisher": "Nissan Middle East",
+      "sourceType": "official_aftersales",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en"
+    },
+    {
+      "id": "ae-changan-alsvin",
+      "url": "https://www.changan.ae/buy-online/alsvin?grade=1",
+      "title": "Changan Alsvin Advance UAE",
+      "publisher": "Changan UAE / Union Motors",
+      "sourceType": "local_model_page",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en"
+    },
+    {
+      "id": "ae-changan-price-secondary",
+      "url": "https://dubaicarindex.com/buy/new/changan/alsvin",
+      "title": "Changan Alsvin Dubai price guide",
+      "publisher": "Dubai Car Index",
+      "sourceType": "automotive_media",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en",
+      "notes": "二手/新车价格指南，声称价格源为Union Motors；用于线索，不视为厂家价格确认。"
+    },
+    {
+      "id": "ae-nissan-sunny-price-secondary",
+      "url": "https://dubaicarindex.com/buy/new/nissan/sunny",
+      "title": "Nissan Sunny Dubai price guide",
+      "publisher": "Dubai Car Index",
+      "sourceType": "automotive_media",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en",
+      "notes": "公开价格指南，未在当前Nissan官方页面找到可见现金价，故仅作为未确认线索。"
+    },
+    {
+      "id": "ae-mg5-dimensions-secondary",
+      "url": "https://www.madena.ae/cars/mg/mg-5",
+      "title": "MG 5 UAE trims and dimensions",
+      "publisher": "Madena",
+      "sourceType": "automotive_media",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en",
+      "notes": "声称规格源自MG媒体库；车身长度用于待复核比较。"
+    },
+    {
+      "id": "ae-uae-market-2025",
+      "url": "https://bestsellingcarsblog.com/2026/02/united-arab-emirates-full-year-2025-toyota-hilux-leads-jetour-t2-3/",
+      "title": "United Arab Emirates full year 2025 vehicle market",
+      "publisher": "Best Selling Cars Blog",
+      "sourceType": "sales_data_provider",
+      "marketCode": "AE",
+      "publishedAt": "2026-02-04T00:00:00+04:00",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en"
+    },
+    {
+      "id": "ae-uae-market-2026",
+      "url": "https://www.focus2move.com/emirates-automotive-market/",
+      "title": "UAE vehicle market YTD July 2026",
+      "publisher": "Focus2move",
+      "sourceType": "sales_data_provider",
+      "marketCode": "AE",
+      "publishedAt": "2026-08-19T00:00:00+04:00",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en"
+    },
+    {
+      "id": "ae-vat-automotive",
+      "url": "https://tax.gov.ae/DownloadOpenTextFile?fileUrl=en%2FVAT_VAT_Guides%2FAutomotive_Sector%2FAutomotive_Sector_EN_29_06_2021_EN.pdf",
+      "title": "Automotive Sector VAT Guide",
+      "publisher": "UAE Federal Tax Authority",
+      "sourceType": "government_official",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en",
+      "notes": "官方指引说明阿联酋境内汽车销售适用5% VAT。"
+    },
+    {
+      "id": "ae-customs-union",
+      "url": "https://icp.gov.ae/en/customs-union-for-gcc/",
+      "title": "Customs Union for GCC States",
+      "publisher": "UAE Federal Authority for Identity, Citizenship, Customs and Port Security",
+      "sourceType": "government_official",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en"
+    },
+    {
+      "id": "ae-integrated-tariff",
+      "url": "https://www.dubaicustoms.gov.ae/en/PoliciesAndNotices/Documents/IntegratedCustomsTariff.pdf",
+      "title": "UAE Integrated Customs Tariff",
+      "publisher": "Dubai Customs",
+      "sourceType": "government_official",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en/ar",
+      "notes": "87.03项下乘用车税目显示5%税率；具体12位税号须按车辆参数和申报安排确认。"
+    },
+    {
+      "id": "ae-cepa-list",
+      "url": "https://www.moet.gov.ae/en/cepa",
+      "title": "UAE Comprehensive Economic Partnership Agreements",
+      "publisher": "UAE Ministry of Economy and Tourism",
+      "sourceType": "government_official",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en"
+    },
+    {
+      "id": "ae-import-guide",
+      "url": "https://u.ae/-/media/Information-and-services/Business/UAE-imports-and-exports-guide-eng.pdf",
+      "title": "UAE imports and exports guide",
+      "publisher": "Official Portal of the UAE Government",
+      "sourceType": "government_official",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en"
+    },
+    {
+      "id": "ae-rental-market",
+      "url": "https://www.mordorintelligence.com/industry-reports/united-arab-emirates-car-rental-market",
+      "title": "UAE car rental market",
+      "publisher": "Mordor Intelligence",
+      "sourceType": "other",
+      "marketCode": "AE",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en",
+      "notes": "二级市场研究；用于说明经济型车辆在租赁收入中的高占比，不能替代官方销量。"
+    },
+    {
+      "id": "ae-mg-fleet-mix",
+      "url": "https://www.yallamotor.com/news/uae-car-dealers-kia-mg-and-freelander-2026-55801",
+      "title": "UAE MG distributor sales and fleet mix",
+      "publisher": "YallaMotor",
+      "sourceType": "automotive_media",
+      "marketCode": "AE",
+      "publishedAt": "2026-10-21T00:00:00+04:00",
+      "accessedAt": "2026-10-24T16:00:00+08:00",
+      "language": "en",
+      "notes": "报道引用IEM数据：2021年以来累计MG销量中约45%来自车队及机构客户。"
+    },
+    {
+      "id": "MX-S01",
+      "url": "https://www.kia.com/content/dam/kwcms/mx/es/images/showroom/2027/k3-sedan/pdf/brochure_K3_Sedan_2027.pdf",
+      "title": "K3 Sedán 2027 – folleto oficial",
+      "publisher": "Kia México",
+      "sourceType": "official_brochure",
+      "marketCode": "MX",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "es",
+      "notes": "官方 PDF；规格表为矢量图形表格，已按 400dpi 渲染核对数值"
+    },
+    {
+      "id": "MX-S02",
+      "url": "https://www.kia.com/mx/showroom/k3-sedan.html",
+      "title": "Kia K3 Sedán 2027 | Subcompacto",
+      "publisher": "Kia México",
+      "sourceType": "official_model_page",
+      "marketCode": "MX",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "es",
+      "notes": "官网版本与“Configura por”价格；页面标注 2027 年款"
+    },
+    {
+      "id": "MX-S04",
+      "url": "https://cdn.mgmotor.com.mx/storage/fichas-tecnicas/mg-mg5nuevo-2027-ficha-tecnica-01.pdf",
+      "title": "MG5 MCE 2027 – ficha técnica",
+      "publisher": "MG Motor México",
+      "sourceType": "official_brochure",
+      "marketCode": "MX",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "es",
+      "notes": "图像型 PDF（3 页），已渲染为 PNG 逐页读取"
+    },
+    {
+      "id": "MX-S05",
+      "url": "https://www.mgmotor.com.mx/vehiculos/mg5nuevo",
+      "title": "MG5 | MG Motor México",
+      "publisher": "MG Motor México",
+      "sourceType": "official_model_page",
+      "marketCode": "MX",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "es",
+      "notes": "页面内嵌 JSON 含 versions 数组：指导价 price 与促销价 specialPrice"
+    },
+    {
+      "id": "MX-S11",
+      "url": "https://www.kmtc.co.kr/course/123/0",
+      "title": "ASIA MEXICO EXPRESS (AMX) port rotation & schedule",
+      "publisher": "KMTC (Korea Marine Transport)",
+      "sourceType": "carrier_schedule",
+      "marketCode": "MX",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "Shanghai(Waigaoqiao) → Manzanillo, Mexico T/D 21 天"
+    },
+    {
+      "id": "MX-S12",
+      "url": "https://goodhopefreight.com/info/news/nyk-container-tracking.html",
+      "title": "NYK AMX / AMC transit time tables (China–Latin America)",
+      "publisher": "Good Hope Freight",
+      "sourceType": "forwarder_schedule",
+      "marketCode": "MX",
+      "publishedAt": "2026-04-22",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "AMX: SHA→ZLO 20 天、SHA→LZC 22 天；AMC: SHA→ZLO 21 天、SHA→LZC 23 天"
+    },
+    {
+      "id": "MX-S14",
+      "url": "https://www.reddit.com/r/AutosMexico/comments/1svuuzx/mg5_2027/",
+      "title": "MG5 2027",
+      "publisher": "Reddit r/AutosMexico",
+      "sourceType": "forum",
+      "marketCode": "MX",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "es",
+      "notes": "18 条评论；仅公开搜索摘要可见，正文需登录"
+    },
+    {
+      "id": "MX-S15",
+      "url": "https://www.reddit.com/r/AutosMexico/comments/1j3lwz1/mg5_pregunte_lo_que_quiera/",
+      "title": "MG5 pregunte lo que quiera",
+      "publisher": "Reddit r/AutosMexico",
+      "sourceType": "forum",
+      "marketCode": "MX",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "es",
+      "notes": "58 条评论"
+    },
+    {
+      "id": "MX-S17",
+      "url": "https://www.reddit.com/r/AutosMexico/comments/1l4m3rk/comprar%C3%ADan_el_mg_5_2025/",
+      "title": "Comprarían el MG 5 2025?",
+      "publisher": "Reddit r/AutosMexico",
+      "sourceType": "forum",
+      "marketCode": "MX",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "es",
+      "notes": "34 条评论"
+    },
+    {
+      "id": "MX-S18",
+      "url": "https://www.reddit.com/r/AutosMexico/comments/1qpnr3a/qu%C3%A9_recomiendan_como_compra_mg5_elegance_2026_o/",
+      "title": "Qué recomiendan como compra, MG5 Elegance 2026 o C级 Sedan GF 2026?",
+      "publisher": "Reddit r/AutosMexico",
+      "sourceType": "forum",
+      "marketCode": "MX",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "es",
+      "notes": "28 条评论；含对 MG 维修成本的负面意见"
+    },
+    {
+      "id": "MX-S19",
+      "url": "https://www.reddit.com/r/AutosMexico/comments/1eq7l03/kia_k3_lx_mazda_2_i_sport_2024_o_yaris_2024/",
+      "title": "Kia K3 LX, Mazda 2 i Sport 2024 o Yaris 2024?",
+      "publisher": "Reddit r/AutosMexico",
+      "sourceType": "forum",
+      "marketCode": "MX",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "es",
+      "notes": "17 条评论"
+    },
+    {
+      "id": "MX-S20",
+      "url": "https://www.reddit.com/r/AutosMexico/comments/1oj8i6l/kia_k3_lx_mt_o_nissan_versa_advance_mt/",
+      "title": "KIA K3 LX MT o NISSAN VERSA ADVANCE MT?",
+      "publisher": "Reddit r/AutosMexico",
+      "sourceType": "forum",
+      "marketCode": "MX",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "es",
+      "notes": "10 条评论"
+    },
+    {
+      "id": "MX-S21",
+      "url": "https://www.reddit.com/r/AutosMexico/comments/1fqp80b/toyota_corolla_vs_prius_2016_vs_kia_k3_nuevo/",
+      "title": "Toyota Corolla vs Prius (2016) vs Kia k3 nuevo",
+      "publisher": "Reddit r/AutosMexico",
+      "sourceType": "forum",
+      "marketCode": "MX",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "es",
+      "notes": "41 条评论；含对 Kia 保修政策的正面评价"
+    },
+    {
+      "id": "KZ-S01",
+      "url": "https://chery.kz/cars/arrizo-6/",
+      "title": "Arrizo 6 – ресми сайт (Chery Kazakhstan)",
+      "publisher": "Chery Kazakhstan",
+      "sourceType": "official_model_page",
+      "marketCode": "KZ",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "kk/ru",
+      "notes": "含哈萨克语卖点、Comfort/Modern 两版价格与技术参数表"
+    },
+    {
+      "id": "KZ-S02",
+      "url": "https://chery.kz/userdata/rubrics/rubrics_202/file_kk.pdf",
+      "title": "CHERY ARRIZO 6 – НҰСҚАЛАРЫ МЕН БАҒАЛАРЫ (2026 ж.ш.)",
+      "publisher": "Chery Kazakhstan",
+      "sourceType": "official_brochure",
+      "marketCode": "KZ",
+      "publishedAt": "2026",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "kk",
+      "notes": "官方价格与配置 PDF，2 页"
+    },
+    {
+      "id": "KZ-S03",
+      "url": "https://carguru.kz/ru/cars/chevrolet/cobalt",
+      "title": "Chevrolet Cobalt 2026 — цена в Казахстане",
+      "publisher": "Carguru.kz",
+      "sourceType": "third_party_price_aggregator",
+      "marketCode": "KZ",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "ru",
+      "notes": "第三方聚合：3 个 AT 版本，6,290,000 / 6,490,000 / 6,790,000 ₸；版本名与价格对应关系未核实"
+    },
+    {
+      "id": "KZ-S08",
+      "url": "https://infohub.kz/ru/article/cobalt-kazahstan-uzbekistan-seny-krossovery",
+      "title": "Chevrolet Cobalt в Казахстане дороже, чем в Узбекистане",
+      "publisher": "InfoHub.kz",
+      "sourceType": "news",
+      "marketCode": "KZ",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "ru",
+      "notes": "2026 款 Cobalt 1.5L AT 在哈起价约 650 万坚戈"
+    },
+    {
+      "id": "SA-S01",
+      "url": "https://www.toyota.com.sa/en/vehicles/yaris",
+      "title": "Toyota Yaris 2026 – Stylish Economy Sedan | Toyota KSA",
+      "publisher": "Toyota / ALJ (Abdul Latif Jameel)",
+      "sourceType": "official_model_page",
+      "marketCode": "SA",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "三个等级（Y / Y Plus / YX）价格均含 3,162.50 SAR 运费"
+    },
+    {
+      "id": "SA-S02",
+      "url": "https://www.zigwheelsksa.com/new-cars/mg/5/price",
+      "title": "MG 5 Price in KSA – October 2026 offers",
+      "publisher": "ZigWheels KSA",
+      "sourceType": "third_party_price_aggregator",
+      "marketCode": "SA",
+      "publishedAt": "2026-10",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en/ar",
+      "notes": "报 SAR 53,990 起"
+    },
+    {
+      "id": "SA-S03",
+      "url": "https://www.drivearabia.com/carprices/ksa/mg/mg-5/2026/",
+      "title": "MG 5 2026 price in KSA, specs and reviews",
+      "publisher": "Drive Arabia",
+      "sourceType": "third_party_price_aggregator",
+      "marketCode": "SA",
+      "publishedAt": "2026",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "报 SAR 50,000 起"
+    },
+    {
+      "id": "SA-S04",
+      "url": "https://blog.halacarly.com/prices/new/mg/mg5/",
+      "title": "سعر إم جي MG5 2026 الجديدة في السعودية",
+      "publisher": "Halacarly",
+      "sourceType": "third_party_price_aggregator",
+      "marketCode": "SA",
+      "publishedAt": "2026",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "ar",
+      "notes": "报 51,251–52,311 SAR（含税）"
+    },
+    {
+      "id": "SA-S05",
+      "url": "https://www.sayarabay.com/new-cars/mg/5/price",
+      "title": "MG 5 Price Starts From SAR 53,705 In Saudi Arabia",
+      "publisher": "SayaraBay",
+      "sourceType": "third_party_price_aggregator",
+      "marketCode": "SA",
+      "publishedAt": "2026-10",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "报 SAR 53,705 起"
+    },
+    {
+      "id": "SA-S09",
+      "url": "https://cargoenter.com/routes/shanghai-to-jeddah/",
+      "title": "Shanghai to Jeddah Shipping Time | 16-22 Days",
+      "publisher": "CargoEnter",
+      "sourceType": "forwarder_schedule",
+      "marketCode": "SA",
+      "publishedAt": "2026",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "海运 16–22 天港到港，另加 2–5 天清关"
+    },
+    {
+      "id": "SA-S10",
+      "url": "https://www.cogoport.com/rates/shanghai-sp-to-jeddah-sp",
+      "title": "Shanghai to Jeddah FCL rates, schedules & transit time",
+      "publisher": "Cogoport",
+      "sourceType": "forwarder_schedule",
+      "marketCode": "SA",
+      "publishedAt": "2026-10",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "按最新承运人船期 21 天 7 小时"
+    },
+    {
+      "id": "SA-S11",
+      "url": "https://traqocontainer.com/routes/shanghai-to-jeddah",
+      "title": "Shanghai to Jeddah shipping — transit time & carriers",
+      "publisher": "Traqo",
+      "sourceType": "forwarder_schedule",
+      "marketCode": "SA",
+      "publishedAt": "2026",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "典型 12–22 天，航程约 4,369 nm；转运航線更长"
+    },
+    {
+      "id": "SA-S12",
+      "url": "https://www.cargorouter.com/freight-shipping/China/Shanghai/Saudi-Arabia/Jeddah/",
+      "title": "Ship from Shanghai to Jeddah – sea/road/rail/air",
+      "publisher": "CargoRouter",
+      "sourceType": "forwarder_schedule",
+      "marketCode": "SA",
+      "publishedAt": "2026",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "给出经一次转运的替代方案，时效估计 32.55 天"
+    },
+    {
+      "id": "AE-S01",
+      "url": "https://www.toyota.ae/en/new-cars/yaris/",
+      "title": "The New Toyota Yaris 2026 Sedan in UAE – Price & Specs",
+      "publisher": "Al-Futtaim Toyota UAE",
+      "sourceType": "official_model_page",
+      "marketCode": "AE",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "“From 64,900”，月供 1,017；1.5L 4 缸 CVT"
+    },
+    {
+      "id": "AE-S02",
+      "url": "https://www.zigwheels.ae/new-cars/mg/5/price",
+      "title": "MG 5 2026 price in UAE",
+      "publisher": "ZigWheels UAE",
+      "sourceType": "third_party_price_aggregator",
+      "marketCode": "AE",
+      "publishedAt": "2026-10",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "报 AED 54,000–57,500"
+    },
+    {
+      "id": "AE-S03",
+      "url": "https://www.zigwheels.ae/new-cars/nissan/sunny",
+      "title": "Nissan Sunny price in UAE, specs & reviews",
+      "publisher": "ZigWheels UAE",
+      "sourceType": "third_party_price_aggregator",
+      "marketCode": "AE",
+      "publishedAt": "2026",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "页面标注“Discontinued in Jul, 2025”；最后记录价 AED 61,500–81,500（2024-03，阿布扎比）"
+    },
+    {
+      "id": "AE-S04",
+      "url": "https://www.zigwheels.ae/new-cars/changan/alsvin",
+      "title": "Changan Alsvin price in UAE, specs & reviews",
+      "publisher": "ZigWheels UAE",
+      "sourceType": "third_party_price_aggregator",
+      "marketCode": "AE",
+      "publishedAt": "2026",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "单一版本 1.5L Advanced AT FWD；未公布 AED 价格，仅称比 Yaris 便宜约 AED 20,000+"
+    },
+    {
+      "id": "AE-S05",
+      "url": "https://www.changan.ae/vehicle/alsvin",
+      "title": "Alsvin | Changan UAE",
+      "publisher": "Changan UAE (Al-Futtaim)",
+      "sourceType": "official_model_page",
+      "marketCode": "AE",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "官方卖点页：1.5 L、5DCT、145 N·m"
+    },
+    {
+      "id": "AE-S06",
+      "url": "https://www.culines.com/en/site/details/581",
+      "title": "CULINES Middle East service – transit time release",
+      "publisher": "CULINES (中联航运)",
+      "sourceType": "carrier_schedule",
+      "marketCode": "AE",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "Shekou/Ningbo/Shanghai → Jebel Ali 分别为 14/16/18 天"
+    },
+    {
+      "id": "AE-S07",
+      "url": "https://www.cogoport.com/rates/shanghai-sp-to-jebel-ali-sp",
+      "title": "Shanghai to Jebel Ali FCL rates, schedules & transit time",
+      "publisher": "Cogoport",
+      "sourceType": "forwarder_schedule",
+      "marketCode": "AE",
+      "publishedAt": "2026-10",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "按最新船期 18 天 14 小时"
+    },
+    {
+      "id": "AE-S08",
+      "url": "https://traqocontainer.com/routes/shanghai-to-jebel-ali",
+      "title": "Shanghai to Jebel Ali shipping – transit time & carriers",
+      "publisher": "Traqo",
+      "sourceType": "forwarder_schedule",
+      "marketCode": "AE",
+      "publishedAt": "2026",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "典型 12–22 天，约 3,485 nm"
+    },
+    {
+      "id": "AE-S09",
+      "url": "https://www.freightscanner.co/freight/shanghai-cnsha-to-jebel-ali-aedxb",
+      "title": "Ocean freight Shanghai to Jebel Ali – transit & schedules",
+      "publisher": "FreightScanner",
+      "sourceType": "forwarder_schedule",
+      "marketCode": "AE",
+      "publishedAt": "2026",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "典型 14–22 天；直航取低值、转运取高值"
+    },
+    {
+      "id": "AE-S13",
+      "url": "https://www.reddit.com/r/CarsForSaleUAE/comments/1w7cpkj/need_advice_used_sedan_for_daily_site_work_in/",
+      "title": "Need advice — used sedan for daily site work in Dubai/Sharjah (Ciaz vs Sunny vs Attrage?)",
+      "publisher": "Reddit r/CarsForSaleUAE",
+      "sourceType": "forum",
+      "marketCode": "AE",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "5 条评论；含实际油耗提问"
+    },
+    {
+      "id": "AE-S15",
+      "url": "https://www.mgmotor.me/models/mg-5/",
+      "title": "MG 5 | Refined Everyday Sedan | MG Middle East",
+      "publisher": "MG Motor Middle East",
+      "sourceType": "official_model_page",
+      "marketCode": "AE",
+      "publishedAt": "",
+      "accessedAt": "2026-10-25T14:29:00+08:00",
+      "language": "en",
+      "notes": "区域版参数：1.5L 110hp / 140Nm / 16.8 km/L / 406 L 行李厢"
+    }
+  ]
+}

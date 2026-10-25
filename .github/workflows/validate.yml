@@ -1,4 +1,4 @@
-name: Validate Marketing Buddy
+name: Validate public website
 
 on:
   pull_request:
@@ -16,5 +16,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node scripts/validate-data.mjs
-      - run: node scripts/test-site.mjs
+      - run: node --check app.js
+      - run: node scripts/validate-public.mjs

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Marketing Buddy Weekly Update"
-  short_description: "Validate and publish guarded weekly intelligence updates"
-  default_prompt: "Use $marketing-buddy-weekly-update to run the configured weekly refresh, publish only eligible data changes, and report held items without changing the product structure."
