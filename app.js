@@ -1,351 +1,450 @@
-const DATA_URL = './data/autointel-v1.6.global.json';
+const DATA_URL = './data/public.json';
 
 const MARKET_META = {
-  MX: { flag: '🇲🇽', name: '墨西哥', focus: '已完成首轮基线研究' },
-  KZ: { flag: '🇰🇿', name: '哈萨克斯坦', focus: '已完成首轮基线研究' },
-  SA: { flag: '🇸🇦', name: '沙特阿拉伯', focus: '已完成首轮基线研究' },
-  AE: { flag: '🇦🇪', name: '阿联酋', focus: '已完成首轮基线研究；竞品建议待确认' }
+  MX: { flag: '🇲🇽', name: '墨西哥', shipping: true },
+  KZ: { flag: '🇰🇿', name: '哈萨克斯坦', shipping: false },
+  SA: { flag: '🇸🇦', name: '沙特阿拉伯', shipping: true },
+  AE: { flag: '🇦🇪', name: '阿联酋', shipping: true }
 };
 
 const state = { data: null };
 const app = document.querySelector('#app');
 const breadcrumb = document.querySelector('#breadcrumb');
 
-const escapeHtml = (value = '') => String(value)
+const redact = (value = '') => String(value);
+
+const escapeHtml = (value = '') => redact(value)
   .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
   .replaceAll('"', '&quot;').replaceAll("'", '&#039;');
 
-const compact = (value, max = 105) => {
-  if (!value) return '尚未采集，等待下一轮研究。';
-  return value.length > max ? `${value.slice(0, max)}…` : value;
+const compact = (value, max = 130) => {
+  const text = redact(value || '');
+  return text.length > max ? `${text.slice(0, max)}…` : text;
 };
 
-const money = (amount, currency = 'MXN') => {
-  if (amount === undefined || amount === null) return '待补充';
-  return new Intl.NumberFormat('zh-CN', { style: 'currency', currency, maximumFractionDigits: 0 }).format(amount);
-};
+const number = value => Number.isFinite(value) ? new Intl.NumberFormat('zh-CN').format(value) : '待研究';
+const money = (amount, currency) => Number.isFinite(amount)
+  ? new Intl.NumberFormat('zh-CN', { style: 'currency', currency: currency || 'USD', maximumFractionDigits: 0 }).format(amount)
+  : '待研究';
 
-const number = (value) => value === undefined || value === null ? '待补充' : new Intl.NumberFormat('zh-CN').format(value);
-const factText = (fact) => fact?.status === 'confirmed' ? fact.value : '待补充';
-const first = (items) => Array.isArray(items) ? items[0] : items;
-const sourceMap = () => new Map(state.data.sources.map(source => [source.id, source]));
-const vehicleMap = () => new Map(state.data.vehicles.map(vehicle => [vehicle.id, vehicle]));
+const sourceMap = () => new Map((state.data.sources || []).map(source => [source.id, source]));
+const vehicleMap = () => new Map((state.data.vehicles || []).map(vehicle => [vehicle.id, vehicle]));
+const first = items => Array.isArray(items) ? items[0] : undefined;
 
 function loading() {
-  app.innerHTML = `<div class="loading"><div class="skeleton" style="width:28%"></div><div class="skeleton" style="width:70%;height:52px"></div><div class="skeleton" style="width:86%"></div><div class="skeleton" style="height:250px;margin-top:25px"></div></div>`;
+  app.innerHTML = `<div class="loading"><div></div><div></div><div></div></div>`;
 }
 
 function updateNav(route) {
   document.querySelectorAll('.nav-item').forEach(item => item.classList.toggle('active', item.dataset.route === route));
 }
 
-function sectionHead(no, label, title, note = '') {
-  return `<div class="section-head"><div><span class="section-no">${no} · ${escapeHtml(label)}</span><h2>${escapeHtml(title)}</h2></div>${note ? `<p>${escapeHtml(note)}</p>` : ''}</div>`;
-}
-
-function statusTag(confirmed, label) {
-  return `<span class="tag ${confirmed ? 'confirmed' : ''}">${confirmed ? '● 已核验' : '○ 待研究'}${label ? ` · ${escapeHtml(label)}` : ''}</span>`;
-}
-
-function sourceLinks(sourceIds = []) {
-  const map = sourceMap();
-  const unique = [...new Set(sourceIds)].map(id => map.get(id)).filter(Boolean);
-  if (!unique.length) return `<p class="muted">暂无可用来源。</p>`;
-  return `<div class="source-list">${unique.map(source => `
-    <a class="source-link" href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">
-      <div><strong>${escapeHtml(source.title || source.publisher)}</strong><small>${escapeHtml(source.publisher)} · ${escapeHtml(source.sourceType)}</small></div><span>↗</span>
-    </a>`).join('')}</div>`;
-}
-
-function inlineSource(sourceIds = [], label = '来源') {
+function sourceLink(sourceIds = [], label = '查看来源') {
   const ids = Array.isArray(sourceIds) ? sourceIds : [sourceIds];
   const source = ids.map(id => sourceMap().get(id)).find(Boolean);
-  return source ? `<a class="inline-source" href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer" title="${escapeHtml(source.title || source.publisher)}">${escapeHtml(label)} ↗</a>` : '';
+  return source
+    ? `<a class="source-link" href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(label)} <span>↗</span></a>`
+    : `<span class="source-missing">来源待补</span>`;
 }
 
-function activityType(event) {
-  const text = `${event?.title || ''} ${event?.description || ''}`;
-  if (/免息|利率|首付|月供|金融|奖励|特别价/.test(text)) return { key: 'finance', label: '金融与促销', style: '' };
-  if (/售后|质保|保修|零部件|道路救援/.test(text)) return { key: 'aftersales', label: '售后与品牌动作', style: 'orange' };
-  return { key: 'marketing', label: '营销活动', style: 'orange' };
+function statusPill(status = 'not_found', suggested = false) {
+  if (suggested) return `<span class="status-pill suggested">AI 建议</span>`;
+  if (status === 'confirmed') return `<span class="status-pill confirmed">已核验</span>`;
+  if (status === 'unconfirmed') return `<span class="status-pill pending">待复核</span>`;
+  return `<span class="status-pill empty">待研究</span>`;
 }
 
-function embeddedEvents(events = [], emptyText = '当前没有已核验的相关活动。') {
-  if (!events.length) return `<p class="empty-inline">${escapeHtml(emptyText)}</p>`;
-  return events.map(event => `<div class="embedded-event"><div class="embedded-event-head"><span>${escapeHtml(event.eventDate || event.activityDate || '日期待核实')}</span>${inlineSource(event.sourceIds, '原始来源')}</div><strong>${escapeHtml(event.title)}</strong><p>${escapeHtml(event.description || '')}</p>${event.whyItMatters ? `<div class="why-line"><b>对 EMGRAND 的意义</b>${escapeHtml(event.whyItMatters)}</div>` : ''}</div>`).join('');
+function sectionTitle(kicker, title, note = '') {
+  return `<div class="section-title"><div><span>${escapeHtml(kicker)}</span><h2>${escapeHtml(title)}</h2></div>${note ? `<p>${escapeHtml(note)}</p>` : ''}</div>`;
+}
+
+function reportConfidence() {
+  const facts = [];
+  for (const market of state.data.markets || []) {
+    const card = marketCard(market.code);
+    facts.push(card?.importantMarketNews, card?.importantCompetitorAction, market.basics?.taxImportAndPolicy);
+  }
+  const valid = facts.filter(fact => fact && fact.status !== 'not_found');
+  if (!valid.length) return { score: 0, completeness: 0, tone: 'caution', label: '暂无可评估事实', updatedAt: '待更新' };
+  const sources = sourceMap();
+  const evidenceScore = valid.reduce((sum, fact) => {
+    const status = fact.status === 'confirmed' ? .95 : fact.status === 'unconfirmed' ? .45 : .1;
+    const sourceQuality = (fact.sourceIds || []).map(id => sources.get(id)?.sourceType).map(type =>
+      /^official|government|regulator|customs|statistical/.test(type || '') ? 1
+        : /association|carrier/.test(type || '') ? .85
+        : /news|industry/.test(type || '') ? .65 : .45);
+    const source = sourceQuality.length ? Math.max(...sourceQuality) : .1;
+    const ageDays = fact.verifiedAt ? (Date.now() - Date.parse(fact.verifiedAt)) / 86400000 : Infinity;
+    const freshness = ageDays <= 7 ? 1 : ageDays <= 30 ? .8 : .55;
+    return sum + status * .45 + source * .4 + freshness * .15;
+  }, 0) / valid.length;
+  const vehicles = state.data.vehicles || [];
+  const coveredModules = vehicles.reduce((sum, vehicle) => sum
+    + Number(Boolean(vehicle.prices?.length))
+    + Number(Boolean(vehicle.salesRecords?.length))
+    + Number(Boolean(vehicle.researchV2?.officialSpecifications?.length || vehicle.specifications?.length))
+    + Number(Boolean(vehicle.researchV2?.dealerOffers?.length || vehicle.financeOffers?.length || vehicle.marketingActivities?.length || vehicle.recentEvents?.length))
+    + Number(Boolean(vehicle.researchV2?.consumerFeedback?.sampleSize)), 0);
+  const shippingTracks = 3; // 墨西哥、沙特、阿联酋的路线周期均等待研究报告补充。
+  const completedShippingTracks = (state.data.markets || []).filter(market => market.researchV2?.shippingRoutes?.length).length;
+  const completeness = Math.round(((coveredModules + completedShippingTracks) / (vehicles.length * 5 + shippingTracks)) * 100);
+  const score = Math.max(0, Math.min(95, Math.round(evidenceScore * 100)));
+  const dates = valid.map(fact => fact.verifiedAt).filter(Boolean).sort().reverse();
+  return { score, completeness, tone: score > 80 ? 'good' : score >= 60 ? 'standard' : 'caution', label: score > 80 ? '较高可信' : score >= 60 ? '基础可用' : '仍需补强', updatedAt: dates[0]?.slice(0, 10) || '待更新' };
+}
+
+function keyMarketFact(code) {
+  const card = marketCard(code);
+  return card?.importantMarketNews?.status !== 'not_found'
+    ? card.importantMarketNews
+    : card?.importantCompetitorAction;
+}
+
+function signalCategory(item) {
+  const text = `${item.title || ''} ${item.description || ''}`;
+  if (/免息|折扣|优惠|奖励|月供|首付|offer|金融|价格/i.test(text)) return '重大营销动作';
+  if (/上市|发布|推出|launch|首发|新款/i.test(text)) return '新车 / 上市动作';
+  if (/政策|关税|法规|准入|税/i.test(text)) return '国家政策变化';
+  return '竞品重大动作';
+}
+
+function highValueSignals() {
+  const collected = [];
+  for (const vehicle of state.data.vehicles || []) {
+    const events = [...(vehicle.recentEvents || []), ...(vehicle.marketingActivities || [])];
+    for (const event of events) collected.push({
+      marketCode: vehicle.marketCode,
+      brand: vehicle.brand,
+      model: vehicle.model,
+      category: signalCategory(event),
+      title: event.title,
+      summary: event.description || event.whyItMatters || event.conditions,
+      date: event.eventDate || event.validFrom || event.validTo || '',
+      sourceIds: event.sourceIds || []
+    });
+  }
+  const seen = new Set();
+  return collected
+    .filter(item => item.title && !seen.has(redact(item.title)) && seen.add(redact(item.title)))
+    .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+    .slice(0, 4);
+}
+
+function signalList() {
+  return highValueSignals().map((signal, index) => {
+    const meta = MARKET_META[signal.marketCode];
+    return `<article class="signal-item">
+      <span class="signal-index">0${index + 1}</span>
+      <div class="signal-copy"><div class="signal-meta"><span>${escapeHtml(signal.category)}</span><span>${meta?.flag || ''} ${escapeHtml(meta?.name || signal.marketCode)} · ${escapeHtml(signal.brand)}</span><time>${escapeHtml(signal.date || '日期待核实')}</time></div><h3>${escapeHtml(signal.title)}</h3><p>${escapeHtml(compact(signal.summary || '详细影响等待进一步核验。', 150))}</p></div>
+      <div class="signal-action">${sourceLink(signal.sourceIds, '原始来源')}<a href="#/market/${signal.marketCode}">相关市场 →</a></div>
+    </article>`;
+  }).join('');
+}
+
+function countryEntryCard(market) {
+  const meta = MARKET_META[market.code];
+  const fact = keyMarketFact(market.code);
+  const pool = state.data.competitorPools.find(item => item.marketCode === market.code);
+  return `<a class="market-entry-card" href="#/market/${market.code}">
+    <div class="market-entry-top"><span class="country-flag">${meta.flag}</span><span>${market.code}</span></div>
+    <h3>${escapeHtml(meta.name)}</h3>
+    <p>${escapeHtml(compact(fact?.value || fact?.note || '等待下一轮研究更新。', 115))}</p>
+    <div class="market-entry-foot"><span>${pool?.entries?.length || 0} 个重点竞品</span><strong>进入国家详情 →</strong></div>
+  </a>`;
+}
+
+function getPrice(vehicle) {
+  return vehicle?.prices?.find(item => item.price?.status === 'confirmed' && Number.isFinite(item.price?.amount))?.price
+    || vehicle?.prices?.find(item => Number.isFinite(item.price?.amount))?.price;
+}
+
+function getSale(vehicle) {
+  return first(vehicle?.salesRecords)?.volume;
+}
+
+function getOffer(vehicle) {
+  return first(vehicle?.financeOffers) || first(vehicle?.recentEvents) || null;
+}
+
+function marketCard(code) {
+  return state.data.globalOverview.countryCards.find(card => card.marketCode === code);
+}
+
+function newsItems() {
+  const items = [];
+  for (const market of state.data.markets) {
+    const card = marketCard(market.code);
+    const meta = MARKET_META[market.code];
+    if (card?.importantMarketNews?.status !== 'not_found') {
+      items.push({ marketCode: market.code, country: meta.name, flag: meta.flag, category: '市场变化', title: `${meta.name}市场重要变化`, fact: card.importantMarketNews });
+    }
+    if (card?.importantCompetitorAction?.status !== 'not_found') {
+      items.push({ marketCode: market.code, country: meta.name, flag: meta.flag, category: '竞品行动', title: `${meta.name}竞品最新动作`, fact: card.importantCompetitorAction });
+    }
+  }
+  return items.sort((a, b) => (b.fact.verifiedAt || '').localeCompare(a.fact.verifiedAt || '')).slice(0, 6);
 }
 
 function overview() {
   updateNav('overview');
-  breadcrumb.textContent = 'Marketing Buddy / 全球总览';
-  const data = state.data;
-  const mx = data.markets.find(m => m.code === 'MX');
-  const confirmedVehicles = data.vehicles.filter(v => v.researchStatus === 'confirmed');
-  const confirmedMarkets = data.markets.filter(m => m.basics?.summary?.status === 'confirmed');
-  const totalCompetitors = data.competitorPools.reduce((sum, pool) => sum + pool.entries.length, 0);
-  const globalSummary = data.globalOverview.summary30d?.status === 'confirmed' ? data.globalOverview.summary30d.value : factText(mx.basics.summary);
-  const weeklyFocus = data.globalOverview.weeklyFocus?.status === 'confirmed' ? data.globalOverview.weeklyFocus.value : '首轮基线研究正在按国家推进。';
-  const topPolicy = first(data.globalOverview.environmentPanels.policy);
-
+  breadcrumb.textContent = 'Marketing Buddy / C级 Sedan / 情报总览';
+  const confidence = reportConfidence();
   app.innerHTML = `
-    <section class="hero">
-      <div><span class="eyebrow">Marketing Buddy · Global intelligence</span><h1>EMGRAND<br>全球营销情报</h1><p>聚焦四国市场，用价格、销量、金融政策、保修政策与营销活动，把分散的公开信息转化为可核对的竞争判断。</p></div>
-      <div class="hero-meta"><strong>V1.6</strong><span>四国上线基线</span></div>
+    <section class="page-hero overview-hero">
+      <div class="hero-copy">
+        <span class="hero-kicker">MARKETING BUDDY · C-CLASS SEDAN</span>
+        <h1>重要的事，<br><em>一眼看清。</em></h1>
+        <p>只保留会影响定价、上市节奏、竞争策略和物流安排的市场情报。</p>
+      </div>
+      <aside class="confidence-card">
+        <span>CORE FACT CONFIDENCE · 核心摘要可信度</span>
+        <div class="confidence-score"><strong>${confidence.score}</strong><small>%</small></div>
+        <b>${escapeHtml(confidence.label)} · 规则估算</b>
+        <div class="confidence-bar ${confidence.tone}"><i style="width:${confidence.score}%"></i></div>
+        <p>当前仅评估四国市场、政策与竞品摘要的已收录事实；不是全站准确率。</p>
+        <small class="confidence-criteria">绿色 &gt;80：较高可信 · 蓝色 60–80：基础可用</small>
+        <small class="confidence-method">判断依据：来源级别 40% · 核验状态 45% · 更新时效 15%。仅评核心摘要，不代表全站事实准确率。</small>
+        <div class="completeness-mini"><span>信息完整度</span><strong>${confidence.completeness}%</strong><p>衡量内容全不全，不判断真伪。</p></div>
+        <time>最近核验 ${escapeHtml(confidence.updatedAt)}</time>
+      </aside>
     </section>
 
-    <section class="metric-grid">
-      <div class="metric"><small>已完成市场</small><strong>${confirmedMarkets.length}/4</strong><span class="trend">四国固定范围</span></div>
-      <div class="metric"><small>竞品池对象</small><strong>${totalCompetitors}</strong><span class="trend">含待确认 AI 建议</span></div>
-      <div class="metric"><small>已核验车型</small><strong>${confirmedVehicles.length}</strong><span class="trend">四国基线</span></div>
-      <div class="metric"><small>可追溯来源</small><strong>${data.sources.length}</strong><span class="trend">公开来源</span></div>
-    </section>
+    ${sectionTitle('01 · INTELLIGENCE BRIEF', '本期高价值情报', '跨市场选择最重要的竞品动作、营销活动、新车发布或政策变化，不按国家平均分配。')}
+    <section class="signal-list">${signalList()}</section>
 
-    ${sectionHead('01', '30-day brief', '近 30 天重点情报', '首页只保留最值得关注的变化，详细证据进入国家页和车型页。')}
-    <section class="brief-card">
-      <div><span class="eyebrow" style="color:var(--lime)">Global baseline · verified</span><h3>${escapeHtml(weeklyFocus)}</h3><p>${escapeHtml(globalSummary)}</p></div>
-      <div class="brief-side"><span>一级政策提醒</span><strong>相关整车税号：50% 一般进口税率<br>2026-01-01 起生效</strong></div>
-    </section>
+    ${sectionTitle('02 · COUNTRY ENTRIES', '各国情报入口', '每张卡片展示当前最重要的信息，点击进入国家详情。')}
+    <section class="market-entry-grid">${state.data.markets.map(countryEntryCard).join('')}</section>
 
-    ${sectionHead('02', 'Markets', '四国市场', '四国首轮公开信息基线均已完成；未公开、口径冲突或需企业资料确认的字段继续明确标注。')}
-    <section class="country-grid">${data.markets.map(market => countryCard(market)).join('')}</section>
-
-    ${sectionHead('03', 'Environment', '政策与竞争环境', '把分散事实压缩成面向业务的观察；竞品的金融、保修和营销活动进入各自详情页查看。')}
-    <section class="panel-grid">
-      <article class="info-panel policy-critical"><div class="panel-top"><div class="panel-icon">§</div><span class="policy-level">一级政策</span></div><h3>${escapeHtml(topPolicy?.title || '国家政策')}</h3><p>${escapeHtml(topPolicy?.summary || '等待政策专项研究。')} ${inlineSource(topPolicy?.sourceIds, '官方依据')}</p><div class="policy-impact"><b>四国政策已覆盖</b>墨西哥、哈萨克斯坦、沙特和阿联酋的关税与税费均已建立来源链；车型实际适用仍以报关资料为准。</div></article>
-      <article class="info-panel"><div class="panel-icon">%</div><h3>金融与促销</h3><p>${escapeHtml(data.globalOverview.environmentPanels.financeAndPromotions.map(item => item.title).slice(0, 4).join('；'))}</p></article>
-      <article class="info-panel"><div class="panel-icon">↗</div><h3>市场变化</h3><p>${escapeHtml(data.globalOverview.environmentPanels.marketChanges.map(item => item.title).slice(0, 4).join('；'))}</p></article>
-    </section>`;
+    <section class="principle-strip"><strong>信息准入原则</strong><span>影响价格</span><span>影响上市</span><span>影响竞争</span><span>影响物流</span><p>缺少可靠来源的销量和排名不展示。</p></section>`;
 }
 
-function countryCard(market) {
-  const meta = MARKET_META[market.code];
-  const confirmed = market.basics?.summary?.status === 'confirmed';
-  const overviewCard = state.data.globalOverview.countryCards.find(card => card.marketCode === market.code);
-  const action = overviewCard?.importantCompetitorAction?.status === 'confirmed' ? overviewCard.importantCompetitorAction.value : '等待该市场首轮公开数据研究。';
-  const summary = confirmed ? compact(market.basics.summary.value, 120) : market.code === 'AE' ? '竞品尚未指定，需先完成当地在售车型扫描。' : '市场结构已建立，关键字段等待研究 AI 按模板补齐。';
-  return `<a class="country-card ${confirmed ? 'ready' : ''}" href="#/market/${market.code}">
-    <div class="country-top"><div class="country-name"><span class="flag">${meta.flag}</span><div><strong>${meta.name}</strong><div class="sub">${market.code}</div></div></div>${statusTag(confirmed)}</div>
-    <div class="country-insight"><small>市场状态</small><p>${escapeHtml(summary)}</p></div>
-    <div class="country-insight"><small>竞争动作</small><p>${escapeHtml(action)}</p></div>
-    <span class="go">进入市场 →</span>
-  </a>`;
-}
-
-function marketPage(code) {
-  updateNav('market');
-  const market = state.data.markets.find(item => item.code === code) || state.data.markets[0];
-  const meta = MARKET_META[market.code];
-  const confirmed = market.basics?.summary?.status === 'confirmed';
-  breadcrumb.textContent = `Marketing Buddy / 国家市场 / ${meta.name}`;
-
-  app.innerHTML = `
-    <section class="hero">
-      <div><span class="eyebrow">Country intelligence · ${market.code}</span><h1>${meta.flag} ${meta.name}市场</h1><p>${confirmed ? escapeHtml(market.basics.summary.value) : `页面框架已经就绪。${meta.name}的数据尚未完成公开来源核验，因此不展示推测值。`}</p></div>
-      <div class="hero-meta">${statusTag(confirmed, confirmed ? '已完成首轮基线研究' : meta.focus)}</div>
-    </section>
-    <nav class="market-tabs">${state.data.markets.map(item => `<a href="#/market/${item.code}" class="market-tab ${item.code === market.code ? 'active' : ''}">${MARKET_META[item.code].flag} ${MARKET_META[item.code].name}</a>`).join('')}</nav>
-    ${confirmed ? confirmedMarket(market) : pendingMarket(market)}
-  `;
-}
-
-function pendingMarket(market) {
-  const meta = MARKET_META[market.code];
-  const pool = state.data.competitorPools.find(item => item.marketCode === market.code);
-  const names = (pool?.entries || []).map(entry => vehicleMap().get(entry.vehicleId)).filter(Boolean).map(v => `${v.brand} ${v.model}`);
-  return `
-    <div class="callout"><span>◷</span><div><strong>这个市场等待数据，不影响网站继续制作</strong><p>后续可以把标准研究任务交给其他 AI。返回的数据通过格式与来源检查后，即可直接进入当前页面。</p></div></div>
-    ${sectionHead('01', 'Market basics', '市场基本情况')}
-    <section class="basics-grid">${['市场规模与趋势','轿车细分市场','税费及政策环境','主要销售渠道'].map(label => `<article class="basic-card unavailable"><small>${label}</small><p>待 AI 根据当地官方及可靠公开来源补充。</p></article>`).join('')}</section>
-    ${sectionHead('02', 'Competitive map', '价格 × 车身长度 × 销量')}
-    <section class="empty-state"><div class="empty-icon">◌</div><h2>数据坐标尚未形成</h2><p>需要至少获得车型当地售价、车身长度，以及可比统计周期销量。缺少销量时仍可降级展示，但必须明确标注。</p></section>
-    ${sectionHead('03', 'Competitors', '已设定竞品')}
-    <section class="vehicle-grid">${names.length ? names.map(name => `<article class="vehicle-card"><div class="title-row"><h3>${escapeHtml(name)}</h3>${statusTag(false, '人工设定')}</div><p class="muted">已纳入监测范围，等待首轮研究。</p></article>`).join('') : `<article class="empty-state" style="grid-column:1/-1"><div class="empty-icon">＋</div><h2>尚未指定竞品</h2><p>${meta.name}需要先扫描当地同价位、同级别在售轿车，再由用户确认核心竞品。</p></article>`}</section>`;
-}
-
-function confirmedMarket(market) {
-  const basics = market.basics;
-  const pool = state.data.competitorPools.find(item => item.marketCode === market.code);
-  const vehicles = (pool?.entries || []).map(entry => {
-    const vehicle = vehicleMap().get(entry.vehicleId);
-    return vehicle ? { ...vehicle, _poolEntry: entry } : null;
-  }).filter(Boolean);
-  const emgrand = state.data.vehicles.find(v => v.id === market.emgrandLocalProfile.vehicleId);
-  return `
-    ${sectionHead('01', 'Market basics', '市场基本情况')}
-    <section class="basics-grid">
-      ${basicCard('市场规模与趋势', basics.marketSizeAndTrend)}
-      ${basicCard('轿车细分市场', basics.sedanSegment)}
-      ${basicCard('税费及政策环境', basics.taxImportAndPolicy)}
-      ${basicCard('主要销售渠道', basics.salesChannels)}
-    </section>
-    ${sectionHead('02', 'Competitive map', '价格 × 车身长度 × 销量', bubbleNote(market.bubbleChart))}
-    ${bubbleChart(market.bubbleChart)}
-    ${sectionHead('03', 'EMGRAND local', 'EMGRAND 当地车型信息')}
-    ${localProfile(emgrand)}
-    ${sectionHead('04', 'Competitors', market.code === 'AE' ? 'AI 建议竞品（待确认）' : '主要与次级竞品', '此处保留快速比较；金融、保修和营销活动的完整内容进入对应竞品详情。AI 建议不会自动变为正式竞品。')}
-    <section class="vehicle-grid">${vehicles.map(vehicleCard).join('')}</section>
-    ${sectionHead('05', 'Comparison', '竞品横向对比')}
-    ${comparisonTable([emgrand, ...vehicles])}`;
-}
-
-function bubbleNote(points = []) {
-  const periods = [...new Set(points.map(point => point.sales?.period).filter(Boolean))];
-  const period = periods.length === 1 ? periods[0] : periods.length ? periods.join(' / ') : '最新可比周期';
-  return `X 轴为车长，Y 轴为起售价，气泡面积代表 ${period} 销量。`;
-}
-
-function basicCard(label, fact) {
-  const ok = fact?.status === 'confirmed';
-  const isCriticalPolicy = label === '税费及政策环境' && ok;
-  return `<article class="basic-card ${ok ? '' : 'unavailable'} ${isCriticalPolicy ? 'critical-policy' : ''}"><div class="basic-card-head"><small>${escapeHtml(label)}</small>${isCriticalPolicy ? '<span class="policy-level">一级政策</span>' : ''}</div><p>${ok ? `${escapeHtml(fact.value)} ${inlineSource(fact.sourceIds, '官方依据')}` : '本项尚未完成可靠来源核验。'}</p>${fact?.note ? `<div class="fact-note"><b>适用边界</b>${escapeHtml(fact.note)}</div>` : ''}</article>`;
-}
-
-function bubbleChart(points = []) {
-  const usable = points.filter(point => [point.bodyLengthMm?.value, point.price?.amount, point.sales?.value].every(Number.isFinite));
-  if (!usable.length) return `<section class="empty-state"><p>暂无三个维度均可用的图表数据。</p></section>`;
-  const lengths = usable.map(p => p.bodyLengthMm.value);
-  const prices = usable.map(p => p.price.amount);
-  const sales = usable.map(p => p.sales.value);
-  const currency = usable[0].price.currency || 'MXN';
-  const minX = Math.min(...lengths) - 35, maxX = Math.max(...lengths) + 35;
-  const minY = Math.floor((Math.min(...prices) - 10000) / 10000) * 10000;
-  const maxY = Math.ceil((Math.max(...prices) + 10000) / 10000) * 10000;
-  const x = v => 90 + ((v - minX) / (maxX - minX)) * 720;
-  const y = v => 300 - ((v - minY) / (maxY - minY)) * 225;
-  const r = v => 15 + Math.sqrt(v / Math.max(...sales)) * 23;
-  const color = series => series === 'emgrand' ? '#0d7c57' : series === 'primary' ? '#f17c45' : '#9ca7a1';
-  const vehicles = vehicleMap();
-  const yTicks = [minY, Math.round((minY + maxY) / 2), maxY];
-  const circles = usable.map(point => {
-    const vehicle = vehicles.get(point.vehicleId);
-    const name = vehicle ? `${vehicle.brand} ${vehicle.model}` : point.vehicleId;
-    return `<g tabindex="0" aria-label="${escapeHtml(name)}，车长 ${point.bodyLengthMm.value} 毫米，价格 ${point.price.amount} ${currency}，销量 ${point.sales.value} 辆">
-      <circle cx="${x(point.bodyLengthMm.value)}" cy="${y(point.price.amount)}" r="${r(point.sales.value)}" fill="${color(point.series)}" fill-opacity=".82" stroke="white" stroke-width="3"><title>${escapeHtml(name)} · ${money(point.price.amount, currency)} · ${number(point.sales.value)} 辆</title></circle>
-      <text x="${x(point.bodyLengthMm.value)}" y="${y(point.price.amount) - r(point.sales.value) - 8}" text-anchor="middle" class="bubble-label">${escapeHtml(name)}</text>
-      <text x="${x(point.bodyLengthMm.value)}" y="${y(point.price.amount) + 3}" text-anchor="middle" class="bubble-value">${number(point.sales.value)}</text>
-    </g>`;
-  }).join('');
-  return `<section class="chart-card">
-    <div class="chart-meta"><span class="legend"><i style="background:var(--green)"></i> EMGRAND</span><span class="legend"><i style="background:var(--orange)"></i> 人工设定竞品</span><span>气泡数字：月销量（辆）</span></div>
-    <svg viewBox="0 0 900 370" role="img" aria-label="墨西哥车型价格、车长和销量气泡图">
-      ${yTicks.map(t => `<line x1="70" x2="840" y1="${y(t)}" y2="${y(t)}" class="chart-grid"/><text x="60" y="${y(t)+4}" text-anchor="end" class="chart-label">${Math.round(t/1000)}k</text>`).join('')}
-      <line x1="70" x2="840" y1="310" y2="310" class="chart-axis"/><line x1="70" x2="70" y1="50" y2="310" class="chart-axis"/>
-      <text x="455" y="350" text-anchor="middle" class="chart-label">车身长度（mm）</text><text x="14" y="180" text-anchor="middle" transform="rotate(-90 14 180)" class="chart-label">起售价（${escapeHtml(currency)}）</text>
-      <text x="90" y="328" text-anchor="middle" class="chart-label">${Math.round(minX)}</text><text x="810" y="328" text-anchor="middle" class="chart-label">${Math.round(maxX)}</text>
-      ${circles}
-    </svg>
-  </section>`;
-}
-
-function localProfile(vehicle) {
-  const promo = vehicle.prices.find(item => item.price.priceType === 'promotion')?.price;
-  const msrp = vehicle.prices.filter(item => item.price.priceType === 'manufacturer_msrp');
-  const finance = first(vehicle.financeOffers);
-  const listedPrices = msrp.length ? msrp : vehicle.prices.filter(item => Number.isFinite(item.price?.amount));
-  return `<section class="profile-grid">
-    <article class="profile-card"><h3>在售版本与价格</h3><div class="mini-list">${listedPrices.map(item => `<div class="mini-row"><span>${escapeHtml(item.price.variantId || item.id)}</span><strong class="fact-value">${money(item.price.amount, item.price.currency)} ${inlineSource(item.price.sourceIds)}</strong></div>`).join('') || '<p class="empty-inline">现金指导价尚未确认。</p>'}${promo ? `<div class="mini-row"><span>活动价</span><strong class="fact-value" style="color:var(--green)">${money(promo.amount, promo.currency)} ${inlineSource(promo.sourceIds)}</strong></div>` : ''}</div></article>
-    <article class="profile-card"><h3>金融及促销政策</h3><div class="mini-list"><div class="mini-row"><span>方案</span><strong class="fact-value">${escapeHtml(finance?.title || '待补充')} ${inlineSource(finance?.sourceIds)}</strong></div><div class="mini-row"><span>期限</span><strong>${finance?.termMonths || '—'} 个月</strong></div><div class="mini-row"><span>有效至</span><strong>${finance?.validTo || '待核实'}</strong></div></div></article>
-    <article class="profile-card"><h3>售后与质保</h3><div class="mini-list">${vehicle.aftersales.map(item => `<div class="mini-row"><span>${item.type === 'vehicle_warranty' ? '质保' : '道路救援'}</span><strong class="fact-value">${escapeHtml(item.detail.value)} ${inlineSource(item.detail.sourceIds)}</strong></div>`).join('')}</div></article>
-    <article class="profile-card"><h3>经销商与服务网络</h3><p class="muted" style="font-size:12px;line-height:1.7">${escapeHtml(factText(state.data.markets.find(m => m.code === vehicle.marketCode).emgrandLocalProfile.dealerAndServiceNetwork))}</p></article>
-  </section>`;
-}
-
-function vehicleCard(vehicle) {
-  const price = vehicle.prices.find(item => item.price.priceType === 'manufacturer_msrp')?.price || vehicle.prices.find(item => Number.isFinite(item.price?.amount))?.price;
-  const promo = vehicle.prices.find(item => item.price.priceType === 'promotion')?.price;
-  const sale = first(vehicle.salesRecords)?.volume;
-  const finance = first(vehicle.financeOffers);
-  const warranty = vehicle.aftersales.find(item => item.type === 'vehicle_warranty')?.detail;
-  const event = first(vehicle.recentEvents);
-  const suggested = vehicle._poolEntry?.decisionStatus === 'suggested';
-  const tierLabel = suggested ? 'AI 建议 · 待确认' : vehicle._poolEntry?.tier === 'secondary' ? '人工设定 · 次级' : '人工设定 · 主要';
-  return `<article class="vehicle-card">
-    <div class="title-row"><div><h3>${escapeHtml(vehicle.brand)} ${escapeHtml(vehicle.model)}</h3><div class="sub">${escapeHtml(vehicle.marketCode)} · ${suggested ? '建议竞品' : '正式竞品'}</div></div>${statusTag(!suggested, tierLabel)}</div>
-    <div class="vehicle-stats"><div class="stat-cell"><small>公开起售价</small><strong class="fact-value">${money(price?.amount, price?.currency)} ${inlineSource(price?.sourceIds)}</strong></div><div class="stat-cell"><small>${escapeHtml(sale?.period || '销量周期')}</small><strong class="fact-value">${number(sale?.value)} 辆 ${inlineSource(sale?.sourceIds)}</strong></div><div class="stat-cell"><small>金融与促销</small><strong class="fact-value">${promo ? money(promo.amount, promo.currency) : escapeHtml(compact(finance?.title, 18))} ${inlineSource(promo?.sourceIds || finance?.sourceIds)}</strong></div><div class="stat-cell"><small>基础质保</small><strong class="fact-value">${escapeHtml(compact(warranty?.value, 25))} ${inlineSource(warranty?.sourceIds)}</strong></div></div>
-    <div class="action-note"><small>${activityType(event).label}</small><p>${escapeHtml(event?.title || finance?.title || '待补充')} ${inlineSource(event?.sourceIds, '原始来源')}</p></div>
-    <a class="text-link" href="#/vehicle/${vehicle.id}">查看竞品详情 →</a>
+function newsCard(item, featured = false) {
+  const date = item.fact.verifiedAt ? item.fact.verifiedAt.slice(0, 10) : '日期待核实';
+  return `<article class="news-card ${featured ? 'featured' : ''}">
+    <div class="news-meta"><span>${item.flag} ${escapeHtml(item.country)}</span><span>${escapeHtml(item.category)}</span><time>${escapeHtml(date)}</time></div>
+    <h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(compact(item.fact.value || item.fact.note, featured ? 220 : 150))}</p>
+    <div class="news-footer"><a href="#/market/${item.marketCode}">查看国家详情 →</a>${sourceLink(item.fact.sourceIds)}</div>
   </article>`;
 }
 
-function comparisonTable(vehicles) {
-  const rows = [
-    ['起售价', v => { const price = v.prices.find(item => item.price.priceType === 'manufacturer_msrp')?.price || v.prices.find(item => Number.isFinite(item.price?.amount))?.price; return money(price?.amount, price?.currency); }],
-    ['金融/促销', v => first(v.financeOffers)?.title || '待补充'],
-    ['售后质保', v => v.aftersales.find(item => item.type === 'vehicle_warranty')?.detail?.value || '待补充'],
-    ['月销量', v => `${number(first(v.salesRecords)?.volume?.value)} 辆`]
+function marketPage(code) {
+  updateNav('markets');
+  const market = state.data.markets.find(item => item.code === code) || state.data.markets[0];
+  const meta = MARKET_META[market.code];
+  const card = marketCard(market.code);
+  const pool = state.data.competitorPools.find(item => item.marketCode === market.code);
+  const entries = pool?.entries || [];
+  breadcrumb.textContent = `Marketing Buddy / 国家市场 / ${meta.name}`;
+  app.innerHTML = `
+    <section class="page-hero country-hero">
+      <div class="hero-copy"><span class="hero-kicker">COUNTRY INTELLIGENCE · ${market.code}</span><h1>${meta.flag} ${meta.name}<br><em>C级 Sedan 市场</em></h1><p>${escapeHtml(compact(market.basics?.summary?.value, 190))}</p></div>
+      <div class="country-switcher">${state.data.markets.map(item => `<a class="${item.code === market.code ? 'active' : ''}" href="#/market/${item.code}">${MARKET_META[item.code].flag} ${MARKET_META[item.code].name}</a>`).join('')}</div>
+    </section>
+
+    ${sectionTitle('01 · WHAT MATTERS', '当地重要变化', '只呈现会影响业务判断的市场、政策和竞品变化。')}
+    <section class="highlight-grid">${summaryCard('市场变化', market.code, card?.importantMarketNews)}${policyCard(market.code, market.basics?.taxImportAndPolicy)}${summaryCard('竞品动作', market.code, card?.importantCompetitorAction)}</section>
+
+    ${meta.shipping ? `${sectionTitle('02 · LAUNCH LOGISTICS', '发运周期参考', '从开航计时；海上段为公开航线参考，清关与配送为计划估算。')}${shippingPreview(market)}` : ''}
+
+    ${sectionTitle(meta.shipping ? '03 · COMPETITORS' : '02 · COMPETITORS', '重点竞品', market.code === 'AE' ? '四个 AI 建议竞品继续保留，尚未自动转为正式竞品。' : '进入车型详情查看报价、促销、配置、消费者评价和销量。')}
+    <section class="competitor-grid">${entries.map(entry => competitorCard(entry)).join('')}</section>`;
+}
+
+function highlightCard(label, fact) {
+  const status = fact?.status || 'not_found';
+  return `<article class="highlight-card"><div class="card-top"><span>${escapeHtml(label)}</span>${statusPill(status)}</div><p>${escapeHtml(compact(fact?.value || fact?.note || '等待下一轮研究。', 190))}</p>${sourceLink(fact?.sourceIds)}</article>`;
+}
+
+function summaryCard(label, code, fact) {
+  const conclusions = {
+    '市场变化': {
+      MX: '市场仍保持增长，短期可继续观察需求窗口。',
+      KZ: '市场保持增长，但本地化竞品基础较强。',
+      SA: '市场从高位进入调整，上市节奏需要更审慎。',
+      AE: '市场转弱，需优先验证价格和促销效率。'
+    },
+    '竞品动作': {
+      MX: 'K3用超长免息抢占价格敏感用户，金融竞争升温。',
+      KZ: 'Cobalt销量领先又叠加限价，主流价位竞争加剧。',
+      SA: 'Yaris以低月供和代付方案降低购车门槛。',
+      AE: 'MG与Toyota均以低月供和权益争夺价格敏感与企业客户。'
+    }
+  };
+  const conclusion = conclusions[label]?.[code] || '该变化值得持续关注。';
+  const detail = compact(fact?.value || fact?.note || '等待下一轮研究。', 145);
+  return `<article class="highlight-card summary-card"><div class="card-top"><span>${escapeHtml(label)}</span>${statusPill(fact?.status || 'not_found')}</div><div class="summary-conclusion"><small>先看结论</small><strong>${escapeHtml(conclusion)}</strong></div><p class="summary-detail">${escapeHtml(detail)}</p>${sourceLink(fact?.sourceIds)}</article>`;
+}
+
+function policyCard(code, fact) {
+  const summaries = {
+    MX: { conclusion: '进口成本压力显著，优先确认 50% 关税是否适用。', detail: '自 2026 年起，无贸易协定国家的相关整车一般关税升至 50%；最终以税号、原产地和进口安排为准。' },
+    KZ: { conclusion: '中国整车进口税负较高，本地生产竞品更有成本优势。', detail: '相关排量整车一般关税为 15%，进口增值税为 16%；中国原产 CBU 没有优惠关税。' },
+    SA: { conclusion: '关税相对温和，但认证和增值税会影响成本与上市节奏。', detail: '乘用车一般关税为 5%，进口 VAT 为 15%；同时需要完成 SASO 和 SABER 合规。' },
+    AE: { conclusion: '基础税负相对温和，重点确认清关路径和车型归类。', detail: '联盟外整车一般关税为 5%，境内汽车销售 VAT 为 5%；中国原产 CBU 通常按一般税率处理。' }
+  };
+  const copy = summaries[code] || { conclusion: '政策影响仍需确认。', detail: compact(fact?.value || fact?.note || '等待下一轮研究。', 120) };
+  return `<article class="highlight-card policy-card"><div class="card-top"><span>政策环境</span>${statusPill(fact?.status || 'not_found')}</div><div class="policy-conclusion"><small>先看结论</small><strong>${escapeHtml(copy.conclusion)}</strong></div><p class="policy-detail">${escapeHtml(copy.detail)}</p>${sourceLink(fact?.sourceIds)}</article>`;
+}
+
+function shippingPreview(market) {
+  const meta = MARKET_META[market.code];
+  const route = market.researchV2?.shippingRoutes?.[0];
+  if (!route) return `<section class="shipping-card">${emptyResearch('尚无可靠航线周期；待取得承运人船期和目的港清关记录。')}</section>`;
+  const range = days => days ? `${days.min}–${days.max} 天` : '待核实';
+  return `<section class="shipping-card">
+    <div class="shipping-route-head"><div><span>${meta.flag} ${escapeHtml(route.originPort)} → ${escapeHtml(route.destinationPort)}</span><strong>从船期 / 开航开始计算 · 规划参考</strong></div>${statusPill('unconfirmed')}</div>
+    <div class="shipping-line">
+      <div class="shipping-stage"><i>01</i><span>船期 / 开航</span><strong>实际 ETD 待确认</strong><small>计时起点</small></div><div class="shipping-arrow">→</div>
+      <div class="shipping-stage"><i>02</i><span>海上运输</span><strong>${range(route.seaTransitDays)}</strong><small>公开航线参考</small></div><div class="shipping-arrow">→</div>
+      <div class="shipping-stage"><i>03</i><span>等待 / 清关放行</span><strong>${range(route.portDwellCustomsReleaseDaysEstimate)}</strong><small>研究估算</small></div><div class="shipping-arrow">→</div>
+      <div class="shipping-stage"><i>04</i><span>配送与上市准备</span><strong>${range(route.localDeliveryLaunchPreparationDaysEstimate)}</strong><small>计划假设</small></div>
+    </div>
+    <div class="shipping-scenarios"><span>低位：${escapeHtml(route.lowCaseDays)} 天</span><span>基准：${escapeHtml(route.baseCaseDays)} 天</span><span>高位：${escapeHtml(route.highCaseDays)} 天</span></div>
+    <p class="review-rule">${escapeHtml(route.note)} ${sourceLink(route.sourceIds, '航线线索')}</p>
+  </section>`;
+}
+
+function competitorCard(entry) {
+  const vehicle = vehicleMap().get(entry.vehicleId);
+  if (!vehicle) return '';
+  const price = getPrice(vehicle);
+  const sale = getSale(vehicle);
+  const offer = getOffer(vehicle);
+  const suggested = entry.decisionStatus === 'suggested';
+  return `<article class="competitor-card">
+    <div class="competitor-head"><div><span>${escapeHtml(vehicle.brand)}</span><h3>${escapeHtml(vehicle.model)}</h3></div>${statusPill(vehicle.researchStatus, suggested)}</div>
+    <div class="competitor-data"><div><small>${price?.status === 'confirmed' ? '当地公开价格' : '价格线索 · 待复核'}</small><strong>${money(price?.amount, price?.currency)}</strong></div><div><small>${escapeHtml(sale?.period || '销量')}</small><strong>${Number.isFinite(sale?.value) ? `${number(sale.value)} 辆` : '暂无可靠数据'}</strong></div></div>
+    <div class="offer-line"><small>当前优惠 / 动作</small><p>${escapeHtml(compact(offer?.title || '等待 Web AI 补充当地经销商活动。', 90))}</p></div>
+    <a class="primary-link" href="#/vehicle/${vehicle.id}">查看完整竞品详情 →</a>
+  </article>`;
+}
+
+function vehicleSections(vehicle) {
+  const offers = vehicle.financeOffers || [];
+  const events = [...(vehicle.recentEvents || []), ...(vehicle.marketingActivities || [])];
+  return [
+    { key: 'performance', no: '01', title: '销量及价格变化', kicker: 'PRICE & SALES', description: '先看当地公开价格、价格变动证据和可靠销量。', body: performanceContent(vehicle) },
+    { key: 'offers', no: '02', title: '当地优惠与促销', kicker: 'DEALER OFFERS', description: '经销商报价、金融政策、现金优惠和有效期。', body: dealerOfferContent(vehicle, offers, events) },
+    { key: 'selling-points', no: '03', title: '当地官网核心卖点', kicker: 'OFFICIAL SELLING POINTS', description: '当地官网如何定义这款车，以及重点宣传哪些价值。', body: officialSellingContent(vehicle) },
+    { key: 'reviews', no: '04', title: '当地消费者真实评价', kicker: 'CONSUMER VOICE', description: '论坛、社交媒体与视频评论中的有限样本线索。', body: reviewContent(vehicle) },
+    { key: 'profile', no: '05', title: '用户画像', kicker: 'AUDIENCE PROFILE', description: '目标用户、购车动机、使用场景与决策阻力。', body: userProfileContent(vehicle) },
+    { key: 'specs', no: '06', title: '官方配置表及中文翻译', kicker: 'OFFICIAL SPECIFICATIONS', description: '最后查看官方 PDF、配置原文、页码与中文翻译。', body: specificationContent(vehicle) }
   ];
-  return `<div class="comparison-wrap"><table class="comparison"><thead><tr><th>指标</th>${vehicles.map(v => `<th>${escapeHtml(v.brand)} ${escapeHtml(v.model)}</th>`).join('')}</tr></thead><tbody>${rows.map(([label, getter]) => `<tr><td>${label}</td>${vehicles.map(v => `<td>${escapeHtml(getter(v))}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
 }
 
 function vehicleDetail(id) {
-  updateNav('market');
+  updateNav('markets');
   const vehicle = state.data.vehicles.find(item => item.id === id);
   if (!vehicle) return notFound();
-  const market = state.data.markets.find(item => item.code === vehicle.marketCode);
-  const recentEvents = vehicle.recentEvents || [];
-  const financeEvents = recentEvents.filter(event => activityType(event).key === 'finance');
-  const aftersalesEvents = recentEvents.filter(event => activityType(event).key === 'aftersales');
-  const marketingEvents = [
-    ...(vehicle.marketingActivities || []),
-    ...recentEvents.filter(event => activityType(event).key === 'marketing')
-  ];
-  const price = vehicle.prices.find(item => item.price.priceType === 'manufacturer_msrp')?.price || vehicle.prices.find(item => Number.isFinite(item.price?.amount))?.price;
-  const sale = first(vehicle.salesRecords)?.volume;
-  const length = vehicle.specifications.find(item => item.key === 'body_length_mm')?.fact;
-  const sourceIds = [
-    ...vehicle.prices.flatMap(item => item.price.sourceIds || []),
-    ...vehicle.financeOffers.flatMap(item => item.sourceIds || []),
-    ...vehicle.aftersales.flatMap(item => item.detail.sourceIds || []),
-    ...vehicle.salesRecords.flatMap(item => item.volume.sourceIds || []),
-    ...vehicle.specifications.flatMap(item => item.fact.sourceIds || []),
-    ...recentEvents.flatMap(event => event.sourceIds || []),
-    ...(vehicle.marketingActivities || []).flatMap(activity => activity.sourceIds || [])
-  ];
-  breadcrumb.textContent = `Marketing Buddy / ${MARKET_META[vehicle.marketCode].name} / ${vehicle.brand} ${vehicle.model}`;
+  const meta = MARKET_META[vehicle.marketCode];
+  const pool = state.data.competitorPools.find(item => item.marketCode === vehicle.marketCode);
+  const entry = pool?.entries?.find(item => item.vehicleId === vehicle.id);
+  const suggested = entry?.decisionStatus === 'suggested';
+  const price = getPrice(vehicle);
+  const sale = getSale(vehicle);
+  const sections = vehicleSections(vehicle);
+  breadcrumb.textContent = `Marketing Buddy / ${meta.name} / ${redact(vehicle.brand)} ${redact(vehicle.model)}`;
   app.innerHTML = `
-    <a class="text-link" href="#/market/${vehicle.marketCode}">← 返回${MARKET_META[vehicle.marketCode].name}市场</a>
+    <a class="back-link" href="#/market/${vehicle.marketCode}">← 返回${meta.name}市场</a>
     <section class="detail-hero">
-      <span class="eyebrow" style="color:var(--lime)">Competitor intelligence · verified</span>
-      <h1>${escapeHtml(vehicle.model)}</h1><p>${escapeHtml(vehicle.brand)} · ${MARKET_META[vehicle.marketCode].name} · 竞品情报详情</p>
-      <div class="detail-kpis"><div class="detail-kpi"><small>公开起售价</small><strong>${money(price?.amount, price?.currency)}</strong></div><div class="detail-kpi"><small>${escapeHtml(sale?.period || '销量周期')}</small><strong>${number(sale?.value)} 辆</strong></div><div class="detail-kpi"><small>车身长度</small><strong>${number(length?.value)} mm</strong></div><div class="detail-kpi"><small>来源数量</small><strong>${new Set(sourceIds).size}</strong></div></div>
+      <div><span class="hero-kicker">COMPETITOR DETAIL · ${vehicle.marketCode}</span><h1>${escapeHtml(vehicle.brand)}<br><em>${escapeHtml(vehicle.model)}</em></h1><p>${meta.flag} ${meta.name} · ${vehicle.modelYear || '当前年款'} · 数据结构 V2</p></div>
+      <div class="detail-summary">${statusPill(vehicle.researchStatus, suggested)}<div><small>${price?.status === 'confirmed' ? '当地公开价格' : '价格线索 · 待复核'}</small><strong>${money(price?.amount, price?.currency)}</strong></div><div><small>${escapeHtml(sale?.period || '销量')}</small><strong>${Number.isFinite(sale?.value) ? `${number(sale.value)} 辆` : '暂无可靠数据'}</strong></div></div>
     </section>
-    <section class="content-grid">
-      <article class="content-card"><h2>售价与配置</h2><div class="mini-list">${vehicle.prices.map(item => `<div class="mini-row"><span>${escapeHtml(item.price.variantId || item.id)}${item.price.priceType === 'promotion' ? ' · 活动' : ''}</span><strong class="fact-value">${money(item.price.amount, item.price.currency)} ${inlineSource(item.price.sourceIds)}</strong></div>`).join('')}${vehicle.specifications.map(item => `<div class="mini-row"><span>${escapeHtml(item.label)}</span><strong class="fact-value">${number(item.fact.value)} ${escapeHtml(item.fact.unit)} ${inlineSource(item.fact.sourceIds)}</strong></div>`).join('')}</div></article>
-      <article class="content-card"><h2>金融政策</h2>${vehicle.financeOffers.map(offer => `<div class="mini-list"><div class="mini-row"><span>方案</span><strong class="fact-value">${escapeHtml(offer.title)} ${inlineSource(offer.sourceIds)}</strong></div><div class="mini-row"><span>条件</span><strong>${escapeHtml(offer.conditions || '待核实')}</strong></div><div class="mini-row"><span>有效期</span><strong>${offer.validTo || '未确认'}</strong></div></div>`).join('') || '<p class="empty-inline">当前没有已核验的金融方案。</p>'}${embeddedEvents(financeEvents, '当前没有单独的金融活动记录。')}</article>
-      <article class="content-card"><h2>保修与售后政策</h2><div class="mini-list">${vehicle.aftersales.map(item => `<div class="mini-row"><span>${escapeHtml(item.type)}</span><strong class="fact-value">${escapeHtml(item.detail.value)} ${inlineSource(item.detail.sourceIds)}</strong></div>`).join('')}</div>${embeddedEvents(aftersalesEvents, '当前没有单独的售后活动记录。')}</article>
-      <article class="content-card"><h2>营销活动</h2>${embeddedEvents(marketingEvents, '本轮研究暂未发现独立且可核验的营销活动；后续数据补充后会直接显示在这里。')}</article>
-      <article class="content-card"><h2>销量与定位</h2><div class="mini-list"><div class="mini-row"><span>${escapeHtml(sale?.period || '统计期')}</span><strong>${number(sale?.value)} 辆</strong></div><div class="mini-row"><span>与 EMGRAND 的关系</span><strong>${escapeHtml(compact(vehicle.competitiveRelationshipToEmgrand?.value, 90))}</strong></div></div></article>
-      <article class="content-card wide"><h2>信息来源</h2>${sourceLinks(sourceIds)}</article>
+
+    <div class="single-page-note"><span>单页竞品档案</span><p>除官方配置表外，所有内容直接展开，便于连续浏览和比较。</p></div>
+    <section class="detail-sections">
+      ${sections.filter(section => section.key !== 'specs').map(section => detailSection(section.no, section.title, section.kicker, section.body)).join('')}
+      ${collapsedDetailSection(sections.find(section => section.key === 'specs'))}
     </section>`;
 }
 
-function poolPage() {
-  updateNav('pool');
-  breadcrumb.textContent = 'Marketing Buddy / 竞品池';
-  const vehicles = vehicleMap();
-  app.innerHTML = `
-    <section class="hero"><div><span class="eyebrow">Competitor governance</span><h1>竞品池</h1><p>按国家维护人工设定、次级和 AI 建议竞品。第一版仅展示配置结果，不提供账号或复杂后台。</p></div><div class="hero-meta"><strong>${state.data.competitorPools.reduce((n,p)=>n+p.entries.length,0)}</strong><span>当前监测对象</span></div></section>
-    <div class="callout"><span>i</span><div><strong>决策规则</strong><p>AI 可以推荐，但不能擅自删除人工设定竞品。AI 建议需给出推荐理由与来源，经人工采纳后才能进入正式监测。</p></div></div>
-    ${sectionHead('01', 'Country pools', '四国竞品配置')}
-    <section class="pool-list">${state.data.competitorPools.map(pool => {
-      const meta = MARKET_META[pool.marketCode];
-      return `<article class="pool-group"><div class="pool-header"><h2>${meta.flag} ${meta.name}</h2><span class="tag">${pool.entries.length} 个对象</span></div><div class="pool-entries">${pool.entries.length ? pool.entries.map(entry => { const v = vehicles.get(entry.vehicleId); return `<div class="pool-row"><strong>${escapeHtml(v?.brand || '')} ${escapeHtml(v?.model || entry.vehicleId)}</strong><span>${entry.tier === 'primary' ? '主要竞品' : entry.tier === 'secondary' ? '次级竞品' : 'AI 建议'}</span><span>${entry.origin === 'manual' ? '人工设定' : 'AI 推荐'}</span><span>${entry.monitor ? '● 监测中' : '○ 未监测'}</span></div>`; }).join('') : `<div class="empty-pool">尚未指定竞品，等待当地市场扫描与人工确认。</div>`}</div></article>`;
-    }).join('')}</section>`;
+function detailSection(no, title, kicker, body) {
+  return `<article class="detail-section"><header><div><span>${no} · ${escapeHtml(kicker)}</span><h2>${escapeHtml(title)}</h2></div></header>${body}</article>`;
+}
+
+function collapsedDetailSection(section) {
+  return `<details class="detail-section spec-collapse"><summary><div><span>${section.no} · ${escapeHtml(section.kicker)}</span><h2>${escapeHtml(section.title)}</h2><p>${escapeHtml(section.description)}</p></div><b>展开配置表 ＋</b></summary><div class="spec-collapse-body">${section.body}</div></details>`;
+}
+
+function userProfileContent(vehicle) {
+  const profiles = vehicle.researchV2?.audienceProfile || [];
+  if (profiles.length) return `<div class="profile-card"><div class="profile-status"><span>研究假设 · 待消费者样本验证</span><p>现有样本不足以确认画像；以下为后续访谈的验证方向。</p></div><div class="single-detail-column">${profiles.map(item => `<div class="offer-block"><strong>${escapeHtml(item.claim)}</strong><p>${escapeHtml(item.validationNeed || '需更多独立用户访谈与评论交叉验证。')}</p>${sourceLink(item.sourceIds || [], '线索来源')}</div>`).join('')}</div></div>`;
+  const hasOffers = Boolean(vehicle.financeOffers?.length || vehicle.marketingActivities?.length || vehicle.recentEvents?.length);
+  return `<div class="profile-card">
+    <div class="profile-status"><span>研究假设 · 待消费者样本验证</span><p>这不是已确认事实；后续需要用评论、论坛及经销商访谈验证。</p></div>
+    <div class="profile-grid">
+      <div><small>核心人群</small><strong>城市通勤与家庭用车人群</strong><p>以主流家用轿车需求作为初步假设。</p></div>
+      <div><small>购车阶段</small><strong>首购或预算型换购</strong><p>需结合当地车主样本确认。</p></div>
+      <div><small>主要动机</small><strong>空间、可靠性与日常使用成本</strong><p>等待当地官网卖点和真实评论交叉验证。</p></div>
+      <div><small>价格敏感度</small><strong>${hasOffers ? '可能关注首付、月供及现金优惠' : '待研究'}</strong><p>${hasOffers ? '依据当地促销频率形成的推断，不代表已确认用户偏好。' : '暂无足够促销或评论证据。'}</p></div>
+    </div>
+    <div class="profile-tags"><span>城市通勤</span><span>家庭使用</span><span>价格敏感</span><span>售后保障</span></div>
+  </div>`;
+}
+
+function dealerOfferContent(vehicle, offers, events) {
+  const v2 = vehicle.researchV2?.dealerOffers || [];
+  const legacy = [...offers, ...events].filter(item => !item.validTo || item.validTo >= '2026-10-25');
+  const offerRows = [...v2.map(item => ({ ...item, title: `${item.variant || item.channel}：${Number.isFinite(item.offerPrice) ? money(item.offerPrice, item.currency) : Number.isFinite(item.monthlyPayment) ? `月供 ${money(item.monthlyPayment, item.currency)}` : '详情待核实'}`, conditions: `${item.channel}；${item.conditions || ''}。报价条件待核实。` })), ...legacy].slice(0, 5).map(item => `<div class="offer-block"><div><span>${escapeHtml(item.validTo || item.eventDate || '有效期待核实')}</span>${sourceLink(item.sourceIds)}</div><strong>${escapeHtml(item.title || '活动')}</strong><p>${escapeHtml(compact(item.conditions || item.description || item.whyItMatters || '', 180))}</p></div>`).join('');
+  const warranty = (vehicle.aftersales || []).map(item => `<li><span>${escapeHtml(item.type)}</span><strong>${escapeHtml(item.detail?.value || item.detail?.note || '待研究')}</strong>${sourceLink(item.detail?.sourceIds)}</li>`).join('');
+  return `<div class="single-detail-column"><h3>优惠与促销</h3>${offerRows || emptyResearch('当前没有已核验活动。')}</div>${warranty ? `<div class="warranty-strip"><h3>售后参考</h3><ul>${warranty}</ul></div>` : ''}`;
+}
+
+function performanceContent(vehicle) {
+  const prices = vehicle.prices || [];
+  const records = vehicle.salesRecords || [];
+  const priceRows = prices.map(item => `<div class="data-row"><div><small>${escapeHtml(item.price?.priceType || 'price')}</small><strong>${escapeHtml(item.price?.variantId || item.id)}</strong></div><b>${money(item.price?.amount, item.price?.currency)}</b>${sourceLink(item.price?.sourceIds)}</div>`).join('');
+  const salesRows = records.map(record => `<div class="sales-row"><div><span>${escapeHtml(record.volume?.period || '统计期')}</span><small>${escapeHtml(record.volume?.unit || 'vehicles')} · ${escapeHtml(record.volume?.status || 'unknown')}</small></div><strong>${number(record.volume?.value)} 辆</strong>${sourceLink(record.volume?.sourceIds)}</div>`).join('');
+  const secondary = (vehicle.researchV2?.priceNotes || []).slice(0, 3).map(item => `<div class="data-row"><div><small>待复核价格线索</small><strong>${escapeHtml(item.variant || '版本待确认')}</strong></div><b>${money(item.amount, item.currency)}</b>${sourceLink(item.sourceIds)}</div>`).join('');
+  return `<div class="detail-columns"><div><h3>公开价格与变化</h3>${priceRows || emptyResearch('暂无可核验官方价格。')}${secondary}<div class="trend-note"><strong>价格变化</strong><p>不同版本的价格不是涨跌。需同一版本、相同口径的历史记录才能判断变化。</p></div></div><div><h3>销量与市场表现</h3>${salesRows || emptyResearch('暂无可靠公开销量；网站不会展示估算值。')}</div></div><p class="review-rule">第三方报价均标为待复核；不同版本、统计周期和数据口径不得直接比较。</p>`;
+}
+
+function specificationContent(vehicle) {
+  const translated = vehicle.researchV2?.officialSpecifications || [];
+  if (translated.length) return `<div class="single-detail-column">${translated.map(item => `<div class="offer-block"><div><span>${escapeHtml(item.variant || item.modelYear || '官方配置')}</span>${sourceLink(item.sourceIds, '官方文件')}</div><strong>${escapeHtml(item.chineseTranslation)}</strong><p>${escapeHtml(item.originalText)}</p><small>${escapeHtml(item.reference || '')}</small></div>`).join('')}</div>`;
+  const specs = vehicle.specifications || [];
+  if (!specs.length) return emptyResearch('尚未取得当地官方 PDF 或配置器资料。');
+  return `<div class="spec-table"><div class="spec-head"><span>项目</span><span>当地公开值</span><span>中文说明 / 来源</span></div>${specs.map(item => `<div class="spec-row"><span>${escapeHtml(item.label || item.key)}</span><strong>${escapeHtml(item.fact?.value)} ${escapeHtml(item.fact?.unit || '')}</strong><span>${sourceLink(item.fact?.sourceIds, '原始依据')}</span></div>`).join('')}</div><p class="review-rule">原文及逐项中文翻译仍待补齐。</p>`;
+}
+
+function officialSellingContent(vehicle) {
+  const points = vehicle.researchV2?.officialSellingPoints || [];
+  if (!points.length) return emptyResearch('当地官网卖点尚未取得可核验原文。');
+  return `<div class="single-detail-column">${points.map(item => `<div class="offer-block"><div><span>当地官网</span>${sourceLink(item.sourceIds, '官方来源')}</div><strong>${escapeHtml(item.chineseSummary)}</strong><p>${escapeHtml(item.localText)}</p><small>${escapeHtml(item.relatedSpec || '')}</small></div>`).join('')}</div>`;
+}
+
+function reviewContent(vehicle) {
+  const feedback = vehicle.researchV2?.consumerFeedback;
+  if (!feedback?.sampleSize) return reviewPlaceholder();
+  const themes = [...(feedback.positiveThemes || []), ...(feedback.negativeThemes || [])].slice(0, 5);
+  return `<div class="single-detail-column"><h3>有限样本线索 · ${feedback.sampleSize} 条 / 帖</h3>${themes.map(item => `<div class="offer-block"><strong>${escapeHtml(item.theme)}</strong><p>仅 ${escapeHtml(item.threads || 1)} 条讨论支持，不能视为高频评价。</p>${sourceLink(item.sourceIds, '原帖')}</div>`).join('')}</div><p class="review-rule">平台：${escapeHtml((feedback.platforms || []).join('、'))}。${escapeHtml(feedback.limitations || '样本不足，仍需核验。')}</p>`;
+}
+
+function reviewPlaceholder() {
+  return `<div class="review-layout"><div class="review-column positive"><span>高频好评</span>${emptyResearch('等待论坛、社交平台及视频评论样本。')}</div><div class="review-column negative"><span>高频差评与争议</span>${emptyResearch('至少 5 条独立评价才标记为高频。')}</div></div><p class="review-rule">允许匿名短引文；必须记录平台、样本数量、时间范围，并排除疑似广告和重复内容。</p>`;
+}
+
+function salesContent(vehicle) {
+  const records = vehicle.salesRecords || [];
+  if (!records.length) return emptyResearch('暂无可靠公开销量；网站不会展示估算值。');
+  return `<div class="sales-list">${records.map(record => `<div class="sales-row"><div><span>${escapeHtml(record.volume?.period || '统计期')}</span><small>${escapeHtml(record.volume?.unit || 'vehicles')} · ${escapeHtml(record.volume?.status || 'unknown')}</small></div><strong>${number(record.volume?.value)} 辆</strong>${sourceLink(record.volume?.sourceIds)}</div>`).join('')}</div><p class="review-rule">不同统计周期和口径不得直接比较；二级数据库必须保留“待复核”状态。</p>`;
+}
+
+function emptyResearch(message) {
+  return `<div class="empty-research"><span>待研究</span><p>${escapeHtml(message)}</p></div>`;
 }
 
 function notFound() {
-  app.innerHTML = `<section class="empty-state"><div class="empty-icon">?</div><h2>没有找到这个页面</h2><p>返回全球总览继续浏览。</p><a class="button" href="#/overview">返回总览</a></section>`;
+  app.innerHTML = `<section class="not-found"><strong>404</strong><h1>没有找到这个页面</h1><a href="#/overview">返回情报总览</a></section>`;
 }
 
 function router() {
   if (!state.data) return;
   window.scrollTo(0, 0);
-  const parts = location.hash.replace(/^#\//, '').split('/');
-  const [route = 'overview', id] = parts;
+  const [route = 'overview', id, subsection] = location.hash.replace(/^#\//, '').split('/');
   if (route === 'overview') overview();
   else if (route === 'market') marketPage(id || 'MX');
-  else if (route === 'vehicle') vehicleDetail(id);
-  else if (route === 'pool') poolPage();
+  else if (route === 'vehicle') vehicleDetail(id, subsection);
   else notFound();
   document.querySelector('.sidebar').classList.remove('open');
   document.querySelector('#drawerBackdrop').classList.remove('open');
@@ -354,16 +453,15 @@ function router() {
 async function init() {
   loading();
   try {
-    if (window.AUTOINTEL_DATA) {
-      state.data = window.AUTOINTEL_DATA;
-    } else {
+    if (window.MB_DATA) state.data = window.MB_DATA;
+    else {
       const response = await fetch(DATA_URL);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       state.data = await response.json();
     }
     router();
   } catch (error) {
-    app.innerHTML = `<section class="empty-state"><div class="empty-icon">!</div><h2>数据文件未能加载</h2><p>请确认 data 文件夹与 index.html 保持在同一个网站文件夹中。</p></section>`;
+    app.innerHTML = `<section class="not-found"><strong>!</strong><h1>数据加载失败</h1><p>请确认 data 文件夹与网站文件保持在同一目录。</p></section>`;
     console.error(error);
   }
 }

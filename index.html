@@ -1,65 +1,57 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Marketing Buddy — Geely EMGRAND 海外市场与竞品营销情报工作台" />
-  <title>Marketing Buddy · EMGRAND</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Marketing Buddy C级 Sedan 市场与竞品情报工作台">
+  <title>Marketing Buddy · C级 Sedan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="ambient ambient-a"></div>
-  <div class="ambient ambient-b"></div>
-  <div class="app-shell">
-    <aside class="sidebar" aria-label="主导航">
+  <div class="site-shell">
+    <aside class="sidebar">
       <a class="brand" href="#/overview" aria-label="Marketing Buddy 首页">
-        <span class="brand-mark"><img src="assets/marketing-buddy-golden-retriever.png" alt="Marketing Buddy 小金毛助手" /></span>
-        <span><strong>Marketing Buddy</strong><small>EMGRAND · V1.6</small></span>
+        <span class="brand-avatar"><img src="assets/marketing-buddy-golden-retriever.png" alt="Marketing Buddy 金毛标志"></span>
+        <span><strong>Marketing Buddy</strong><small>C级 Sedan · V2</small></span>
       </a>
 
-      <nav class="nav-list">
-        <p class="nav-label">情报工作台</p>
-        <a class="nav-item" data-route="overview" href="#/overview"><span class="nav-icon">⌂</span><span>全球总览</span></a>
-        <a class="nav-item" data-route="market" href="#/market/MX"><span class="nav-icon">◎</span><span>国家市场</span></a>
-        <a class="nav-item" data-route="pool" href="#/pool"><span class="nav-icon">◇</span><span>竞品池</span></a>
+      <div class="nav-label">市场情报工作台</div>
+      <nav aria-label="主要导航">
+        <a class="nav-item" data-route="overview" href="#/overview"><span>⌂</span><strong>情报总览</strong><small>重要新闻</small></a>
+        <a class="nav-item" data-route="markets" href="#/market/MX"><span>◎</span><strong>国家市场</strong><small>竞品详情</small></a>
       </nav>
 
       <div class="sidebar-foot">
-        <div class="sync-card">
-          <span class="status-dot"></span>
-          <div><strong>四国上线版</strong><small>基线截至 2026-10-24</small></div>
-        </div>
-        <p>你的汽车营销情报伙伴<br>公开来源 · 可追溯 · 不补造缺失值</p>
+        <span class="version-dot"></span>
+        <div><strong>四国情报</strong><small>来源与缺口清晰标记</small></div>
       </div>
     </aside>
 
-    <main>
+    <button id="drawerBackdrop" class="drawer-backdrop" aria-label="关闭导航"></button>
+
+    <div class="workspace">
       <header class="topbar">
-        <button class="mobile-menu" id="mobileMenu" aria-label="打开导航">☰</button>
-        <div class="breadcrumb" id="breadcrumb">Marketing Buddy / 全球总览</div>
-        <div class="top-actions">
-          <span class="verified-pill"><span>✓</span> 已核验数据</span>
-          <button class="icon-button" id="helpButton" aria-label="查看说明">?</button>
-        </div>
+        <button id="mobileMenu" class="icon-button menu-button" aria-label="打开导航">☰</button>
+        <div id="breadcrumb" class="breadcrumb">Marketing Buddy / C级 Sedan</div>
+        <button id="helpButton" class="help-button"><span>?</span> 关于本站</button>
       </header>
-      <div id="app" class="page" aria-live="polite"></div>
-    </main>
+      <main id="app" class="app" aria-live="polite"></main>
+      <footer class="page-footer"><span>Marketing Buddy</span><p>C级 Sedan 市场与竞品情报 · 四国市场情报</p></footer>
+    </div>
   </div>
 
-  <div class="drawer-backdrop" id="drawerBackdrop"></div>
-  <dialog id="helpDialog">
-    <button class="dialog-close" id="closeHelp" aria-label="关闭">×</button>
-    <span class="eyebrow">关于本版本</span>
-    <h2>Marketing Buddy 四国情报基线</h2>
-    <p>墨西哥、哈萨克斯坦、沙特阿拉伯和阿联酋的首轮公开信息研究已完成。每个关键事实尽量关联原始来源；缺失、冲突或需企业文件确认的内容会明确标注。</p>
-    <div class="dialog-rule"></div>
-    <p class="muted">网站由 GitHub 主分支触发 Vercel 自动发布；周更数据先校验，再进入正式站点。</p>
+  <dialog id="helpDialog" class="help-dialog">
+    <button id="closeHelp" class="dialog-close" aria-label="关闭">×</button>
+    <span class="dialog-kicker">ABOUT THIS REPORT</span>
+    <h2>关于 Marketing Buddy</h2>
+    <p>本站汇总四国 C级 Sedan 市场与竞品情报。已核验内容附原始来源；公开价格、优惠和船期会变化，请按链接复查。待复核内容仅作为研究线索。</p>
+    <ul><li>不展示内部目标车型名称</li><li>不使用未经核验的销量和排名</li><li>每条正式信息保留可点击来源</li></ul>
   </dialog>
 
-  <script src="data/autointel-v1.6.bundle.js"></script>
+  <script src="data/public.bundle.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
