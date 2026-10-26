@@ -201,6 +201,7 @@ export function validateOperation(base, next, operation, evidenceAll, asOf, requ
       if(field.includes('officialSpecifications')) assert(row.originalText && row.chineseTranslation && row.reference && row.variant, 'Specification translation needs original, translation, locator and variant');
     }
     if (field === 'researchV2.officialSellingPoints') assert(row.localText && row.chineseSummary && hasRole(sourceIds.filter(s=>supported.has(s)),sources,rowMarket,['local_official','regional_official']), 'Selling point needs official original text and Chinese summary');
+    if (field === 'aftersales' && row.detail?.status==='confirmed') assert(hasRole(sourceIds.filter(s=>supported.has(s)),sources,rowMarket,['local_official','dealer']), 'Confirmed warranty needs local official/dealer evidence');
     if (['financeOffers','researchV2.dealerOffers','marketingActivities','recentEvents'].includes(field)) {
       assert(row.conditions || row.description, 'Offer/event conditions or description missing');
       if (row.status==='confirmed') assert(hasRole(sourceIds.filter(s=>supported.has(s)),sources,rowMarket,['local_official','dealer']) && isoDate(row.validFrom || row.eventDate), 'Confirmed offer/event needs local evidence and start/event date');
@@ -227,6 +228,7 @@ export function validateOperation(base, next, operation, evidenceAll, asOf, requ
       assert(row.lowCaseDays===stages.reduce((s,x)=>s+x.min,0) && row.highCaseDays===stages.reduce((s,x)=>s+x.max,0) && row.baseCaseDays>=row.lowCaseDays && row.baseCaseDays<=row.highCaseDays, 'Shipping totals do not match stage ranges');
       assert(row.confidence==='low'||row.confidence==='medium', 'Public route references cannot be high-confidence booked commitments');
       if(!hasRole(sourceIds.filter(s=>supported.has(s)),sources,rowMarket,['carrier'])) assert(row.confidence==='low', 'Forwarder-only shipping must be low confidence');
+      if(row.etd?.status==='confirmed') assert(isoDate(row.etd.value)&&hasRole((row.etd.sourceIds||[]).filter(s=>supported.has(s)),sources,rowMarket,['carrier']),'Confirmed ETD needs dated original carrier evidence');
     }
     if (field === 'highValueSignals') {
       assert(row.id && Object.keys(config.competitors).includes(row.marketCode) && row.title && row.summary && isoDate(row.date) && row.date<=asOf && row.date>=new Date(Date.parse(asOf)-config.signalWindowDays*86400000).toISOString().slice(0,10), 'Signal requires current event date and market');
