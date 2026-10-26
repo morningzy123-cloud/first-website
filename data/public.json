@@ -1,6 +1,6 @@
 {
   "schemaVersion": "marketing-buddy-v2-public",
-  "generatedAt": "2026-10-25",
+  "generatedAt": "2026-10-26",
   "project": {
     "name": "Marketing Buddy",
     "scope": "C级 Sedan",
@@ -1396,13 +1396,16 @@
           "price": {
             "status": "confirmed",
             "currency": "KZT",
-            "amount": 6490000,
+            "amount": 5990000,
             "priceType": "manufacturer_msrp",
-            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "verifiedAt": "2026-10-26T20:00:00+08:00",
             "sourceIds": [
+              "kz-cobalt-pricelist-2026-10",
               "kz-chevrolet-cobalt-page"
             ],
-            "variantId": "cobalt-kz-optimum-at"
+            "variantId": "cobalt-kz-optimum-at",
+            "observedAt": "2026-10-26",
+            "condition": "官方价目表口径：最高建议转售价（максимальные цены перепродажи），未列税费、注册与保险等落地费用；实际成交以授权经销商为准"
           }
         },
         {
@@ -1410,13 +1413,16 @@
           "price": {
             "status": "confirmed",
             "currency": "KZT",
-            "amount": 6790000,
+            "amount": 6290000,
             "priceType": "manufacturer_msrp",
-            "verifiedAt": "2026-10-24T23:00:00+08:00",
+            "verifiedAt": "2026-10-26T20:00:00+08:00",
             "sourceIds": [
+              "kz-cobalt-pricelist-2026-10",
               "kz-chevrolet-cobalt-page"
             ],
-            "variantId": "cobalt-kz-elegant-at"
+            "variantId": "cobalt-kz-elegant-at",
+            "observedAt": "2026-10-26",
+            "condition": "官方价目表口径：最高建议转售价（максимальные цены перепродажи），未列税费、注册与保险等落地费用；实际成交以授权经销商为准"
           }
         },
         {
@@ -2098,14 +2104,14 @@
       "financeOffers": [
         {
           "id": "sa-yaris-aljuf-current",
-          "status": "confirmed",
+          "status": "unconfirmed",
           "title": "Yaris Sedan 2026 月供方案",
           "provider": "Abdul Latif Jameel United Finance",
           "downPaymentPercent": {
             "status": "confirmed",
             "value": 0,
             "unit": "%",
-            "verifiedAt": "2026-10-24T12:00:00+08:00",
+            "verifiedAt": "2026-10-26T20:00:00+08:00",
             "sourceIds": [
               "sa-toyota-yaris-finance"
             ]
@@ -2113,21 +2119,21 @@
           "monthlyPayment": {
             "status": "confirmed",
             "currency": "SAR",
-            "amount": 988,
+            "amount": 1187,
             "priceType": "other",
             "condition": "Y 2026 起始月供",
             "variantId": "yaris-sa-y-2026",
-            "verifiedAt": "2026-10-24T12:00:00+08:00",
+            "verifiedAt": "2026-10-26T20:00:00+08:00",
             "sourceIds": [
               "sa-toyota-yaris-finance"
             ]
           },
           "termMonths": 60,
-          "conditions": "前 4 期月供由金融公司代付；零管理费、无需担保人，均受条款与审批限制。页面未公开 APR、尾款和保险成本。",
+          "conditions": "页面展示 Y 2026 月供自 1,187 SAR 起（60 期、前 4 期由金融公司代付、零管理费、无需担保人，均受条款与审批限制）。页面未公布活动起止日期、APR、尾款与保险成本，故按协议标为待核实。",
           "sourceIds": [
             "sa-toyota-yaris-finance"
           ],
-          "verifiedAt": "2026-10-24T12:00:00+08:00"
+          "verifiedAt": "2026-10-26T20:00:00+08:00"
         }
       ],
       "aftersales": [
@@ -4280,6 +4286,23 @@
       "accessedAt": "2026-10-25T14:29:00+08:00",
       "language": "en",
       "notes": "区域版参数：1.5L 110hp / 140Nm / 16.8 km/L / 406 L 行李厢"
+    },
+    {
+      "id": "kz-cobalt-pricelist-2026-10",
+      "url": "https://cdn.chevrolet-auto.kz/cars/LNDwCv4hRMeMjBueTaE6sbbFfv88DAtZwspjL3Wh.pdf",
+      "title": "CHEVROLET COBALT прайс-лист MY 2026",
+      "publisher": "Chevrolet Kazakhstan (официальный дистрибьютор)",
+      "sourceType": "official_price_list",
+      "marketCode": "KZ",
+      "accessedAt": "2026-10-26T20:00:00+08:00",
+      "language": "ru",
+      "notes": "官方价目表 PDF，随车型页「Скачать прайс」下载；文件未标注发布日期"
     }
-  ]
+  ],
+  "lastUpdate": {
+    "runId": "2026-10-26-weekly-mvpbyw0f",
+    "asOf": "2026-10-26",
+    "windowStart": "2026-10-19",
+    "windowEnd": "2026-10-26"
+  }
 }

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "marketing-buddy-weekly-release-v1",
+  "run": {
+    "id": "2026-10-26-weekly-mvpbyw0f",
+    "asOf": "2026-10-26",
+    "windowStart": "2026-10-19",
+    "windowEnd": "2026-10-26"
+  },
+  "baseDataHash": "4df24ed08e608dd47163502509ed31e33744567c3ea8bb6c147cb155453d898a",
+  "dataHash": "e9778f68f22328f4fd50d5894551f8d9417bfb2abe3932c2f2f24449edd00984",
+  "review": {
+    "completed": true,
+    "conflictsSeparated": true,
+    "privacyChecked": true
+  },
+  "changes": [
+    {
+      "changeId": "chg-cobalt-prices-my2026",
+      "entity": "vehicle",
+      "id": "chevrolet-cobalt-kz",
+      "field": "prices",
+      "beforeHash": "801ef641f8ec51b76036044876f4d7abf9e125563600fa084d93be777b575d91",
+      "reason": "官方价目表 MY2026 指导价下调：Optimum AT 6,490,000→5,990,000、Elegant AT 6,790,000→6,290,000 KZT；车型页同步显示新价",
+      "evidenceIds": [
+        "evd-cobalt-pricelist",
+        "evd-cobalt-modelpage"
+      ],
+      "review": {
+        "verdict": "supported",
+        "scopeMatches": true,
+        "current": true,
+        "conflictsResolved": true
+      },
+      "afterHash": "fcb6d3d05d8ebeb10dabf0b7c8a8f9a645b8b1b8a49a43fdd4a577cff6b84b99"
+    },
+    {
+      "changeId": "chg-yaris-sa-monthly",
+      "entity": "vehicle",
+      "id": "toyota-yaris-sa",
+      "field": "financeOffers",
+      "beforeHash": "98e07ba5cf560a56aaf1e999bd02c138981246c5d5efc44568a20fa387473040",
+      "reason": "AJL United Finance Yaris 2026 Y 版展示月供由 988 上调至 1,187 SAR，其余条件（0 首付、前 4 期代付、60 期）不变；因页面未公布起止日期，状态按数据协议改为待核实",
+      "evidenceIds": [
+        "evd-yaris-alj-monthly"
+      ],
+      "review": {
+        "verdict": "supported",
+        "scopeMatches": true,
+        "current": true,
+        "conflictsResolved": true
+      },
+      "afterHash": "40abfb1f754b69c75ed92049ffdc427a83159493aca151dca4c946ea3235139f"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evd-cobalt-pricelist",
+      "sourceId": "kz-cobalt-pricelist-2026-10",
+      "url": "https://cdn.chevrolet-auto.kz/cars/LNDwCv4hRMeMjBueTaE6sbbFfv88DAtZwspjL3Wh.pdf",
+      "kind": "direct_pdf",
+      "checkedAt": "2026-10-26T20:00:00+08:00",
+      "locator": "PDF 第 1 页车型价格区块与第 2 页 комплектации 价格行",
+      "scope": {
+        "marketCode": "KZ",
+        "vehicleId": "chevrolet-cobalt-kz",
+        "modelYear": 2026
+      },
+      "excerptHash": "17e149a4a2208b8411814d66d9b52eaccb86e4492be4cae3c7a35bf5e3ecb305"
+    },
+    {
+      "id": "evd-cobalt-modelpage",
+      "sourceId": "kz-chevrolet-cobalt-page",
+      "url": "https://chevrolet-auto.kz/models/cobalt",
+      "kind": "direct_page",
+      "checkedAt": "2026-10-26T20:00:00+08:00",
+      "locator": "Комплектации 区块两个版本价格行",
+      "scope": {
+        "marketCode": "KZ",
+        "vehicleId": "chevrolet-cobalt-kz",
+        "modelYear": 2026
+      },
+      "excerptHash": "d76aeebffd131634c565a4a18d5486e456d6a32bed1481704cc45a83c504bf67"
+    },
+    {
+      "id": "evd-yaris-alj-monthly",
+      "sourceId": "sa-toyota-yaris-finance",
+      "url": "https://www.aljfinance.com/en/offers/yarisoffer",
+      "kind": "direct_page",
+      "checkedAt": "2026-10-26T20:00:00+08:00",
+      "locator": "Offer Includes 列表第 1 项",
+      "scope": {
+        "marketCode": "SA",
+        "vehicleId": "toyota-yaris-sa",
+        "variant": "Y 2026",
+        "modelYear": 2026
+      },
+      "excerptHash": "905ea5c0a99986a7a55fe3d4c273b9ca036d0d068e309bc603edd22abf4d70ee"
+    }
+  ]
+}
