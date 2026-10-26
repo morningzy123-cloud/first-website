@@ -95,7 +95,7 @@ UI 从以上数据读取摘要与日期。不要为了更新这些内容修改 a
 
 字段：originPort、destinationPort、timingStart:vessel_departure、transportMode(container/roro/sea_unspecified)、directOrTransshipment、etd、seaTransitDays、portDwellCustomsReleaseDaysEstimate、localDeliveryLaunchPreparationDaysEstimate、lowCaseDays/baseCaseDays/highCaseDays、confidence、note、sourceIds。
 
-etd 为 `{value:null或日期,status:unconfirmed或confirmed}`。三个阶段均有 min/max；清关和配送阶段还需 `kind:estimate`。低位=三段 min 合计，高位=三段 max 合计，基准介于其间。公开参考只能 low/medium，只有货代参考且无承运人原始依据时为 low。note 写局势、转运、假设和未决条件，不将集装箱参考伪装成整车滚装交期。
+etd 为 `{value:null或日期,status:unconfirmed或confirmed}`；confirmed 时还需承运人原始依据的 sourceIds 和本次 verifiedAt。三个阶段均有 min/max；清关和配送阶段还需 `kind:estimate`。低位=三段 min 合计，高位=三段 max 合计，基准介于其间。公开参考只能 low/medium，只有货代参考且无承运人原始依据时为 low。note 写局势、转运、假设和未决条件，不将集装箱参考伪装成整车滚装交期。
 
 ## 自动到期清理
 
