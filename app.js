@@ -30,6 +30,8 @@ const money = (amount, currency) => Number.isFinite(amount)
 const sourceMap = () => new Map((state.data.sources || []).map(source => [source.id, source]));
 const vehicleMap = () => new Map((state.data.vehicles || []).map(vehicle => [vehicle.id, vehicle]));
 const first = items => Array.isArray(items) ? items[0] : undefined;
+const localToday = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+const activeOffer = item => (!item.validFrom || item.validFrom <= localToday()) && (!item.validTo || item.validTo >= localToday());
 
 function loading() {
   app.innerHTML = `<div class="loading"><div></div><div></div><div></div></div>`;
@@ -41,9 +43,9 @@ function updateNav(route) {
 
 function sourceLink(sourceIds = [], label = '查看来源') {
   const ids = Array.isArray(sourceIds) ? sourceIds : [sourceIds];
-  const source = ids.map(id => sourceMap().get(id)).find(Boolean);
-  return source
-    ? `<a class="source-link" href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(label)} <span>↗</span></a>`
+  const sources = [...new Map(ids.map(id => sourceMap().get(id)).filter(Boolean).map(source => [source.url, source])).values()];
+  return sources.length
+    ? sources.map((source, index) => `<a class="source-link" href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(label)}${sources.length > 1 ? ` ${index + 1}` : ''} <span>↗</span></a>`).join(' ')
     : `<span class="source-missing">来源待补</span>`;
 }
 
@@ -109,7 +111,8 @@ function signalCategory(item) {
 }
 
 function highValueSignals() {
-  const collected = [];
+  const collected = Array.isArray(state.data.globalOverview.highValueSignals) ? [...state.data.globalOverview.highValueSignals] : [];
+  if (!Array.isArray(state.data.globalOverview.highValueSignals)) {
   for (const vehicle of state.data.vehicles || []) {
     const events = [...(vehicle.recentEvents || []), ...(vehicle.marketingActivities || [])];
     for (const event of events) collected.push({
@@ -123,15 +126,20 @@ function highValueSignals() {
       sourceIds: event.sourceIds || []
     });
   }
+  }
   const seen = new Set();
+  const today = localToday();
+  const cutoff = new Date(Date.parse(today) - 30 * 86400000).toISOString().slice(0, 10);
   return collected
-    .filter(item => item.title && !seen.has(redact(item.title)) && seen.add(redact(item.title)))
-    .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+    .filter(item => item.title && item.status !== 'unconfirmed' && item.date >= cutoff && item.date <= today && activeOffer(item) && !seen.has(redact(item.title)) && seen.add(redact(item.title)))
+    .sort((a, b) => (b.importance || 3) - (a.importance || 3) || (b.date || '').localeCompare(a.date || ''))
     .slice(0, 4);
 }
 
 function signalList() {
-  return highValueSignals().map((signal, index) => {
+  const signals = highValueSignals();
+  if (!signals.length) return emptyResearch('本期暂无已核验且仍有时效的重大情报。');
+  return signals.map((signal, index) => {
     const meta = MARKET_META[signal.marketCode];
     return `<article class="signal-item">
       <span class="signal-index">0${index + 1}</span>
@@ -143,7 +151,7 @@ function signalList() {
 
 function countryEntryCard(market) {
   const meta = MARKET_META[market.code];
-  const fact = keyMarketFact(market.code);
+  const fact = marketCard(market.code)?.entrySummary || keyMarketFact(market.code);
   const pool = state.data.competitorPools.find(item => item.marketCode === market.code);
   return `<a class="market-entry-card" href="#/market/${market.code}">
     <div class="market-entry-top"><span class="country-flag">${meta.flag}</span><span>${market.code}</span></div>
@@ -154,16 +162,18 @@ function countryEntryCard(market) {
 }
 
 function getPrice(vehicle) {
-  return vehicle?.prices?.find(item => item.price?.status === 'confirmed' && Number.isFinite(item.price?.amount))?.price
-    || vehicle?.prices?.find(item => Number.isFinite(item.price?.amount))?.price;
+  const prices = [...(vehicle?.prices || [])].map(item => item.price).filter(price => Number.isFinite(price?.amount)).sort((a,b) => (b.observedAt || b.verifiedAt || '').localeCompare(a.observedAt || a.verifiedAt || ''));
+  return prices.find(price => price.status === 'confirmed') || prices[0];
 }
 
 function getSale(vehicle) {
-  return first(vehicle?.salesRecords)?.volume;
+  return [...(vehicle?.salesRecords || [])].sort((a,b) => (b.volume?.periodEnd || b.volume?.period || '').localeCompare(a.volume?.periodEnd || a.volume?.period || ''))[0]?.volume;
 }
 
 function getOffer(vehicle) {
-  return first(vehicle?.financeOffers) || first(vehicle?.recentEvents) || null;
+  const local = vehicle?.researchV2?.dealerOffers?.find(activeOffer);
+  if (local) return { title: `${local.variant || '当地报价'}：${Number.isFinite(local.offerPrice) ? money(local.offerPrice, local.currency) : Number.isFinite(local.monthlyPayment) ? `月供 ${money(local.monthlyPayment, local.currency)}` : '条件待核实'}` };
+  return vehicle?.financeOffers?.find(activeOffer) || vehicle?.recentEvents?.find(activeOffer) || null;
 }
 
 function marketCard(code) {
@@ -256,34 +266,16 @@ function highlightCard(label, fact) {
 }
 
 function summaryCard(label, code, fact) {
-  const conclusions = {
-    '市场变化': {
-      MX: '市场仍保持增长，短期可继续观察需求窗口。',
-      KZ: '市场保持增长，但本地化竞品基础较强。',
-      SA: '市场从高位进入调整，上市节奏需要更审慎。',
-      AE: '市场转弱，需优先验证价格和促销效率。'
-    },
-    '竞品动作': {
-      MX: 'K3用超长免息抢占价格敏感用户，金融竞争升温。',
-      KZ: 'Cobalt销量领先又叠加限价，主流价位竞争加剧。',
-      SA: 'Yaris以低月供和代付方案降低购车门槛。',
-      AE: 'MG与Toyota均以低月供和权益争夺价格敏感与企业客户。'
-    }
-  };
-  const conclusion = conclusions[label]?.[code] || '该变化值得持续关注。';
+  const conclusion = fact?.conclusion || compact(fact?.value || '等待可靠资料形成结论。', 52);
   const detail = compact(fact?.value || fact?.note || '等待下一轮研究。', 145);
   return `<article class="highlight-card summary-card"><div class="card-top"><span>${escapeHtml(label)}</span>${statusPill(fact?.status || 'not_found')}</div><div class="summary-conclusion"><small>先看结论</small><strong>${escapeHtml(conclusion)}</strong></div><p class="summary-detail">${escapeHtml(detail)}</p>${sourceLink(fact?.sourceIds)}</article>`;
 }
 
 function policyCard(code, fact) {
-  const summaries = {
-    MX: { conclusion: '进口成本压力显著，优先确认 50% 关税是否适用。', detail: '自 2026 年起，无贸易协定国家的相关整车一般关税升至 50%；最终以税号、原产地和进口安排为准。' },
-    KZ: { conclusion: '中国整车进口税负较高，本地生产竞品更有成本优势。', detail: '相关排量整车一般关税为 15%，进口增值税为 16%；中国原产 CBU 没有优惠关税。' },
-    SA: { conclusion: '关税相对温和，但认证和增值税会影响成本与上市节奏。', detail: '乘用车一般关税为 5%，进口 VAT 为 15%；同时需要完成 SASO 和 SABER 合规。' },
-    AE: { conclusion: '基础税负相对温和，重点确认清关路径和车型归类。', detail: '联盟外整车一般关税为 5%，境内汽车销售 VAT 为 5%；中国原产 CBU 通常按一般税率处理。' }
-  };
-  const copy = summaries[code] || { conclusion: '政策影响仍需确认。', detail: compact(fact?.value || fact?.note || '等待下一轮研究。', 120) };
-  return `<article class="highlight-card policy-card"><div class="card-top"><span>政策环境</span>${statusPill(fact?.status || 'not_found')}</div><div class="policy-conclusion"><small>先看结论</small><strong>${escapeHtml(copy.conclusion)}</strong></div><p class="policy-detail">${escapeHtml(copy.detail)}</p>${sourceLink(fact?.sourceIds)}</article>`;
+  const conclusion = fact?.conclusion || compact(fact?.value || '政策影响仍需确认。', 52);
+  const legalLabel = { in_force: '已生效', scheduled: '已公布，待生效', proposal: '提案，尚未生效' }[fact?.legalStatus];
+  const detail = compact(`${legalLabel ? `${legalLabel} · ` : ''}${fact?.value || fact?.note || '等待下一轮研究。'}`, 190);
+  return `<article class="highlight-card policy-card"><div class="card-top"><span>政策环境</span>${statusPill(fact?.status || 'not_found')}</div><div class="policy-conclusion"><small>先看结论</small><strong>${escapeHtml(conclusion)}</strong></div><p class="policy-detail">${escapeHtml(detail)}</p>${sourceLink(fact?.sourceIds)}</article>`;
 }
 
 function shippingPreview(market) {
@@ -294,7 +286,7 @@ function shippingPreview(market) {
   return `<section class="shipping-card">
     <div class="shipping-route-head"><div><span>${meta.flag} ${escapeHtml(route.originPort)} → ${escapeHtml(route.destinationPort)}</span><strong>从船期 / 开航开始计算 · 规划参考</strong></div>${statusPill('unconfirmed')}</div>
     <div class="shipping-line">
-      <div class="shipping-stage"><i>01</i><span>船期 / 开航</span><strong>实际 ETD 待确认</strong><small>计时起点</small></div><div class="shipping-arrow">→</div>
+      <div class="shipping-stage"><i>01</i><span>船期 / 开航</span><strong>${escapeHtml(route.etd?.value || '实际 ETD 待确认')}</strong><small>${route.etd?.status === 'confirmed' ? '已确认开航日' : '计时起点 · 待确认'}</small></div><div class="shipping-arrow">→</div>
       <div class="shipping-stage"><i>02</i><span>海上运输</span><strong>${range(route.seaTransitDays)}</strong><small>公开航线参考</small></div><div class="shipping-arrow">→</div>
       <div class="shipping-stage"><i>03</i><span>等待 / 清关放行</span><strong>${range(route.portDwellCustomsReleaseDaysEstimate)}</strong><small>研究估算</small></div><div class="shipping-arrow">→</div>
       <div class="shipping-stage"><i>04</i><span>配送与上市准备</span><strong>${range(route.localDeliveryLaunchPreparationDaysEstimate)}</strong><small>计划假设</small></div>
@@ -383,8 +375,8 @@ function userProfileContent(vehicle) {
 }
 
 function dealerOfferContent(vehicle, offers, events) {
-  const v2 = vehicle.researchV2?.dealerOffers || [];
-  const legacy = [...offers, ...events].filter(item => !item.validTo || item.validTo >= '2026-10-25');
+  const v2 = (vehicle.researchV2?.dealerOffers || []).filter(activeOffer);
+  const legacy = [...offers, ...events].filter(activeOffer);
   const offerRows = [...v2.map(item => ({ ...item, title: `${item.variant || item.channel}：${Number.isFinite(item.offerPrice) ? money(item.offerPrice, item.currency) : Number.isFinite(item.monthlyPayment) ? `月供 ${money(item.monthlyPayment, item.currency)}` : '详情待核实'}`, conditions: `${item.channel}；${item.conditions || ''}。报价条件待核实。` })), ...legacy].slice(0, 5).map(item => `<div class="offer-block"><div><span>${escapeHtml(item.validTo || item.eventDate || '有效期待核实')}</span>${sourceLink(item.sourceIds)}</div><strong>${escapeHtml(item.title || '活动')}</strong><p>${escapeHtml(compact(item.conditions || item.description || item.whyItMatters || '', 180))}</p></div>`).join('');
   const warranty = (vehicle.aftersales || []).map(item => `<li><span>${escapeHtml(item.type)}</span><strong>${escapeHtml(item.detail?.value || item.detail?.note || '待研究')}</strong>${sourceLink(item.detail?.sourceIds)}</li>`).join('');
   return `<div class="single-detail-column"><h3>优惠与促销</h3>${offerRows || emptyResearch('当前没有已核验活动。')}</div>${warranty ? `<div class="warranty-strip"><h3>售后参考</h3><ul>${warranty}</ul></div>` : ''}`;

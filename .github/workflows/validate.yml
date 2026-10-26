@@ -13,8 +13,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
       - run: node --check app.js
       - run: node scripts/validate-public.mjs
+      - run: node scripts/test-site.mjs
+      - run: node --test scripts/weekly/core.test.mjs
+      - if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          WEEKLY_HEAD_REF: ${{ github.head_ref }}
+        run: node scripts/weekly/check-scope.mjs "$BASE_SHA"
