@@ -1,0 +1,6 @@
+.weekly-runs/
+.weekly-publish-lock
+node_modules/
+.env
+.env.*
+!.env.example

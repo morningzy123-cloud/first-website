@@ -1,0 +1,4 @@
+interface:
+  display_name: "Marketing Buddy 每周自动更新"
+  short_description: "按四国检索规范核验竞品情报，更新网站数据并通过 GitHub 自动发布"
+  default_prompt: "使用 $marketing-buddy-weekly-update 完成本周四国研究、数据核验和网站自动更新。"

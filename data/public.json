@@ -17,7 +17,8 @@
           "sourceIds": [
             "mx-inegi-raiavl-detail",
             "mx-inegi-raiavl-release"
-          ]
+          ],
+          "conclusion": "市场仍保持增长，短期可继续观察需求窗口。"
         },
         "importantCompetitorAction": {
           "status": "confirmed",
@@ -25,7 +26,18 @@
           "verifiedAt": "2026-10-24T00:00:00+08:00",
           "sourceIds": [
             "mx-kia-k3-promo-oct"
-          ]
+          ],
+          "conclusion": "K3用超长免息抢占价格敏感用户，金融竞争升温。"
+        },
+        "entrySummary": {
+          "status": "confirmed",
+          "value": "INEGI 详细记录显示，墨西哥 2026 年 9 月销售 129,274 辆轻型车；1—9 月的先行统计为 1,144,002 辆，同比增长 5.0%。",
+          "verifiedAt": "2026-10-24T00:00:00+08:00",
+          "sourceIds": [
+            "mx-inegi-raiavl-detail",
+            "mx-inegi-raiavl-release"
+          ],
+          "conclusion": "市场仍保持增长，短期可继续观察需求窗口。"
         }
       },
       {
@@ -36,7 +48,8 @@
           "verifiedAt": "2026-10-24T23:00:00+08:00",
           "sourceIds": [
             "kz-kao-sales-2026-09"
-          ]
+          ],
+          "conclusion": "市场保持增长，但本地化竞品基础较强。"
         },
         "importantCompetitorAction": {
           "status": "confirmed",
@@ -45,7 +58,17 @@
           "sourceIds": [
             "kz-kao-sales-2026-09",
             "kz-chevrolet-cobalt-promo-oct-2026"
-          ]
+          ],
+          "conclusion": "Cobalt销量领先又叠加限价，主流价位竞争加剧。"
+        },
+        "entrySummary": {
+          "status": "confirmed",
+          "value": "哈萨克斯坦官方经销商在 2026 年 9 月销售 19,309 辆新乘用车和商用车，同比增长 5.2%；1—9 月累计 165,678 辆，同比增长 2.6%。",
+          "verifiedAt": "2026-10-24T23:00:00+08:00",
+          "sourceIds": [
+            "kz-kao-sales-2026-09"
+          ],
+          "conclusion": "市场保持增长，但本地化竞品基础较强。"
         }
       },
       {
@@ -57,7 +80,8 @@
           "sourceIds": [
             "sa-daleel-automotive",
             "sa-h1-2026-market"
-          ]
+          ],
+          "conclusion": "市场从高位进入调整，上市节奏需要更审慎。"
         },
         "importantCompetitorAction": {
           "status": "confirmed",
@@ -65,7 +89,18 @@
           "verifiedAt": "2026-10-24T12:00:00+08:00",
           "sourceIds": [
             "sa-toyota-yaris-finance"
-          ]
+          ],
+          "conclusion": "Yaris以低月供和代付方案降低购车门槛。"
+        },
+        "entrySummary": {
+          "status": "confirmed",
+          "value": "沙特政府产业平台显示，2025 年新车销量约 85.6 万辆；二手/行业数据转引显示 2026 年上半年轻型车销量 313,458 辆，同比下降 23.5%，市场从高位进入调整。",
+          "verifiedAt": "2026-10-24T12:00:00+08:00",
+          "sourceIds": [
+            "sa-daleel-automotive",
+            "sa-h1-2026-market"
+          ],
+          "conclusion": "市场从高位进入调整，上市节奏需要更审慎。"
         }
       },
       {
@@ -78,7 +113,8 @@
             "ae-uae-market-2025",
             "ae-uae-market-2026"
           ],
-          "note": "阿联酋缺少统一公开的政府车型销量数据库，数字来自专业销量数据提供者。"
+          "note": "阿联酋缺少统一公开的政府车型销量数据库，数字来自专业销量数据提供者。",
+          "conclusion": "市场转弱，需优先验证价格和促销效率。"
         },
         "importantCompetitorAction": {
           "status": "confirmed",
@@ -88,8 +124,90 @@
             "ae-mg-offer-pay-next-year",
             "ae-toyota-yaris-business"
           ],
-          "note": "两项页面均未给出明确活动起止日期，需每周检查页面是否仍有效。"
+          "note": "两项页面均未给出明确活动起止日期，需每周检查页面是否仍有效。",
+          "conclusion": "MG与Toyota均以低月供和权益争夺价格敏感与企业客户。"
+        },
+        "entrySummary": {
+          "status": "confirmed",
+          "value": "2025年阿联酋新车市场约335,772辆，同比增长5.3%；但2026年前7个月同比下降22.2%，市场由增长转向明显调整。",
+          "verifiedAt": "2026-10-24T16:00:00+08:00",
+          "sourceIds": [
+            "ae-uae-market-2025",
+            "ae-uae-market-2026"
+          ],
+          "note": "阿联酋缺少统一公开的政府车型销量数据库，数字来自专业销量数据提供者。",
+          "conclusion": "市场转弱，需优先验证价格和促销效率。"
         }
+      }
+    ],
+    "highValueSignals": [
+      {
+        "id": "mg-ae-iem-50000-fleet-mix-2026-10",
+        "marketCode": "AE",
+        "brand": "MG",
+        "model": "MG5",
+        "category": "竞品重大动作",
+        "title": "IEM披露MG阿联酋累计交付50,000辆及车队客户占比",
+        "summary": "行业媒体援引经销商IEM数据称，自2021年起累计MG销量中约55%为零售、45%为车队和机构客户；2025年交付13,265辆。该事件为品牌/渠道层面，不是MG5车型销量。",
+        "date": "2026-10-21",
+        "validTo": null,
+        "importance": 3,
+        "status": "confirmed",
+        "sourceIds": [
+          "ae-mg-fleet-mix"
+        ],
+        "verifiedAt": "2026-10-24T16:00:00+08:00"
+      },
+      {
+        "id": "mg-mx-aftersales-2026-10",
+        "marketCode": "MX",
+        "brand": "MG",
+        "model": "MG5",
+        "category": "竞品重大动作",
+        "title": "MG 强调售后网络与零部件供应能力",
+        "summary": "MG 官方称其在墨西哥拥有超过 108 家授权经销商，圣路易斯波托西零部件中心可在三个工作日内向经销商交付，并继续以 Lucky Seven 作为售后保障。",
+        "date": "2026-10-20",
+        "validTo": null,
+        "importance": 3,
+        "status": "confirmed",
+        "sourceIds": [
+          "mx-mg-network-news"
+        ],
+        "verifiedAt": "2026-10-24T00:00:00+08:00"
+      },
+      {
+        "id": "cobalt-kz-promo-2026-10",
+        "marketCode": "KZ",
+        "brand": "Chevrolet",
+        "model": "Cobalt",
+        "category": "竞品重大动作",
+        "title": "Cobalt 授权经销商价格降至 5,990,000 KZT 起",
+        "summary": "Terra Motors 发布 Cobalt 限量价格活动，页面未披露结束日期。",
+        "date": "2026-10-17",
+        "validTo": null,
+        "importance": 3,
+        "status": "confirmed",
+        "sourceIds": [
+          "kz-chevrolet-cobalt-promo-oct-2026"
+        ],
+        "verifiedAt": "2026-10-24T23:00:00+08:00"
+      },
+      {
+        "id": "k3-mx-finance-2026-10",
+        "marketCode": "MX",
+        "brand": "Kia",
+        "model": "K3",
+        "category": "重大营销动作",
+        "title": "K3 Sedan 2027 推出最高 36 个月免息",
+        "summary": "除 L MT 外，K3 Sedan 2027 可享最高 36 个月免息，并延后至 2026 年 12 月开始还款；活动至 10 月 31 日。",
+        "date": "2026-10-01",
+        "validTo": "2026-10-31",
+        "importance": 3,
+        "status": "confirmed",
+        "sourceIds": [
+          "mx-kia-k3-promo-oct"
+        ],
+        "verifiedAt": "2026-10-24T00:00:00+08:00"
       }
     ]
   },
@@ -109,13 +227,14 @@
         },
         "taxImportAndPolicy": {
           "status": "confirmed",
-          "value": "自 2026 年 1 月 1 日起，墨西哥将包括 8703.22.99 在内的多项整车进口税号的一般进口税率调至 50%。政府说明该政策适用于与墨西哥没有贸易协定国家的相关商品。C级 Sedan 1.5L 若以中国原产 CBU 进口并实际归入 8703.22.99，原则上会受影响。",
+          "value": "自 2026 年 1 月 1 日起，墨西哥将包括 8703.22.99 在内的多项整车进口税号的一般进口税率调至 50%。政府说明该政策适用于与墨西哥没有贸易协定国家的相关商品。具体车型须根据实际税号、原产地和进口安排确认是否适用。",
           "verifiedAt": "2026-10-24T00:00:00+08:00",
           "sourceIds": [
             "mx-dof-tigie-reform-2025-12-29",
             "mx-economia-tariff-package-2025-12-18"
           ],
-          "note": "50% 是进口税率，不等于终端售价必然上涨 50%。C级 Sedan 的实际适用需由报关资料确认税号/NICO、原产地与进口安排。"
+          "note": "进口税率不等于终端售价涨幅；适用税号/NICO、原产地与进口安排需由实际报关文件确认。",
+          "conclusion": "进口成本压力显著，优先确认 50% 关税是否适用。"
         }
       },
       "researchV2": {
@@ -178,13 +297,12 @@
       "basics": {
         "summary": {
           "status": "confirmed",
-          "value": "哈萨克斯坦 2026 年 1—9 月官方经销商新车销量为 165,678 辆，同比增长 2.6%。三款对标轿车中，Cobalt 依靠本地生产和规模销量领先；C级 Sedan 与 Arrizo 6 的 9 月销量分别为 122 辆和 73 辆。",
+          "value": "哈萨克斯坦官方经销商在 2026 年 9 月销售 19,309 辆新乘用车和商用车，同比增长 5.2%；1—9 月累计 165,678 辆，同比增长 2.6%。",
           "verifiedAt": "2026-10-24T23:00:00+08:00",
           "sourceIds": [
-            "kz-kao-sales-2026-09",
-            "kz-bscb-model-sales-2026-09",
-            "kz-kao-production-2026-09"
-          ]
+            "kz-kao-sales-2026-09"
+          ],
+          "conclusion": "市场保持增长，但本地化竞品基础较强。"
         },
         "taxImportAndPolicy": {
           "status": "confirmed",
@@ -196,7 +314,8 @@
             "kz-kgd-vat-2026",
             "kz-eaeu-china-nonpreferential"
           ],
-          "note": "法规事实与车型适用分开：根据官方 1,499cc 汽油机规格，中国原产 CBU C级 Sedan 很可能落入 8703 22 109 9，但实际税号、原产地、进口方式与是否享有产业政策必须以报关资料确认。15% 关税与 16% 进口增值税均不能直接换算为零售价涨幅。Cobalt 与 Arrizo 6 已在哈萨克斯坦本地生产，其整车进口税比较不具同口径性。"
+          "note": "具体车型归类、原产地、进口方式及产业政策适用须以报关资料确认。关税和进口增值税不能直接换算为零售价涨幅，本地生产与整车进口应分别比较。",
+          "conclusion": "中国整车进口税负较高，需按实际税号核实成本。"
         }
       },
       "researchV2": {
@@ -208,7 +327,7 @@
       "basics": {
         "summary": {
           "status": "confirmed",
-          "value": "沙特是海湾地区最大的汽车市场之一。官方产业平台显示 2025 年新车销量约 85.6 万辆；2026 年上半年行业数据为 313,458 辆，同比下降 23.5%。入门级轿车依然活跃，Yaris、MG5 与 C级 Sedan 分别代表强势日系、成熟中国品牌和低价高配置路线。",
+          "value": "沙特是海湾地区最大的汽车市场之一。官方产业平台显示 2025 年新车销量约 85.6 万辆；2026 年上半年行业数据为 313,458 辆，同比下降 23.5%。本站重点跟踪 Yaris Sedan 与 MG5 的价格和营销变化。",
           "verifiedAt": "2026-10-24T12:00:00+08:00",
           "sourceIds": [
             "sa-daleel-automotive",
@@ -230,7 +349,8 @@
             "sa-saso-saber",
             "sa-gaft-agreements"
           ],
-          "note": "1.5L 汽油 C级 Sedan 很可能归入 HS 8703.22，但沙特/GCC 实际 12 位税号、车辆原产地和进口安排未从公开报关文件确认。5% 关税和 15% VAT 不能直接等同为终端售价相同比例上涨。"
+          "note": "实际十二位税号、原产地与进口安排应按具体车辆和报关文件核对，税率不能机械等同为终端售价涨幅。",
+          "conclusion": "认证和增值税会影响成本与上市节奏。"
         }
       },
       "researchV2": {
@@ -312,7 +432,8 @@
             "ae-cepa-list",
             "ae-import-guide"
           ],
-          "note": "C级 Sedan 1.5L汽油两驱私人乘用车若为清关当年或下一年车型，技术特征可能对应12位税号8703 22 11 00 00；但实际税号、原产地证明、车型年份、进口商安排、自由区路径及任何个案优惠尚未取得报关文件确认，车型适用结论必须保留条件。自由区货物进入阿联酋本地市场时仍按当时税则征税。5%关税和5% VAT不等于零售价机械上涨10%。"
+          "note": "实际税号、原产地证明、车型年份、进口商和自由区路径尚须具体报关文件确认。自由区货物进入阿联酋本地市场时按适用税则处理；关税与 VAT 不能机械等同为零售价涨幅。",
+          "conclusion": "重点确认清关路径和车型归类。"
         }
       },
       "researchV2": {
@@ -609,7 +730,7 @@
           "eventDate": "2026-10-01",
           "title": "K3 Sedan 2027 推出最高 36 个月免息",
           "description": "除 L MT 外，K3 Sedan 2027 可享最高 36 个月免息，并延后至 2026 年 12 月开始还款；活动至 10 月 31 日。",
-          "whyItMatters": "K3 以免息降低融资总成本和短期付款压力，对 C级 Sedan 当前以价格和奖励为主的促销形成直接竞争。",
+          "whyItMatters": "免息方案降低融资总成本及短期付款压力，是当地金融竞争的重要信号。",
           "status": "confirmed",
           "sourceIds": [
             "mx-kia-k3-promo-oct"
@@ -1038,7 +1159,7 @@
           "eventDate": "2026-10-20",
           "title": "MG 强调售后网络与零部件供应能力",
           "description": "MG 官方称其在墨西哥拥有超过 108 家授权经销商，圣路易斯波托西零部件中心可在三个工作日内向经销商交付，并继续以 Lucky Seven 作为售后保障。",
-          "whyItMatters": "品牌级售后网络和零部件时效增强 MG5 的持有信心，是 C级 Sedan 在质保年限之外需要关注的竞争维度。",
+          "whyItMatters": "品牌级售后网络和零部件供应时效会影响消费者持有成本与购买信心。",
           "status": "confirmed",
           "sourceIds": [
             "mx-mg-network-news"
@@ -1215,7 +1336,7 @@
           }
         ],
         "consumerFeedback": {
-          "sampleSize": 5,
+          "sampleSize": 3,
           "platforms": [
             "Reddit r/AutosMexico"
           ],
@@ -1225,14 +1346,6 @@
               "threads": 1,
               "sourceIds": [
                 "MX-S14"
-              ]
-            },
-            {
-              "theme": "配置与价格比被视为主要卖点（与 C级 Sedan 直接对比）",
-              "threads": 2,
-              "sourceIds": [
-                "MX-S18",
-                "MX-S17"
               ]
             }
           ],
@@ -1245,13 +1358,6 @@
               ]
             },
             {
-              "theme": "对维修与总持有成本的担忧（匿名引文：“MG no lo compres… es un pozo financiero esa madre si se te descompone”）",
-              "threads": 1,
-              "sourceIds": [
-                "MX-S18"
-              ]
-            },
-            {
               "theme": "对车源真伪/水淹车的疑虑出现在购车讨论中",
               "threads": 1,
               "sourceIds": [
@@ -1259,17 +1365,9 @@
               ]
             }
           ],
-          "limitations": "5 个讨论帖（评论数 18–58），仅能读取搜索摘要与单条引用；未做全文编码，因此各主题计数为“出现帖数”，不构成频次统计。样本集中于 r/AutosMexico，偏向已购/拟购的年轻网民，不代表全市场。未纳入 Facebook 车主群与 YouTube 评论。"
+          "limitations": "仅保留三个可定位讨论帖的线索。原交付主要读取搜索摘要和短引文，仍需补充直接原文核验；不作车主评价频次统计，不代表当地全体消费者。"
         },
         "audienceProfile": [
-          {
-            "claim": "价格敏感的首购人群，用“同价位配置更多”做决策，直接对比 C级 Sedan 等中国品牌",
-            "basis": "hypothesis",
-            "sourceIds": [
-              "MX-S18",
-              "MX-S17"
-            ]
-          },
           {
             "claim": "城市通勤为主、对动力要求不高，但会在山路/满载场景感到不足",
             "basis": "hypothesis",
@@ -1472,7 +1570,7 @@
           "eventDate": "2026-10-17",
           "title": "Cobalt 授权经销商价格降至 5,990,000 KZT 起",
           "description": "Terra Motors 发布 Cobalt 限量价格活动，页面未披露结束日期。",
-          "whyItMatters": "活动价比 C级 Sedan 官方入门价低 1,000,000 KZT，进一步放大 Cobalt 的价格与销量优势。",
+          "whyItMatters": "限量价格活动强化了 Cobalt 在当地入门轿车市场的价格竞争。",
           "status": "confirmed",
           "sourceIds": [
             "kz-chevrolet-cobalt-promo-oct-2026"
@@ -2331,7 +2429,7 @@
           "eventDate": "2026-10-21",
           "title": "IEM披露MG阿联酋累计交付50,000辆及车队客户占比",
           "description": "行业媒体援引经销商IEM数据称，自2021年起累计MG销量中约55%为零售、45%为车队和机构客户；2025年交付13,265辆。该事件为品牌/渠道层面，不是MG5车型销量。",
-          "whyItMatters": "MG的车队基础会放大MG5在租赁和机构采购中的价格、服务与残值竞争力，C级 Sedan不宜只按零售月供比较。",
+          "whyItMatters": "车队客户基础会影响车型的租赁、机构采购和售后服务竞争。",
           "status": "confirmed",
           "sourceIds": [
             "ae-mg-fleet-mix"
@@ -3054,7 +3152,7 @@
       "publishedAt": "2026-10-07T00:00:00-06:00",
       "accessedAt": "2026-10-24T00:00:00+08:00",
       "language": "es",
-      "notes": "2026 年 9 月销售：C级 Sedan 1,555；Kia K3 Sedan 3,753；MG5 2,425。"
+      "notes": "2026 年 9 月：Kia K3 Sedan 3,753 辆，MG5 2,425 辆。"
     },
     {
       "id": "mx-amda-segments-sep",
@@ -3195,29 +3293,6 @@
       "accessedAt": "2026-10-24T23:00:00+08:00",
       "language": "ru",
       "notes": "9 月 19,309 辆；1—9 月 165,678 辆；Cobalt 9 月 2,906 辆。"
-    },
-    {
-      "id": "kz-kao-production-2026-09",
-      "url": "https://kao.kz/ru/novosti/101/",
-      "title": "Производство автомобилей за январь–сентябрь 2026 года",
-      "publisher": "Казахстанский автомобильный союз",
-      "sourceType": "industry_association",
-      "marketCode": "KZ",
-      "publishedAt": "2026-10-07T00:00:00+05:00",
-      "accessedAt": "2026-10-24T23:00:00+08:00",
-      "language": "ru",
-      "notes": "1—9 月生产 146,541 辆；Cobalt 27,659 辆；Chery 品牌 12,593 辆。"
-    },
-    {
-      "id": "kz-bscb-model-sales-2026-09",
-      "url": "https://bestsellingcarsblog.com/2026/10/kazakhstan-september-2026-changan-127-1-haval-88-3-shine/",
-      "title": "Kazakhstan September 2026: Changan, Haval shine",
-      "publisher": "BestSellingCarsBlog",
-      "sourceType": "sales_data_provider",
-      "marketCode": "KZ",
-      "accessedAt": "2026-10-24T23:00:00+08:00",
-      "language": "en",
-      "notes": "2026 年 9 月/1—9 月：Cobalt 2,906/24,561；C级 Sedan 122/1,079；Arrizo 6 73/1,031。Cobalt 月度值与 KAO 一致。"
     },
     {
       "id": "kz-chevrolet-cobalt-page",
@@ -3385,8 +3460,7 @@
       "marketCode": "SA",
       "publishedAt": "2025-08-14T00:00:00+04:00",
       "accessedAt": "2026-10-24T12:00:00+08:00",
-      "language": "en",
-      "notes": "H1 2025 MG5 4,910 and C级 Sedan 3,213; article says official sales data but does not expose the underlying registry."
+      "language": "en"
     },
     {
       "id": "sa-zatca-vehicle-duty",
@@ -3882,18 +3956,6 @@
       "accessedAt": "2026-10-25T14:29:00+08:00",
       "language": "es",
       "notes": "34 条评论"
-    },
-    {
-      "id": "MX-S18",
-      "url": "https://www.reddit.com/r/AutosMexico/comments/1qpnr3a/qu%C3%A9_recomiendan_como_compra_mg5_elegance_2026_o/",
-      "title": "Qué recomiendan como compra, MG5 Elegance 2026 o C级 Sedan GF 2026?",
-      "publisher": "Reddit r/AutosMexico",
-      "sourceType": "forum",
-      "marketCode": "MX",
-      "publishedAt": "",
-      "accessedAt": "2026-10-25T14:29:00+08:00",
-      "language": "es",
-      "notes": "28 条评论；含对 MG 维修成本的负面意见"
     },
     {
       "id": "MX-S19",
