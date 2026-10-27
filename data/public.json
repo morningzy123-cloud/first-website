@@ -1,6 +1,6 @@
 {
   "schemaVersion": "marketing-buddy-v2-public",
-  "generatedAt": "2026-10-26",
+  "generatedAt": "2026-10-28",
   "project": {
     "name": "Marketing Buddy",
     "scope": "C级 Sedan",
@@ -3061,6 +3061,622 @@
           }
         ]
       }
+    },
+    {
+      "id": "nissan-versa-mx",
+      "marketCode": "MX",
+      "brand": "Nissan",
+      "model": "Versa",
+      "modelYear": "2026",
+      "researchStatus": "confirmed",
+      "prices": [
+        {
+          "id": "nissan-versa-mx-price-0",
+          "price": {
+            "status": "confirmed",
+            "amount": 374900,
+            "currency": "MXN",
+            "priceType": "official_list_price",
+            "variantId": "Sense Base TM '26",
+            "condition": "官方 Precio de Lista（MXN）；不含 CrediNissan 特别价与金融促销；页面未注明税费与上牌费口径",
+            "observedAt": "2026-10-28",
+            "verifiedAt": "2026-10-28T00:40:00+08:00",
+            "sourceIds": [
+              "mx-nissan-versa-page",
+              "mx-nissan-versa-precios"
+            ]
+          }
+        },
+        {
+          "id": "nissan-versa-mx-price-1",
+          "price": {
+            "status": "confirmed",
+            "amount": 382900,
+            "currency": "MXN",
+            "priceType": "official_list_price",
+            "variantId": "Sense TM '26",
+            "condition": "官方 Precio de Lista（MXN）；不含 CrediNissan 特别价与金融促销；页面未注明税费与上牌费口径",
+            "observedAt": "2026-10-28",
+            "verifiedAt": "2026-10-28T00:40:00+08:00",
+            "sourceIds": [
+              "mx-nissan-versa-page",
+              "mx-nissan-versa-precios"
+            ]
+          }
+        },
+        {
+          "id": "nissan-versa-mx-price-2",
+          "price": {
+            "status": "confirmed",
+            "amount": 406900,
+            "currency": "MXN",
+            "priceType": "official_list_price",
+            "variantId": "Sense CVT '26",
+            "condition": "官方 Precio de Lista（MXN）；不含 CrediNissan 特别价与金融促销；页面未注明税费与上牌费口径",
+            "observedAt": "2026-10-28",
+            "verifiedAt": "2026-10-28T00:40:00+08:00",
+            "sourceIds": [
+              "mx-nissan-versa-page",
+              "mx-nissan-versa-precios"
+            ]
+          }
+        },
+        {
+          "id": "nissan-versa-mx-price-3",
+          "price": {
+            "status": "confirmed",
+            "amount": 428900,
+            "currency": "MXN",
+            "priceType": "official_list_price",
+            "variantId": "Advance TM '26",
+            "condition": "官方 Precio de Lista（MXN）；不含 CrediNissan 特别价与金融促销；页面未注明税费与上牌费口径",
+            "observedAt": "2026-10-28",
+            "verifiedAt": "2026-10-28T00:40:00+08:00",
+            "sourceIds": [
+              "mx-nissan-versa-page",
+              "mx-nissan-versa-precios"
+            ]
+          }
+        },
+        {
+          "id": "nissan-versa-mx-price-4",
+          "price": {
+            "status": "confirmed",
+            "amount": 439900,
+            "currency": "MXN",
+            "priceType": "official_list_price",
+            "variantId": "Advance CVT '26",
+            "condition": "官方 Precio de Lista（MXN）；不含 CrediNissan 特别价与金融促销；页面未注明税费与上牌费口径",
+            "observedAt": "2026-10-28",
+            "verifiedAt": "2026-10-28T00:40:00+08:00",
+            "sourceIds": [
+              "mx-nissan-versa-page",
+              "mx-nissan-versa-precios"
+            ]
+          }
+        },
+        {
+          "id": "nissan-versa-mx-price-5",
+          "price": {
+            "status": "confirmed",
+            "amount": 470900,
+            "currency": "MXN",
+            "priceType": "official_list_price",
+            "variantId": "Exclusive CVT '26",
+            "condition": "官方 Precio de Lista（MXN）；不含 CrediNissan 特别价与金融促销；页面未注明税费与上牌费口径",
+            "observedAt": "2026-10-28",
+            "verifiedAt": "2026-10-28T00:40:00+08:00",
+            "sourceIds": [
+              "mx-nissan-versa-page",
+              "mx-nissan-versa-precios"
+            ]
+          }
+        }
+      ],
+      "financeOffers": [
+        {
+          "id": "versa-2026-credinissan-precio-especial",
+          "status": "confirmed",
+          "title": "CrediNissan 特别价：全系下调，Sense Base 289,990 MXN 起",
+          "provider": "CrediNissan / NR Finance México (NRFM)",
+          "conditions": "适用 Versa 2026 全部六个版本；仅在传统信贷（crédito tradicional）下有效，不与其他促销叠加；须经 NRFM 信贷审批，特别价取决于客户财务状况与信用表现；各版本特别价见 priceNotes。",
+          "validFrom": "2026-10-21",
+          "validTo": "2026-11-02",
+          "sourceIds": [
+            "mx-nissan-versa-page"
+          ],
+          "verifiedAt": "2026-10-28T00:40:00+08:00"
+        },
+        {
+          "id": "versa-2026-60-msi",
+          "status": "unconfirmed",
+          "title": "车型页主标语：最高 60 期免息",
+          "provider": "CrediNissan",
+          "conditions": "车型页首屏仅写「o hasta 60 meses sin intereses」，未公布适用版本、首付比例、0% 利率适用期限、手续费与尾款安排，未取得条款原文；官方博客另称 2026 年 9 月为「hasta 48 meses sin intereses y 0% de Costo por Apertura」，期数与月份互相矛盾，故按待核实记录。",
+          "sourceIds": [
+            "mx-nissan-versa-page",
+            "mx-nissan-blog-versa"
+          ],
+          "verifiedAt": "2026-10-28T00:40:00+08:00"
+        }
+      ],
+      "aftersales": [
+        {
+          "id": "versa-basic-warranty",
+          "type": "vehicle_warranty",
+          "detail": {
+            "status": "confirmed",
+            "value": "原厂保修 3 年或 60,000 km，以先到者为准（官网延保页以此作为「Garantía Original」的到期条件）。",
+            "verifiedAt": "2026-10-28T00:40:00+08:00",
+            "sourceIds": [
+              "mx-nissan-garantia-ext"
+            ]
+          }
+        },
+        {
+          "id": "versa-extended-warranty",
+          "type": "extended_warranty",
+          "detail": {
+            "status": "confirmed",
+            "value": "可选延长保修：在原厂保修到期后再保 3 年或至 125,000 km；可一次付清或并入月供。",
+            "verifiedAt": "2026-10-28T00:40:00+08:00",
+            "sourceIds": [
+              "mx-nissan-garantia-ext"
+            ]
+          }
+        },
+        {
+          "id": "versa-roadside-assistance",
+          "type": "roadside_assistance",
+          "detail": {
+            "status": "confirmed",
+            "value": "延长保修方案内含 24/7 全年无休援助：拖车、医疗协助、换胎、送油、开锁与故障住宿；具体范围以服务顾问告知的条款为准。",
+            "verifiedAt": "2026-10-28T00:40:00+08:00",
+            "sourceIds": [
+              "mx-nissan-garantia-ext"
+            ]
+          }
+        }
+      ],
+      "salesRecords": [],
+      "specifications": [
+        {
+          "key": "body_length_mm",
+          "label": "车身长度",
+          "fact": {
+            "status": "confirmed",
+            "value": 4500,
+            "unit": "mm",
+            "verifiedAt": "2026-10-28T00:40:00+08:00",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ]
+          }
+        },
+        {
+          "key": "wheelbase_mm",
+          "label": "轴距",
+          "fact": {
+            "status": "confirmed",
+            "value": 2620,
+            "unit": "mm",
+            "verifiedAt": "2026-10-28T00:40:00+08:00",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ]
+          }
+        },
+        {
+          "key": "trunk_l_sense",
+          "label": "后备箱容积（Sense）",
+          "fact": {
+            "status": "confirmed",
+            "value": 466,
+            "unit": "L",
+            "verifiedAt": "2026-10-28T00:40:00+08:00",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ]
+          }
+        },
+        {
+          "key": "trunk_l_high",
+          "label": "后备箱容积（Advance / Exclusive）",
+          "fact": {
+            "status": "confirmed",
+            "value": 482,
+            "unit": "L",
+            "verifiedAt": "2026-10-28T00:40:00+08:00",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ]
+          }
+        },
+        {
+          "key": "fuel_tank_l",
+          "label": "油箱容积",
+          "fact": {
+            "status": "confirmed",
+            "value": 41,
+            "unit": "L",
+            "verifiedAt": "2026-10-28T00:40:00+08:00",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ]
+          }
+        },
+        {
+          "key": "power_hp",
+          "label": "最大马力",
+          "fact": {
+            "status": "confirmed",
+            "value": 118,
+            "unit": "hp",
+            "verifiedAt": "2026-10-28T00:40:00+08:00",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ]
+          }
+        }
+      ],
+      "marketingActivities": [],
+      "recentEvents": [
+        {
+          "id": "versa-mx-credinissan-promo-2026-10",
+          "marketCode": "MX",
+          "vehicleId": "nissan-versa-mx",
+          "eventDate": "2026-10-21",
+          "title": "Versa 2026 推出 CrediNissan 特别价，全系下调约 7.5 万–9.5 万 MXN",
+          "description": "2026 年 10 月 21 日至 11 月 2 日，Versa 2026 六个版本在传统信贷下适用特别价：Sense Base 由 374,900 降至 289,990 MXN，Exclusive CVT 由 470,900 降至 386,990 MXN；特别价不与其它促销叠加。",
+          "whyItMatters": "直接用信贷渠道降价，把入门价压到 29 万 MXN 以内，同时抬高标价维持价格形象，对同价位竞品的价格锚点构成压力。",
+          "status": "confirmed",
+          "validFrom": "2026-10-21",
+          "validTo": "2026-11-02",
+          "sourceIds": [
+            "mx-nissan-versa-page"
+          ],
+          "verifiedAt": "2026-10-28T00:40:00+08:00"
+        }
+      ],
+      "researchV2": {
+        "priceNotes": [
+          {
+            "variant": "Sense Base TM '26",
+            "amount": 289990,
+            "currency": "MXN",
+            "sourceIds": [
+              "mx-nissan-versa-page"
+            ],
+            "note": "CrediNissan 特别价（标价 374,900）；仅限传统信贷，活动期 2026-10-21 至 2026-11-02，不与其他促销叠加"
+          },
+          {
+            "variant": "Sense TM '26",
+            "amount": 306990,
+            "currency": "MXN",
+            "sourceIds": [
+              "mx-nissan-versa-page"
+            ],
+            "note": "CrediNissan 特别价（标价 382,900）；仅限传统信贷，活动期 2026-10-21 至 2026-11-02，不与其他促销叠加"
+          },
+          {
+            "variant": "Sense CVT '26",
+            "amount": 331990,
+            "currency": "MXN",
+            "sourceIds": [
+              "mx-nissan-versa-page"
+            ],
+            "note": "CrediNissan 特别价（标价 406,900）；仅限传统信贷，活动期 2026-10-21 至 2026-11-02，不与其他促销叠加"
+          },
+          {
+            "variant": "Advance TM '26",
+            "amount": 333990,
+            "currency": "MXN",
+            "sourceIds": [
+              "mx-nissan-versa-page"
+            ],
+            "note": "CrediNissan 特别价（标价 428,900）；仅限传统信贷，活动期 2026-10-21 至 2026-11-02，不与其他促销叠加"
+          },
+          {
+            "variant": "Advance CVT '26",
+            "amount": 344990,
+            "currency": "MXN",
+            "sourceIds": [
+              "mx-nissan-versa-page"
+            ],
+            "note": "CrediNissan 特别价（标价 439,900）；仅限传统信贷，活动期 2026-10-21 至 2026-11-02，不与其他促销叠加"
+          },
+          {
+            "variant": "Exclusive CVT '26",
+            "amount": 386990,
+            "currency": "MXN",
+            "sourceIds": [
+              "mx-nissan-versa-page"
+            ],
+            "note": "CrediNissan 特别价（标价 470,900）；仅限传统信贷，活动期 2026-10-21 至 2026-11-02，不与其他促销叠加"
+          }
+        ],
+        "dealerOffers": [],
+        "officialSellingPoints": [
+          {
+            "localText": "118HP @ 6300 RPM / TORQUE 110 LB-PIE @ 4000 RPM",
+            "chineseSummary": "1.6 L HR16DE 自然吸气：118 马力 @6,300 rpm、110 lb·ft @4,000 rpm；匹配 5 速手动或 Xtronic CVT",
+            "relatedSpec": "Motor HR16DE 1.6L / Potencia neta 118@6300",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-28T00:40:00+08:00"
+          },
+          {
+            "localText": "Sistema de audio premium Bose® con 8 bocinas (2 frontales, 2 traseras, 2 Personal Bose® en cabecera de conductor y 2 tweeters), pantalla táctil 12.3”",
+            "chineseSummary": "Exclusive 配 12.3 英寸触屏与 8 喇叭 Bose 音响（含头枕近场扬声器），是同价位少见的配置组合",
+            "relatedSpec": "Solo versión Exclusive",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-28T00:40:00+08:00"
+          },
+          {
+            "localText": "Sistema de 6 bolsas de aire. 2 bolsas de aire frontales. 2 bolsas de aire laterales. 2 bolsas de aire de tipo cortina.",
+            "chineseSummary": "全系 6 气囊，并配 ABS/EBD/BA、VDC、TPMS、HSA 与 ISOFIX，符合 NOM-194-SE-2021",
+            "relatedSpec": "Seguridad pasiva 全系标配",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-28T00:40:00+08:00"
+          },
+          {
+            "localText": "Capacidad de cajuela (L) 466 482",
+            "chineseSummary": "行李厢 466 L（Sense）/ 482 L（Advance、Exclusive），在 B 级三厢中偏大",
+            "relatedSpec": "Capacidad de cajuela",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-28T00:40:00+08:00"
+          },
+          {
+            "localText": "Rendimiento de combustible (km/l) Ciudad 17.18 / Carretera 21.29 / Combinado 18.81（Sense，MT）",
+            "chineseSummary": "官方实验室综合油耗 18.77–18.81 km/L（NOM-163 工况，非实际道路值）",
+            "relatedSpec": "Rendimiento de combustible",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-28T00:40:00+08:00"
+          },
+          {
+            "localText": "Todas las versiones del Versa 2026 —Sense, Advance y Exclusive— incluyen Apple CarPlay y Android Auto inalámbricos de serie",
+            "chineseSummary": "全系标配无线 Apple CarPlay / Android Auto，入门版也有 9 英寸触屏",
+            "relatedSpec": "Conectividad 全系",
+            "sourceIds": [
+              "mx-nissan-blog-versa"
+            ],
+            "status": "confirmed",
+            "verifiedAt": "2026-10-28T00:40:00+08:00"
+          }
+        ],
+        "officialSpecifications": [
+          {
+            "originalText": "Motor HR16DE (1.6L) / Potencia neta (HP @ rpm) 118@6300 / Torque neto (Lb-pie @ rpm) 110@4000 / Transmisión: Manual de 5 velocidades o Xtronic CVT",
+            "chineseTranslation": "HR16DE 1.6 L 发动机：118 马力 @6,300 rpm，扭矩 110 lb·ft @4,000 rpm；变速箱为 5 速手动或 Xtronic CVT",
+            "reference": "官方目录 PDF 第 11 页「Motor / Transmisión」表",
+            "modelYear": "2026",
+            "variant": "全系（MT / CVT）",
+            "status": "confirmed",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ],
+            "verifiedAt": "2026-10-28T00:40:00+08:00"
+          },
+          {
+            "originalText": "Largo (mm) 4,500 / Ancho (mm) 1,740 / Alto (mm) 1,470 1,475 / Distancia entre ejes (mm) 2,620",
+            "chineseTranslation": "尺寸（mm）：全长 4,500 / 全宽 1,740 / 全高 1,470（Sense）与 1,475（其余）/ 轴距 2,620",
+            "reference": "官方目录 PDF 第 11 页「Dimensiones exteriores」",
+            "modelYear": "2026",
+            "variant": "全系",
+            "status": "confirmed",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ],
+            "verifiedAt": "2026-10-28T00:40:00+08:00"
+          },
+          {
+            "originalText": "Capacidad de tanque de combustible (L) 41 / Capacidad de cajuela (L) 466 482 / Peso vehicular (kg) 1,110 1,110 1,131 1,120 1,147 1,170",
+            "chineseTranslation": "油箱 41 L；行李厢 466 L（Sense 两版）/ 482 L（Advance、Exclusive）；整备质量 1,110–1,170 kg",
+            "reference": "官方目录 PDF 第 11 页「Capacidades / Peso」",
+            "modelYear": "2026",
+            "variant": "按版本",
+            "status": "confirmed",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ],
+            "verifiedAt": "2026-10-28T00:40:00+08:00"
+          },
+          {
+            "originalText": "Rendimiento de combustible (km/l) Ciudad 17.18 17.18 16.83 17.18 16.83 16.83 / Carretera 21.29 21.29 21.86 21.29 21.86 21.86 / Combinado 18.81 18.81 18.77 18.81 18.77 18.77",
+            "chineseTranslation": "油耗（km/L）：市区 16.83–17.18 / 高速 21.29–21.86 / 综合 18.77–18.81（按 Sense Base MT → Exclusive CVT 列序）",
+            "reference": "官方目录 PDF 第 11 页「Rendimiento de combustible」，脚注说明为实验室受控条件，按 NOM-163 口径",
+            "modelYear": "2026",
+            "variant": "六个版本列",
+            "status": "confirmed",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ],
+            "verifiedAt": "2026-10-28T00:40:00+08:00"
+          },
+          {
+            "originalText": "Frenado Inteligente de Emergencia con Detección de Peatones (I-FEB+PED) - · · · · · / Advertencia de Punto Ciego (BSW) - - - - - · / Sistema de audio premium Bose® ... pantalla táctil 12.3” - - - - - ·",
+            "chineseTranslation": "I-FEB+PED 自动紧急制动（含行人侦测）自 Sense TM 起配备；BSW 盲点警示、I-BSI、RCTA、I-DA、HBA、LDW、I-LI 与 12.3 英寸 Bose 音响仅 Exclusive 具备",
+            "reference": "官方目录 PDF 第 11 页「Seguridad activa y pasiva / Confort y Tecnología」装备表（列序：Sense Base TM、Sense TM、Sense CVT、Advance TM、Advance CVT、Exclusive CVT）",
+            "modelYear": "2026",
+            "variant": "按版本差异",
+            "status": "confirmed",
+            "sourceIds": [
+              "mx-nissan-versa-catalogo"
+            ],
+            "verifiedAt": "2026-10-28T00:40:00+08:00"
+          }
+        ],
+        "consumerFeedback": {
+          "sampleSize": 7,
+          "platforms": [
+            "Reddit r/AutosMexico"
+          ],
+          "samples": [
+            {
+              "id": "rdv-1",
+              "sourceId": "mx-rd-versa-comparativa",
+              "independenceKey": "rd-am-agusvargas",
+              "ownerStatus": "unknown",
+              "observedAt": "2026-10-28"
+            },
+            {
+              "id": "rdv-2",
+              "sourceId": "mx-rd-versa-comparativa",
+              "independenceKey": "rd-am-ripcritical",
+              "ownerStatus": "self_reported_owner",
+              "observedAt": "2026-10-28"
+            },
+            {
+              "id": "rdv-3",
+              "sourceId": "mx-rd-versa-comparativa",
+              "independenceKey": "rd-am-chinomaster182",
+              "ownerStatus": "unknown",
+              "observedAt": "2026-10-28"
+            },
+            {
+              "id": "rdv-4",
+              "sourceId": "mx-rd-versa-mazda2",
+              "independenceKey": "rd-am-hanibalborges",
+              "ownerStatus": "unknown",
+              "observedAt": "2026-10-28"
+            },
+            {
+              "id": "rdv-5",
+              "sourceId": "mx-rd-versa-mazda2",
+              "independenceKey": "rd-am-krubbit",
+              "ownerStatus": "unknown",
+              "observedAt": "2026-10-28"
+            },
+            {
+              "id": "rdv-6",
+              "sourceId": "mx-rd-versa-mazda2",
+              "independenceKey": "rd-am-starfew7522",
+              "ownerStatus": "unknown",
+              "observedAt": "2026-10-28"
+            },
+            {
+              "id": "rdv-7",
+              "sourceId": "mx-rd-versa-espacio",
+              "independenceKey": "rd-am-wolfsatzuky",
+              "ownerStatus": "self_reported_owner",
+              "observedAt": "2026-10-28"
+            }
+          ],
+          "positiveThemes": [
+            {
+              "theme": "皮实好养、配件便宜、空间大（“De batalla, refacciones baras, servicio económico, rendidor, espacioso”）",
+              "threads": 1,
+              "sampleIds": [
+                "rdv-1"
+              ],
+              "sourceIds": [
+                "mx-rd-versa-comparativa"
+              ]
+            },
+            {
+              "theme": "后排与行李厢空间明显优于 Mazda 2，适合常载人（“el Mazda dos está muy chiquito tanto de cajuela como en los asientos de atrás”）",
+              "threads": 1,
+              "sampleIds": [
+                "rdv-4"
+              ],
+              "sourceIds": [
+                "mx-rd-versa-mazda2"
+              ]
+            },
+            {
+              "theme": "车主认可空间表现（“Actualmente tengo un Versa y me gusta mucho el espacio que ofrece”）",
+              "threads": 1,
+              "sampleIds": [
+                "rdv-7"
+              ],
+              "sourceIds": [
+                "mx-rd-versa-espacio"
+              ]
+            },
+            {
+              "theme": "品牌可靠性口碑靠前：讨论中把 Nissan 列入最可靠品牌前五",
+              "threads": 1,
+              "sampleIds": [
+                "rdv-5"
+              ],
+              "sourceIds": [
+                "mx-rd-versa-mazda2"
+              ]
+            }
+          ],
+          "negativeThemes": [
+            {
+              "theme": "改款缺乏新意：现款车主认为“el nuevo modelo no tiene nada de nuevo”",
+              "threads": 1,
+              "sampleIds": [
+                "rdv-2"
+              ],
+              "sourceIds": [
+                "mx-rd-versa-comparativa"
+              ]
+            },
+            {
+              "theme": "CVT 变速箱被建议谨慎，部分买家因此转向 Toyota / Honda（“el versa tiene transmisión CVT así que recomendaría ver otras opciones”）",
+              "threads": 1,
+              "sampleIds": [
+                "rdv-5"
+              ],
+              "sourceIds": [
+                "mx-rd-versa-mazda2"
+              ]
+            },
+            {
+              "theme": "在 K3 / Virtus / Versa 三方对比中被认为“confiabilidad ni eficiencia”都不突出",
+              "threads": 1,
+              "sampleIds": [
+                "rdv-3"
+              ],
+              "sourceIds": [
+                "mx-rd-versa-comparativa"
+              ]
+            }
+          ],
+          "limitations": "仅通过 Reddit RSS 读取到 3 个讨论帖的正文与 2 个帖子的完整评论（第 3 帖评论接口返回 429），样本 7 条，全部为购车咨询帖而非长期用车复盘；r/AutosMexico 搜索接口返回 403、单帖 JSON 接口 403，Reddit 以外平台（Facebook 群组、YouTube 评论）本次不可达。样本量不足以支撑“高频负面”结论，主题仅代表个别自述。"
+        },
+        "audienceProfile": [
+          {
+            "claim": "首次购车或家庭唯一用车，预算 30 万–45 万 MXN，把后排空间、行李厢与月供放在配置之前",
+            "basis": "hypothesis",
+            "sourceIds": [
+              "mx-rd-versa-mazda2",
+              "mx-rd-versa-espacio"
+            ],
+            "validationNeed": "需 30 条以上车主自述或经销商访谈，确认空间与月供在决策权重中的排序"
+          },
+          {
+            "claim": "对比清单通常同时包含 Kia K3、VW Virtus、Mazda 2 与 Chevrolet Aveo，价格锚点来自月供而非标价",
+            "basis": "hypothesis",
+            "sourceIds": [
+              "mx-rd-versa-comparativa",
+              "mx-rd-versa-mazda2"
+            ]
+          },
+          {
+            "claim": "部分买家在意 CVT 长期可靠性，会把保修年限与变速箱型式一起纳入考量",
+            "basis": "hypothesis",
+            "validationNeed": "需补充投诉平台与售后工单数据，验证 CVT 顾虑是否影响成交"
+          }
+        ]
+      }
     }
   ],
   "competitorPools": [
@@ -3073,6 +3689,10 @@
         },
         {
           "vehicleId": "mg5-mx",
+          "decisionStatus": "fixed"
+        },
+        {
+          "vehicleId": "nissan-versa-mx",
           "decisionStatus": "fixed"
         }
       ]
@@ -4297,12 +4917,114 @@
       "accessedAt": "2026-10-26T20:00:00+08:00",
       "language": "ru",
       "notes": "官方价目表 PDF，随车型页「Скачать прайс」下载；文件未标注发布日期"
+    },
+    {
+      "id": "mx-nissan-versa-precios",
+      "url": "https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html",
+      "title": "Nissan Versa 2026 - Precios y versiones",
+      "publisher": "Nissan México",
+      "sourceType": "official_model_page",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-28T00:40:00+08:00",
+      "language": "es-MX",
+      "notes": "页面内嵌价格数据标注 Updated_On 2026.10.22；六个版本 gradePrice 与车型页 Precio de Lista 一致"
+    },
+    {
+      "id": "mx-nissan-versa-page",
+      "url": "https://www.nissan.com.mx/vehiculos/todos/versa.html",
+      "title": "Nissan Versa 2026 车型主页（含 CrediNissan 特别价与活动脚注）",
+      "publisher": "Nissan México",
+      "sourceType": "official_promotion",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-28T00:40:00+08:00",
+      "language": "es-MX"
+    },
+    {
+      "id": "mx-nissan-versa-catalogo",
+      "url": "https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf",
+      "title": "Nissan Versa 2026 官方目录与装备规格表",
+      "publisher": "Nissan México",
+      "sourceType": "official_brochure",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-28T00:40:00+08:00",
+      "language": "es-MX"
+    },
+    {
+      "id": "mx-nissan-garantia-ext",
+      "url": "https://www.nissan.com.mx/duenos-nissan/respaldo-nissan/garantia-extendida.html",
+      "title": "Garantía Extendida Nissan（含原厂保修期限表述）",
+      "publisher": "Nissan México",
+      "sourceType": "official_aftersales",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-28T00:40:00+08:00",
+      "language": "es-MX"
+    },
+    {
+      "id": "mx-nissan-credi-tradicional",
+      "url": "https://www.nissan.com.mx/credi-nissan/soluciones-financieras/tradicional.html",
+      "title": "Crédito Tradicional CrediNissan（首付与期限规则）",
+      "publisher": "Nissan México",
+      "sourceType": "official_finance",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-28T00:40:00+08:00",
+      "language": "es-MX"
+    },
+    {
+      "id": "mx-nissan-blog-versa",
+      "url": "https://www.nissan.com.mx/experiencia-nissan/blog/la-ventaja-del-nissan-versa.html",
+      "title": "Sedanes accesibles que compiten con opciones premium: la ventaja del Nissan Versa",
+      "publisher": "Nissan México",
+      "sourceType": "manufacturer_official",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-28T00:40:00+08:00",
+      "language": "es-MX",
+      "notes": "官方博客，内容反映 2026 年 9 月口径，价格与期限与当前价目页不一致"
+    },
+    {
+      "id": "mx-nissan-versa-atributos",
+      "url": "https://www.nissan.com.mx/vehiculos/todos/versa/atributos.html",
+      "title": "Nissan Versa 2026 Atributos",
+      "publisher": "Nissan México",
+      "sourceType": "official_model_page",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-28T00:40:00+08:00",
+      "language": "es-MX"
+    },
+    {
+      "id": "mx-rd-versa-comparativa",
+      "url": "https://www.reddit.com/r/AutosMexico/comments/1wq4px5/recomendaci%C3%B3n_de_auto/",
+      "title": "Recomendación de auto（K3 / Virtus / Versa 对比讨论）",
+      "publisher": "Reddit r/AutosMexico",
+      "sourceType": "forum",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-28T00:40:00+08:00",
+      "language": "es-MX"
+    },
+    {
+      "id": "mx-rd-versa-mazda2",
+      "url": "https://www.reddit.com/r/AutosMexico/comments/1v0e9fd/versa_advance_o_mazda_2_i_sport/",
+      "title": "Versa advance o Mazda 2 I sport",
+      "publisher": "Reddit r/AutosMexico",
+      "sourceType": "forum",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-28T00:40:00+08:00",
+      "language": "es-MX"
+    },
+    {
+      "id": "mx-rd-versa-espacio",
+      "url": "https://www.reddit.com/r/AutosMexico/comments/1vwzp4e/recomendaci%C3%B3n_de_auto/",
+      "title": "Recomendación de auto（现款 Versa 车主的换购咨询）",
+      "publisher": "Reddit r/AutosMexico",
+      "sourceType": "forum",
+      "marketCode": "MX",
+      "accessedAt": "2026-10-28T00:40:00+08:00",
+      "language": "es-MX"
     }
   ],
   "lastUpdate": {
-    "runId": "2026-10-26-weekly-mvpbyw0f",
-    "asOf": "2026-10-26",
-    "windowStart": "2026-10-19",
-    "windowEnd": "2026-10-26"
+    "runId": "2026-10-28-mx-versa-scope",
+    "asOf": "2026-10-28",
+    "windowStart": "2026-10-28",
+    "windowEnd": "2026-10-28"
   }
 }

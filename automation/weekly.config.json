@@ -17,7 +17,7 @@
   "countryCardFields": ["entrySummary", "importantMarketNews", "importantCompetitorAction"],
   "overviewFields": ["highValueSignals"],
   "competitors": {
-    "MX": ["kia-k3-mx", "mg5-mx"],
+    "MX": ["kia-k3-mx", "mg5-mx", "nissan-versa-mx"],
     "KZ": ["chevrolet-cobalt-kz", "chery-arrizo-6-kz"],
     "SA": ["mg5-sa", "toyota-yaris-sa"],
     "AE": ["mg5-ae", "nissan-sunny-ae", "toyota-yaris-ae", "changan-alsvin-ae"]

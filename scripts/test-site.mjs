@@ -31,4 +31,4 @@ const signals=data.globalOverview.highValueSignals;
 data.globalOverview.highValueSignals=[{id:'test',title:'POLICY_SIGNAL_SENTINEL',summary:'test',marketCode:'MX',category:'国家政策',date:'2026-10-26',status:'confirmed',sourceIds:[]}];
 assert(render('#/overview').includes('POLICY_SIGNAL_SENTINEL'),'Explicit high-value signals are not rendered');
 data.globalOverview.highValueSignals=[];assert(!render('#/overview').includes('POLICY_SIGNAL_SENTINEL'),'Empty signal list ignored');data.globalOverview.highValueSignals=signals;
-console.log('PASS: overview, four markets, ten competitors, dynamic conclusions, signals and date-driven expiry');
+console.log(`PASS: overview, four markets, ${data.vehicles.length} competitors, dynamic conclusions, signals and date-driven expiry`);
