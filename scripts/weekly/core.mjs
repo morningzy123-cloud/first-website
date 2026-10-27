@@ -58,7 +58,8 @@ export function validateSnapshot(data) {
   assert(data.schemaVersion === 'marketing-buddy-v2-public', 'Unknown public schema');
   assert(data.project?.name === 'Marketing Buddy' && data.project?.scope === 'C级 Sedan', 'Brand or scope changed');
   assert(data.markets?.length === 4 && new Set(data.markets.map(m => m.code)).size === 4, 'Exactly four unique markets required');
-  assert(data.vehicles?.length === 10 && new Set(data.vehicles.map(v => v.id)).size === 10, 'Exactly ten unique competitors required');
+  const expectedVehicles = Object.values(config.competitors).flat();
+  assert(data.vehicles?.length === expectedVehicles.length && new Set(data.vehicles.map(v => v.id)).size === expectedVehicles.length, `Exactly ${expectedVehicles.length} unique competitors required`);
   const ids = new Set();
   for (const source of data.sources || []) {
     assert(source.id && !ids.has(source.id), `Duplicate or missing source ID: ${source.id}`); ids.add(source.id);

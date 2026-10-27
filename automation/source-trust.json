@@ -10,6 +10,7 @@
     {"host": "economia.gob.mx", "markets": ["MX"], "roles": ["policy"]},
     {"host": "kia.com", "paths": ["/mx/", "/content/dam/kwcms/mx/"], "markets": ["MX"], "roles": ["local_official", "dealer"]},
     {"host": "mgmotor.com.mx", "markets": ["MX"], "roles": ["local_official", "dealer"]},
+    {"host": "nissan.com.mx", "markets": ["MX"], "roles": ["local_official", "dealer"]},
     {"host": "kao.kz", "markets": ["KZ"], "roles": ["sales"]},
     {"host": "akab.kz", "markets": ["KZ"], "roles": ["sales"]},
     {"host": "kgd.gov.kz", "markets": ["KZ"], "roles": ["policy"]},

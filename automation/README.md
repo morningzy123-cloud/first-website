@@ -27,4 +27,16 @@
 
 周更只改变三份公开数据文件，保留品牌、金毛形象、蓝色UI、四国和既有竞品池。新增国家或竞品、修改UI/规则、账户设置或历史清理需要另行安排。当前公开仓库的旧历史不是本更新包的清理目标。
 
+### 新增竞品（范围变更，需人工授权）
+
+新增车型不是周更操作，周更通道会拒绝（`check-scope` 对非 `weekly/*` 分支只做完整校验）。正确做法是一次独立 PR，同时改动：
+
+1. `automation/weekly.config.json` 的 `competitors[市场]` 加入车型 ID；
+2. `data/public.json` 的 `vehicles` 加入完整车型对象、`competitorPools[市场].entries` 加入同 ID（`fixed`）；
+3. 若官方域名未在 `automation/source-trust.json`，补一条主机规则，否则价格/配置无法标为 confirmed；
+4. 用 `bundleText(data)` 重新生成 `data/public.bundle.js`，不要手改 bundle；
+5. `release.json` 保持上一次周更的清单，不要为范围变更伪造周更记录。
+
+竞品总数由配置推导，不要再写死数字。合并后下一次周更会自动把新车型纳入 28 项覆盖记录。
+
 自动检查会限制数据范围、证据记录、日期、引用和发布状态；事实真伪仍需要执行研究的 AI 认真读原文。不要将“脚本通过”理解为全站信息100%准确。
