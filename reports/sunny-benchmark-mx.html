@@ -72,7 +72,7 @@
   table.cmp thead th.hu { background:#0f3f7a; text-align:center; }
   table.cmp thead th.hv { background:#4a1020; text-align:center; }
   table.cmp thead th.vh { text-align:center; }
-  table.cmp tbody th { width:230px; min-width:230px; font-weight:700; color:#28374d; background:#fbfdff; position:relative; padding-left:13px; }
+  table.cmp tbody th { width:286px; min-width:286px; font-weight:700; color:#28374d; background:#fbfdff; position:relative; padding-left:13px; }
   table.cmp tbody th::before { content:""; position:absolute; left:0; top:0; bottom:0; width:4px; }
   table.cmp tbody th.rv-us::before { background:#0f9d58; }
   table.cmp tbody th.rv-them::before { background:#e11d48; }
@@ -81,7 +81,7 @@
   table.cmp td.tv { background:#fdfbfc; }
   .yes { color:#0b7a46; font-weight:900; font-size:13px; }
   .no { color:#c3ccd9; font-weight:700; }
-  .mk { display:inline-block; margin-left:7px; padding:1px 6px; border-radius:5px; font-style:normal; font-size:9px; font-weight:900; letter-spacing:.04em; }
+  .mk { display:inline-block; margin-left:7px; padding:1px 6px; border-radius:5px; font-style:normal; font-size:9px; font-weight:900; letter-spacing:.04em; white-space:nowrap; }
   .mk-us { background:#e6f6ed; color:#0b7a46; }
   .mk-them { background:#fde8ed; color:#b0143a; }
   .mk-tie { background:#f1f5f9; color:#64748b; }
@@ -199,8 +199,16 @@
   .lv-m { color:#a16207; font-weight:900; }
   .lv-l { color:#0b7a46; font-weight:900; }
 
+  table.pricet td.srccell { white-space:nowrap; width:1%; }
+  .refs { display:inline-flex; gap:2px; margin-left:3px; vertical-align:super; letter-spacing:normal; text-transform:none; }
+  table.pricet thead a.ref, table.cmp thead a.ref, table.ftbl thead a.ref { background:#fff; border-color:#fff; color:#0b1f3a; }
+  a.ref { display:inline-flex; align-items:center; justify-content:center; min-width:14px; height:14px; padding:0 3px; font-size:9px; font-weight:900; line-height:1; color:#1d4ed8; background:#eaf1ff; border:1px solid #cfdffb; border-radius:4px; text-decoration:none; }
+  a.ref:hover { background:#1d4ed8; color:#fff; border-color:#1d4ed8; }
+  .ref-own { display:inline-flex; align-items:center; justify-content:center; min-width:14px; height:14px; padding:0 3px; font-size:9px; font-weight:900; line-height:1; color:#7c8aa0; background:#f2f5f9; border:1px solid #e2e8f0; border-radius:4px; font-style:normal; cursor:help; }
+  .src-cnt { font-size:9.5px; font-weight:800; color:#0f9d58; background:#eefaf3; border-radius:5px; padding:2px 6px; white-space:nowrap; }
+  .src-cnt.zero { color:#94a3b8; background:#f4f6f9; }
   ul.src { list-style:none; display:grid; gap:8px; }
-  ul.src li { display:grid; grid-template-columns:34px 1fr auto; gap:10px; align-items:center; padding:10px 13px; background:#fff; border:1px solid #e8eff8; border-radius:10px; font-size:12px; }
+  ul.src li { display:grid; grid-template-columns:34px 1fr auto auto; gap:10px; align-items:center; padding:10px 13px; background:#fff; border:1px solid #e8eff8; border-radius:10px; font-size:12px; }
   .src-idx { font-size:10.5px; font-weight:900; color:#94a3b8; }
   ul.src a { color:#1d4ed8; font-weight:700; text-decoration:underline; text-underline-offset:2px; }
   .src-nolink { color:#475569; font-weight:700; }
@@ -230,7 +238,7 @@
       <h1>为什么更便宜却打不过：<br>本品 B 级 Sedan与 <span>Nissan Versa</span> 的墨西哥专项对标</h1>
       <p class="rp-sub">
         本品指导价比对手低 20.0%、整车保修长 2 年、动力总成保修长 5 年、车身大一圈、四轮碟刹。
-        但 2026 年 9 月，Versa 卖出 7,985 台排名全车型第一，本品卖出 1,555 台排名第 22——是对方的 19.5%。
+        但 2026 年 9 月，Versa 卖出 7,985 台排名全车型第一，本品卖出 1,555 台排名第 22——是对方的 19.5%<span class="refs"><a class="ref" href="https://www.luznoticias.mx/2026-10-08/mexico/nissan-versa-chevrolet-aveo-y-kia-k3-lideran-las-ventas-de-autos-en-septiembre/308874" target="_blank" rel="noopener noreferrer" title="来源 08 · 9 月车型销量榜">8</a><a class="ref" href="https://www.shangyexinzhi.com/article/34442763.html" target="_blank" rel="noopener noreferrer" title="来源 09 · 9 月品牌与车型销量明细">9</a><a class="ref" href="https://www.globalautoinsight.com/read_news.php?id=11654" target="_blank" rel="noopener noreferrer" title="来源 10 · 9 月轻型车销量复核">10</a></span>。
         本报告用两车官方价格接口、官方目录 PDF 第 11 页的六版本装备矩阵、官方促销条款、AMDA/JATO 金融报告与 INEGI 销量口径，
         把这个矛盾拆到可复核的程度：<b>问题不在产品，在把谁的需求当输入。</b>
       </p>
@@ -247,23 +255,23 @@
     <div class="kpi5">
       <div>
         <b><em>1,555</em> 台</b>
-        <small>本品 9 月销量</small>
+        <small>本品 9 月销量<span class="refs"><a class="ref" href="https://www.luznoticias.mx/2026-10-08/mexico/nissan-versa-chevrolet-aveo-y-kia-k3-lideran-las-ventas-de-autos-en-septiembre/308874" target="_blank" rel="noopener noreferrer" title="来源 08 · 9 月车型销量榜">8</a><a class="ref" href="https://www.shangyexinzhi.com/article/34442763.html" target="_blank" rel="noopener noreferrer" title="来源 09 · 9 月品牌与车型销量明细">9</a><a class="ref" href="https://www.globalautoinsight.com/read_news.php?id=11654" target="_blank" rel="noopener noreferrer" title="来源 10 · 9 月轻型车销量复核">10</a></span></small>
         <p>车型榜第 22 位、轿车榜第 10 位；Versa 同期 7,985 台，是我们的 5.1 倍</p>
       </div><div>
         <b><em>−8.6%</em> </b>
-        <small>成交价差</small>
+        <small>成交价差<span class="refs"><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer" title="来源 01 · 对手官方价格与版本页">1</a><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa.html" target="_blank" rel="noopener noreferrer" title="来源 02 · 对手官方车型页（指导价与信贷特价双口径）">2</a><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span></span></small>
         <p>264,990 对 289,990。指导价差 20.0%，被对手 84,910 的信贷折扣吃掉三分之二</p>
       </div><div>
         <b><em>20.4%</em> </b>
-        <small>对手全系平均折扣率</small>
+        <small>对手全系平均折扣率<span class="refs"><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer" title="来源 01 · 对手官方价格与版本页">1</a><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa.html" target="_blank" rel="noopener noreferrer" title="来源 02 · 对手官方车型页（指导价与信贷特价双口径）">2</a><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span></span></small>
         <p>六个版本折扣 17.8%–22.6%，不是只打入门版</p>
       </div><div>
         <b><em>+463</em> MXN/月</b>
-        <small>同首付比例月供差</small>
+        <small>同首付比例月供差<span class="refs"><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/home/nissan-2025-terminos_promociones_oferta_comercial_posventa.pdf" target="_blank" rel="noopener noreferrer" title="来源 04 · 对手促销条款与 CAT 披露 PDF">4</a><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-record-755-early-2026" target="_blank" rel="noopener noreferrer" title="来源 12 · 金融渗透率报告">12</a></span></small>
         <p>5,749 对 5,286。更便宜的车，每月更贵</p>
       </div><div>
         <b><em>54.9</em> /100</b>
-        <small>本品九力加权</small>
+        <small>本品九力加权<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span></span></small>
         <p>对手 87.2。差距最大的是洞察力（30 vs 91）</p>
       </div>
     </div>
@@ -291,8 +299,8 @@
         <div class="lg"><b><span class="sw them"></span>红 = 对手占优</b><p>同一规则反向。凡是判定的行都在行首有色条，并在项目名后标注「我优 / 对手优 / 持平」，不存在未判定的行。</p></div>
         <div class="lg"><b><span class="sw tie"></span>灰 = 持平</b><p>覆盖率之差小于 1 个百分点，或数值差异不构成客户感知差异（例如整备质量更重，本身不是优劣）。</p></div>
         <div class="lg"><b>版本对位</b><p>本品 GC ↔ Versa Sense Base；GL ↔ Sense TM / CVT；GF ↔ Advance / Exclusive。价格对位按成交价，不按指导价。</p></div>
-        <div class="lg"><b>数据基准</b><p>对手六版本价格取自官网价格接口（Updated_On 2026-10-22 20:45:59）；配置取自官方目录 PDF 第 11 页矩阵；我方取自官方目录 PDF 第 5 页 GC/GL/GF 矩阵。</p></div>
-        <div class="lg"><b>已知局限</b><p>两车均为官方标称值，未做实测；保修条款以官方文本为准，实际执行以门店为准。第 10 节列出全部缺口。</p></div>
+        <div class="lg"><b>数据基准</b><p>对手六版本价格取自官网价格接口（Updated_On 2026-10-22 20:45:59）<span class="refs"><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer" title="来源 01 · 对手官方价格与版本页">1</a></span>；配置取自官方目录 PDF 第 11 页矩阵<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a></span>；我方取自官方目录 PDF 第 5 页 GC/GL/GF 矩阵<span class="refs"><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span></span>。</p></div>
+        <div class="lg"><b>已知局限</b><p>两车均为官方标称值，未做实测；保修条款以官方文本为准，实际执行以门店为准。第 10 节列出全部缺口。判定规则、加权公式与模型估算（用户占比、决策漏斗）属于推导过程，不逐条标注出处，其输入数据在对应章节均有来源角标。</p></div>
       </div>
     </section>
 
@@ -301,36 +309,36 @@
       <p class="sec-lead">如果只有一个结论可以带走：<b>我们输在「把中国用户的配置偏好当成了墨西哥用户的需求」，不是输在产品力。</b>五条支撑，按重要性排序。</p>
       <div class="answer">
         <div class="ans"><b>① 价格优势是真的，但被对手的金融武器抹掉了三分之二</b>
-          <p>指导价 299,990 对 374,900，我们低 20.0%（74,910 MXN）。但对手用 CrediNissan 把 <b>六个版本全部打折</b>，平均折扣率 20.4%，入门版直降 84,910 到 289,990。客户眼里的真实差距只剩 8.6%（25,000 MXN）。<i>我们降的是标签价，对手降的是到手价。</i></p></div>
+          <p>指导价 299,990 对 374,900，我们低 20.0%（74,910 MXN）<span class="refs"><span class="ref-own" title="来源 21 · 我方官方车型页（内部存档）">21</span><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer" title="来源 01 · 对手官方价格与版本页">1</a></span>。但对手用 CrediNissan 把 <b>六个版本全部打折</b>，平均折扣率 20.4%，入门版直降 84,910 到 289,990<span class="refs"><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa.html" target="_blank" rel="noopener noreferrer" title="来源 02 · 对手官方车型页（指导价与信贷特价双口径）">2</a></span>。客户眼里的真实差距只剩 8.6%（25,000 MXN）<span class="refs"><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span></span>。<i>我们降的是标签价，对手降的是到手价。</i></p></div>
         <div class="ans"><b>② 更便宜的车，每月反而更贵 463 MXN</b>
-          <p>按各自官方最低首付比例对齐（我方 28.2%），我方月供 5,749，对手约 5,286。墨西哥零售金融渗透率已达 75.5%、60 期是主流，客户在报价单上看到的是月供，不是指导价。<i>这一栏一翻，前面所有配置优势都归零。</i></p></div>
+          <p>按各自官方最低首付比例对齐（我方 28.2%），我方月供 5,749，对手约 5,286<span class="refs"><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/home/nissan-2025-terminos_promociones_oferta_comercial_posventa.pdf" target="_blank" rel="noopener noreferrer" title="来源 04 · 对手促销条款与 CAT 披露 PDF">4</a></span>。墨西哥零售金融渗透率已达 75.5%、60 期是主流<span class="refs"><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-record-755-early-2026" target="_blank" rel="noopener noreferrer" title="来源 12 · 金融渗透率报告">12</a></span>，客户在报价单上看到的是月供，不是指导价。<i>这一栏一翻，前面所有配置优势都归零。</i></p></div>
         <div class="ans"><b>③ 根因是洞察力，不是产品力——这是全报告最反直觉的一条</b>
-          <p>产品力我方 88、对手 71，我们领先 17 分；洞察力我方 30、对手 91，落后 61 分。墨西哥 B 级买家进店 15 分钟只验三件事：手机能不能连、撞了会不会自己刹、三年后好不好卖。我们在这三项上分别是 1/3 版、0/6 版、无回购承诺。<i>配置表上我们全赢，客户的第一顺位我们全输。</i></p></div>
+          <p>产品力我方 88、对手 71，我们领先 17 分；洞察力我方 30、对手 91，落后 61 分。墨西哥 B 级买家进店 15 分钟只验三件事：手机能不能连<span class="refs"><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a></span>、撞了会不会自己刹<span class="refs"><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a></span>、三年后好不好卖<span class="refs"><a class="ref" href="https://www.abrova.com/post/used-car-market-in-mexico" target="_blank" rel="noopener noreferrer" title="来源 20 · 二手车市场结构">20</a></span>。我们在这三项上分别是 1/3 版、0/6 版、无回购承诺。<i>配置表上我们全赢，客户的第一顺位我们全输。</i></p></div>
         <div class="ans"><b>④ 渠道差是结构性的，投放补不回来</b>
-          <p>85 家店对 232 家，单店月销 50.7 台对 104 台。即使按计划在年底做到 100 家，动线覆盖仍只有对手的 43%。对手的经销商还经营着一个已建 126 所学校的基金会——<i>这是 65 年攒下的社区资产，不是预算能对标的东西。</i></p></div>
+          <p>85 家店对 232 家<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a><a class="ref" href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer" title="来源 07 · 对手经销商网络规模与社区资产">7</a></span>，单店月销 50.7 台对 104 台。即使按计划在年底做到 100 家，动线覆盖仍只有对手的 43%。对手的经销商还经营着一个已建 126 所学校的基金会<span class="refs"><a class="ref" href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer" title="来源 07 · 对手经销商网络规模与社区资产">7</a></span>——<i>这是 65 年攒下的社区资产，不是预算能对标的东西。</i></p></div>
         <div class="ans"><b>⑤ 我们的低价是补贴出来的，不是成本优势</b>
-          <p>整车进口、2026 年 1 月起承担 50% 关税；对手本地生产、USMCA 零关税、自营金融排墨西哥新车信贷第一（15.4%）。这种情况下仍报出更低的成交价，意味着毛利在被压缩。行业在关税生效前普遍囤货，把冲击推迟到了 2026 下半年——<i>而我们的增长正好建立在这段被推迟的价格上。</i></p></div>
+          <p>整车进口、2026 年 1 月起承担 50% 关税<span class="refs"><a class="ref" href="https://www.ccpitcq.org.cn/web/article/web/content_1450422120825958400.html" target="_blank" rel="noopener noreferrer" title="来源 16 · 关税法案要点">16</a></span>；对手本地生产、USMCA 零关税<span class="refs"><a class="ref" href="https://www.aftermarketinternational.com/en/news/latest-news/9755-nissan-celebrates-65-years-in-mexico-and-reinforces-its-global-strategic-importance.html" target="_blank" rel="noopener noreferrer" title="来源 06 · 对手 65 周年资料：本地生产与销量地位">6</a></span>、自营金融排墨西哥新车信贷第一（15.4%）<span class="refs"><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-nine-year-high-through-july-2026" target="_blank" rel="noopener noreferrer" title="来源 13 · 信贷市场份额报告">13</a></span>。这种情况下仍报出更低的成交价，意味着毛利在被压缩。行业在关税生效前普遍囤货，把冲击推迟到了 2026 下半年——<i>而我们的增长正好建立在这段被推迟的价格上。</i></p></div>
       </div>
     </section>
 
     <section class="sec" id="sales">
       <div class="sec-head"><span class="sec-no">02</span><h2>销量现实：不是「前十对前十」，是 1,555 对 7,985</h2></div>
-      <p class="sec-lead">先把量级摆正。9 月墨西哥轻型车 129,274 台（同比 +7.9%），1–9 月累计 114.4 万台（+5.0%），九年新高。大盘在涨，我们也在涨（+91.1%），但差距是 5.1 倍。</p>
+      <p class="sec-lead">先把量级摆正。9 月墨西哥轻型车 129,274 台（同比 +7.9%），1–9 月累计 114.4 万台（+5.0%），九年新高<span class="refs"><a class="ref" href="https://www.globalautoinsight.com/read_news.php?id=11654" target="_blank" rel="noopener noreferrer" title="来源 10 · 9 月轻型车销量复核">10</a><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-record-755-early-2026" target="_blank" rel="noopener noreferrer" title="来源 12 · 金融渗透率报告">12</a></span>。大盘在涨，我们也在涨（+91.1%），但差距是 5.1 倍<span class="refs"><a class="ref" href="https://www.shangyexinzhi.com/article/34442763.html" target="_blank" rel="noopener noreferrer" title="来源 09 · 9 月品牌与车型销量明细">9</a></span>。</p>
       <div class="card">
         <h4>9 月车型与品牌关键位次（INEGI 口径）</h4>
         <div class="tbl-scroll" style="border:0;border-radius:0">
           <table class="pricet">
-            <thead><tr><th>车型</th><th>9 月销量</th><th>位次</th><th>同比</th><th>备注</th></tr></thead>
+            <thead><tr><th>车型</th><th>9 月销量</th><th>位次</th><th>同比</th><th>备注</th><th>来源</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Nissan Versa</th><td><b>7,985</b></td><td>车型第 1</td><td>—</td><td class="note-cell">连续多月与 Aveo 争第一</td></tr>
-              <tr><th scope="row">Chevrolet Aveo</th><td>5,854</td><td>第 2</td><td>—</td><td class="note-cell">真正的价格对手，不是我们</td></tr>
-              <tr><th scope="row">Kia K3 Sedán</th><td>3,753</td><td>第 3</td><td>—</td><td class="note-cell">—</td></tr>
-              <tr><th scope="row"><b>本品 B 级 Sedan</b></th><td><b>1,555</b></td><td><b>车型第 22 / 轿车第 10</b></td><td><b>+90.1%（1–9 月）</b></td><td class="note-cell">我们</td></tr>
+              <tr><th scope="row">Nissan Versa</th><td><b>7,985</b></td><td>车型第 1</td><td>—</td><td class="note-cell">连续多月与 Aveo 争第一</td><td class="srccell"><span class="refs"><a class="ref" href="https://www.luznoticias.mx/2026-10-08/mexico/nissan-versa-chevrolet-aveo-y-kia-k3-lideran-las-ventas-de-autos-en-septiembre/308874" target="_blank" rel="noopener noreferrer" title="来源 08 · 9 月车型销量榜">8</a><a class="ref" href="https://www.shangyexinzhi.com/article/34442763.html" target="_blank" rel="noopener noreferrer" title="来源 09 · 9 月品牌与车型销量明细">9</a></span></td></tr>
+              <tr><th scope="row">Chevrolet Aveo</th><td>5,854</td><td>第 2</td><td>—</td><td class="note-cell">真正的价格对手，不是我们</td><td class="srccell"><span class="refs"><a class="ref" href="https://www.luznoticias.mx/2026-10-08/mexico/nissan-versa-chevrolet-aveo-y-kia-k3-lideran-las-ventas-de-autos-en-septiembre/308874" target="_blank" rel="noopener noreferrer" title="来源 08 · 9 月车型销量榜">8</a></span></td></tr>
+              <tr><th scope="row">Kia K3 Sedán</th><td>3,753</td><td>第 3</td><td>—</td><td class="note-cell">—</td><td class="srccell"><span class="refs"><a class="ref" href="https://www.luznoticias.mx/2026-10-08/mexico/nissan-versa-chevrolet-aveo-y-kia-k3-lideran-las-ventas-de-autos-en-septiembre/308874" target="_blank" rel="noopener noreferrer" title="来源 08 · 9 月车型销量榜">8</a></span></td></tr>
+              <tr><th scope="row"><b>本品 B 级 Sedan</b></th><td><b>1,555</b></td><td><b>车型第 22 / 轿车第 10</b></td><td><b>+90.1%（1–9 月）</b></td><td class="note-cell">我们</td><td class="srccell"><span class="refs"><a class="ref" href="https://www.luznoticias.mx/2026-10-08/mexico/nissan-versa-chevrolet-aveo-y-kia-k3-lideran-las-ventas-de-autos-en-septiembre/308874" target="_blank" rel="noopener noreferrer" title="来源 08 · 9 月车型销量榜">8</a><a class="ref" href="https://www.shangyexinzhi.com/article/34442763.html" target="_blank" rel="noopener noreferrer" title="来源 09 · 9 月品牌与车型销量明细">9</a><a class="ref" href="https://www.globalautoinsight.com/read_news.php?id=11654" target="_blank" rel="noopener noreferrer" title="来源 10 · 9 月轻型车销量复核">10</a><a class="ref" href="https://www.focus2move.com/mexico-best-selling-cars/" target="_blank" rel="noopener noreferrer" title="来源 11 · 1–9 月车型排名">11</a></span></td></tr>
             </tbody>
           </table>
         </div>
-        <p style="margin-top:14px">品牌层：日产 24,139 台（+15.7%，份额 17.2%）第一；我方 4,306 台（+91.1%）第八，一年前还是第 16。中国品牌合计 14,759 台、份额 11.4%，但这个数字没算不公开报数的比亚迪与奇瑞。1–9 月我方累计 35,912 台（+182.5%）。</p>
-        <p style="margin-top:10px">换算成单店效率：日产 104 台/店/月，我方 50.7 台/店/月。全行业中国品牌平均只有 22 台/店/月（行业均值 40），我们高于中国品牌平均，但只有日产的一半。渠道不是"数量不够"这么简单，是<b>数量与效率同时落后</b>。</p>
+        <p style="margin-top:14px">品牌层：日产 24,139 台（+15.7%，份额 17.2%）第一；我方 4,306 台（+91.1%）第八，一年前还是第 16<span class="refs"><a class="ref" href="https://www.shangyexinzhi.com/article/34442763.html" target="_blank" rel="noopener noreferrer" title="来源 09 · 9 月品牌与车型销量明细">9</a><a class="ref" href="https://www.globalautoinsight.com/read_news.php?id=11654" target="_blank" rel="noopener noreferrer" title="来源 10 · 9 月轻型车销量复核">10</a></span>。中国品牌合计 14,759 台、份额 11.4%，但这个数字没算不公开报数的比亚迪与奇瑞<span class="refs"><a class="ref" href="https://www.cnr.cn/2013qcpd/2015xc/20260806/t20260806_527749564.shtml" target="_blank" rel="noopener noreferrer" title="来源 17 · 中国品牌在墨份额">17</a></span>。1–9 月我方累计 35,912 台（+182.5%）<span class="refs"><a class="ref" href="https://www.focus2move.com/mexico-best-selling-cars/" target="_blank" rel="noopener noreferrer" title="来源 11 · 1–9 月车型排名">11</a></span>。</p>
+        <p style="margin-top:10px">换算成单店效率：日产 104 台/店/月，我方 50.7 台/店/月<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a><a class="ref" href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer" title="来源 07 · 对手经销商网络规模与社区资产">7</a></span>。全行业中国品牌平均只有 22 台/店/月（行业均值 40）<span class="refs"><a class="ref" href="https://mexicodailypost.com/chinese-car-dealerships-are-expected-to-close" target="_blank" rel="noopener noreferrer" title="来源 14 · 渠道效率行业数据">14</a></span>，我们高于中国品牌平均，但只有日产的一半。渠道不是"数量不够"这么简单，是<b>数量与效率同时落后</b>。</p>
       </div>
     </section>
 
@@ -339,10 +347,10 @@
       <p class="sec-lead">同一台车有三个价格：指导价（宣传用）、成交价（签约用）、月供（客户真正比较的那个）。三层结论完全相反。</p>
 
       <div class="card">
-        <h4>第一层 · 我方三个版本（官方指导价与促销价）</h4>
+        <h4>第一层 · 我方三个版本（官方指导价与促销价）<span class="refs"><span class="ref-own" title="来源 21 · 我方官方车型页（内部存档）">21</span><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span></span></h4>
         <div class="tbl-scroll" style="border:0;border-radius:0">
           <table class="pricet">
-            <thead><tr><th>版本</th><th>指导价</th><th>促销成交价</th><th>优惠额</th><th>优惠率</th><th>说明</th></tr></thead>
+            <thead><tr><th>版本</th><th>指导价</th><th>促销成交价<span class="refs"><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span></span></th><th>优惠额</th><th>优惠率</th><th>说明</th></tr></thead>
             <tbody><tr>
   <th scope="row">本品 GC</th>
   <td>299,990</td>
@@ -367,14 +375,14 @@
 </tr></tbody>
           </table>
         </div>
-        <p style="margin-top:12px">注意 GF 的 373,990 与 Versa Sense Base 的 374,900 几乎同价。也就是说：<b>在同一个价位，我们给顶配（天窗、12.3 英寸双屏、仿皮、电动主驾、四轮碟刹、EPB），对手给入门（15 寸钢圈、手动空调、2 喇叭、无 CarPlay）。</b>这是配置/价格比最漂亮的一档——但客户拿 28.999 万就能把对手的入门版开走，而我们只有把预算提到 37.4 万才能拿到 GF。价格带的对位错位，就发生在这里。</p>
+        <p style="margin-top:12px">注意 GF 的 373,990<span class="refs"><span class="ref-own" title="来源 21 · 我方官方车型页（内部存档）">21</span></span> 与 Versa Sense Base 的 374,900<span class="refs"><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer" title="来源 01 · 对手官方价格与版本页">1</a></span> 几乎同价。也就是说：<b>在同一个价位，我们给顶配（天窗、12.3 英寸双屏、仿皮、电动主驾、四轮碟刹、EPB），对手给入门（15 寸钢圈、手动空调、2 喇叭、无 CarPlay）。</b>这是配置/价格比最漂亮的一档——但客户拿 28.999 万就能把对手的入门版开走，而我们只有把预算提到 37.4 万才能拿到 GF。价格带的对位错位，就发生在这里。</p>
       </div>
 
       <div class="card">
-        <h4>第二层 · 对手六个版本（官方指导价 vs CrediNissan 特价）</h4>
+        <h4>第二层 · 对手六个版本（官方指导价 vs CrediNissan 特价）<span class="refs"><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer" title="来源 01 · 对手官方价格与版本页">1</a><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa.html" target="_blank" rel="noopener noreferrer" title="来源 02 · 对手官方车型页（指导价与信贷特价双口径）">2</a></span></h4>
         <div class="tbl-scroll" style="border:0;border-radius:0">
           <table class="pricet">
-            <thead><tr><th>版本</th><th>指导价（Precio de Lista）</th><th>CrediNissan 特价</th><th>折扣额</th><th>折扣率</th></tr></thead>
+            <thead><tr><th>版本</th><th>指导价（Precio de Lista）<span class="refs"><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer" title="来源 01 · 对手官方价格与版本页">1</a></span></th><th>CrediNissan 特价<span class="refs"><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa.html" target="_blank" rel="noopener noreferrer" title="来源 02 · 对手官方车型页（指导价与信贷特价双口径）">2</a></span></th><th>折扣额</th><th>折扣率</th></tr></thead>
             <tbody><tr>
     <th scope="row">Versa Sense Base TM</th>
     <td>374,900</td>
@@ -414,20 +422,20 @@
   </tr></tbody>
           </table>
         </div>
-        <p style="margin-top:12px">六个版本折扣率 17.8%–22.6%，<b>平均 20.4%</b>。这个数字几乎精确等于我们 20.0% 的指导价优势。这不是巧合：对手用金融折扣把整条价格带下移了一档，我们引以为据的"便宜 20%"在成交环节被还原成"便宜 8.6%"。而且对手对<b>每个版本</b>都公开报价，我们只对入门版公开。</p>
+        <p style="margin-top:12px">六个版本折扣率 17.8%–22.6%，<b>平均 20.4%</b><span class="refs"><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer" title="来源 01 · 对手官方价格与版本页">1</a><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa.html" target="_blank" rel="noopener noreferrer" title="来源 02 · 对手官方车型页（指导价与信贷特价双口径）">2</a></span>。这个数字几乎精确等于我们 20.0% 的指导价优势。这不是巧合：对手用金融折扣把整条价格带下移了一档，我们引以为据的"便宜 20%"在成交环节被还原成"便宜 8.6%"。而且对手对<b>每个版本</b>都公开报价，我们只对入门版公开。</p>
       </div>
 
       <div class="card">
-        <h4>第三层 · 月供：决定性的反向信号</h4>
-        <p>我方官方口径只有三个数字：促销价 264,990、首付 74,800（占 28.2%）、月供 5,749。<b>期限、利率、CAT 全部未公示</b>——按 48 期与 60 期两种假设反推，年化成本约 19.7% / 26.6%。对手按 CAT 18.0%、60 期、同首付比例推算约 5,286。差额 <b>+463 MXN/月</b>，五年累计约 27,800 MXN——已经超过我们 25,000 的成交价优势。</p>
-        <p style="margin-top:10px">为什么会这样：<b>我们降的是车价，对手降的是利率。</b>车价降 2.5 万只影响本金的 8.6%，而利率与期限决定月供的绝大部分。按我方促销条件反推的年化成本在 19.7%（48 期）到 26.6%（60 期）之间，显著高于市场 60 期加权利率 10.5%，也高于对手公示的 CAT 18.0%。这个倒挂不解决，谈价格永远谈不赢。</p>
-        <p style="margin-top:10px">三个必须知道的市场事实：<b>①</b> 零售金融渗透率 75.5%（含车队 62.9%），28 个州超过 70%；<b>②</b> 60 期是主流（细分市场占 39%），72 期在快速上升；<b>③</b> 品牌自营金融占新车信贷 79.58%，其中日产的 NR Finance 以 120,136 台、15.4% 份额排第一。中国品牌整体金融渗透率只有 56.9%——<b>说明月供这个战场是对手选的，而且他们已经赢了。</b></p>
+        <h4>第三层 · 月供：决定性的反向信号<span class="refs"><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/home/nissan-2025-terminos_promociones_oferta_comercial_posventa.pdf" target="_blank" rel="noopener noreferrer" title="来源 04 · 对手促销条款与 CAT 披露 PDF">4</a><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-record-755-early-2026" target="_blank" rel="noopener noreferrer" title="来源 12 · 金融渗透率报告">12</a></span></h4>
+        <p>我方官方口径只有三个数字：促销价 264,990、首付 74,800（占 28.2%）、月供 5,749。<b>期限、利率、CAT 全部未公示</b>——按 48 期与 60 期两种假设反推，年化成本约 19.7% / 26.6%。对手按 CAT 18.0%、60 期、同首付比例推算约 5,286。差额 <b>+463 MXN/月</b><span class="refs"><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/home/nissan-2025-terminos_promociones_oferta_comercial_posventa.pdf" target="_blank" rel="noopener noreferrer" title="来源 04 · 对手促销条款与 CAT 披露 PDF">4</a></span>，五年累计约 27,800 MXN——已经超过我们 25,000 的成交价优势。</p>
+        <p style="margin-top:10px">为什么会这样：<b>我们降的是车价，对手降的是利率。</b>车价降 2.5 万只影响本金的 8.6%，而利率与期限决定月供的绝大部分。按我方促销条件反推的年化成本在 19.7%（48 期）到 26.6%（60 期）之间，显著高于市场 60 期加权利率 10.5%<span class="refs"><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-record-755-early-2026" target="_blank" rel="noopener noreferrer" title="来源 12 · 金融渗透率报告">12</a></span>，也高于对手公示的 CAT 18.0%<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/home/nissan-2025-terminos_promociones_oferta_comercial_posventa.pdf" target="_blank" rel="noopener noreferrer" title="来源 04 · 对手促销条款与 CAT 披露 PDF">4</a></span>。这个倒挂不解决，谈价格永远谈不赢。</p>
+        <p style="margin-top:10px">三个必须知道的市场事实：<b>①</b> 零售金融渗透率 75.5%（含车队 62.9%），28 个州超过 70%<span class="refs"><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-record-755-early-2026" target="_blank" rel="noopener noreferrer" title="来源 12 · 金融渗透率报告">12</a></span>；<b>②</b> 60 期是主流（细分市场占 39%），72 期在快速上升<span class="refs"><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-record-755-early-2026" target="_blank" rel="noopener noreferrer" title="来源 12 · 金融渗透率报告">12</a></span>；<b>③</b> 品牌自营金融占新车信贷 79.58%，其中日产的 NR Finance 以 120,136 台、15.4% 份额排第一。中国品牌整体金融渗透率只有 56.9%<span class="refs"><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-nine-year-high-through-july-2026" target="_blank" rel="noopener noreferrer" title="来源 13 · 信贷市场份额报告">13</a></span>——<b>说明月供这个战场是对手选的，而且他们已经赢了。</b></p>
       </div>
     </section>
 
     <section class="sec" id="spec">
       <div class="sec-head"><span class="sec-no">04</span><h2>配置逐项对标：67 行，每行都有判定</h2></div>
-      <p class="sec-lead">这是全报告最硬的一张表：三个本品版本 × 六个 Versa 版本，全部来自官方目录的完整装备矩阵（本品第 5 页 ● ○ —；Versa 第 11 页 · / -）。<b>表里没有"没标注"的行</b>——每一行左侧都有色条，项目名后标注胜负。</p>
+      <p class="sec-lead">这是全报告最硬的一张表：我方三个版本 × 对手六个版本，全部来自官方目录的完整装备矩阵（我方第 5 页 ● ○ —<span class="refs"><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span></span>；Versa 第 11 页 · / -<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a></span>）。<b>表里没有"没标注"的行</b>——每一行左侧都有色条，项目名后标注胜负。</p>
       <div class="sum">
         <div><b class="pos">35</b><small>我方占优的行</small></div>
         <div><b class="neg">19</b><small>对手占优的行</small></div>
@@ -439,8 +447,8 @@
           <thead>
             <tr>
               <th rowspan="2">对标项</th>
-              <th colspan="3" class="hu">本品（本品）</th>
-              <th colspan="6" class="hv">Nissan Versa（SUNNY）</th>
+              <th colspan="3" class="hu">本品（B 级 Sedan）<span class="refs"><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span><span class="ref-own" title="来源 23 · 我方官方技术参数表（内部存档）">23</span></span></th>
+              <th colspan="6" class="hv">Nissan Versa（SUNNY）<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a></span></th>
             </tr>
             <tr>
               <th class="vh hu">GC</th><th class="vh hu">GL</th><th class="vh hu">GF</th>
@@ -481,7 +489,7 @@
               <div><b>87.2</b><small>Nissan Versa</small></div>
             </div>
             <p style="font-size:12.5px;line-height:1.85;color:#51607a">
-              加权公式：<b>Σ（权重 × 力得分）÷ 100</b>。以渠道力为例：20% × 42 = 8.40 分，只有对手同一项 19.80 分的 42%。
+              加权公式：<b>Σ（权重 × 力得分）÷ 100</b>。以渠道力为例：20% × 42 = 8.40 分，只有对手同一项 19.80 分的 42%<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a><a class="ref" href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer" title="来源 07 · 对手经销商网络规模与社区资产">7</a><a class="ref" href="https://mexicodailypost.com/chinese-car-dealerships-are-expected-to-close" target="_blank" rel="noopener noreferrer" title="来源 14 · 渠道效率行业数据">14</a></span>。
               九项加总后我方 54.9、对手 87.2，差距 32.3 分。
             </p>
             <p style="font-size:12.5px;line-height:1.85;color:#51607a;margin-top:10px">
@@ -592,27 +600,27 @@
       <div class="fbar them"><span style="width:99%"></span></div>
       <div class="fnum"><b>42</b><span>我方</span><b class="r">99</b><span>对手</span><em class="v-bad">-57</em></div>
     </div>
-    <p class="fthesis">客户不会为一台修不了、卖不掉的车改变动线。渠道是唯一不能靠投放补齐的力。</p>
+    <p class="fthesis">客户不会为一台修不了、卖不掉的车改变动线。渠道是唯一不能靠投放补齐的力。<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a><a class="ref" href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer" title="来源 07 · 对手经销商网络规模与社区资产">7</a><a class="ref" href="https://www.shangyexinzhi.com/article/34442763.html" target="_blank" rel="noopener noreferrer" title="来源 09 · 9 月品牌与车型销量明细">9</a><a class="ref" href="https://mexicodailypost.com/chinese-car-dealerships-are-expected-to-close" target="_blank" rel="noopener noreferrer" title="来源 14 · 渠道效率行业数据">14</a></span></p>
     <div class="fsubwrap">
       <table class="fsub">
         <thead><tr><th>子指标</th><th>权重</th><th>我方</th><th>对手</th><th>我方分</th><th>对手分</th></tr></thead>
         <tbody>
           <tr>
-            <td class="sn">门店绝对数<small>85 ÷ 232 = 36.6%</small></td>
+            <td class="sn">门店绝对数<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a><a class="ref" href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer" title="来源 07 · 对手经销商网络规模与社区资产">7</a></span><small>85 ÷ 232 = 36.6%</small></td>
             <td class="num">45%</td>
             <td class="sv">85 家</td>
             <td class="sv r">232 家</td>
             <td class="num b">36.6</td>
             <td class="num b r">100</td>
           </tr><tr>
-            <td class="sn">单店月销（渠道效率）<small>我方 4,306÷85；日产 24,139÷232</small></td>
+            <td class="sn">单店月销（渠道效率）<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a><a class="ref" href="https://www.shangyexinzhi.com/article/34442763.html" target="_blank" rel="noopener noreferrer" title="来源 09 · 9 月品牌与车型销量明细">9</a><a class="ref" href="https://mexicodailypost.com/chinese-car-dealerships-are-expected-to-close" target="_blank" rel="noopener noreferrer" title="来源 14 · 渠道效率行业数据">14</a></span><small>我方 4,306÷85；日产 24,139÷232</small></td>
             <td class="num">35%</td>
             <td class="sv">50.7 台</td>
             <td class="sv r">104 台</td>
             <td class="num b">48.8</td>
             <td class="num b r">100</td>
           </tr><tr>
-            <td class="sn">渠道下沉与社区嵌入<small>定性：门店地理分布 + 社区资产</small></td>
+            <td class="sn">渠道下沉与社区嵌入<span class="refs"><a class="ref" href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer" title="来源 07 · 对手经销商网络规模与社区资产">7</a></span><small>定性：门店地理分布 + 社区资产</small></td>
             <td class="num">20%</td>
             <td class="sv">集中在都会、入墨 3 年</td>
             <td class="sv r">覆盖几乎全部州；经销商基金会已建 126 所学校</td>
@@ -636,34 +644,34 @@
       <div class="fbar them"><span style="width:83%"></span></div>
       <div class="fnum"><b>69</b><span>我方</span><b class="r">83</b><span>对手</span><em class="v-warn">-14</em></div>
     </div>
-    <p class="fthesis">保修条款是纸面承诺，服务网点才是兑现能力。两者我们一强一弱。</p>
+    <p class="fthesis">保修条款是纸面承诺，服务网点才是兑现能力。两者我们一强一弱。<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span><a class="ref" href="https://www.nissan.com.mx/duenos-nissan/respaldo-nissan/garantia-extendida.html" target="_blank" rel="noopener noreferrer" title="来源 05 · 对手官方延长保修说明">5</a><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/home/nissan-2025-terminos_promociones_oferta_comercial_posventa.pdf" target="_blank" rel="noopener noreferrer" title="来源 04 · 对手促销条款与 CAT 披露 PDF">4</a><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span></span></p>
     <div class="fsubwrap">
       <table class="fsub">
         <thead><tr><th>子指标</th><th>权重</th><th>我方</th><th>对手</th><th>我方分</th><th>对手分</th></tr></thead>
         <tbody>
           <tr>
-            <td class="sn">服务网点可及性<small>沿用渠道网点数</small></td>
+            <td class="sn">服务网点可及性<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a></span><small>沿用渠道网点数</small></td>
             <td class="num">40%</td>
             <td class="sv">85 个服务点</td>
             <td class="sv r">232 个服务点</td>
             <td class="num b">36.6</td>
             <td class="num b r">100</td>
           </tr><tr>
-            <td class="sn">保修条款<small>官方保修条款对比</small></td>
+            <td class="sn">保修条款<span class="refs"><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span><a class="ref" href="https://www.nissan.com.mx/duenos-nissan/respaldo-nissan/garantia-extendida.html" target="_blank" rel="noopener noreferrer" title="来源 05 · 对手官方延长保修说明">5</a></span><small>官方保修条款对比</small></td>
             <td class="num">30%</td>
             <td class="sv">5 年/15 万 + 8 年/25 万</td>
             <td class="sv r">3 年/6 万，动力总成含在内</td>
             <td class="num b">96</td>
             <td class="num b r">55</td>
           </tr><tr>
-            <td class="sn">备件保障<small>官方口径 + 第三方报道</small></td>
+            <td class="sn">备件保障<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a></span><small>官方口径 + 第三方报道</small></td>
             <td class="num">20%</td>
             <td class="sv">DHL 仓库 4,000+ SKU、21 万件、72 小时全国达</td>
             <td class="sv r">本地生产、配件普及、任一修理厂可修</td>
             <td class="num b">82</td>
             <td class="num b r">92</td>
           </tr><tr>
-            <td class="sn">价格透明度<small>定性</small></td>
+            <td class="sn">价格透明度<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/home/nissan-2025-terminos_promociones_oferta_comercial_posventa.pdf" target="_blank" rel="noopener noreferrer" title="来源 04 · 对手促销条款与 CAT 披露 PDF">4</a><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span></span><small>定性</small></td>
             <td class="num">10%</td>
             <td class="sv">门店公示统一服务价目表</td>
             <td class="sv r">官网可查保养报价</td>
@@ -687,27 +695,27 @@
       <div class="fbar them"><span style="width:91%"></span></div>
       <div class="fnum"><b>30</b><span>我方</span><b class="r">91</b><span>对手</span><em class="v-bad">-61</em></div>
     </div>
-    <p class="fthesis">墨西哥 B 级买家进店 15 分钟只验三件事：CarPlay、有没有主动刹车、以后好不好卖。我们三件全输，配置表全赢。</p>
+    <p class="fthesis">墨西哥 B 级买家进店 15 分钟只验三件事：CarPlay、有没有主动刹车、以后好不好卖。我们三件全输，配置表全赢。<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer" title="来源 01 · 对手官方价格与版本页">1</a><span class="ref-own" title="来源 21 · 我方官方车型页（内部存档）">21</span></span></p>
     <div class="fsubwrap">
       <table class="fsub">
         <thead><tr><th>子指标</th><th>权重</th><th>我方</th><th>对手</th><th>我方分</th><th>对手分</th></tr></thead>
         <tbody>
           <tr>
-            <td class="sn">高频配置覆盖（CarPlay / AA）<small>覆盖版本数 ÷ 版本总数</small></td>
+            <td class="sn">高频配置覆盖（CarPlay / AA）<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span></span><small>覆盖版本数 ÷ 版本总数</small></td>
             <td class="num">35%</td>
             <td class="sv">3 版中 1 版有，且是有线</td>
             <td class="sv r">6 版全覆盖，且无线</td>
             <td class="num b">33</td>
             <td class="num b r">100</td>
           </tr><tr>
-            <td class="sn">主动安全（AEB 等）覆盖<small>覆盖版本数 ÷ 版本总数</small></td>
+            <td class="sn">主动安全（AEB 等）覆盖<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span></span><small>覆盖版本数 ÷ 版本总数</small></td>
             <td class="num">35%</td>
             <td class="sv">0 版有 AEB，仅倒车影像与雷达</td>
             <td class="sv r">5/6 版有 AEB+PED</td>
             <td class="num b">5</td>
             <td class="num b r">83</td>
           </tr><tr>
-            <td class="sn">版本梯度与价格带设计<small>价格带密度与配置递进</small></td>
+            <td class="sn">版本梯度与价格带设计<span class="refs"><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer" title="来源 01 · 对手官方价格与版本页">1</a><span class="ref-own" title="来源 21 · 我方官方车型页（内部存档）">21</span></span><small>价格带密度与配置递进</small></td>
             <td class="num">30%</td>
             <td class="sv">3 版跨 7.4 万，中间档断档</td>
             <td class="sv r">6 版跨 9.6 万，每 2–3 万一档</td>
@@ -731,27 +739,27 @@
       <div class="fbar them"><span style="width:78%"></span></div>
       <div class="fnum"><b>65</b><span>我方</span><b class="r">78</b><span>对手</span><em class="v-warn">-13</em></div>
     </div>
-    <p class="fthesis">"标签价更低"和"价格力更强"是两件事。前者我们赢 20%，后者我们输。</p>
+    <p class="fthesis">"标签价更低"和"价格力更强"是两件事。前者我们赢 20%，后者我们输。<span class="refs"><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer" title="来源 01 · 对手官方价格与版本页">1</a><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span><a class="ref" href="https://www.ccpitcq.org.cn/web/article/web/content_1450422120825958400.html" target="_blank" rel="noopener noreferrer" title="来源 16 · 关税法案要点">16</a><a class="ref" href="https://www.aftermarketinternational.com/en/news/latest-news/9755-nissan-celebrates-65-years-in-mexico-and-reinforces-its-global-strategic-importance.html" target="_blank" rel="noopener noreferrer" title="来源 06 · 对手 65 周年资料：本地生产与销量地位">6</a></span></p>
     <div class="fsubwrap">
       <table class="fsub">
         <thead><tr><th>子指标</th><th>权重</th><th>我方</th><th>对手</th><th>我方分</th><th>对手分</th></tr></thead>
         <tbody>
           <tr>
-            <td class="sn">客户到手价水平<small>成交价越低得分越高</small></td>
+            <td class="sn">客户到手价水平<span class="refs"><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer" title="来源 01 · 对手官方价格与版本页">1</a></span><small>成交价越低得分越高</small></td>
             <td class="num">40%</td>
             <td class="sv">264,990</td>
             <td class="sv r">289,990</td>
             <td class="num b">90</td>
             <td class="num b r">65</td>
           </tr><tr>
-            <td class="sn">单位价格换到的配置<small>同价位对位比较</small></td>
+            <td class="sn">单位价格换到的配置<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span></span><small>同价位对位比较</small></td>
             <td class="num">30%</td>
             <td class="sv">同价配置多，但关键项缺</td>
             <td class="sv r">入门即 9 寸 + 无线 CarPlay + 一键启动</td>
             <td class="num b">70</td>
             <td class="num b r">80</td>
           </tr><tr>
-            <td class="sn">价格可持续性<small>关税与产能结构</small></td>
+            <td class="sn">价格可持续性<span class="refs"><a class="ref" href="https://www.ccpitcq.org.cn/web/article/web/content_1450422120825958400.html" target="_blank" rel="noopener noreferrer" title="来源 16 · 关税法案要点">16</a><a class="ref" href="https://www.aftermarketinternational.com/en/news/latest-news/9755-nissan-celebrates-65-years-in-mexico-and-reinforces-its-global-strategic-importance.html" target="_blank" rel="noopener noreferrer" title="来源 06 · 对手 65 周年资料：本地生产与销量地位">6</a></span><small>关税与产能结构</small></td>
             <td class="num">30%</td>
             <td class="sv">整车进口、50% 关税、促销二选一</td>
             <td class="sv r">本地生产、USMCA 零关税、自营金融</td>
@@ -775,34 +783,34 @@
       <div class="fbar them"><span style="width:71%"></span></div>
       <div class="fnum"><b>88</b><span>我方</span><b class="r">71</b><span>对手</span><em class="v-good">+17</em></div>
     </div>
-    <p class="fthesis">硬件我们不弱，甚至更强。产品力不是战败原因，这是全报告最反直觉的一条。</p>
+    <p class="fthesis">硬件我们不弱，甚至更强。产品力不是战败原因，这是全报告最反直觉的一条。<span class="refs"><span class="ref-own" title="来源 23 · 我方官方技术参数表（内部存档）">23</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span></span></p>
     <div class="fsubwrap">
       <table class="fsub">
         <thead><tr><th>子指标</th><th>权重</th><th>我方</th><th>对手</th><th>我方分</th><th>对手分</th></tr></thead>
         <tbody>
           <tr>
-            <td class="sn">尺寸与空间<small>官方尺寸表</small></td>
+            <td class="sn">尺寸与空间<span class="refs"><span class="ref-own" title="来源 23 · 我方官方技术参数表（内部存档）">23</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a></span><small>官方尺寸表</small></td>
             <td class="num">30%</td>
             <td class="sv">4,638 / 轴距 2,650 / 500 L</td>
             <td class="sv r">4,500 / 2,620 / 466 L</td>
             <td class="num b">95</td>
             <td class="num b r">68</td>
           </tr><tr>
-            <td class="sn">动力与底盘<small>官方规格表</small></td>
+            <td class="sn">动力与底盘<span class="refs"><span class="ref-own" title="来源 23 · 我方官方技术参数表（内部存档）">23</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a></span><small>官方规格表</small></td>
             <td class="num">30%</td>
             <td class="sv">121 HP、四轮碟刹、EPB</td>
             <td class="sv r">118 HP、后鼓刹、机械手刹</td>
             <td class="num b">85</td>
             <td class="num b r">72</td>
           </tr><tr>
-            <td class="sn">座舱硬件<small>顶配对顶配</small></td>
+            <td class="sn">座舱硬件<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span></span><small>顶配对顶配</small></td>
             <td class="num">20%</td>
             <td class="sv">12.3 寸屏 + 12.3 寸仪表</td>
             <td class="sv r">12.3 寸屏 + Bose 8 喇叭</td>
             <td class="num b">78</td>
             <td class="num b r">72</td>
           </tr><tr>
-            <td class="sn">被动安全<small>官方配置表</small></td>
+            <td class="sn">被动安全<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span></span><small>官方配置表</small></td>
             <td class="num">20%</td>
             <td class="sv">6 气囊 + 四轮碟刹 + 后排遗留提醒</td>
             <td class="sv r">6 气囊 + 后鼓刹</td>
@@ -826,27 +834,27 @@
       <div class="fbar them"><span style="width:95%"></span></div>
       <div class="fnum"><b>42</b><span>我方</span><b class="r">95</b><span>对手</span><em class="v-bad">-53</em></div>
     </div>
-    <p class="fthesis">2026 年 1 月 1 日起，非 FTA 国家轻型车进口关税从 20% 升至 50%。这不是竞争问题，是生存问题。</p>
+    <p class="fthesis">2026 年 1 月 1 日起，非 FTA 国家轻型车进口关税从 20% 升至 50%。这不是竞争问题，是生存问题。<span class="refs"><a class="ref" href="https://www.ccpitcq.org.cn/web/article/web/content_1450422120825958400.html" target="_blank" rel="noopener noreferrer" title="来源 16 · 关税法案要点">16</a><a class="ref" href="https://www.aftermarketinternational.com/en/news/latest-news/9755-nissan-celebrates-65-years-in-mexico-and-reinforces-its-global-strategic-importance.html" target="_blank" rel="noopener noreferrer" title="来源 06 · 对手 65 周年资料：本地生产与销量地位">6</a><span class="ref-own" title="来源 23 · 我方官方技术参数表（内部存档）">23</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a></span></p>
     <div class="fsubwrap">
       <table class="fsub">
         <thead><tr><th>子指标</th><th>权重</th><th>我方</th><th>对手</th><th>我方分</th><th>对手分</th></tr></thead>
         <tbody>
           <tr>
-            <td class="sn">关税与本地化<small>墨西哥关税法案 2026-01-01 生效</small></td>
+            <td class="sn">关税与本地化<span class="refs"><a class="ref" href="https://www.ccpitcq.org.cn/web/article/web/content_1450422120825958400.html" target="_blank" rel="noopener noreferrer" title="来源 16 · 关税法案要点">16</a><a class="ref" href="https://www.aftermarketinternational.com/en/news/latest-news/9755-nissan-celebrates-65-years-in-mexico-and-reinforces-its-global-strategic-importance.html" target="_blank" rel="noopener noreferrer" title="来源 06 · 对手 65 周年资料：本地生产与销量地位">6</a></span><small>墨西哥关税法案 2026-01-01 生效</small></td>
             <td class="num">50%</td>
             <td class="sv">整车进口，50% 关税</td>
             <td class="sv r">本地组装，USMCA 框架内</td>
             <td class="num b">20</td>
             <td class="num b r">96</td>
           </tr><tr>
-            <td class="sn">认证与合规<small>官方文件</small></td>
+            <td class="sn">认证与合规<span class="refs"><span class="ref-own" title="来源 23 · 我方官方技术参数表（内部存档）">23</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a></span><small>官方文件</small></td>
             <td class="num">30%</td>
             <td class="sv">NOM-194 等已认证</td>
             <td class="sv r">本地生产全流程合规</td>
             <td class="num b">80</td>
             <td class="num b r">95</td>
           </tr><tr>
-            <td class="sn">产业政策关系<small>公开资料</small></td>
+            <td class="sn">产业政策关系<span class="refs"><a class="ref" href="https://www.aftermarketinternational.com/en/news/latest-news/9755-nissan-celebrates-65-years-in-mexico-and-reinforces-its-global-strategic-importance.html" target="_blank" rel="noopener noreferrer" title="来源 06 · 对手 65 周年资料：本地生产与销量地位">6</a></span><small>公开资料</small></td>
             <td class="num">20%</td>
             <td class="sv">新进入者，无本地工厂</td>
             <td class="sv r">65 年在墨、两家整车厂、一家动力总成厂</td>
@@ -870,27 +878,27 @@
       <div class="fbar them"><span style="width:86%"></span></div>
       <div class="fnum"><b>55</b><span>我方</span><b class="r">86</b><span>对手</span><em class="v-bad">-31</em></div>
     </div>
-    <p class="fthesis">权益不是"送什么"，是"能不能让客户今天就把车开走"。核心是金融可得性。</p>
+    <p class="fthesis">权益不是"送什么"，是"能不能让客户今天就把车开走"。核心是金融可得性。<span class="refs"><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-nine-year-high-through-july-2026" target="_blank" rel="noopener noreferrer" title="来源 13 · 信贷市场份额报告">13</a><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/home/nissan-2025-terminos_promociones_oferta_comercial_posventa.pdf" target="_blank" rel="noopener noreferrer" title="来源 04 · 对手促销条款与 CAT 披露 PDF">4</a><a class="ref" href="https://www.abrova.com/post/used-car-market-in-mexico" target="_blank" rel="noopener noreferrer" title="来源 20 · 二手车市场结构">20</a><a class="ref" href="https://financialreader.com/?p=4016/" target="_blank" rel="noopener noreferrer" title="来源 18 · 二手车折旧第三方估算">18</a></span></p>
     <div class="fsubwrap">
       <table class="fsub">
         <thead><tr><th>子指标</th><th>权重</th><th>我方</th><th>对手</th><th>我方分</th><th>对手分</th></tr></thead>
         <tbody>
           <tr>
-            <td class="sn">金融可得性与成本<small>AMDA/JATO 信贷报告 + 官方促销条款</small></td>
+            <td class="sn">金融可得性与成本<span class="refs"><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-nine-year-high-through-july-2026" target="_blank" rel="noopener noreferrer" title="来源 13 · 信贷市场份额报告">13</a><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/home/nissan-2025-terminos_promociones_oferta_comercial_posventa.pdf" target="_blank" rel="noopener noreferrer" title="来源 04 · 对手促销条款与 CAT 披露 PDF">4</a></span><small>AMDA/JATO 信贷报告 + 官方促销条款</small></td>
             <td class="num">40%</td>
             <td class="sv">自有汽车金融公司；CAT 未公示</td>
             <td class="sv r">NR Finance 墨西哥第一，占新车信贷 15.4%；CAT 18.0% 依法公示</td>
             <td class="num b">52</td>
             <td class="num b r">96</td>
           </tr><tr>
-            <td class="sn">赠品与服务包<small>门店口径</small></td>
+            <td class="sn">赠品与服务包<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/home/nissan-2025-terminos_promociones_oferta_comercial_posventa.pdf" target="_blank" rel="noopener noreferrer" title="来源 04 · 对手促销条款与 CAT 披露 PDF">4</a><a class="ref" href="https://www.abrova.com/post/used-car-market-in-mexico" target="_blank" rel="noopener noreferrer" title="来源 20 · 二手车市场结构">20</a></span><small>门店口径</small></td>
             <td class="num">30%</td>
             <td class="sv">常规脚垫/膜/首保</td>
             <td class="sv r">常规赠品 + 认证二手车体系</td>
             <td class="num b">70</td>
             <td class="num b r">70</td>
           </tr><tr>
-            <td class="sn">置换与回购<small>官网业务范围</small></td>
+            <td class="sn">置换与回购<span class="refs"><a class="ref" href="https://www.abrova.com/post/used-car-market-in-mexico" target="_blank" rel="noopener noreferrer" title="来源 20 · 二手车市场结构">20</a><a class="ref" href="https://financialreader.com/?p=4016/" target="_blank" rel="noopener noreferrer" title="来源 18 · 二手车折旧第三方估算">18</a></span><small>官网业务范围</small></td>
             <td class="num">30%</td>
             <td class="sv">无官方认证二手车与保值回购</td>
             <td class="sv r">官方认证二手车 + 置换体系</td>
@@ -914,27 +922,27 @@
       <div class="fbar them"><span style="width:88%"></span></div>
       <div class="fnum"><b>59</b><span>我方</span><b class="r">88</b><span>对手</span><em class="v-warn">-29</em></div>
     </div>
-    <p class="fthesis">认知差距是时间造成的，只能靠时间和事件压缩，不能靠预算。</p>
+    <p class="fthesis">认知差距是时间造成的，只能靠时间和事件压缩，不能靠预算。<span class="refs"><a class="ref" href="https://www.aftermarketinternational.com/en/news/latest-news/9755-nissan-celebrates-65-years-in-mexico-and-reinforces-its-global-strategic-importance.html" target="_blank" rel="noopener noreferrer" title="来源 06 · 对手 65 周年资料：本地生产与销量地位">6</a><a class="ref" href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer" title="来源 07 · 对手经销商网络规模与社区资产">7</a><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a></span></p>
     <div class="fsubwrap">
       <table class="fsub">
         <thead><tr><th>子指标</th><th>权重</th><th>我方</th><th>对手</th><th>我方分</th><th>对手分</th></tr></thead>
         <tbody>
           <tr>
-            <td class="sn">品牌认知与信任<small>公开资料</small></td>
+            <td class="sn">品牌认知与信任<span class="refs"><a class="ref" href="https://www.aftermarketinternational.com/en/news/latest-news/9755-nissan-celebrates-65-years-in-mexico-and-reinforces-its-global-strategic-importance.html" target="_blank" rel="noopener noreferrer" title="来源 06 · 对手 65 周年资料：本地生产与销量地位">6</a><a class="ref" href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer" title="来源 07 · 对手经销商网络规模与社区资产">7</a></span><small>公开资料</small></td>
             <td class="num">40%</td>
             <td class="sv">入墨 3 年，认知仍在建立</td>
             <td class="sv r">65 年、连续 18 年销量第一</td>
             <td class="num b">45</td>
             <td class="num b r">96</td>
           </tr><tr>
-            <td class="sn">内容与口碑<small>定性</small></td>
+            <td class="sn">内容与口碑<span class="refs"><a class="ref" href="https://www.aftermarketinternational.com/en/news/latest-news/9755-nissan-celebrates-65-years-in-mexico-and-reinforces-its-global-strategic-importance.html" target="_blank" rel="noopener noreferrer" title="来源 06 · 对手 65 周年资料：本地生产与销量地位">6</a><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a></span><small>定性</small></td>
             <td class="num">30%</td>
             <td class="sv">产品力口碑在形成</td>
             <td class="sv r">存量车主基数大</td>
             <td class="num b">60</td>
             <td class="num b r">80</td>
           </tr><tr>
-            <td class="sn">赞助与事件<small>公开报道</small></td>
+            <td class="sn">赞助与事件<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a><a class="ref" href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer" title="来源 07 · 对手经销商网络规模与社区资产">7</a></span><small>公开报道</small></td>
             <td class="num">30%</td>
             <td class="sv">赞助美洲队（Club América）</td>
             <td class="sv r"> Formula E、长期体育资产</td>
@@ -958,27 +966,27 @@
       <div class="fbar them"><span style="width:95%"></span></div>
       <div class="fnum"><b>63</b><span>我方</span><b class="r">95</b><span>对手</span><em class="v-bad">-32</em></div>
     </div>
-    <p class="fthesis">进口链条在关税与库存双重压力下，交付确定性低于本地生产。</p>
+    <p class="fthesis">进口链条在关税与库存双重压力下，交付确定性低于本地生产。<span class="refs"><a class="ref" href="https://www.aftermarketinternational.com/en/news/latest-news/9755-nissan-celebrates-65-years-in-mexico-and-reinforces-its-global-strategic-importance.html" target="_blank" rel="noopener noreferrer" title="来源 06 · 对手 65 周年资料：本地生产与销量地位">6</a><a class="ref" href="https://www.ccpitcq.org.cn/web/article/web/content_1450422120825958400.html" target="_blank" rel="noopener noreferrer" title="来源 16 · 关税法案要点">16</a><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a><a class="ref" href="https://www.abrova.com/post/used-car-market-in-mexico" target="_blank" rel="noopener noreferrer" title="来源 20 · 二手车市场结构">20</a></span></p>
     <div class="fsubwrap">
       <table class="fsub">
         <thead><tr><th>子指标</th><th>权重</th><th>我方</th><th>对手</th><th>我方分</th><th>对手分</th></tr></thead>
         <tbody>
           <tr>
-            <td class="sn">产能与库存<small>公开资料</small></td>
+            <td class="sn">产能与库存<span class="refs"><a class="ref" href="https://www.aftermarketinternational.com/en/news/latest-news/9755-nissan-celebrates-65-years-in-mexico-and-reinforces-its-global-strategic-importance.html" target="_blank" rel="noopener noreferrer" title="来源 06 · 对手 65 周年资料：本地生产与销量地位">6</a><a class="ref" href="https://www.ccpitcq.org.cn/web/article/web/content_1450422120825958400.html" target="_blank" rel="noopener noreferrer" title="来源 16 · 关税法案要点">16</a></span><small>公开资料</small></td>
             <td class="num">40%</td>
             <td class="sv">整车进口；关税前囤货正在消化</td>
             <td class="sv r">本地两座整车厂 + 动力总成厂</td>
             <td class="num b">50</td>
             <td class="num b r">96</td>
           </tr><tr>
-            <td class="sn">物流时效<small>行业通行周期</small></td>
+            <td class="sn">物流时效<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a><a class="ref" href="https://www.aftermarketinternational.com/en/news/latest-news/9755-nissan-celebrates-65-years-in-mexico-and-reinforces-its-global-strategic-importance.html" target="_blank" rel="noopener noreferrer" title="来源 06 · 对手 65 周年资料：本地生产与销量地位">6</a></span><small>行业通行周期</small></td>
             <td class="num">30%</td>
             <td class="sv">海运 30–45 天 + 清关</td>
             <td class="sv r">厂到店以天计</td>
             <td class="num b">58</td>
             <td class="num b r">95</td>
           </tr><tr>
-            <td class="sn">配件供应<small>第三方报道</small></td>
+            <td class="sn">配件供应<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a><a class="ref" href="https://www.abrova.com/post/used-car-market-in-mexico" target="_blank" rel="noopener noreferrer" title="来源 20 · 二手车市场结构">20</a></span><small>第三方报道</small></td>
             <td class="num">30%</td>
             <td class="sv">DHL 区域仓，72 小时全国达</td>
             <td class="sv r">本地配件体系，普及度最高</td>
@@ -1001,7 +1009,7 @@
 
     <section class="sec" id="users">
       <div class="sec-head"><span class="sec-no">06</span><h2>用户结构：五类人，我们只赢了一类</h2></div>
-      <p class="sec-lead">墨西哥 B 级买家的分层很清晰，且与配置偏好强相关。下表把每类人的核心需求、对手怎么接、我们怎么接，逐条对上。<b>占比是模型估算</b>（依据销量结构、价格带分布与配置偏好推断），不是官方统计数据——墨西哥没有公开的车型级客群结构。</p>
+      <p class="sec-lead">墨西哥 B 级买家的分层很清晰，且与配置偏好强相关。下表把每类人的核心需求、对手怎么接、我们怎么接，逐条对上。<b>占比是模型估算</b>（依据销量结构、价格带分布与配置偏好推断），不是官方统计数据——墨西哥没有公开的车型级客群结构。客群规模由销量结构与价格带分布反推<span class="refs"><a class="ref" href="https://www.luznoticias.mx/2026-10-08/mexico/nissan-versa-chevrolet-aveo-y-kia-k3-lideran-las-ventas-de-autos-en-septiembre/308874" target="_blank" rel="noopener noreferrer" title="来源 08 · 9 月车型销量榜">8</a><a class="ref" href="https://www.focus2move.com/mexico-best-selling-cars/" target="_blank" rel="noopener noreferrer" title="来源 11 · 1–9 月车型排名">11</a></span>。</p>
       <div class="tbl-scroll">
         <table class="utbl">
           <thead><tr><th>客群与占比</th><th>是谁</th><th>真正在意什么</th><th>对手怎么接</th><th>我们怎么接</th><th>判定</th></tr></thead>
@@ -1081,8 +1089,8 @@
             <p>残值与置换顾虑最终劝退</p>
           </div>
         </div>
-        <p style="margin-top:14px">把各环转化率连乘：认知 45% × 进店 38% × 第一印象 34% ≈ 5.8%，而对手是 96% × 99% × 88% ≈ 83.6%。<b>差距不是某一环崩了，是每一环都掉 15–20 个百分点。</b>这也是为什么单点改善（比如只补 CarPlay）效果有限——它只能修好中间的 34%，修不到前两环。</p>
-        <p style="margin-top:10px;font-size:11.5px;color:#8b98ab"><b>口径说明：</b>本漏斗是<b>模型估算</b>，由三项已核验数据推得——渠道覆盖比（85/232）、配置覆盖率差（CarPlay 1/3 对 6/6）、报价差（月供 +463）。它不是门店实测转化数据；若要替换为实测，需要在门店埋点采集六环逐一转化率。</p>
+        <p style="margin-top:14px">把各环转化率连乘：认知 45% × 进店 38% × 第一印象 34% ≈ 5.8%，而对手是 96% × 99% × 88% ≈ 83.6%<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a><a class="ref" href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer" title="来源 07 · 对手经销商网络规模与社区资产">7</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a></span>。<b>差距不是某一环崩了，是每一环都掉 15–20 个百分点。</b>这也是为什么单点改善（比如只补 CarPlay）效果有限——它只能修好中间的 34%，修不到前两环。</p>
+        <p style="margin-top:10px;font-size:11.5px;color:#8b98ab"><b>口径说明：</b>本漏斗是<b>模型估算</b>，由三项已核验数据推得——渠道覆盖比（85/232）<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a><a class="ref" href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer" title="来源 07 · 对手经销商网络规模与社区资产">7</a></span>、配置覆盖率差（CarPlay 1/3 对 6/6）<span class="refs"><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a></span>、报价差（月供 +463）<span class="refs"><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/home/nissan-2025-terminos_promociones_oferta_comercial_posventa.pdf" target="_blank" rel="noopener noreferrer" title="来源 04 · 对手促销条款与 CAT 披露 PDF">4</a></span>。它不是门店实测转化数据；若要替换为实测，需要在门店埋点采集六环逐一转化率。</p>
       </div>
     </section>
 
@@ -1091,13 +1099,13 @@
       <p class="sec-lead">墨西哥没有官方的车型级残值指数，Kavak 与 Mercado Libre 的接口均返回 403。这一节全部是第三方估算，只能看方向，不能看小数点。</p>
       <div class="card">
         <h4>三条口径</h4>
-        <p><b>① 单一来源的车型对照估算：</b>Versa 新车约 315,000 → 二手 235,000–255,000，折旧 20%–25%；同价位中国品牌（Changan Alsvin）262,000 → 175,000–195,000，折旧 25%–33%。<b>差距约 5–8 个百分点</b>，换算到 30 万级车约 1.5 万–2.4 万 MXN。</p>
-        <p style="margin-top:10px"><b>② 银行通用口径：</b>BBVA México 的说明是新车落地即折 20%，其后每年约 5%。这个口径不区分品牌，只能作基准线。</p>
-        <p style="margin-top:10px"><b>③ 结构性因素（比数字更重要）：</b>二手车市场的普遍判断是 Versa 与 Jetta 属于"最实用保值"的车型，理由不是品牌光环，而是<b>保有量最大 → 配件最便宜 → 任何修理厂都会修</b>。这是一条我们短期无法复制的能力：我们的保有量只有 3.5 万台（1–9 月 35,912 台），配件靠进口。</p>
+        <p><b>① 单一来源的车型对照估算：</b>Versa 新车约 315,000 → 二手 235,000–255,000，折旧 20%–25%；同价位中国品牌（Changan Alsvin）262,000 → 175,000–195,000，折旧 25%–33%。<b>差距约 5–8 个百分点</b>，换算到 30 万级车约 1.5 万–2.4 万 MXN<span class="refs"><a class="ref" href="https://financialreader.com/?p=4016/" target="_blank" rel="noopener noreferrer" title="来源 18 · 二手车折旧第三方估算">18</a></span>。</p>
+        <p style="margin-top:10px"><b>② 银行通用口径：</b>BBVA México 的说明是新车落地即折 20%，其后每年约 5%<span class="refs"><a class="ref" href="https://www.bbva.mx/educacion-financiera/creditos/credito-automotriz/credito-auto-cuanto-se-devalua-un-auto-anualmente.html" target="_blank" rel="noopener noreferrer" title="来源 19 · 银行折旧口径">19</a></span>。这个口径不区分品牌，只能作基准线。</p>
+        <p style="margin-top:10px"><b>③ 结构性因素（比数字更重要）：</b>二手车市场的普遍判断是 Versa 与 Jetta 属于"最实用保值"的车型，理由不是品牌光环，而是<b>保有量最大 → 配件最便宜 → 任何修理厂都会修</b>。这是一条我们短期无法复制的能力：我们的保有量只有 3.5 万台（1–9 月 35,912 台）<span class="refs"><a class="ref" href="https://www.focus2move.com/mexico-best-selling-cars/" target="_blank" rel="noopener noreferrer" title="来源 11 · 1–9 月车型排名">11</a></span>，配件靠进口<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a><a class="ref" href="https://www.abrova.com/post/used-car-market-in-mexico" target="_blank" rel="noopener noreferrer" title="来源 20 · 二手车市场结构">20</a></span>。</p>
       </div>
       <div class="card">
         <h4>为什么残值会直接杀死成交</h4>
-        <p>墨西哥零售金融渗透率 75.5%，意味着绝大多数客户是贷款买车。贷款买车的人一定会算一件事：<b>三年后我这台车还值多少，够不够抵掉尾款。</b>如果残值低 5–8 个点，客户要么补一大笔钱，要么继续开——这两个结果都让"换新"这件事变得不划算。</p>
+        <p>墨西哥零售金融渗透率 75.5%<span class="refs"><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-record-755-early-2026" target="_blank" rel="noopener noreferrer" title="来源 12 · 金融渗透率报告">12</a></span>，意味着绝大多数客户是贷款买车。贷款买车的人一定会算一件事：<b>三年后我这台车还值多少，够不够抵掉尾款。</b>如果残值低 5–8 个点，客户要么补一大笔钱，要么继续开——这两个结果都让"换新"这件事变得不划算。</p>
         <p style="margin-top:10px">渠道侧的证据是：二手车置换是中国品牌门店的常见场景，但置换回来的多是大众捷达、日产 Tiida、起亚 Soul 这些老牌车型——<b>说明客户在用老牌车换中国车，而不是用中国车换中国车。</b>我们的复购循环还没建立。</p>
       </div>
     </section>
@@ -1107,13 +1115,13 @@
       <div class="attr3">
         <div class="at">
           <div class="lv">表象</div>
-          <div><b>配置表看着更实在，客户却选了更贵的</b><p>同样 30 万，我们给 12.3 寸屏、天窗、仿皮、四轮碟刹；对手给 9 寸屏、织物、鼓刹。客户仍然选对手。</p></div>
+          <div><b>配置表看着更实在，客户却选了更贵的<span class="refs"><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer" title="来源 01 · 对手官方价格与版本页">1</a><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span></span></b><p>同样 30 万，我们给 12.3 寸屏、天窗、仿皮、四轮碟刹；对手给 9 寸屏、织物、鼓刹。客户仍然选对手。<span class="refs"><a class="ref" href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer" title="来源 01 · 对手官方价格与版本页">1</a><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span></span></p></div>
         </div><div class="at">
           <div class="lv">机制</div>
-          <div><b>三个环节连续掉分，每个环节单独看都不致命</b><p>进店少 → 第一印象缺 CarPlay 与一键启动 → 报价月供更高。三个环节各掉 15%–20% 转化，乘起来只剩三分之一。</p></div>
+          <div><b>三个环节连续掉分，每个环节单独看都不致命<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-record-755-early-2026" target="_blank" rel="noopener noreferrer" title="来源 12 · 金融渗透率报告">12</a></span></b><p>进店少 → 第一印象缺 CarPlay 与一键启动 → 报价月供更高。三个环节各掉 15%–20% 转化，乘起来只剩三分之一。<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-record-755-early-2026" target="_blank" rel="noopener noreferrer" title="来源 12 · 金融渗透率报告">12</a></span></p></div>
         </div><div class="at">
           <div class="lv">根因</div>
-          <div><b>我们把"中国用户的配置偏好"当成了"墨西哥用户的需求"</b><p>版本分层优先大屏、天窗、仿皮，这些在中国是感知最强的配置。墨西哥买家的第一顺位是手机互联、主动安全、转手价。方向错了，执行越好偏差越大。</p></div>
+          <div><b>我们把"中国用户的配置偏好"当成了"墨西哥用户的需求"<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span><a class="ref" href="https://www.abrova.com/post/used-car-market-in-mexico" target="_blank" rel="noopener noreferrer" title="来源 20 · 二手车市场结构">20</a></span></b><p>版本分层优先大屏、天窗、仿皮，这些在中国是感知最强的配置。墨西哥买家的第一顺位是手机互联、主动安全、转手价。方向错了，执行越好偏差越大。<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span><a class="ref" href="https://www.abrova.com/post/used-car-market-in-mexico" target="_blank" rel="noopener noreferrer" title="来源 20 · 二手车市场结构">20</a></span></p></div>
         </div>
       </div>
       <div class="card" style="margin-top:16px">
@@ -1129,57 +1137,57 @@
         <div class="act">
           <div class="no">01</div>
           <div>
-            <h4>CarPlay / Android Auto 全系标配，且无线</h4>
+            <h4>CarPlay / Android Auto 全系标配，且无线<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span></span></h4>
             <div class="meta"><span>产品 + 采购</span><span>下一批到港前</span></div>
-            <p>6/6 对 1/3 的覆盖率差距，是全表最贵的一条。成本约 60–90 美元/台，相当于车价的 0.3%。</p>
+            <p>6/6 对 1/3 的覆盖率差距，是全表最贵的一条。成本约 60–90 美元/台，相当于车价的 0.3%。<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span></span></p>
             <div class="kpi"><b>验收：</b>到店客户"手机连不上"投诉归零；入门版试驾转化率 +15%</div>
           </div>
         </div><div class="act">
           <div class="no">02</div>
           <div>
-            <h4>把 AEB 下放到中配，砍掉天窗换主动安全</h4>
+            <h4>把 AEB 下放到中配，砍掉天窗换主动安全<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span></span></h4>
             <div class="meta"><span>产品规划</span><span>下一次年款</span></div>
-            <p>对手从第二档起 5/6 版标配 AEB。我们是 0/6。安全配置是家庭用户的否决项，天窗是加分项。</p>
+            <p>对手从第二档起 5/6 版标配 AEB。我们是 0/6。安全配置是家庭用户的否决项，天窗是加分项。<span class="refs"><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer" title="来源 03 · 对手官方目录 PDF（六版本装备矩阵）">3</a><span class="ref-own" title="来源 22 · 我方官方目录 PDF（内部存档）">22</span></span></p>
             <div class="kpi"><b>验收：</b>中配版本 AEB 搭载率 100%；家庭用户（画像 A）成交占比提升</div>
           </div>
         </div><div class="act">
           <div class="no">03</div>
           <div>
-            <h4>金融方案透明化：公布 CAT 与总成本</h4>
+            <h4>金融方案透明化：公布 CAT 与总成本<span class="refs"><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/home/nissan-2025-terminos_promociones_oferta_comercial_posventa.pdf" target="_blank" rel="noopener noreferrer" title="来源 04 · 对手促销条款与 CAT 披露 PDF">4</a></span></h4>
             <div class="meta"><span>金融 + 市场</span><span>立即</span></div>
-            <p>对手 CAT 18.0% 依法公示，我们不公示。不公示在客户眼里等于"有鬼"，是信任负资产。</p>
+            <p>对手 CAT 18.0% 依法公示，我们不公示。不公示在客户眼里等于"有鬼"，是信任负资产。<span class="refs"><span class="ref-own" title="来源 24 · 我方官方促销页（内部存档）">24</span><a class="ref" href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/home/nissan-2025-terminos_promociones_oferta_comercial_posventa.pdf" target="_blank" rel="noopener noreferrer" title="来源 04 · 对手促销条款与 CAT 披露 PDF">4</a></span></p>
             <div class="kpi"><b>验收：</b>官网与门店公示 CAT；报价单必含总成本一栏</div>
           </div>
         </div><div class="act">
           <div class="no">04</div>
           <div>
-            <h4>上线 72 期产品，把月供压到 5,000 以下</h4>
+            <h4>上线 72 期产品，把月供压到 5,000 以下<span class="refs"><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-record-755-early-2026" target="_blank" rel="noopener noreferrer" title="来源 12 · 金融渗透率报告">12</a><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-nine-year-high-through-july-2026" target="_blank" rel="noopener noreferrer" title="来源 13 · 信贷市场份额报告">13</a></span></h4>
             <div class="meta"><span>金融</span><span>本季度</span></div>
-            <p>市场 60 期占 39% 且 72 期在上升；平均加权利率 10.5%。我们推算的 19.7%–26.6% 明显高于市场，期限是最快的杠杆。</p>
+            <p>市场 60 期占 39% 且 72 期在上升；平均加权利率 10.5%。我们推算的 19.7%–26.6% 明显高于市场，期限是最快的杠杆。<span class="refs"><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-record-755-early-2026" target="_blank" rel="noopener noreferrer" title="来源 12 · 金融渗透率报告">12</a><a class="ref" href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-nine-year-high-through-july-2026" target="_blank" rel="noopener noreferrer" title="来源 13 · 信贷市场份额报告">13</a></span></p>
             <div class="kpi"><b>验收：</b>同首付比例月供 ≤ 5,000；金融渗透率从 56.9% 提到 70%</div>
           </div>
         </div><div class="act">
           <div class="no">05</div>
           <div>
-            <h4>把 85 家店做成"有效覆盖"，不追数量</h4>
+            <h4>把 85 家店做成"有效覆盖"，不追数量<span class="refs"><a class="ref" href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer" title="来源 07 · 对手经销商网络规模与社区资产">7</a><a class="ref" href="https://mexicodailypost.com/chinese-car-dealerships-are-expected-to-close" target="_blank" rel="noopener noreferrer" title="来源 14 · 渠道效率行业数据">14</a></span></h4>
             <div class="meta"><span>渠道</span><span>6 个月</span></div>
-            <p>单店效率 50.7 台对 104 台，只有对手一半。再开 15 家店到 100 家，也补不上 232 家的动线覆盖。</p>
+            <p>单店效率 50.7 台对 104 台，只有对手一半。再开 15 家店到 100 家，也补不上 232 家的动线覆盖。<span class="refs"><a class="ref" href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer" title="来源 07 · 对手经销商网络规模与社区资产">7</a><a class="ref" href="https://mexicodailypost.com/chinese-car-dealerships-are-expected-to-close" target="_blank" rel="noopener noreferrer" title="来源 14 · 渠道效率行业数据">14</a></span></p>
             <div class="kpi"><b>验收：</b>单店月销 ≥ 65 台；B 级客群商圈覆盖率 ≥ 70%</div>
           </div>
         </div><div class="act">
           <div class="no">06</div>
           <div>
-            <h4>用服务半径换网点数量：上门取送车 + 跨城服务车</h4>
+            <h4>用服务半径换网点数量：上门取送车 + 跨城服务车<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a></span></h4>
             <div class="meta"><span>售后</span><span>本季度</span></div>
-            <p>5 年/15 万保修是纸面优势，85 个服务点兑现不了。服务半径是最便宜的补网点方式。</p>
+            <p>5 年/15 万保修是纸面优势，85 个服务点兑现不了。服务半径是最便宜的补网点方式。<span class="refs"><a class="ref" href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer" title="来源 15 · 我方网络与备件公开报道">15</a></span></p>
             <div class="kpi"><b>验收：</b>30 公里内可服务人口覆盖率 ≥ 90%；首保上门率 ≥ 40%</div>
           </div>
         </div><div class="act">
           <div class="no">07</div>
           <div>
-            <h4>推出"三年保值回购"，直接攻击残值顾虑</h4>
+            <h4>推出"三年保值回购"，直接攻击残值顾虑<span class="refs"><a class="ref" href="https://www.abrova.com/post/used-car-market-in-mexico" target="_blank" rel="noopener noreferrer" title="来源 20 · 二手车市场结构">20</a><a class="ref" href="https://financialreader.com/?p=4016/" target="_blank" rel="noopener noreferrer" title="来源 18 · 二手车折旧第三方估算">18</a></span></h4>
             <div class="meta"><span>市场 + 金融</span><span>下一季度</span></div>
-            <p>中国品牌三年残值第三方估算 25%–33%，对手 20%–25%。残值是墨西哥买家最后一根稻草。</p>
+            <p>中国品牌三年残值第三方估算 25%–33%，对手 20%–25%。残值是墨西哥买家最后一根稻草。<span class="refs"><a class="ref" href="https://www.abrova.com/post/used-car-market-in-mexico" target="_blank" rel="noopener noreferrer" title="来源 20 · 二手车市场结构">20</a><a class="ref" href="https://financialreader.com/?p=4016/" target="_blank" rel="noopener noreferrer" title="来源 18 · 二手车折旧第三方估算">18</a></span></p>
             <div class="kpi"><b>验收：</b>回购承诺覆盖率 100%；成交拦截原因中"保值"占比下降 50%</div>
           </div>
         </div>
@@ -1231,8 +1239,8 @@
 
     <section class="sec" id="src">
       <div class="sec-head"><span class="sec-no">11</span><h2>来源清单：24 项</h2></div>
-      <p class="sec-lead">对手侧与第三方来源全部可点击。我方官方来源在公开版中降级为文字标注（内部合规要求），内部版保留链接。</p>
-      <ul class="src"><li><span class="src-idx">01</span><a href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer">对手官方价格与版本页</a><em class="src-kind k-off">官方</em></li><li><span class="src-idx">02</span><a href="https://www.nissan.com.mx/vehiculos/todos/versa.html" target="_blank" rel="noopener noreferrer">对手官方车型页（指导价与信贷特价双口径）</a><em class="src-kind k-off">官方</em></li><li><span class="src-idx">03</span><a href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer">对手官方目录 PDF（六版本装备矩阵）</a><em class="src-kind k-off">官方</em></li><li><span class="src-idx">04</span><a href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/home/nissan-2025-terminos_promociones_oferta_comercial_posventa.pdf" target="_blank" rel="noopener noreferrer">对手促销条款与 CAT 披露 PDF</a><em class="src-kind k-off">官方</em></li><li><span class="src-idx">05</span><a href="https://www.nissan.com.mx/duenos-nissan/respaldo-nissan/garantia-extendida.html" target="_blank" rel="noopener noreferrer">对手官方延长保修说明</a><em class="src-kind k-off">官方</em></li><li><span class="src-idx">06</span><a href="https://www.aftermarketinternational.com/en/news/latest-news/9755-nissan-celebrates-65-years-in-mexico-and-reinforces-its-global-strategic-importance.html" target="_blank" rel="noopener noreferrer">对手 65 周年资料：本地生产与销量地位</a><em class="src-kind k-third">第三方</em></li><li><span class="src-idx">07</span><a href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer">对手经销商网络规模与社区资产</a><em class="src-kind k-third">第三方</em></li><li><span class="src-idx">08</span><a href="https://www.luznoticias.mx/2026-10-08/mexico/nissan-versa-chevrolet-aveo-y-kia-k3-lideran-las-ventas-de-autos-en-septiembre/308874" target="_blank" rel="noopener noreferrer">9 月车型销量榜</a><em class="src-kind k-third">第三方</em></li><li><span class="src-idx">09</span><a href="https://www.shangyexinzhi.com/article/34442763.html" target="_blank" rel="noopener noreferrer">9 月品牌与车型销量明细</a><em class="src-kind k-third">第三方</em></li><li><span class="src-idx">10</span><a href="https://www.globalautoinsight.com/read_news.php?id=11654" target="_blank" rel="noopener noreferrer">9 月轻型车销量复核</a><em class="src-kind k-third">第三方</em></li><li><span class="src-idx">11</span><a href="https://www.focus2move.com/mexico-best-selling-cars/" target="_blank" rel="noopener noreferrer">1–9 月车型排名</a><em class="src-kind k-third">第三方</em></li><li><span class="src-idx">12</span><a href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-record-755-early-2026" target="_blank" rel="noopener noreferrer">金融渗透率报告</a><em class="src-kind k-third">第三方</em></li><li><span class="src-idx">13</span><a href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-nine-year-high-through-july-2026" target="_blank" rel="noopener noreferrer">信贷市场份额报告</a><em class="src-kind k-third">第三方</em></li><li><span class="src-idx">14</span><a href="https://mexicodailypost.com/chinese-car-dealerships-are-expected-to-close" target="_blank" rel="noopener noreferrer">渠道效率行业数据</a><em class="src-kind k-third">第三方</em></li><li><span class="src-idx">15</span><a href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer">我方网络与备件公开报道</a><em class="src-kind k-third">第三方</em></li><li><span class="src-idx">16</span><a href="https://www.ccpitcq.org.cn/web/article/web/content_1450422120825958400.html" target="_blank" rel="noopener noreferrer">关税法案要点</a><em class="src-kind k-third">第三方</em></li><li><span class="src-idx">17</span><a href="https://www.cnr.cn/2013qcpd/2015xc/20260806/t20260806_527749564.shtml" target="_blank" rel="noopener noreferrer">中国品牌在墨份额</a><em class="src-kind k-third">第三方</em></li><li><span class="src-idx">18</span><a href="https://financialreader.com/?p=4016/" target="_blank" rel="noopener noreferrer">二手车折旧第三方估算</a><em class="src-kind k-third">第三方</em></li><li><span class="src-idx">19</span><a href="https://www.bbva.mx/educacion-financiera/creditos/credito-automotriz/credito-auto-cuanto-se-devalua-un-auto-anualmente.html" target="_blank" rel="noopener noreferrer">银行折旧口径</a><em class="src-kind k-third">第三方</em></li><li><span class="src-idx">20</span><a href="https://www.abrova.com/post/used-car-market-in-mexico" target="_blank" rel="noopener noreferrer">二手车市场结构</a><em class="src-kind k-third">第三方</em></li><li><span class="src-idx">21</span><span class="src-nolink">我方官方车型页（内部存档）</span><em class="src-kind k-off">官方</em></li><li><span class="src-idx">22</span><span class="src-nolink">我方官方目录 PDF（内部存档）</span><em class="src-kind k-off">官方</em></li><li><span class="src-idx">23</span><span class="src-nolink">我方官方技术参数表（内部存档）</span><em class="src-kind k-off">官方</em></li><li><span class="src-idx">24</span><span class="src-nolink">我方官方促销页（内部存档）</span><em class="src-kind k-off">官方</em></li></ul>
+      <p class="sec-lead">正文里每个数据后面都跟着一个蓝色数字角标，点开就是它的出处——不需要滚到这里来找。下表是全部 24 项来源，并标出每项被正文引用了多少次。对手侧与第三方来源全部可点击；我方官方来源在公开版中降级为文字标注（内部合规要求），内部版保留链接。</p>
+      <ul class="src"><li id="s1"><span class="src-idx">01</span><a href="https://www.nissan.com.mx/vehiculos/todos/versa/precios-y-versiones.html" target="_blank" rel="noopener noreferrer">对手官方价格与版本页</a><span class="src-cnt">正文引用 14 处</span><em class="src-kind k-off">官方</em></li><li id="s2"><span class="src-idx">02</span><a href="https://www.nissan.com.mx/vehiculos/todos/versa.html" target="_blank" rel="noopener noreferrer">对手官方车型页（指导价与信贷特价双口径）</a><span class="src-cnt">正文引用 6 处</span><em class="src-kind k-off">官方</em></li><li id="s3"><span class="src-idx">03</span><a href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/versa/my26/vlp/catalogos/nissan-2026-versa-catalogo.pdf" target="_blank" rel="noopener noreferrer">对手官方目录 PDF（六版本装备矩阵）</a><span class="src-cnt">正文引用 28 处</span><em class="src-kind k-off">官方</em></li><li id="s4"><span class="src-idx">04</span><a href="https://www.nissan.com.mx/content/dam/Nissan/mexico/assets/home/nissan-2025-terminos_promociones_oferta_comercial_posventa.pdf" target="_blank" rel="noopener noreferrer">对手促销条款与 CAT 披露 PDF</a><span class="src-cnt">正文引用 13 处</span><em class="src-kind k-off">官方</em></li><li id="s5"><span class="src-idx">05</span><a href="https://www.nissan.com.mx/duenos-nissan/respaldo-nissan/garantia-extendida.html" target="_blank" rel="noopener noreferrer">对手官方延长保修说明</a><span class="src-cnt">正文引用 2 处</span><em class="src-kind k-off">官方</em></li><li id="s6"><span class="src-idx">06</span><a href="https://www.aftermarketinternational.com/en/news/latest-news/9755-nissan-celebrates-65-years-in-mexico-and-reinforces-its-global-strategic-importance.html" target="_blank" rel="noopener noreferrer">对手 65 周年资料：本地生产与销量地位</a><span class="src-cnt">正文引用 12 处</span><em class="src-kind k-third">第三方</em></li><li id="s7"><span class="src-idx">07</span><a href="https://za.headtopics.com/news/nissan-domina-el-mercado-en-mexico-con-unidades-vendidas-y-82462715" target="_blank" rel="noopener noreferrer">对手经销商网络规模与社区资产</a><span class="src-cnt">正文引用 14 处</span><em class="src-kind k-third">第三方</em></li><li id="s8"><span class="src-idx">08</span><a href="https://www.luznoticias.mx/2026-10-08/mexico/nissan-versa-chevrolet-aveo-y-kia-k3-lideran-las-ventas-de-autos-en-septiembre/308874" target="_blank" rel="noopener noreferrer">9 月车型销量榜</a><span class="src-cnt">正文引用 7 处</span><em class="src-kind k-third">第三方</em></li><li id="s9"><span class="src-idx">09</span><a href="https://www.shangyexinzhi.com/article/34442763.html" target="_blank" rel="noopener noreferrer">9 月品牌与车型销量明细</a><span class="src-cnt">正文引用 8 处</span><em class="src-kind k-third">第三方</em></li><li id="s10"><span class="src-idx">10</span><a href="https://www.globalautoinsight.com/read_news.php?id=11654" target="_blank" rel="noopener noreferrer">9 月轻型车销量复核</a><span class="src-cnt">正文引用 5 处</span><em class="src-kind k-third">第三方</em></li><li id="s11"><span class="src-idx">11</span><a href="https://www.focus2move.com/mexico-best-selling-cars/" target="_blank" rel="noopener noreferrer">1–9 月车型排名</a><span class="src-cnt">正文引用 4 处</span><em class="src-kind k-third">第三方</em></li><li id="s12"><span class="src-idx">12</span><a href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-record-755-early-2026" target="_blank" rel="noopener noreferrer">金融渗透率报告</a><span class="src-cnt">正文引用 12 处</span><em class="src-kind k-third">第三方</em></li><li id="s13"><span class="src-idx">13</span><a href="https://mexicobusiness.news/automotive/news/mexico-auto-financing-hits-nine-year-high-through-july-2026" target="_blank" rel="noopener noreferrer">信贷市场份额报告</a><span class="src-cnt">正文引用 6 处</span><em class="src-kind k-third">第三方</em></li><li id="s14"><span class="src-idx">14</span><a href="https://mexicodailypost.com/chinese-car-dealerships-are-expected-to-close" target="_blank" rel="noopener noreferrer">渠道效率行业数据</a><span class="src-cnt">正文引用 6 处</span><em class="src-kind k-third">第三方</em></li><li id="s15"><span class="src-idx">15</span><a href="https://english.dotdotnews.com/a/202605/29/AP6a192d3ce4b09ea23316c56e.html" target="_blank" rel="noopener noreferrer">我方网络与备件公开报道</a><span class="src-cnt">正文引用 20 处</span><em class="src-kind k-third">第三方</em></li><li id="s16"><span class="src-idx">16</span><a href="https://www.ccpitcq.org.cn/web/article/web/content_1450422120825958400.html" target="_blank" rel="noopener noreferrer">关税法案要点</a><span class="src-cnt">正文引用 7 处</span><em class="src-kind k-third">第三方</em></li><li id="s17"><span class="src-idx">17</span><a href="https://www.cnr.cn/2013qcpd/2015xc/20260806/t20260806_527749564.shtml" target="_blank" rel="noopener noreferrer">中国品牌在墨份额</a><span class="src-cnt">正文引用 1 处</span><em class="src-kind k-third">第三方</em></li><li id="s18"><span class="src-idx">18</span><a href="https://financialreader.com/?p=4016/" target="_blank" rel="noopener noreferrer">二手车折旧第三方估算</a><span class="src-cnt">正文引用 5 处</span><em class="src-kind k-third">第三方</em></li><li id="s19"><span class="src-idx">19</span><a href="https://www.bbva.mx/educacion-financiera/creditos/credito-automotriz/credito-auto-cuanto-se-devalua-un-auto-anualmente.html" target="_blank" rel="noopener noreferrer">银行折旧口径</a><span class="src-cnt">正文引用 1 处</span><em class="src-kind k-third">第三方</em></li><li id="s20"><span class="src-idx">20</span><a href="https://www.abrova.com/post/used-car-market-in-mexico" target="_blank" rel="noopener noreferrer">二手车市场结构</a><span class="src-cnt">正文引用 11 处</span><em class="src-kind k-third">第三方</em></li><li id="s21"><span class="src-idx">21</span><span class="src-nolink">我方官方车型页（内部存档）</span><span class="src-cnt">正文引用 5 处</span><em class="src-kind k-off">官方</em></li><li id="s22"><span class="src-idx">22</span><span class="src-nolink">我方官方目录 PDF（内部存档）</span><span class="src-cnt">正文引用 26 处</span><em class="src-kind k-off">官方</em></li><li id="s23"><span class="src-idx">23</span><span class="src-nolink">我方官方技术参数表（内部存档）</span><span class="src-cnt">正文引用 6 处</span><em class="src-kind k-off">官方</em></li><li id="s24"><span class="src-idx">24</span><span class="src-nolink">我方官方促销页（内部存档）</span><span class="src-cnt">正文引用 18 处</span><em class="src-kind k-off">官方</em></li></ul>
     </section>
   </div>
 </div>
