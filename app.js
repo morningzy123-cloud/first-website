@@ -437,6 +437,10 @@ function router() {
   if (route === 'overview') overview();
   else if (route === 'market') marketPage(id || 'MX');
   else if (route === 'vehicle') vehicleDetail(id, subsection);
+  else if (route === 'radar' && window.MB_RADAR) {
+    updateNav('radar');
+    window.MB_RADAR.render(app, breadcrumb, state.data, id, subsection);
+  }
   else notFound();
   document.querySelector('.sidebar').classList.remove('open');
   document.querySelector('#drawerBackdrop').classList.remove('open');

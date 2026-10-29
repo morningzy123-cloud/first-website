@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: 22
       - run: node --check app.js
+      - run: node --check radar.js
+      - run: node scripts/radar-data.mjs --check
+      - run: node --test scripts/radar.test.mjs
       - run: node scripts/validate-public.mjs
       - run: node scripts/test-site.mjs
       - run: node --test scripts/weekly/core.test.mjs
