@@ -2621,28 +2621,6 @@
       "legalStatus": "公开通告 / 分析提示"
     },
     {
-      "id": "SA-risk-2",
-      "title": "吉达备选仍需核查红海段",
-      "summary": "绕过霍尔木兹并不等于绕过所有风险；中国南向到吉达的示意路线通常进入曼德海峡和红海。",
-      "category": "transport",
-      "level": "high",
-      "countryCodes": [
-        "SA"
-      ],
-      "routeIds": [
-        "SA-JED-CONTINGENCY"
-      ],
-      "checkedAt": "2026-10-30",
-      "expiresAt": null,
-      "evidenceStatus": "confirmed",
-      "sourceIds": [
-        "GULF-S02",
-        "GULF-S06"
-      ],
-      "action": "确认承运人实际走向、战争险、应急附加费与可执行ETD/ETA。",
-      "legalStatus": "公开通告 / 分析提示"
-    },
-    {
       "id": "SA-risk-3",
       "title": "新车能效标签与车型合规须前置",
       "summary": "SASO新轻型车能效标签许可面向制造商/供应商；应核对GSO车型年清单及沙特国家附加法规。",
@@ -2974,5 +2952,10 @@
       "action": "逐航次核查实际走向、战争险及是否接受新订舱。",
       "legalStatus": "区域安全提示；不是对所有船旗的同一法律义务"
     }
+  ],
+  "briefRiskIds": [
+    "SA-risk-1",
+    "mx-tariff",
+    "KZ-vat"
   ]
 }

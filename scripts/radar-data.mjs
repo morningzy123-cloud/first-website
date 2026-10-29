@@ -17,6 +17,7 @@ export function validate(data){
  const expected=['SA','AE','QA','MX','PE','CL','KZ','UZ'];
  const unique=(items,label)=>{check(Array.isArray(items),`${label} must be an array`);const ids=new Set();for(const i of items){check(typeof i.id==='string'&&/^[A-Za-z0-9_-]+$/.test(i.id)&&!ids.has(i.id),`Invalid/duplicate ${label} ID`);ids.add(i.id);}return ids;};
  const sources=unique(data.sources,'source'),routes=unique(data.routes,'route');unique(data.risks,'risk');
+ check(Array.isArray(data.briefRiskIds)&&data.briefRiskIds.length<=3&&new Set(data.briefRiskIds).size===data.briefRiskIds.length&&data.briefRiskIds.every(id=>data.risks.some(r=>r.id===id)),'Brief must contain up to three distinct existing risk IDs');
  check(data.countries.length===8&&new Set(data.countries.map(c=>c.code)).size===8&&data.countries.every(c=>expected.includes(c.code)),'Exactly eight unique radar countries required');
  for(const s of data.sources){
   check(safeUrl(s.url)&&hosts.some(h=>new URL(s.url).hostname===h||new URL(s.url).hostname.endsWith('.'+h)),`Unreviewed source host ${s.id}`);
