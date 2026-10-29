@@ -1,5 +1,7 @@
 # Marketing Buddy · C级 Sedan
 
+新增 [汽车出口运输与政策风险雷达](https://first-website-five-chi.vercel.app/#/radar)：天津出发、八国看板、候选路线地图、清关放行与配送分段估算、上市排期测算。采用公开资料研究快照，不是实时船舶监测。雷达数据独立维护，见 [更新规范](automation/RADAR_UPDATE.md) 和 [外部Agent周更指令](automation/RADAR_WEEKLY_PROMPT.md)。
+
 四国市场与竞品情报公开站。包含墨西哥、哈萨克斯坦、沙特阿拉伯、阿联酋；阿联酋四款车型仍标为“AI 建议”。
 
 页面是静态网站，直接打开 `index.html` 或由 Vercel 托管。数据文件为 `data/public.json`，离线打开时使用 `data/public.bundle.js`。两者必须来自同一次审核导出，不能分别手工修改。

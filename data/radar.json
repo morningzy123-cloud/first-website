@@ -1,0 +1,2978 @@
+{
+  "schemaVersion": "marketing-buddy-export-radar-v1",
+  "asOf": "2026-10-30",
+  "origin": {
+    "label": "天津港 / 天津新港北铁路中心站",
+    "coords": [
+      117.75,
+      38.98
+    ]
+  },
+  "methodology": "路线结构参考港口、承运人、政府与监管机构原始资料；海运/铁路天数以公开常态服务、历史航次和路径长度推算宽区间，清关、陆桥及本地配送另列规划假设。不是实际逐票运输记录或统计置信区间；所有时间以认证、进口资质、单证及承运接载齐备为前提。首次认证、无限期停航、封港和扣货不计入区间，上限可能失效。",
+  "sources": [
+    {
+      "id": "GULF-S01",
+      "title": "HMM KME – Korea Middle East Express service network",
+      "publisher": "HMM",
+      "url": "https://www.hmm21.com/e-service/general/schedule/serviceNetwork/serviceNetworkLoop.do?route=KME&siteTp=E&svcNwCd=MDE",
+      "publishedAt": null,
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "公开服务表列天津新港→杰贝阿里28天、达曼31天、哈马德35天；未注明本次更新日。 常态航程锚点；不是已确认当前船期，不作滚装时效证据。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "GULF-S02",
+      "title": "Reopening of Bookings to Upper Gulf Locations",
+      "publisher": "Hapag-Lloyd",
+      "url": "https://www.hapag-lloyd.com/en/services-information/news/2026/04/reopening-of-bookings-to-upper-gulf-locations.headless.html",
+      "publishedAt": "2026-07-28",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "公布豪尔费坎/富查伊拉陆桥及湾内支线衔接；达曼/朱拜勒经吉达陆桥；东海岸到Jebel Ali/Sharjah保税运输约5天，支线不固定每周。 只证明该承运人备选网络及约5天陆桥锚点；不证明天津全程班次。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "GULF-S03",
+      "title": "Middle East – Strait of Hormuz and the Middle East",
+      "publisher": "International Maritime Organization",
+      "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-strait-of-hormuz.aspx",
+      "publishedAt": "2026-10-27",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "官方专题仍描述持续的区域航运不稳定；事件列表更新至10月27日，并列UKMTO/JMIC核查入口。 风险来源与核查时点；不是10月30日实时通航保证。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "GULF-S04",
+      "title": "Middle East – Highlighted (Confirmed) incidents",
+      "publisher": "International Maritime Organization",
+      "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx",
+      "publishedAt": "2026-10-27",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "官方确认事件表含霍尔木兹及阿曼湾区域，10月18日含豪尔费坎东北方向船舶受损。 避免将海峡外东海岸卸港方案误标为无风险；无需在首页展示伤亡或总事件数。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "GULF-S05",
+      "title": "IMEA Maersk Market Update – October 2026",
+      "publisher": "Maersk",
+      "url": "https://www.maersk.com.cn/news/articles/2026/10/13/india-middle-east-and-africa-market-update-october",
+      "publishedAt": "2026-10-13",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "10月更新仍提示中东变化影响路线、港口和内陆连接；达曼等东部供应链受霍尔木兹扰动。 近期承运人风险提示，不把旧常态服务表误当现行可用性。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "GULF-S06",
+      "title": "Changes to cargo routed via Jeddah",
+      "publisher": "Maersk",
+      "url": "https://www.maersk.com/news/articles/2026/05/28/jeddah-gateway-rerouting-red-sea-maersk-update",
+      "publishedAt": "2026-05-28",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "沙特收货人货物继续经吉达，包括通向利雅得/达曼陆桥；非沙特收货人转口不再经吉达，改走其他地区门户。 不把沙特国内陆桥错用于所有中东国家；仅特定承运人方案。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "GULF-S07",
+      "title": "Fuel Economy Label for the New Light Vehicles",
+      "publisher": "SASO",
+      "url": "https://www.saso.gov.sa/en/eservices/pages/maineservicesdetails.aspx?serviceid=419",
+      "publishedAt": "2023-12-02",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "新轻型车能效标签许可服务要求有效符合性证书；产品应符合相关海湾和沙特法规。 基线合规要求；页面服务估计5个工作日不能解释为整车清关周期。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "GULF-S08",
+      "title": "List of GSO Technical Regulations for Motor Vehicles – 2026 Model Year D4",
+      "publisher": "GCC Standardization Organization",
+      "url": "https://www.gso.org.sa/wp-content/uploads/2024/12/GSO-Technical-Regulations-MV-2026-MY-D4.pdf",
+      "publishedAt": null,
+      "kind": "primary",
+      "retrieval": "direct_pdf",
+      "supports": "文件列2026车型年清单、国家附加要求；阿联酋自2026年1月道路车辆Euro 6b；沙特附录列能效标签及SAUDI CAFE 2024–2028。 注明适用2026车型年D4版本；不宣称已排除后续更新或已取得任一车型认证。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "GULF-S09",
+      "title": "Frequently Asked Questions",
+      "publisher": "Dubai Customs",
+      "url": "https://www.dubaicustoms.gov.ae/en/mobile/pages/faq.aspx",
+      "publishedAt": null,
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "一般税率FAQ列5% CIF及商业海关代码/申报要求。 基准参考；具体HS税则、优惠/豁免、VAT和自由区转口区别另核。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "GULF-S10",
+      "title": "Clearance of Personal Effects – New and Second Hand Vehicle",
+      "publisher": "Dubai Customs",
+      "url": "https://www.dubaicustoms.gov.ae/en/eservices/servicesforindividuals/pages/clearanceofpersonaleffects.aspx",
+      "publishedAt": null,
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "车辆栏目列发票、装箱单、提单等，并说明评估值5%关税。 个人服务页，不能替代商业整车进口逐车型审批依据。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "GULF-S11",
+      "title": "Hamad Port",
+      "publisher": "Mwani Qatar",
+      "url": "https://www.mwani.com.qa/english/ports/hamadport/pages/default.aspx",
+      "publishedAt": null,
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "哈马德港官方介绍列汽车等专门进口货物及车辆码头。 港口功能定位；不把码头容量当作实际等待时间。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "GULF-S12",
+      "title": "Importation – Commercial importation 0101",
+      "publisher": "Qatar General Authority of Customs",
+      "url": "https://www.customs.gov.qa/English/Procedures/UnifiedGuide/Pages/Importation.aspx",
+      "publishedAt": null,
+      "kind": "reference_only",
+      "retrieval": "search_extract_only_direct_fetch_failed",
+      "supports": "搜索可见商业进口商代码、原产地证、发票、提单及按共同税则申报流程。 仅待复核官方入口；不用于确认税率、最新法规变化或确定清关天数。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "AM-MX-RORO",
+      "title": "天津港开通外贸新航线，天津港集团原稿，2025-01-23",
+      "publisher": "上海航运交易所 / 天津港",
+      "url": "https://info.chineseshipping.com.cn/cninfo/News/202501/t20250123_1399935.shtml",
+      "publishedAt": "2025-01-23",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "1月21日首开墨西哥滚装航线；无当前挂靠港顺序、滚装运输天数。该站为上海航运交易所信息平台转载港口原稿。政府交叉确认：https://www.tj.gov.cn/sy/tjxw/202506/t20250611_6952631.html 。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "AM-MX-MSC",
+      "title": "新增至墨西哥航线，天津政务网，2026-07-13",
+      "publisher": "天津政务网",
+      "url": "https://www.tj.gov.cn/zmhd/hygqx/202607/t20260713_7334140.html",
+      "publishedAt": "2026-07-13",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "7艘5000TEU集装箱船、中国韩国墨西哥闭环、三墨港；旧28–32天缩短8–12天。只能用于集装箱参考，不可用于滚装。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "AM-MX-M2X",
+      "title": "CMA CGM M2X产品册，2025-12；2026网络公告",
+      "publisher": "CMA CGM",
+      "url": "https://www.cma-cgm.com/assets/public/documents/M2X_6.pdf",
+      "publishedAt": null,
+      "kind": "primary",
+      "retrieval": "direct_pdf",
+      "supports": "P2天津→曼萨尼约25天、拉萨罗30天、恩塞纳达37天，标明Non contractual。路线公告：https://www.cma-cgm.com/news/5260/m2x-and-acsa-1-change-of-rotation?cat=ports-terminals ，2025-12-19公布2026年网络。不是当日ETD/ETA。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "AM-MX-DOF",
+      "title": "DECRETO por el que se reforman diversas fracciones arancelarias...，2025-12-29",
+      "publisher": "墨西哥 DOF",
+      "url": "https://dof.gob.mx/nota_detalle_popup.php?codigo=5777376",
+      "publishedAt": "2025-12-29",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "官方完整正文已直接读取；税号8703.22.99等税率50%；Transitorios Primero自2026-01-01生效。不得泛化所有中国车；还需查后续修法及特定进口方案。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "AM-MX-NOM",
+      "title": "NOM-194-SE-2021，DOF，2022-05-09",
+      "publisher": "墨西哥 DOF",
+      "url": "https://sidof.segob.gob.mx/notas/docFuente/5666804",
+      "publishedAt": "2022-05-09",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "安全装置及分年款生效，原法规已打开全文；不能直接证明某一车型已获认证。环保补充核查入口：https://www.gob.mx/profepa/acciones-y-programas/inspeccion-industrial-certificacion-de-vehiculos-nuevos ，2026-07-24，全文读取403，仅列待核查入口。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "AM-PE-FIRST",
+      "title": "天津港-秘鲁钱凯港国际滚装航线首航成功，北京市政府，2025-08-04",
+      "publisher": "北京市政府",
+      "url": "https://www.beijing.gov.cn/ywdt/zwzt/jjjyth/jjyw/202508/t20250804_4165358.html",
+      "publishedAt": "2025-08-04",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "2025-07-03 19:20离津、7月31日当地02:00抵钱凯；约28天历史实际。非当前班轮承诺。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "AM-PE-HANDLING",
+      "title": "钱凯港前8月集装箱吞吐量增长51.6%，首次汽车框架作业再开新局，中远海运港口，2026-09-30",
+      "publisher": "中远海运港口",
+      "url": "https://ports.coscoshipping.com/sc/Media/CompanyUpdate/content.php?id=20260936",
+      "publishedAt": "2026-09-30",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "钱凯具备滚装/集装箱/框架/吊装汽车服务；不证明当前无拥堵、清关天数或每周船期。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "AM-COSCO-SCHEDULE",
+      "title": "COSCO CAR CARRIER SAILING SCHEDULE WCSA，2025-07-30",
+      "publisher": "COSCO CAR CARRIER",
+      "url": "https://www.cosco.co.jp/Page_Web/File/Files/%28TOHO%29COSCO%20PCTC%20vsl%20schedule%2020250730.pdf",
+      "publishedAt": "2025-07-30",
+      "kind": "reference_only",
+      "retrieval": "indexed_only",
+      "supports": "官方搜索缓存完整航次表：天津9/9→圣安东尼奥10/5=26天→钱凯10/11=32天等；原PDF多次读取超时，状态historical_indexed_schedule，不应标为当前已确认船期。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "AM-ACSA",
+      "title": "CMA CGM ACSA1产品册，2025-12",
+      "publisher": "CMA CGM",
+      "url": "https://www.cma-cgm.com/assets/public/documents/ACSA%201_5.pdf",
+      "publishedAt": null,
+      "kind": "primary",
+      "retrieval": "direct_pdf",
+      "supports": "已打开并截图P2。上海→钱凯35/卡亚俄36/圣安东尼奥40天；青岛41/43/47天。没有天津直靠；经亚洲枢纽需额外接驳假设。另旧ACSA1_9.pdf虽标2026-04却与网络公告/新册有矛盾，未采用。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "AM-PE-SUNAT",
+      "title": "Otras Consideraciones / Definición de un vehículo nuevo，SUNAT，无发布日期",
+      "publisher": "SUNAT",
+      "url": "https://www.sunat.gob.pe/orientacionaduanera/importacionvehiculos/otras_consideraciones.html",
+      "publishedAt": null,
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "全文已读：新车认定年款/里程/未注册；不支持当前所有税率或认证总工期。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "AM-PE-REQUIREMENTS",
+      "title": "Requisitos y documentos para importar vehículos nuevos，SUNAT/gob.pe，2024-01-14最后变更",
+      "publisher": "秘鲁政府",
+      "url": "https://www.gob.pe/7023-requisitos-y-documentos-para-importar-vehiculos-nuevos",
+      "publishedAt": "2024-01-14",
+      "kind": "reference_only",
+      "retrieval": "indexed_only",
+      "supports": "官方索引包含DAM车型认证号/制造商同一性证明；页面直读418，标为官方检索线索，不能标全文已核验。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "AM-CL-3CV",
+      "title": "Homologación de vehículos livianos y medianos，ChileAtiende，2026-02-19",
+      "publisher": "ChileAtiende",
+      "url": "https://www.chileatiende.gob.cl/fichas/7-solicitud-de-homologacion-de-vehiculos-livianos-y-medianos-nuevos-sin-uso",
+      "publishedAt": "2026-02-19",
+      "kind": "reference_only",
+      "retrieval": "indexed_only",
+      "supports": "官方完整搜索缓存及PDF索引：车型3CV批准、CHI-e授权；直读403，标官方索引待复核。替代主管机关入口：https://mtt.gov.cl/homologacion-de-vehiculos 。不可给全部认证完成总天数。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "AM-CL-FTA",
+      "title": "Chile–China自由贸易协定，SUBREI，无页面日期",
+      "publisher": "SUBREI",
+      "url": "https://www.subrei.gob.cl/acuerdos-comerciales/acuerdos-comerciales-vigentes/china/",
+      "publishedAt": null,
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "主管机关协定及原产地规则/表单入口已打开；具体税号优惠率须另查，勿自动写0%。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "CA-S01",
+      "title": "CA-S01｜天津政务：天津经阿拉山口至中亚图定班列开行",
+      "publisher": "天津政务网",
+      "url": "https://www.tj.gov.cn/sy/tjxw/202604/t20260417_7283182.html",
+      "publishedAt": "2026-04-17",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "天津集装箱中心站，中亚经阿拉山口 / 霍尔果斯双通道，霍尔果斯方向当时周班并覆盖阿拉木图 / 塔什干。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "CA-S02",
+      "title": "CA-S02｜FESCO：扩展中国至哈萨克 / 乌兹铁路服务",
+      "publisher": "FESCO",
+      "url": "https://www.fesco.com/ru/press-center/news/fesco-rasshirila-geografiyu-otpravok-zheleznodorozhnogo-servisa-iz-kitaya-v-kazakhstan-i-uzbekistan/",
+      "publishedAt": "2026-10-13",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "乌鲁木齐出发经霍尔果斯—阿腾科里，4 列历史列车到阿拉木图附近布隆代及塔什干丘库尔赛，公告平均 9 日；计划至少月班，按需求。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "CA-S03",
+      "title": "CA-S03｜KDTS：多斯特克和阿腾科里换装服务",
+      "publisher": "KDTS",
+      "url": "https://www.kdts.kz/en/o-kompanii/uslugi/dostyk-i-altynkol/",
+      "publishedAt": "2026-10-30",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "不同轨距货物 / 集装箱换装，清关、转运与滚动设备服务；多斯特克设施示例包含 wheeled vehicles。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "CA-S04",
+      "title": "CA-S04｜哈萨克财政部：税务管理问答",
+      "publisher": "哈萨克斯坦财政部",
+      "url": "https://www.gov.kz/org/minfin/documents/details/1030415?lang=ru",
+      "publishedAt": "2026-06-22",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "第 8 问说明税法第 503 条 2026 年一般 VAT 16%，适用应税销售及进口；第 422 条旧口径 12% 属 2026 前。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "CA-S05",
+      "title": "CA-S05｜EEC：TR CU 018/2011 轮式车辆安全法规专页",
+      "publisher": "EEC",
+      "url": "https://eec.eaeunion.org/comission/department/deptexreg/tr/bezopKolesnTrS.php",
+      "publishedAt": "2026-10-30",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "法规及各修订/认证文件核查入口。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "CA-S07",
+      "title": "CA-S07｜乌兹政府：生态类别符合性评价制度调整",
+      "publisher": "乌兹政府",
+      "url": "https://gov.uz/ru/advice/784/document/4329",
+      "publishedAt": "2025-09-23",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "第 597 号决议取消新进口 M/N 独立生态认证，改车辆安全技术规程评价；纯电的生态等级评价例外。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "CA-S08",
+      "title": "CA-S08｜LexUZ：2025-09-19 第 597 号决议原文",
+      "publisher": "LexUZ",
+      "url": "https://lex.uz/uz/acts/7735340",
+      "publishedAt": "2025-09-20",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "认证路径调整原文，技术规程附加生态条款及不符合环保等级不能出具相关上市合规文件。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "CA-S09",
+      "title": "CA-S09｜UTK：2026 年一季度 76 列乌兹至中国班列",
+      "publisher": "UTK",
+      "url": "https://utk.uz/en/news/91",
+      "publishedAt": "2026-04-07",
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "经哈萨克阿腾科里联通塔什干的业务与物流站网络；注意原文是反向业务。",
+      "checkedAt": "2026-10-30"
+    },
+    {
+      "id": "RADAR-MARAD",
+      "title": "2026年有效海事安全通告索引",
+      "publisher": "美国海事局 MARAD",
+      "url": "https://www.maritime.dot.gov/msci-advisories",
+      "publishedAt": null,
+      "kind": "primary",
+      "retrieval": "direct_page",
+      "supports": "核查时有效通告包括红海/曼德海峡/亚丁湾与霍尔木兹/阿曼湾等；是区域风险资料，不表示对所有国家船舶有相同法律义务。",
+      "checkedAt": "2026-10-30"
+    }
+  ],
+  "countries": [
+    {
+      "code": "SA",
+      "name": "沙特阿拉伯",
+      "flag": "🇸🇦",
+      "region": "中东",
+      "summary": "先核对东部港口接单条件，同时评估吉达入境陆桥；红海段也需单独确认。",
+      "defaultRouteId": "SA-JED-CONTINGENCY",
+      "planningNote": "本次没有确认新增关税变化。税率不凭历史常识填写；商业进口按实际HS子目、动力型式、原产地与申报日期向ZATCA核验。"
+    },
+    {
+      "code": "AE",
+      "name": "阿联酋",
+      "flag": "🇦🇪",
+      "region": "中东",
+      "summary": "东海岸卸港可作为陆桥备选；杰贝阿里常态航程不能当作当前承诺。",
+      "defaultRouteId": "AE-KF-LANDBRIDGE",
+      "planningNote": "本次未确认新增普遍关税变化。逐车型核对年款、动力、进口主体和认证；自由区转口与本土进口分别确认。"
+    },
+    {
+      "code": "QA",
+      "name": "卡塔尔",
+      "flag": "🇶🇦",
+      "region": "中东",
+      "summary": "对照东海岸陆桥接湾内支线；接驳非固定周班，上市节点需留余量。",
+      "defaultRouteId": "QA-KF-FEEDER",
+      "planningNote": "卡塔尔海关原页直接读取连续失败，搜索可见完整商业进口栏目摘录。仅可作为待复核入口，不把搜索摘录写成已核验法规变化。未确认新增关税。"
+    },
+    {
+      "code": "MX",
+      "name": "墨西哥",
+      "flag": "🇲🇽",
+      "region": "拉美",
+      "summary": "先复核税号和落地成本，再锁定船舶。天津已有墨西哥滚装与集装箱通道，二者船期和时效须分开。",
+      "defaultRouteId": "mx-roro",
+      "planningNote": "不经过红海或苏伊士；本次没有取得当地实时封港/异常拥堵证据。进口商与车型准入应先完成，清关区间不含首次认证。"
+    },
+    {
+      "code": "PE",
+      "name": "秘鲁",
+      "flag": "🇵🇪",
+      "region": "拉美",
+      "summary": "钱凯已可承接整车多种运输方式。优先核对车型准入资料，并给首次清关留缓冲。",
+      "defaultRouteId": "pe-roro",
+      "planningNote": "不经过红海或苏伊士；本次没有取得当地实时封港/异常拥堵证据。进口商与车型准入应先完成，清关区间不含首次认证。"
+    },
+    {
+      "code": "CL",
+      "name": "智利",
+      "flag": "🇨🇱",
+      "region": "拉美",
+      "summary": "滚装可作为整车主选，圣安东尼奥为候选到港点。车型认证与原产地资料应先于首批发运完成。",
+      "defaultRouteId": "cl-roro",
+      "planningNote": "不经过红海或苏伊士；本次没有取得当地实时封港/异常拥堵证据。进口商与车型准入应先完成，清关区间不含首次认证。"
+    },
+    {
+      "code": "KZ",
+      "name": "哈萨克斯坦",
+      "flag": "🇰🇿",
+      "region": "中亚",
+      "summary": "经霍尔果斯或阿拉山口入境，换装与车型准入是主要核查点。",
+      "defaultRouteId": "KZ-KHORGOS",
+      "planningNote": "内陆国家采用天津港铁路中心站启运；不是海运。公开资料证明集装箱走廊存在，尚未确认当周班期、整车或新能源接载。"
+    },
+    {
+      "code": "UZ",
+      "name": "乌兹别克斯坦",
+      "flag": "🇺🇿",
+      "region": "中亚",
+      "summary": "铁路经哈萨克转运至塔什干，过境衔接与目的国放行分开估算。",
+      "defaultRouteId": "UZ-KHORGOS",
+      "planningNote": "内陆国家采用天津港铁路中心站启运；不是海运。公开资料证明集装箱走廊存在，尚未确认当周班期、整车或新能源接载。"
+    }
+  ],
+  "routes": [
+    {
+      "id": "SA-JED-CONTINGENCY",
+      "countryCode": "SA",
+      "name": "吉达入境＋沙特陆桥（备选）",
+      "mode": "sea_container",
+      "scenario": "改港联运 / 备选",
+      "availability": "conditional",
+      "confidence": "low",
+      "deliveryPoint": "吉达清关放行 → 利雅得/达曼",
+      "waypoints": [
+        {
+          "name": "天津港",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "渤海出海",
+          "coords": [
+            122,
+            38.4
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东海沿岸",
+          "coords": [
+            124.5,
+            29
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "台湾东侧",
+          "coords": [
+            124.5,
+            22
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "南海",
+          "coords": [
+            112,
+            10
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "新加坡 / 马六甲",
+          "coords": [
+            103,
+            1.5
+          ],
+          "type": "hub",
+          "shortName": "马六甲"
+        },
+        {
+          "name": "印度洋",
+          "coords": [
+            80,
+            5.5
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "阿拉伯海",
+          "coords": [
+            65,
+            15
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "亚丁湾",
+          "coords": [
+            50,
+            12
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "曼德海峡",
+          "coords": [
+            43.4,
+            12.5
+          ],
+          "type": "border",
+          "shortName": "曼德海峡"
+        },
+        {
+          "name": "吉达港",
+          "coords": [
+            39.16,
+            21.49
+          ],
+          "type": "port",
+          "shortName": "吉达"
+        },
+        {
+          "name": "利雅得",
+          "coords": [
+            46.68,
+            24.71
+          ],
+          "type": "hub",
+          "shortName": "利雅得"
+        },
+        {
+          "name": "达曼配送终点",
+          "coords": [
+            50.18,
+            26.43
+          ],
+          "type": "destination",
+          "shortName": "达曼"
+        }
+      ],
+      "segments": [
+        {
+          "id": "stage-1",
+          "label": "天津开船→吉达到港",
+          "min": 28,
+          "max": 40,
+          "basis": "estimate",
+          "basisNote": "参考北亚多挂港及印度洋航程推算，不是某条天津—吉达船期报价。",
+          "sourceIds": [
+            "GULF-S02",
+            "GULF-S06"
+          ]
+        },
+        {
+          "id": "stage-2",
+          "label": "卸船/港口等待→清关放行",
+          "min": 3,
+          "max": 10,
+          "basis": "estimate",
+          "basisNote": "以认证及单证齐备为前提；查验、补证可明显超出。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "吉达陆运至利雅得/达曼 + PDI",
+          "min": 4,
+          "max": 9,
+          "basis": "estimate",
+          "basisNote": "吉达进口放行后陆运2–5天、接车/PDI2–4天，合为4–9天参考；无整车承运SLA。",
+          "sourceIds": [
+            "GULF-S02",
+            "GULF-S06"
+          ]
+        }
+      ],
+      "sourceIds": [
+        "GULF-S02",
+        "GULF-S06"
+      ],
+      "conclusion": "吉达方案绕开霍尔木兹，但需复核红海通行。",
+      "assumptions": "公告只证明特定承运人的备选连接逻辑。天津装载、整车接载以及红海段可用性需重新询舱；地图为走向示意。 参考集装箱网络，滚装/整车装箱/新能源接载须另确认。"
+    },
+    {
+      "id": "SA-DMM-BASELINE",
+      "countryCode": "SA",
+      "name": "达曼港（常态直达参考）",
+      "mode": "sea_container",
+      "scenario": "常态基线 / 对照",
+      "availability": "reference_only",
+      "confidence": "low",
+      "deliveryPoint": "达曼港",
+      "waypoints": [
+        {
+          "name": "天津港",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "渤海出海",
+          "coords": [
+            122,
+            38.4
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东海沿岸",
+          "coords": [
+            124.5,
+            29
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "台湾东侧",
+          "coords": [
+            124.5,
+            22
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "南海",
+          "coords": [
+            112,
+            10
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "新加坡 / 马六甲",
+          "coords": [
+            103,
+            1.5
+          ],
+          "type": "hub",
+          "shortName": "马六甲"
+        },
+        {
+          "name": "印度洋",
+          "coords": [
+            80,
+            5.5
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "阿拉伯海",
+          "coords": [
+            65,
+            15
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "霍尔木兹海峡",
+          "coords": [
+            56.4,
+            26.5
+          ],
+          "type": "border",
+          "shortName": "霍尔木兹"
+        },
+        {
+          "name": "达曼港",
+          "coords": [
+            50.18,
+            26.43
+          ],
+          "type": "destination",
+          "shortName": "达曼"
+        }
+      ],
+      "segments": [
+        {
+          "id": "stage-1",
+          "label": "天津开船→达曼到港",
+          "min": 29,
+          "max": 39,
+          "basis": "estimate",
+          "basisNote": "以公开31天服务表为基线加波动，只有承运人确认服务恢复且接载时适用。",
+          "sourceIds": [
+            "GULF-S01",
+            "GULF-S03",
+            "GULF-S05"
+          ]
+        },
+        {
+          "id": "stage-2",
+          "label": "卸船/港口等待→清关放行",
+          "min": 3,
+          "max": 10,
+          "basis": "estimate",
+          "basisNote": "依公开路线参考及项目规划假设；没有取得该车型逐票SLA。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "配送/PDI",
+          "min": 3,
+          "max": 7,
+          "basis": "estimate",
+          "basisNote": "当地配送/PDI规划余量；不含首次车型认证、市场营销与培训。",
+          "sourceIds": []
+        }
+      ],
+      "sourceIds": [
+        "GULF-S01",
+        "GULF-S03",
+        "GULF-S05"
+      ],
+      "conclusion": "先取得实际接载与通航确认，才可用于上市排期。",
+      "assumptions": "以进口资质、认证、单证齐备及承运接载为前提；停航/封港时区间上限失效。 参考集装箱网络，滚装/整车装箱/新能源接载须另确认。"
+    },
+    {
+      "id": "AE-KF-LANDBRIDGE",
+      "countryCode": "AE",
+      "name": "豪尔费坎/富查伊拉→杰贝阿里陆桥（备选）",
+      "mode": "sea_container",
+      "scenario": "改港联运 / 备选",
+      "availability": "conditional",
+      "confidence": "low",
+      "deliveryPoint": "东海岸卸港 → 杰贝阿里/沙迦",
+      "waypoints": [
+        {
+          "name": "天津港",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "渤海出海",
+          "coords": [
+            122,
+            38.4
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东海沿岸",
+          "coords": [
+            124.5,
+            29
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "台湾东侧",
+          "coords": [
+            124.5,
+            22
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "南海",
+          "coords": [
+            112,
+            10
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "新加坡 / 马六甲",
+          "coords": [
+            103,
+            1.5
+          ],
+          "type": "hub",
+          "shortName": "马六甲"
+        },
+        {
+          "name": "印度洋",
+          "coords": [
+            80,
+            5.5
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "阿拉伯海",
+          "coords": [
+            65,
+            15
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "阿曼湾",
+          "coords": [
+            59.5,
+            23.5
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "豪尔费坎 / 富查伊拉",
+          "coords": [
+            56.35,
+            25.35
+          ],
+          "type": "port",
+          "shortName": "东海岸卸港"
+        },
+        {
+          "name": "杰贝阿里 / 沙迦",
+          "coords": [
+            55.05,
+            24.98
+          ],
+          "type": "destination",
+          "shortName": "陆桥门户"
+        }
+      ],
+      "segments": [
+        {
+          "id": "stage-1",
+          "label": "天津开船→东海岸卸港",
+          "min": 26,
+          "max": 36,
+          "basis": "estimate",
+          "basisNote": "参考北亚—海湾历史航程，替换卸港后的估算；不意味着已有天津直达豪尔费坎班次。",
+          "sourceIds": [
+            "GULF-S01",
+            "GULF-S02"
+          ]
+        },
+        {
+          "id": "stage-2",
+          "label": "保税转运/陆桥",
+          "min": 4,
+          "max": 7,
+          "basis": "estimate",
+          "basisNote": "Hapag公告的Fujairah/Khorfakkan→Jebel Ali/Sharjah保税运输约5天为此区间锚点；具体车型需确认接载。",
+          "sourceIds": [
+            "GULF-S02"
+          ]
+        },
+        {
+          "id": "stage-3",
+          "label": "正式进口申报→清关放行",
+          "min": 2,
+          "max": 7,
+          "basis": "estimate",
+          "basisNote": "依公开路线参考及项目规划假设；没有取得该车型逐票SLA。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "配送/PDI",
+          "min": 2,
+          "max": 5,
+          "basis": "estimate",
+          "basisNote": "当地配送/PDI规划余量；不含首次车型认证、市场营销与培训。",
+          "sourceIds": []
+        }
+      ],
+      "sourceIds": [
+        "GULF-S01",
+        "GULF-S02"
+      ],
+      "conclusion": "改港会增加保税转运和陆桥衔接，需分段确认。",
+      "assumptions": "为保守串行预算；实际保税转运与报关可交叉。海峡之外仍有阿曼湾安全风险。 参考集装箱网络，滚装/整车装箱/新能源接载须另确认。"
+    },
+    {
+      "id": "AE-JEA-BASELINE",
+      "countryCode": "AE",
+      "name": "杰贝阿里港（常态直达参考）",
+      "mode": "sea_container",
+      "scenario": "常态基线 / 对照",
+      "availability": "reference_only",
+      "confidence": "low",
+      "deliveryPoint": "杰贝阿里港",
+      "waypoints": [
+        {
+          "name": "天津港",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "渤海出海",
+          "coords": [
+            122,
+            38.4
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东海沿岸",
+          "coords": [
+            124.5,
+            29
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "台湾东侧",
+          "coords": [
+            124.5,
+            22
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "南海",
+          "coords": [
+            112,
+            10
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "新加坡 / 马六甲",
+          "coords": [
+            103,
+            1.5
+          ],
+          "type": "hub",
+          "shortName": "马六甲"
+        },
+        {
+          "name": "印度洋",
+          "coords": [
+            80,
+            5.5
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "阿拉伯海",
+          "coords": [
+            65,
+            15
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "霍尔木兹海峡",
+          "coords": [
+            56.4,
+            26.5
+          ],
+          "type": "border",
+          "shortName": "霍尔木兹"
+        },
+        {
+          "name": "杰贝阿里港",
+          "coords": [
+            55.05,
+            24.98
+          ],
+          "type": "destination",
+          "shortName": "杰贝阿里"
+        }
+      ],
+      "segments": [
+        {
+          "id": "stage-1",
+          "label": "天津开船→杰贝阿里到港",
+          "min": 26,
+          "max": 34,
+          "basis": "estimate",
+          "basisNote": "依公开路线参考及项目规划假设；没有取得该车型逐票SLA。",
+          "sourceIds": [
+            "GULF-S01",
+            "GULF-S02",
+            "GULF-S03"
+          ]
+        },
+        {
+          "id": "stage-2",
+          "label": "卸船/港口等待→清关放行",
+          "min": 2,
+          "max": 7,
+          "basis": "estimate",
+          "basisNote": "依公开路线参考及项目规划假设；没有取得该车型逐票SLA。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "配送/PDI",
+          "min": 2,
+          "max": 5,
+          "basis": "estimate",
+          "basisNote": "当地配送/PDI规划余量；不含首次车型认证、市场营销与培训。",
+          "sourceIds": []
+        }
+      ],
+      "sourceIds": [
+        "GULF-S01",
+        "GULF-S02",
+        "GULF-S03"
+      ],
+      "conclusion": "先取得实际接载与通航确认，才可用于上市排期。",
+      "assumptions": "以进口资质、认证、单证齐备及承运接载为前提；停航/封港时区间上限失效。 参考集装箱网络，滚装/整车装箱/新能源接载须另确认。"
+    },
+    {
+      "id": "QA-KF-FEEDER",
+      "countryCode": "QA",
+      "name": "豪尔费坎/富查伊拉→陆桥→湾内支线→哈马德（备选）",
+      "mode": "sea_container",
+      "scenario": "改港联运 / 备选",
+      "availability": "conditional",
+      "confidence": "low",
+      "deliveryPoint": "东海岸 → 陆桥门户 → 哈马德",
+      "waypoints": [
+        {
+          "name": "天津港",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "渤海出海",
+          "coords": [
+            122,
+            38.4
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东海沿岸",
+          "coords": [
+            124.5,
+            29
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "台湾东侧",
+          "coords": [
+            124.5,
+            22
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "南海",
+          "coords": [
+            112,
+            10
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "新加坡 / 马六甲",
+          "coords": [
+            103,
+            1.5
+          ],
+          "type": "hub",
+          "shortName": "马六甲"
+        },
+        {
+          "name": "印度洋",
+          "coords": [
+            80,
+            5.5
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "阿拉伯海",
+          "coords": [
+            65,
+            15
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "阿曼湾",
+          "coords": [
+            59.5,
+            23.5
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "豪尔费坎 / 富查伊拉",
+          "coords": [
+            56.35,
+            25.35
+          ],
+          "type": "port",
+          "shortName": "东海岸卸港"
+        },
+        {
+          "name": "杰贝阿里 / 沙迦",
+          "coords": [
+            55.05,
+            24.98
+          ],
+          "type": "hub",
+          "shortName": "陆桥门户"
+        },
+        {
+          "name": "哈马德港",
+          "coords": [
+            51.61,
+            24.94
+          ],
+          "type": "destination",
+          "shortName": "哈马德"
+        }
+      ],
+      "segments": [
+        {
+          "id": "stage-1",
+          "label": "天津开船→阿联酋东海岸卸港",
+          "min": 26,
+          "max": 36,
+          "basis": "estimate",
+          "basisNote": "依公开路线参考及项目规划假设；没有取得该车型逐票SLA。",
+          "sourceIds": [
+            "GULF-S02",
+            "GULF-S11"
+          ]
+        },
+        {
+          "id": "stage-2",
+          "label": "保税转运/陆桥",
+          "min": 4,
+          "max": 7,
+          "basis": "estimate",
+          "basisNote": "参考承运人约5天陆桥说明。",
+          "sourceIds": [
+            "GULF-S02"
+          ]
+        },
+        {
+          "id": "stage-3",
+          "label": "接驳等待＋哈马德支线",
+          "min": 3,
+          "max": 10,
+          "basis": "estimate",
+          "basisNote": "公告明确支线非固定每周；未接上船或安全限制时可超出上限。",
+          "sourceIds": [
+            "GULF-S02"
+          ]
+        },
+        {
+          "id": "stage-4",
+          "label": "卸船/进口申报→清关放行",
+          "min": 2,
+          "max": 7,
+          "basis": "estimate",
+          "basisNote": "依公开路线参考及项目规划假设；没有取得该车型逐票SLA。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "配送/PDI",
+          "min": 2,
+          "max": 5,
+          "basis": "estimate",
+          "basisNote": "当地配送/PDI规划余量；不含首次车型认证、市场营销与培训。",
+          "sourceIds": []
+        }
+      ],
+      "sourceIds": [
+        "GULF-S02",
+        "GULF-S11"
+      ],
+      "conclusion": "最后一段支线决定能否按计划到港。",
+      "assumptions": "承运人公告针对其网络，未确认天津出运的具体全程服务或整车接载。 参考集装箱网络，滚装/整车装箱/新能源接载须另确认。"
+    },
+    {
+      "id": "QA-HMD-BASELINE",
+      "countryCode": "QA",
+      "name": "哈马德港（常态直达参考）",
+      "mode": "sea_container",
+      "scenario": "常态基线 / 对照",
+      "availability": "reference_only",
+      "confidence": "low",
+      "deliveryPoint": "哈马德港",
+      "waypoints": [
+        {
+          "name": "天津港",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "渤海出海",
+          "coords": [
+            122,
+            38.4
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东海沿岸",
+          "coords": [
+            124.5,
+            29
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "台湾东侧",
+          "coords": [
+            124.5,
+            22
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "南海",
+          "coords": [
+            112,
+            10
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "新加坡 / 马六甲",
+          "coords": [
+            103,
+            1.5
+          ],
+          "type": "hub",
+          "shortName": "马六甲"
+        },
+        {
+          "name": "印度洋",
+          "coords": [
+            80,
+            5.5
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "阿拉伯海",
+          "coords": [
+            65,
+            15
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "霍尔木兹海峡",
+          "coords": [
+            56.4,
+            26.5
+          ],
+          "type": "border",
+          "shortName": "霍尔木兹"
+        },
+        {
+          "name": "哈马德港",
+          "coords": [
+            51.61,
+            24.94
+          ],
+          "type": "destination",
+          "shortName": "哈马德"
+        }
+      ],
+      "segments": [
+        {
+          "id": "stage-1",
+          "label": "天津开船→哈马德到港",
+          "min": 33,
+          "max": 43,
+          "basis": "estimate",
+          "basisNote": "依公开路线参考及项目规划假设；没有取得该车型逐票SLA。",
+          "sourceIds": [
+            "GULF-S01",
+            "GULF-S03",
+            "GULF-S11"
+          ]
+        },
+        {
+          "id": "stage-2",
+          "label": "卸船/港口等待→清关放行",
+          "min": 2,
+          "max": 7,
+          "basis": "estimate",
+          "basisNote": "依公开路线参考及项目规划假设；没有取得该车型逐票SLA。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "配送/PDI",
+          "min": 2,
+          "max": 5,
+          "basis": "estimate",
+          "basisNote": "当地配送/PDI规划余量；不含首次车型认证、市场营销与培训。",
+          "sourceIds": []
+        }
+      ],
+      "sourceIds": [
+        "GULF-S01",
+        "GULF-S03",
+        "GULF-S11"
+      ],
+      "conclusion": "先取得实际接载与通航确认，才可用于上市排期。",
+      "assumptions": "以进口资质、认证、单证齐备及承运接载为前提；停航/封港时区间上限失效。 参考集装箱网络，滚装/整车装箱/新能源接载须另确认。"
+    },
+    {
+      "id": "mx-roro",
+      "countryCode": "MX",
+      "name": "天津 → 墨西哥西岸（滚装候选）",
+      "mode": "roro",
+      "scenario": "整车滚装 / 候选",
+      "availability": "conditional",
+      "confidence": "low",
+      "deliveryPoint": "曼萨尼约/拉萨罗卡德纳斯（订舱时确认实际挂靠港）",
+      "waypoints": [
+        {
+          "name": "天津港",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "渤海出海",
+          "coords": [
+            122,
+            38.4
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "日本以东",
+          "coords": [
+            145,
+            34
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "北太平洋",
+          "coords": [
+            175,
+            30
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "中太平洋",
+          "coords": [
+            -155,
+            23
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东太平洋",
+          "coords": [
+            -125,
+            15
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "曼萨尼约（实际挂港待确认）",
+          "coords": [
+            -104.31,
+            19.05
+          ],
+          "type": "destination",
+          "shortName": "墨西哥西岸"
+        }
+      ],
+      "segments": [
+        {
+          "id": "sea",
+          "label": "天津离港 → 目的港到港",
+          "min": 28,
+          "max": 40,
+          "basis": "estimate",
+          "basisNote": "天津2025年已开通墨西哥整车滚装航线；未获取当前该船型逐港时间表，海运28–40天是规划估算。",
+          "sourceIds": [
+            "AM-MX-RORO"
+          ]
+        },
+        {
+          "id": "clearance",
+          "label": "港口等待 / 进口清关放行",
+          "min": 4,
+          "max": 10,
+          "basis": "estimate",
+          "basisNote": "当地进口资格、认证与单证齐备时的规划余量，不是海关放行承诺。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "配送 / PDI / 上市准备参考",
+          "min": 3,
+          "max": 7,
+          "basis": "estimate",
+          "basisNote": "按目的港周边经销商接车规划，远距离配送与首次认证另估。",
+          "sourceIds": []
+        }
+      ],
+      "sourceIds": [
+        "AM-MX-RORO"
+      ],
+      "conclusion": "先核税号与落地税负，再选择滚装或装箱。",
+      "assumptions": "仅候选通道，不保证当前班期；装载方式、经停、目的港和车辆接载条件以订舱确认为准。认证失败、封港或扣货可能超出上限。"
+    },
+    {
+      "id": "mx-container",
+      "countryCode": "MX",
+      "name": "天津 → 曼萨尼约（集装箱备选）",
+      "mode": "sea_container",
+      "scenario": "集装箱 / 备选",
+      "availability": "conditional",
+      "confidence": "medium",
+      "deliveryPoint": "曼萨尼约 Manzanillo",
+      "waypoints": [
+        {
+          "name": "天津港",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "渤海出海",
+          "coords": [
+            122,
+            38.4
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "日本以东",
+          "coords": [
+            145,
+            34
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "北太平洋",
+          "coords": [
+            175,
+            30
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "中太平洋",
+          "coords": [
+            -155,
+            23
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东太平洋",
+          "coords": [
+            -125,
+            15
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "曼萨尼约（实际挂港待确认）",
+          "coords": [
+            -104.31,
+            19.05
+          ],
+          "type": "destination",
+          "shortName": "墨西哥西岸"
+        }
+      ],
+      "segments": [
+        {
+          "id": "sea",
+          "label": "天津离港 → 目的港到港",
+          "min": 18,
+          "max": 30,
+          "basis": "estimate",
+          "basisNote": "天津2026年新增MSC通道将旧28–32天缩短8–12天；CMA M2X历史产品表天津到曼萨尼约25天。18–30天为兼容不同班轮的规划区间，整车装箱接受条件和舱位仍需确认。",
+          "sourceIds": [
+            "AM-MX-MSC",
+            "AM-MX-M2X"
+          ]
+        },
+        {
+          "id": "clearance",
+          "label": "港口等待 / 进口清关放行",
+          "min": 4,
+          "max": 10,
+          "basis": "estimate",
+          "basisNote": "当地进口资格、认证与单证齐备时的规划余量，不是海关放行承诺。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "配送 / PDI / 上市准备参考",
+          "min": 3,
+          "max": 7,
+          "basis": "estimate",
+          "basisNote": "按目的港周边经销商接车规划，远距离配送与首次认证另估。",
+          "sourceIds": []
+        }
+      ],
+      "sourceIds": [
+        "AM-MX-MSC",
+        "AM-MX-M2X"
+      ],
+      "conclusion": "先核税号与落地税负，再选择滚装或装箱。",
+      "assumptions": "仅候选通道，不保证当前班期；装载方式、经停、目的港和车辆接载条件以订舱确认为准。认证失败、封港或扣货可能超出上限。"
+    },
+    {
+      "id": "pe-roro",
+      "countryCode": "PE",
+      "name": "天津 → 钱凯（整车滚装）",
+      "mode": "roro",
+      "scenario": "整车滚装 / 候选",
+      "availability": "conditional",
+      "confidence": "low",
+      "deliveryPoint": "钱凯 Chancay",
+      "waypoints": [
+        {
+          "name": "天津港",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "渤海出海",
+          "coords": [
+            122,
+            38.4
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "日本以东",
+          "coords": [
+            145,
+            34
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "北太平洋",
+          "coords": [
+            175,
+            30
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "中太平洋",
+          "coords": [
+            -155,
+            23
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东太平洋",
+          "coords": [
+            -125,
+            15
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东南太平洋",
+          "coords": [
+            -105,
+            -8
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "钱凯港",
+          "coords": [
+            -77.27,
+            -11.57
+          ],
+          "type": "destination",
+          "shortName": "钱凯"
+        }
+      ],
+      "segments": [
+        {
+          "id": "sea",
+          "label": "天津离港 → 目的港到港",
+          "min": 28,
+          "max": 38,
+          "basis": "estimate",
+          "basisNote": "2025年首航7月3日离津、7月31日抵钱凯约28天；COSCO历史航次计划约31–35天。28–38天是历史依据加挂港缓冲，不是当前已确认航次。",
+          "sourceIds": [
+            "AM-PE-FIRST",
+            "AM-PE-HANDLING",
+            "AM-COSCO-SCHEDULE"
+          ]
+        },
+        {
+          "id": "clearance",
+          "label": "港口等待 / 进口清关放行",
+          "min": 3,
+          "max": 8,
+          "basis": "estimate",
+          "basisNote": "当地进口资格、认证与单证齐备时的规划余量，不是海关放行承诺。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "配送 / PDI / 上市准备参考",
+          "min": 2,
+          "max": 5,
+          "basis": "estimate",
+          "basisNote": "按目的港周边经销商接车规划，远距离配送与首次认证另估。",
+          "sourceIds": []
+        }
+      ],
+      "sourceIds": [
+        "AM-PE-FIRST",
+        "AM-PE-HANDLING",
+        "AM-COSCO-SCHEDULE"
+      ],
+      "conclusion": "以历史首航作参考，当前航次和整车接载需确认。",
+      "assumptions": "仅候选通道，不保证当前班期；装载方式、经停、目的港和车辆接载条件以订舱确认为准。认证失败、封港或扣货可能超出上限。"
+    },
+    {
+      "id": "pe-container",
+      "countryCode": "PE",
+      "name": "天津 → 亚洲枢纽 → 卡亚俄/钱凯（集装箱）",
+      "mode": "sea_container",
+      "scenario": "集装箱 / 备选",
+      "availability": "conditional",
+      "confidence": "low",
+      "deliveryPoint": "卡亚俄 Callao / 钱凯 Chancay",
+      "waypoints": [
+        {
+          "name": "天津港",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "渤海出海",
+          "coords": [
+            122,
+            38.4
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "青岛 / 上海枢纽（候选）",
+          "coords": [
+            122,
+            31
+          ],
+          "type": "hub",
+          "shortName": "亚洲枢纽"
+        },
+        {
+          "name": "日本以东",
+          "coords": [
+            145,
+            34
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "北太平洋",
+          "coords": [
+            175,
+            30
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "中太平洋",
+          "coords": [
+            -155,
+            23
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东太平洋",
+          "coords": [
+            -125,
+            15
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东南太平洋",
+          "coords": [
+            -105,
+            -8
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "钱凯 / 卡亚俄（依订舱）",
+          "coords": [
+            -77.27,
+            -11.57
+          ],
+          "type": "destination",
+          "shortName": "钱凯"
+        }
+      ],
+      "segments": [
+        {
+          "id": "sea",
+          "label": "天津离港 → 目的港到港",
+          "min": 40,
+          "max": 55,
+          "basis": "estimate",
+          "basisNote": "CMA ACSA1产品参考上海到钱凯35天/卡亚俄36天、青岛41/43天；天津接驳及衔接时间另加5–12天假设。必须经订舱确认实际枢纽和衔接。",
+          "sourceIds": [
+            "AM-ACSA"
+          ]
+        },
+        {
+          "id": "clearance",
+          "label": "港口等待 / 进口清关放行",
+          "min": 3,
+          "max": 8,
+          "basis": "estimate",
+          "basisNote": "当地进口资格、认证与单证齐备时的规划余量，不是海关放行承诺。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "配送 / PDI / 上市准备参考",
+          "min": 2,
+          "max": 5,
+          "basis": "estimate",
+          "basisNote": "按目的港周边经销商接车规划，远距离配送与首次认证另估。",
+          "sourceIds": []
+        }
+      ],
+      "sourceIds": [
+        "AM-ACSA"
+      ],
+      "conclusion": "以历史首航作参考，当前航次和整车接载需确认。",
+      "assumptions": "仅候选通道，不保证当前班期；装载方式、经停、目的港和车辆接载条件以订舱确认为准。认证失败、封港或扣货可能超出上限。"
+    },
+    {
+      "id": "cl-roro",
+      "countryCode": "CL",
+      "name": "天津 → 圣安东尼奥（整车滚装）",
+      "mode": "roro",
+      "scenario": "整车滚装 / 候选",
+      "availability": "conditional",
+      "confidence": "low",
+      "deliveryPoint": "圣安东尼奥 San Antonio",
+      "waypoints": [
+        {
+          "name": "天津港",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "渤海出海",
+          "coords": [
+            122,
+            38.4
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "日本以东",
+          "coords": [
+            145,
+            34
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "北太平洋",
+          "coords": [
+            175,
+            30
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "中太平洋",
+          "coords": [
+            -155,
+            23
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东太平洋",
+          "coords": [
+            -125,
+            15
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东南太平洋",
+          "coords": [
+            -108,
+            -26
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "智利外海",
+          "coords": [
+            -84,
+            -33
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "圣安东尼奥港",
+          "coords": [
+            -71.62,
+            -33.59
+          ],
+          "type": "destination",
+          "shortName": "圣安东尼奥"
+        }
+      ],
+      "segments": [
+        {
+          "id": "sea",
+          "label": "天津离港 → 目的港到港",
+          "min": 26,
+          "max": 36,
+          "basis": "estimate",
+          "basisNote": "COSCO2025-07-30汽车船历史索引（原PDF待复核）中，天津到圣安东尼奥约26–29天；26–36天为历史计划加缓冲，非2026实时班期。",
+          "sourceIds": [
+            "AM-COSCO-SCHEDULE"
+          ]
+        },
+        {
+          "id": "clearance",
+          "label": "港口等待 / 进口清关放行",
+          "min": 3,
+          "max": 7,
+          "basis": "estimate",
+          "basisNote": "当地进口资格、认证与单证齐备时的规划余量，不是海关放行承诺。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "配送 / PDI / 上市准备参考",
+          "min": 2,
+          "max": 5,
+          "basis": "estimate",
+          "basisNote": "按目的港周边经销商接车规划，远距离配送与首次认证另估。",
+          "sourceIds": []
+        }
+      ],
+      "sourceIds": [
+        "AM-COSCO-SCHEDULE"
+      ],
+      "conclusion": "先核车型认证，再向承运人取得可执行航次。",
+      "assumptions": "仅候选通道，不保证当前班期；装载方式、经停、目的港和车辆接载条件以订舱确认为准。认证失败、封港或扣货可能超出上限。"
+    },
+    {
+      "id": "cl-container",
+      "countryCode": "CL",
+      "name": "天津 → 亚洲枢纽 → 圣安东尼奥（集装箱）",
+      "mode": "sea_container",
+      "scenario": "集装箱 / 备选",
+      "availability": "conditional",
+      "confidence": "low",
+      "deliveryPoint": "圣安东尼奥 San Antonio",
+      "waypoints": [
+        {
+          "name": "天津港",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "渤海出海",
+          "coords": [
+            122,
+            38.4
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "青岛 / 上海枢纽（候选）",
+          "coords": [
+            122,
+            31
+          ],
+          "type": "hub",
+          "shortName": "亚洲枢纽"
+        },
+        {
+          "name": "日本以东",
+          "coords": [
+            145,
+            34
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "北太平洋",
+          "coords": [
+            175,
+            30
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "中太平洋",
+          "coords": [
+            -155,
+            23
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东太平洋",
+          "coords": [
+            -125,
+            15
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "东南太平洋",
+          "coords": [
+            -108,
+            -26
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "智利外海",
+          "coords": [
+            -84,
+            -33
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "圣安东尼奥港",
+          "coords": [
+            -71.62,
+            -33.59
+          ],
+          "type": "destination",
+          "shortName": "圣安东尼奥"
+        }
+      ],
+      "segments": [
+        {
+          "id": "sea",
+          "label": "天津离港 → 目的港到港",
+          "min": 45,
+          "max": 60,
+          "basis": "estimate",
+          "basisNote": "CMA ACSA1历史产品表上海到圣安东尼奥40天、青岛47天；天津接驳/衔接假设5–13天。实际挂港及整车装箱需承运人确认。",
+          "sourceIds": [
+            "AM-ACSA"
+          ]
+        },
+        {
+          "id": "clearance",
+          "label": "港口等待 / 进口清关放行",
+          "min": 3,
+          "max": 7,
+          "basis": "estimate",
+          "basisNote": "当地进口资格、认证与单证齐备时的规划余量，不是海关放行承诺。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "配送 / PDI / 上市准备参考",
+          "min": 2,
+          "max": 5,
+          "basis": "estimate",
+          "basisNote": "按目的港周边经销商接车规划，远距离配送与首次认证另估。",
+          "sourceIds": []
+        }
+      ],
+      "sourceIds": [
+        "AM-ACSA"
+      ],
+      "conclusion": "先核车型认证，再向承运人取得可执行航次。",
+      "assumptions": "仅候选通道，不保证当前班期；装载方式、经停、目的港和车辆接载条件以订舱确认为准。认证失败、封港或扣货可能超出上限。"
+    },
+    {
+      "id": "KZ-KHORGOS",
+      "countryCode": "KZ",
+      "name": "霍尔果斯—阿腾科里 → 阿拉木图",
+      "mode": "rail_container",
+      "scenario": "铁路干线 / 候选",
+      "availability": "conditional",
+      "confidence": "low",
+      "deliveryPoint": "阿拉木图物流站及周边配送",
+      "waypoints": [
+        {
+          "name": "天津新港北铁路中心站",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "西安（走向示意）",
+          "coords": [
+            108.94,
+            34.34
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "兰州（走向示意）",
+          "coords": [
+            103.8,
+            36.06
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "乌鲁木齐",
+          "coords": [
+            87.62,
+            43.83
+          ],
+          "type": "hub",
+          "shortName": "乌鲁木齐"
+        },
+        {
+          "name": "霍尔果斯 / 阿腾科里",
+          "coords": [
+            80.35,
+            44.23
+          ],
+          "type": "border",
+          "shortName": "霍尔果斯"
+        },
+        {
+          "name": "阿拉木图",
+          "coords": [
+            76.89,
+            43.24
+          ],
+          "type": "destination",
+          "shortName": "阿拉木图"
+        }
+      ],
+      "segments": [
+        {
+          "id": "stage-1",
+          "label": "中国境内铁路干线",
+          "min": 6,
+          "max": 9,
+          "basis": "estimate",
+          "basisNote": "天津至新疆长距离铁路段推算，不计启运前集货与等班。",
+          "sourceIds": [
+            "CA-S01"
+          ]
+        },
+        {
+          "id": "stage-2",
+          "label": "中哈口岸换装 / 边境手续",
+          "min": 2,
+          "max": 6,
+          "basis": "estimate",
+          "basisNote": "存在换轨距/换装环节，2–7天为规划余量；没有当周排队数据。",
+          "sourceIds": [
+            "CA-S03"
+          ]
+        },
+        {
+          "id": "stage-3",
+          "label": "境外干线 → 阿拉木图到站",
+          "min": 2,
+          "max": 5,
+          "basis": "estimate",
+          "basisNote": "参考乌鲁木齐出发历史9日样本及路线长度推算；9日不能直接作为天津全程。",
+          "sourceIds": [
+            "CA-S02"
+          ]
+        },
+        {
+          "id": "stage-4",
+          "label": "目的站进口清关放行",
+          "min": 2,
+          "max": 5,
+          "basis": "estimate",
+          "basisNote": "进口单证、认证与申报资料齐备时的规划余量；不含首次车型准入。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "当地配送 / PDI 参考",
+          "min": 1,
+          "max": 3,
+          "basis": "estimate",
+          "basisNote": "城市周边经销商接车与PDI参考，远距离配送另估。",
+          "sourceIds": []
+        }
+      ],
+      "sourceIds": [
+        "CA-S01",
+        "CA-S02",
+        "CA-S03"
+      ],
+      "conclusion": "换装是主要波动点，先确认配载与通关方案。",
+      "assumptions": "集装箱候选走廊；整车/新能源装载方式和资质须承运确认。干线、换装、境外段分开预算，未再叠加完整站到站时效。极端天气、封关或认证缺失可超出上限。"
+    },
+    {
+      "id": "KZ-ALASHANKOU",
+      "countryCode": "KZ",
+      "name": "阿拉山口—多斯特克 → 阿拉木图",
+      "mode": "rail_container",
+      "scenario": "双口岸 / 备选",
+      "availability": "conditional",
+      "confidence": "low",
+      "deliveryPoint": "阿拉木图物流站及周边配送",
+      "waypoints": [
+        {
+          "name": "天津新港北铁路中心站",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "西安（走向示意）",
+          "coords": [
+            108.94,
+            34.34
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "兰州（走向示意）",
+          "coords": [
+            103.8,
+            36.06
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "乌鲁木齐",
+          "coords": [
+            87.62,
+            43.83
+          ],
+          "type": "hub",
+          "shortName": "乌鲁木齐"
+        },
+        {
+          "name": "阿拉山口 / 多斯特克",
+          "coords": [
+            82.53,
+            45.22
+          ],
+          "type": "border",
+          "shortName": "阿拉山口"
+        },
+        {
+          "name": "阿拉木图",
+          "coords": [
+            76.89,
+            43.24
+          ],
+          "type": "destination",
+          "shortName": "阿拉木图"
+        }
+      ],
+      "segments": [
+        {
+          "id": "stage-1",
+          "label": "中国境内铁路干线",
+          "min": 6,
+          "max": 10,
+          "basis": "estimate",
+          "basisNote": "天津至新疆长距离铁路段推算，不计启运前集货与等班。",
+          "sourceIds": [
+            "CA-S01"
+          ]
+        },
+        {
+          "id": "stage-2",
+          "label": "中哈口岸换装 / 边境手续",
+          "min": 2,
+          "max": 7,
+          "basis": "estimate",
+          "basisNote": "存在换轨距/换装环节，2–7天为规划余量；没有当周排队数据。",
+          "sourceIds": [
+            "CA-S03"
+          ]
+        },
+        {
+          "id": "stage-3",
+          "label": "境外干线 → 阿拉木图到站",
+          "min": 3,
+          "max": 6,
+          "basis": "estimate",
+          "basisNote": "参考乌鲁木齐出发历史9日样本及路线长度推算；9日不能直接作为天津全程。",
+          "sourceIds": [
+            "CA-S02"
+          ]
+        },
+        {
+          "id": "stage-4",
+          "label": "目的站进口清关放行",
+          "min": 2,
+          "max": 5,
+          "basis": "estimate",
+          "basisNote": "进口单证、认证与申报资料齐备时的规划余量；不含首次车型准入。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "当地配送 / PDI 参考",
+          "min": 1,
+          "max": 3,
+          "basis": "estimate",
+          "basisNote": "城市周边经销商接车与PDI参考，远距离配送另估。",
+          "sourceIds": []
+        }
+      ],
+      "sourceIds": [
+        "CA-S01",
+        "CA-S02",
+        "CA-S03"
+      ],
+      "conclusion": "换装是主要波动点，先确认配载与通关方案。",
+      "assumptions": "集装箱候选走廊；整车/新能源装载方式和资质须承运确认。干线、换装、境外段分开预算，未再叠加完整站到站时效。极端天气、封关或认证缺失可超出上限。"
+    },
+    {
+      "id": "UZ-KHORGOS",
+      "countryCode": "UZ",
+      "name": "霍尔果斯—阿腾科里 → 塔什干",
+      "mode": "rail_container",
+      "scenario": "铁路干线 / 候选",
+      "availability": "conditional",
+      "confidence": "low",
+      "deliveryPoint": "塔什干物流站及周边配送",
+      "waypoints": [
+        {
+          "name": "天津新港北铁路中心站",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "西安（走向示意）",
+          "coords": [
+            108.94,
+            34.34
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "兰州（走向示意）",
+          "coords": [
+            103.8,
+            36.06
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "乌鲁木齐",
+          "coords": [
+            87.62,
+            43.83
+          ],
+          "type": "hub",
+          "shortName": "乌鲁木齐"
+        },
+        {
+          "name": "霍尔果斯 / 阿腾科里",
+          "coords": [
+            80.35,
+            44.23
+          ],
+          "type": "border",
+          "shortName": "霍尔果斯"
+        },
+        {
+          "name": "阿拉木图",
+          "coords": [
+            76.89,
+            43.24
+          ],
+          "type": "hub",
+          "shortName": "阿拉木图"
+        },
+        {
+          "name": "萨雷阿加什过境",
+          "coords": [
+            69.17,
+            41.45
+          ],
+          "type": "border",
+          "shortName": "乌哈口岸"
+        },
+        {
+          "name": "塔什干物流站",
+          "coords": [
+            69.28,
+            41.31
+          ],
+          "type": "destination",
+          "shortName": "塔什干"
+        }
+      ],
+      "segments": [
+        {
+          "id": "stage-1",
+          "label": "中国境内铁路干线",
+          "min": 6,
+          "max": 9,
+          "basis": "estimate",
+          "basisNote": "天津至新疆长距离铁路段推算，不计启运前集货与等班。",
+          "sourceIds": [
+            "CA-S01"
+          ]
+        },
+        {
+          "id": "stage-2",
+          "label": "中哈口岸换装 / 边境手续",
+          "min": 2,
+          "max": 6,
+          "basis": "estimate",
+          "basisNote": "存在换轨距/换装环节，2–7天为规划余量；没有当周排队数据。",
+          "sourceIds": [
+            "CA-S03"
+          ]
+        },
+        {
+          "id": "stage-3",
+          "label": "哈萨克过境 → 塔什干到站",
+          "min": 5,
+          "max": 9,
+          "basis": "estimate",
+          "basisNote": "参考乌鲁木齐出发历史9日样本及路线长度推算；9日不能直接作为天津全程。",
+          "sourceIds": [
+            "CA-S02"
+          ]
+        },
+        {
+          "id": "stage-4",
+          "label": "目的站进口清关放行",
+          "min": 3,
+          "max": 6,
+          "basis": "estimate",
+          "basisNote": "进口单证、认证与申报资料齐备时的规划余量；不含首次车型准入。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "当地配送 / PDI 参考",
+          "min": 2,
+          "max": 4,
+          "basis": "estimate",
+          "basisNote": "城市周边经销商接车与PDI参考，远距离配送另估。",
+          "sourceIds": []
+        }
+      ],
+      "sourceIds": [
+        "CA-S01",
+        "CA-S02",
+        "CA-S03",
+        "CA-S09"
+      ],
+      "conclusion": "过境与到站进口放行分列，避免漏算或重复。",
+      "assumptions": "集装箱候选走廊；整车/新能源装载方式和资质须承运确认。干线、换装、境外段分开预算，未再叠加完整站到站时效。极端天气、封关或认证缺失可超出上限。"
+    },
+    {
+      "id": "UZ-ALASHANKOU",
+      "countryCode": "UZ",
+      "name": "阿拉山口—多斯特克 → 塔什干",
+      "mode": "rail_container",
+      "scenario": "双口岸 / 备选",
+      "availability": "conditional",
+      "confidence": "low",
+      "deliveryPoint": "塔什干物流站及周边配送",
+      "waypoints": [
+        {
+          "name": "天津新港北铁路中心站",
+          "coords": [
+            117.75,
+            38.98
+          ],
+          "type": "origin",
+          "shortName": "天津"
+        },
+        {
+          "name": "西安（走向示意）",
+          "coords": [
+            108.94,
+            34.34
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "兰州（走向示意）",
+          "coords": [
+            103.8,
+            36.06
+          ],
+          "type": "transit"
+        },
+        {
+          "name": "乌鲁木齐",
+          "coords": [
+            87.62,
+            43.83
+          ],
+          "type": "hub",
+          "shortName": "乌鲁木齐"
+        },
+        {
+          "name": "阿拉山口 / 多斯特克",
+          "coords": [
+            82.53,
+            45.22
+          ],
+          "type": "border",
+          "shortName": "阿拉山口"
+        },
+        {
+          "name": "阿拉木图",
+          "coords": [
+            76.89,
+            43.24
+          ],
+          "type": "hub",
+          "shortName": "阿拉木图"
+        },
+        {
+          "name": "萨雷阿加什过境",
+          "coords": [
+            69.17,
+            41.45
+          ],
+          "type": "border",
+          "shortName": "乌哈口岸"
+        },
+        {
+          "name": "塔什干物流站",
+          "coords": [
+            69.28,
+            41.31
+          ],
+          "type": "destination",
+          "shortName": "塔什干"
+        }
+      ],
+      "segments": [
+        {
+          "id": "stage-1",
+          "label": "中国境内铁路干线",
+          "min": 6,
+          "max": 10,
+          "basis": "estimate",
+          "basisNote": "天津至新疆长距离铁路段推算，不计启运前集货与等班。",
+          "sourceIds": [
+            "CA-S01"
+          ]
+        },
+        {
+          "id": "stage-2",
+          "label": "中哈口岸换装 / 边境手续",
+          "min": 2,
+          "max": 7,
+          "basis": "estimate",
+          "basisNote": "存在换轨距/换装环节，2–7天为规划余量；没有当周排队数据。",
+          "sourceIds": [
+            "CA-S03"
+          ]
+        },
+        {
+          "id": "stage-3",
+          "label": "哈萨克过境 → 塔什干到站",
+          "min": 6,
+          "max": 10,
+          "basis": "estimate",
+          "basisNote": "参考乌鲁木齐出发历史9日样本及路线长度推算；9日不能直接作为天津全程。",
+          "sourceIds": [
+            "CA-S02"
+          ]
+        },
+        {
+          "id": "stage-4",
+          "label": "目的站进口清关放行",
+          "min": 3,
+          "max": 6,
+          "basis": "estimate",
+          "basisNote": "进口单证、认证与申报资料齐备时的规划余量；不含首次车型准入。",
+          "sourceIds": []
+        },
+        {
+          "id": "local",
+          "label": "当地配送 / PDI 参考",
+          "min": 2,
+          "max": 4,
+          "basis": "estimate",
+          "basisNote": "城市周边经销商接车与PDI参考，远距离配送另估。",
+          "sourceIds": []
+        }
+      ],
+      "sourceIds": [
+        "CA-S01",
+        "CA-S02",
+        "CA-S03",
+        "CA-S09"
+      ],
+      "conclusion": "过境与到站进口放行分列，避免漏算或重复。",
+      "assumptions": "集装箱候选走廊；整车/新能源装载方式和资质须承运确认。干线、换装、境外段分开预算，未再叠加完整站到站时效。极端天气、封关或认证缺失可超出上限。"
+    }
+  ],
+  "risks": [
+    {
+      "id": "SA-risk-1",
+      "title": "霍尔木兹扰动影响东部供应",
+      "summary": "Maersk 10月更新仍提示达曼等东部地区的供应受海峡扰动影响。",
+      "category": "transport",
+      "level": "high",
+      "countryCodes": [
+        "SA"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "GULF-S05"
+      ],
+      "action": "订舱时同时取达曼和吉达陆桥方案；已订货以承运人改港/转运通知为准。",
+      "legalStatus": "公开通告 / 分析提示"
+    },
+    {
+      "id": "SA-risk-2",
+      "title": "吉达备选仍需核查红海段",
+      "summary": "绕过霍尔木兹并不等于绕过所有风险；中国南向到吉达的示意路线通常进入曼德海峡和红海。",
+      "category": "transport",
+      "level": "high",
+      "countryCodes": [
+        "SA"
+      ],
+      "routeIds": [
+        "SA-JED-CONTINGENCY"
+      ],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "GULF-S02",
+        "GULF-S06"
+      ],
+      "action": "确认承运人实际走向、战争险、应急附加费与可执行ETD/ETA。",
+      "legalStatus": "公开通告 / 分析提示"
+    },
+    {
+      "id": "SA-risk-3",
+      "title": "新车能效标签与车型合规须前置",
+      "summary": "SASO新轻型车能效标签许可面向制造商/供应商；应核对GSO车型年清单及沙特国家附加法规。",
+      "category": "policy",
+      "level": "watch",
+      "countryCodes": [
+        "SA"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "GULF-S07",
+        "GULF-S08"
+      ],
+      "action": "建立车型认证清单；不要把5个工作日的标签服务估计时限当作整车清关承诺。",
+      "legalStatus": "已核对基线要求；具体车型适用待核验"
+    },
+    {
+      "id": "AE-risk-1",
+      "title": "东海岸陆桥也要核查安全与接驳",
+      "summary": "承运人公布绕过霍尔木兹的海陆衔接；额外转运/保税操作会改变到货节奏，且东海岸并非零风险。",
+      "category": "transport",
+      "level": "high",
+      "countryCodes": [
+        "AE"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "GULF-S02",
+        "GULF-S04"
+      ],
+      "action": "取得卸港、陆桥、进口清关责任划分和单独ETA。",
+      "legalStatus": "公开通告 / 分析提示"
+    },
+    {
+      "id": "AE-risk-2",
+      "title": "2026车型年合规不能套用沙特配置",
+      "summary": "GSO 2026车型年清单列有阿联酋Euro 6b和eCall等国家要求；应按具体动力/年款核对MoIAT认可。",
+      "category": "policy",
+      "level": "watch",
+      "countryCodes": [
+        "AE"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "GULF-S08"
+      ],
+      "action": "在开船前校对阿联酋车型认证；不要把GSO清单当作已取得本车型许可证。",
+      "legalStatus": "已核对基线要求；具体车型适用待核验"
+    },
+    {
+      "id": "AE-risk-3",
+      "title": "关税按实际申报口径重核",
+      "summary": "Dubai Customs FAQ列一般5% CIF关税基准；车辆服务页也给出5%评估值税率。该资料不等于已算出某车型总落地税负。",
+      "category": "policy",
+      "level": "watch",
+      "countryCodes": [
+        "AE"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "GULF-S09",
+        "GULF-S10"
+      ],
+      "action": "区分自由区转口/保税转运与阿联酋本土正式进口；VAT和其他费用另核，不做5%+5%的简单总税率推断。",
+      "legalStatus": "公开通告 / 分析提示"
+    },
+    {
+      "id": "QA-risk-1",
+      "title": "支线不固定，接驳构成额外变动",
+      "summary": "Hapag公告明确湾内支线不采用固定每周轮班，仍受区域通航安全影响。",
+      "category": "transport",
+      "level": "high",
+      "countryCodes": [
+        "QA"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "GULF-S02"
+      ],
+      "action": "以全程可执行订舱确认和最后一段支线ETA控制发布/交付节点。",
+      "legalStatus": "公开通告 / 分析提示"
+    },
+    {
+      "id": "QA-risk-2",
+      "title": "车型年合规和进口商资质前置核对",
+      "summary": "GSO 2026车型年清单有卡塔尔适用排放要求；本地商用进口的文件/税则与放行要求还需重新读取卡塔尔海关原页。",
+      "category": "policy",
+      "level": "watch",
+      "countryCodes": [
+        "QA"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "pending",
+      "sourceIds": [
+        "GULF-S08",
+        "GULF-S12"
+      ],
+      "action": "准备车型认证及原产地证明/发票/提单等单证；税率与具体年款适用性由当地进口商复核。",
+      "legalStatus": "官方入口待复核；未确认新增税率"
+    },
+    {
+      "id": "mx-tariff",
+      "title": "部分乘用车税号进口税为50%",
+      "summary": "DOF 2025-12-29法令列明8703.22.99、8703.23.99等部分乘用车税号50%，并自2026-01-01生效。没有把税率表直接等同于每个中国车型实际应纳税额。",
+      "category": "policy",
+      "level": "high",
+      "countryCodes": [
+        "MX"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "AM-MX-DOF"
+      ],
+      "action": "报价前按具体税号、原产地、优惠及进口方案复核；不得给所有车型统一套50%。",
+      "legalStatus": "法令自 2026-01-01 生效；实际税负须逐税号复核"
+    },
+    {
+      "id": "mx-approval",
+      "title": "安全、环保认证需在发运前核对",
+      "summary": "NOM-194-SE-2021对新轻型车安全装置分阶段生效，存在年款豁免；环保认证另行核对。不能仅以到港清关天数代替首次认证周期。",
+      "category": "policy",
+      "level": "watch",
+      "countryCodes": [
+        "MX"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "AM-MX-NOM"
+      ],
+      "action": "完成NOM适用性、车型/年款和进口商资料核验，再安排首批上市车。",
+      "legalStatus": "基线法规 / 车型适用待核验"
+    },
+    {
+      "id": "pe-new-vehicle",
+      "title": "新车认定与车型准入资料不能后补",
+      "summary": "SUNAT公开规则将新车认定与DAM申报年份、里程和注册状态相联；车型认证/制造商证明需按实际车型和进口主体进一步核验。",
+      "category": "policy",
+      "level": "watch",
+      "countryCodes": [
+        "PE"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "pending",
+      "sourceIds": [
+        "AM-PE-SUNAT",
+        "AM-PE-REQUIREMENTS"
+      ],
+      "action": "核对年款、里程、未注册状态及车型同一性证明，再确定上市时点。",
+      "legalStatus": "基线法规 / 车型适用待核验"
+    },
+    {
+      "id": "pe-customs",
+      "title": "清关与内陆配送保留弹性",
+      "summary": "这是规划假设，没有证据表明钱凯当前发生异常拥堵。",
+      "category": "transport",
+      "level": "watch",
+      "countryCodes": [
+        "PE"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "AM-PE-HANDLING"
+      ],
+      "action": "规划清关3–8天、利马区域配送2–5天；查验或资料不齐可能更久。",
+      "legalStatus": "规划假设；没有已确认异常拥堵"
+    },
+    {
+      "id": "cl-homologation",
+      "title": "3CV车型认证是上市前置事项",
+      "summary": "智利政府公开办理指南要求新轻型/中型车进行安全和排放技术评估；获车型批准后另申请每车CHI-e签发授权。",
+      "category": "policy",
+      "level": "watch",
+      "countryCodes": [
+        "CL"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "pending",
+      "sourceIds": [
+        "AM-CL-3CV"
+      ],
+      "action": "车型认证及每车电子合格证应纳入项目关键路径，不应藏在普通清关时间里。",
+      "legalStatus": "基线法规 / 车型适用待核验"
+    },
+    {
+      "id": "cl-origin",
+      "title": "优惠税率取决于原产地和税号",
+      "summary": "中智自贸协定及原产地证明须与具体税号、车型、批次资料匹配；本雷达不预设每车最终税负。",
+      "category": "policy",
+      "level": "watch",
+      "countryCodes": [
+        "CL"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "AM-CL-FTA"
+      ],
+      "action": "不要把一般进口税率直接当作中国原产车的实付税率。",
+      "legalStatus": "基线法规 / 车型适用待核验"
+    },
+    {
+      "id": "KZ-vat",
+      "title": "一般应税进口 VAT 已改为 16%",
+      "summary": "哈萨克财政部2026年问答列一般应税销售及进口VAT 16%。这是增值税，不是汽车进口关税，也不是整车总税负。",
+      "category": "policy",
+      "level": "watch",
+      "countryCodes": [
+        "KZ"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "CA-S04"
+      ],
+      "action": "预算弃用旧12%通用口径；逐车型复核税基、免税资格与进口方案。",
+      "legalStatus": "自2026年起的一般税率；具体车辆税负待核验"
+    },
+    {
+      "id": "KZ-admission",
+      "title": "商业新车准入不能套个人自用路径",
+      "summary": "TR CU 018/2011为轮式车辆安全法规核查入口；进口主体、车型批准及电子车辆护照须逐项核对。",
+      "category": "policy",
+      "level": "watch",
+      "countryCodes": [
+        "KZ"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "CA-S05"
+      ],
+      "action": "发运前核对商业批量进口认证，未完成不得只凭运输天数承诺上市。",
+      "legalStatus": "基线法规；具体车型适用待核验"
+    },
+    {
+      "id": "UZ-certification",
+      "title": "取消单独生态认证，不等于取消准入",
+      "summary": "2025年第597号决议将新M/N类车辆生态等级符合性纳入整车安全技术规程评价；纯电适用例外，混动等须逐车型确认。",
+      "category": "policy",
+      "level": "watch",
+      "countryCodes": [
+        "UZ"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "CA-S07",
+        "CA-S08"
+      ],
+      "action": "把新车认证路径和进口资料前置；不要把“取消单独认证”解释成免认证。",
+      "legalStatus": "已核对认证路径调整；具体动力/车型适用待核验"
+    },
+    {
+      "id": "CA-border",
+      "title": "换装与跨境衔接需保留余量",
+      "summary": "中哈两处口岸存在不同轨距换装；未获取当周排队或异常拥堵证据，不显示正在延误。",
+      "category": "transport",
+      "level": "watch",
+      "countryCodes": [
+        "KZ",
+        "UZ"
+      ],
+      "routeIds": [],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "CA-S03"
+      ],
+      "action": "订舱时索取当周口岸排队、车辆接载和目的站放行信息。",
+      "legalStatus": "持续核查项；无已确认当周拥堵"
+    },
+    {
+      "id": "red-sea",
+      "title": "吉达备选路线仍经过红海风险区",
+      "summary": "南向进吉达的走向涉及亚丁湾、曼德海峡和红海。MARAD有效通告仍列相关区域安全风险。",
+      "category": "transport",
+      "level": "watch",
+      "countryCodes": [
+        "SA"
+      ],
+      "routeIds": [
+        "SA-JED-CONTINGENCY"
+      ],
+      "checkedAt": "2026-10-30",
+      "expiresAt": null,
+      "evidenceStatus": "confirmed",
+      "sourceIds": [
+        "RADAR-MARAD"
+      ],
+      "action": "逐航次核查实际走向、战争险及是否接受新订舱。",
+      "legalStatus": "区域安全提示；不是对所有船旗的同一法律义务"
+    }
+  ]
+}

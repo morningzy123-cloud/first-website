@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="radar.css">
 </head>
 <body>
   <div class="site-shell">
@@ -22,12 +23,13 @@
       <nav aria-label="主要导航">
         <a class="nav-item" data-route="overview" href="#/overview"><span>⌂</span><strong>情报总览</strong><small>重要新闻</small></a>
         <a class="nav-item" data-route="markets" href="#/market/MX"><span>◎</span><strong>国家市场</strong><small>竞品详情</small></a>
+        <a class="nav-item" data-route="radar" href="#/radar"><span>◉</span><strong>出口风险雷达</strong><small>八国航线 · 运输 · 政策</small></a>
         <a class="nav-item" href="reports/sunny-benchmark-mx.html"><span>◆</span><strong>SUNNY 专项对标</strong><small>B 级 Sedan vs Versa</small></a>
       </nav>
 
       <div class="sidebar-foot">
         <span class="version-dot"></span>
-        <div><strong>四国情报</strong><small>来源与缺口清晰标记</small></div>
+        <div><strong>市场情报 + 出口雷达</strong><small>四国竞品 · 八国物流</small></div>
       </div>
     </aside>
 
@@ -53,6 +55,10 @@
   </dialog>
 
   <script src="data/public.bundle.js"></script>
+  <script src="assets/radar-land.js"></script>
+  <script src="data/radar.bundle.js"></script>
+  <script src="radar.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
+

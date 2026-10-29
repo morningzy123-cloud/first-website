@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {root,validate,checkFiles} from './radar-data.mjs';
+const data=JSON.parse(fs.readFileSync(path.join(root,'data/radar.json'),'utf8'));
+const base=JSON.parse(fs.readFileSync(path.join(root,'data/public.json'),'utf8'));
+function harness(at='2026-10-30T04:00:00Z'){
+ class Clock extends Date { constructor(...args){super(...(args.length?args:[at]));}static now(){return Date.parse(at);} }
+ const context={window:{MB_RADAR_DATA:structuredClone(data),MB_RADAR_LAND:[]},Intl,Date:Clock,console};vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(root,'radar.js'),'utf8'),context);
+ const output={innerHTML:''},crumb={textContent:''};return {api:context.window.MB_RADAR,context,output,crumb,render(code,id){context.window.MB_RADAR.render(output,crumb,base,code,id);return output.innerHTML;}};
+}
+test('radar JSON and generated offline bundle stay identical',()=>checkFiles());
+test('eight destination pages and all route options render without gaps',()=>{const h=harness();assert(h.render().includes('八国目的地看板'));for(const r of data.routes){const html=h.render(r.countryCode,r.id);assert(html.includes(r.name)&&html.includes('关键时间节点'));assert(!html.includes('undefined')&&!html.includes('NaN'));assert(html.includes('规划估算'));}assert(h.render('INVALID').includes('没有找到'));});
+test('milestones add each stage once and delivery stays separate',()=>{const h=harness();for(const r of data.routes){const steps=h.api.milestones(r,'2026-10-30');const min=r.segments.reduce((n,s)=>n+s.min,0),max=r.segments.reduce((n,s)=>n+s.max,0);assert.equal(steps.at(-1).minDay,min);assert.equal(steps.at(-1).maxDay,max);assert.equal(steps.at(-1).id,'local');assert.equal(Date.parse(steps.at(-1).late)-Date.parse('2026-10-30'),max*86400000);}assert.equal(h.api.isoDay('2026-02-30'),false);assert.equal(h.api.isoDay('2028-02-29'),true);});
+test('old evidence becomes pending and expired advisories are excluded',()=>{const h=harness('2026-11-09T04:00:00Z');assert.equal(h.api.riskState(data.risks[0]),'stale');assert(h.render('SA').includes('超过 7 天未复核'));const expired={...data.risks[0],id:'expired',expiresAt:'2026-11-01'};h.context.window.MB_RADAR_DATA.risks.push(expired);assert.equal(h.api.riskState(expired),'expired');assert(!h.api.activeRisks(h.context.window.MB_RADAR_DATA).some(r=>r.id==='expired'));});
+test('risk route targeting excludes unrelated Saudi baseline',()=>{const h=harness();assert(h.api.activeRisks(data,'SA','SA-JED-CONTINGENCY').some(r=>r.id==='red-sea'));assert(!h.api.activeRisks(data,'SA','SA-DMM-BASELINE').some(r=>r.id==='red-sea'));assert(!h.api.activeRisks(data,'MX').some(r=>r.id==='red-sea'));});
+test('unknown source, impossible range and sea route for landlocked country are rejected',()=>{let d=structuredClone(data);d.routes[0].sourceIds=['unknown'];assert.throws(()=>validate(d),/source/i);d=structuredClone(data);d.routes[0].segments[0].max=-1;assert.throws(()=>validate(d),/range/i);d=structuredClone(data);d.routes.find(r=>r.countryCode==='KZ').mode='roro';assert.throws(()=>validate(d),/Landlocked/);});
+test('search-only evidence cannot become a confirmed risk',()=>{const d=structuredClone(data);d.risks[0].sourceIds=['AM-CL-3CV'];d.risks[0].evidenceStatus='confirmed';assert.throws(()=>validate(d),/primary evidence/);});
+test('public text is escaped and no private project is invented',()=>{const h=harness();h.context.window.MB_RADAR_DATA.countries[0].summary='<img src=x onerror=alert(1)>';assert(!h.render().includes('<img src=x'));assert(h.render('QA').includes('尚未登记当地车型或具体项目'));});
+test('calculator submits actual form values and reports late launch plans',()=>{const h=harness();const result={textContent:'',className:''},timeline={innerHTML:''};let submit;const form={elements:{departure:{value:'2026-10-30'},launch:{value:'2026-11-01'},buffer:{value:'7'}},addEventListener(type,handler){submit=handler;}};h.output.querySelector=selector=>selector==='#rr-planner'?form:selector==='#rr-plan-result'?result:timeline;h.render('MX','mx-roro');submit({preventDefault(){}});assert(result.textContent.includes('比计划上市日晚'));assert(result.className.includes('tight'));assert(timeline.innerHTML.includes('2026-10-30'));form.elements.departure.value='2026-02-30';submit({preventDefault(){}});assert(result.textContent.includes('有效日期'));});
