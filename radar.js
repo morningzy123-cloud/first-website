@@ -76,7 +76,9 @@
   function overview(container, crumb, base, data) {
     crumb.textContent = 'Marketing Buddy / 出口风险雷达';
     const primary = data.countries.map(c => data.routes.find(r => r.id === c.defaultRouteId));
-    const topRisks = [...activeRisks(data)].sort((a, b) => Number(b.level === 'high') - Number(a.level === 'high')).slice(0, 3);
+    const currentRisks = activeRisks(data);
+    const curated = (data.briefRiskIds || []).map(id => currentRisks.find(r => r.id === id)).filter(Boolean);
+    const topRisks = curated.length ? curated.slice(0, 3) : [...currentRisks].sort((a, b) => Number(b.level === 'high') - Number(a.level === 'high')).slice(0, 3);
     container.innerHTML = `<div class="rr-shell">${summaryHeader(data)}<div class="rr-intro-note"><b>规划口径</b><span>从实际离津启运开始，分段估算至当地清关放行；配送与上市准备单独列为参考。海湾路线需先确认承运可用性。</span></div>
       <div class="rr-overview-grid">${routeMap(data, primary)}<aside class="rr-situation"><span class="rr-kicker">SITUATION BRIEF</span><h2>先看会改变计划的事</h2>${topRisks.map(r => `<a href="${url(r.countryCodes[0])}"><span class="rr-pill ${riskState(r) === 'stale' ? 'stale' : r.level}">${levelText(r)}</span><h3>${esc(r.title)}</h3><p>${esc(r.summary)}</p><small>查看受影响路线 →</small></a>`).join('')}</aside></div>
       <div class="rr-section-heading"><div><span class="rr-kicker">DESTINATION BOARD / 08</span><h2>八国目的地看板</h2></div><p>点击国家，查看路线、关键节点和适用风险</p></div>
