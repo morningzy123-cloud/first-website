@@ -1,6 +1,6 @@
 {
   "schemaVersion": "marketing-buddy-v2-public",
-  "generatedAt": "2026-10-28",
+  "generatedAt": "2026-11-01",
   "project": {
     "name": "Marketing Buddy",
     "scope": "C级 Sedan",
@@ -191,23 +191,6 @@
           "kz-chevrolet-cobalt-promo-oct-2026"
         ],
         "verifiedAt": "2026-10-24T23:00:00+08:00"
-      },
-      {
-        "id": "k3-mx-finance-2026-10",
-        "marketCode": "MX",
-        "brand": "Kia",
-        "model": "K3",
-        "category": "重大营销动作",
-        "title": "K3 Sedan 2027 推出最高 36 个月免息",
-        "summary": "除 L MT 外，K3 Sedan 2027 可享最高 36 个月免息，并延后至 2026 年 12 月开始还款；活动至 10 月 31 日。",
-        "date": "2026-10-01",
-        "validTo": "2026-10-31",
-        "importance": 3,
-        "status": "confirmed",
-        "sourceIds": [
-          "mx-kia-k3-promo-oct"
-        ],
-        "verifiedAt": "2026-10-24T00:00:00+08:00"
       }
     ]
   },
@@ -592,41 +575,7 @@
           }
         }
       ],
-      "financeOffers": [
-        {
-          "id": "k3-2027-msi-oct",
-          "status": "confirmed",
-          "title": "最高 36 个月免息，2026 年 12 月开始还款",
-          "provider": "Kia Finance",
-          "downPaymentPercent": {
-            "status": "confirmed",
-            "value": 30,
-            "unit": "percent",
-            "verifiedAt": "2026-10-24T00:00:00+08:00",
-            "sourceIds": [
-              "mx-kia-k3-promo-oct"
-            ]
-          },
-          "interestRatePercent": {
-            "status": "confirmed",
-            "value": 0,
-            "unit": "percent",
-            "period": "12–36 months",
-            "verifiedAt": "2026-10-24T00:00:00+08:00",
-            "sourceIds": [
-              "mx-kia-k3-promo-oct"
-            ]
-          },
-          "termMonths": 36,
-          "conditions": "适用于 K3 Sedan 2027（L MT 除外）；平均融资金额 234,850 MXN；合同佣金 2%（不含增值税），须符合活动条款。",
-          "validFrom": "2026-10-01",
-          "validTo": "2026-10-31",
-          "sourceIds": [
-            "mx-kia-k3-promo-oct"
-          ],
-          "verifiedAt": "2026-10-24T00:00:00+08:00"
-        }
-      ],
+      "financeOffers": [],
       "aftersales": [
         {
           "id": "k3-basic-warranty",
@@ -1177,7 +1126,7 @@
             "currency": "MXN",
             "validFrom": null,
             "validTo": null,
-            "conditions": "官网仅显示 specialPrice，未说明适用条件、库存或金融前置要求",
+            "conditions": "官网仅显示 precio especial，未说明适用条件、库存或金融前置要求",
             "status": "unconfirmed",
             "sourceIds": [
               "MX-S05"
@@ -1186,17 +1135,48 @@
           },
           {
             "channel": "品牌官网（非门店报价）",
-            "variant": "EXCITE MT / EXCITE CVT / ELEGANCE CVT",
+            "variant": "EXCITE MT",
             "listPrice": 344000,
             "offerPrice": 284000,
             "currency": "MXN",
             "validFrom": null,
             "validTo": null,
-            "conditions": "同上；另两版促销价为 318,000 / 339,000 MXN",
+            "conditions": "官网仅显示 precio especial，未说明适用条件、库存或金融前置要求",
             "status": "unconfirmed",
             "sourceIds": [
               "MX-S05"
-            ]
+            ],
+            "note": "原合并行（EXCITE MT / EXCITE CVT / ELEGANCE CVT 共用一个金额）按官网版本卡拆分后修正"
+          },
+          {
+            "channel": "品牌官网（非门店报价）",
+            "variant": "EXCITE CVT",
+            "listPrice": 378000,
+            "offerPrice": 318000,
+            "currency": "MXN",
+            "validFrom": null,
+            "validTo": null,
+            "conditions": "官网仅显示 precio especial，未说明适用条件、库存或金融前置要求",
+            "status": "unconfirmed",
+            "sourceIds": [
+              "MX-S05"
+            ],
+            "note": "品牌级促销价，需向门店核实可成交性"
+          },
+          {
+            "channel": "品牌官网（非门店报价）",
+            "variant": "ELEGANCE CVT",
+            "listPrice": 399000,
+            "offerPrice": 339000,
+            "currency": "MXN",
+            "validFrom": null,
+            "validTo": null,
+            "conditions": "官网仅显示 precio especial，未说明适用条件、库存或金融前置要求",
+            "status": "unconfirmed",
+            "sourceIds": [
+              "MX-S05"
+            ],
+            "note": "品牌级促销价，需向门店核实可成交性"
           }
         ],
         "officialSellingPoints": [
@@ -5022,9 +5002,9 @@
     }
   ],
   "lastUpdate": {
-    "runId": "2026-10-28-mx-versa-scope",
-    "asOf": "2026-10-28",
-    "windowStart": "2026-10-28",
-    "windowEnd": "2026-10-28"
+    "runId": "2026-11-01-weekly-mvxq285d",
+    "asOf": "2026-11-01",
+    "windowStart": "2026-10-25",
+    "windowEnd": "2026-11-01"
   }
 }

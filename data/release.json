@@ -1,13 +1,13 @@
 {
   "schemaVersion": "marketing-buddy-weekly-release-v1",
   "run": {
-    "id": "2026-10-26-weekly-mvpbyw0f",
-    "asOf": "2026-10-26",
-    "windowStart": "2026-10-19",
-    "windowEnd": "2026-10-26"
+    "id": "2026-11-01-weekly-mvxq285d",
+    "asOf": "2026-11-01",
+    "windowStart": "2026-10-25",
+    "windowEnd": "2026-11-01"
   },
-  "baseDataHash": "4df24ed08e608dd47163502509ed31e33744567c3ea8bb6c147cb155453d898a",
-  "dataHash": "e9778f68f22328f4fd50d5894551f8d9417bfb2abe3932c2f2f24449edd00984",
+  "baseDataHash": "4823b8284dba5636291e961b33675cbc9bae0c04888396ed76900a4eeadf0015",
+  "dataHash": "e64a382f72e0d5d4e7b202bfc768609e58a9e14ec8a000416bf9c78bcdaa873a",
   "review": {
     "completed": true,
     "conflictsSeparated": true,
@@ -15,33 +15,34 @@
   },
   "changes": [
     {
-      "changeId": "chg-cobalt-prices-my2026",
+      "changeId": "mx-k3-finance-expiry-20261101",
       "entity": "vehicle",
-      "id": "chevrolet-cobalt-kz",
-      "field": "prices",
-      "beforeHash": "801ef641f8ec51b76036044876f4d7abf9e125563600fa084d93be777b575d91",
-      "reason": "官方价目表 MY2026 指导价下调：Optimum AT 6,490,000→5,990,000、Elegant AT 6,790,000→6,290,000 KZT；车型页同步显示新价",
-      "evidenceIds": [
-        "evd-cobalt-pricelist",
-        "evd-cobalt-modelpage"
-      ],
-      "review": {
-        "verdict": "supported",
-        "scopeMatches": true,
-        "current": true,
-        "conflictsResolved": true
-      },
-      "afterHash": "fcb6d3d05d8ebeb10dabf0b7c8a8f9a645b8b1b8a49a43fdd4a577cff6b84b99"
+      "id": "kia-k3-mx",
+      "field": "financeOffers",
+      "beforeHash": "e47e8d66bacb5da6a40bebbf3a8f78282bfae0d19ef3ae7a974e5decb3ccb040",
+      "reasonType": "expiry",
+      "reason": "K3 Sedán 10 月金融方案 validTo 为 2026-10-31，已过期；官网 11-01 仍挂旧活动、未发布 11 月新方案，故撤下该方案",
+      "afterHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
     },
     {
-      "changeId": "chg-yaris-sa-monthly",
+      "changeId": "mx-signal-k3-expiry-20261101",
+      "entity": "overview",
+      "id": "global",
+      "field": "highValueSignals",
+      "beforeHash": "79bbf2a59008f59288f39fe4aeae1ccbe6c045ee21c474d1aec2da18eb7a384c",
+      "reasonType": "expiry",
+      "reason": "首页 K3 免息条目 validTo 为 2026-10-31，活动已结束，从高价值信号中移除",
+      "afterHash": "4e4d199cdffa43f6cdcb63123ca2a1954aa3d7bf94b1acbb2cd01b8825ff7138"
+    },
+    {
+      "changeId": "mx-mg5-dealer-variant-split-20261101",
       "entity": "vehicle",
-      "id": "toyota-yaris-sa",
-      "field": "financeOffers",
-      "beforeHash": "98e07ba5cf560a56aaf1e999bd02c138981246c5d5efc44568a20fa387473040",
-      "reason": "AJL United Finance Yaris 2026 Y 版展示月供由 988 上调至 1,187 SAR，其余条件（0 首付、前 4 期代付、60 期）不变；因页面未公布起止日期，状态按数据协议改为待核实",
+      "id": "mg5-mx",
+      "field": "researchV2.dealerOffers",
+      "beforeHash": "16acdabfd728cb25b8d11456347fd3d4a11fc7ae67630de09dbe6abe185e4d53",
+      "reason": "原合并行把 EXCITE MT/CVT 与 ELEGANCE CVT 记为单一 284,000 MXN，与官网各版本促销价不符；按官网版本卡拆为三条并修正金额",
       "evidenceIds": [
-        "evd-yaris-alj-monthly"
+        "ev-mx-mg5-promo-variants-20261101"
       ],
       "review": {
         "verdict": "supported",
@@ -49,52 +50,24 @@
         "current": true,
         "conflictsResolved": true
       },
-      "afterHash": "40abfb1f754b69c75ed92049ffdc427a83159493aca151dca4c946ea3235139f"
+      "afterHash": "94b3b867e6d70041f2df30f2761e73203234fe6b18a00dcb741a8aba9bfdec6c"
     }
   ],
   "evidence": [
     {
-      "id": "evd-cobalt-pricelist",
-      "sourceId": "kz-cobalt-pricelist-2026-10",
-      "url": "https://cdn.chevrolet-auto.kz/cars/LNDwCv4hRMeMjBueTaE6sbbFfv88DAtZwspjL3Wh.pdf",
-      "kind": "direct_pdf",
-      "checkedAt": "2026-10-26T20:00:00+08:00",
-      "locator": "PDF 第 1 页车型价格区块与第 2 页 комплектации 价格行",
-      "scope": {
-        "marketCode": "KZ",
-        "vehicleId": "chevrolet-cobalt-kz",
-        "modelYear": 2026
-      },
-      "excerptHash": "17e149a4a2208b8411814d66d9b52eaccb86e4492be4cae3c7a35bf5e3ecb305"
-    },
-    {
-      "id": "evd-cobalt-modelpage",
-      "sourceId": "kz-chevrolet-cobalt-page",
-      "url": "https://chevrolet-auto.kz/models/cobalt",
+      "id": "ev-mx-mg5-promo-variants-20261101",
+      "sourceId": "MX-S05",
+      "url": "https://www.mgmotor.com.mx/vehiculos/mg5nuevo",
       "kind": "direct_page",
-      "checkedAt": "2026-10-26T20:00:00+08:00",
-      "locator": "Комплектации 区块两个版本价格行",
+      "checkedAt": "2026-11-01T19:26:00+08:00",
+      "locator": "车型页底部四张版本卡（STYLE MT / EXCITE MT / EXCITE CVT / ELEGANCE CVT）的指导价与 “Precio especial desde” 金额",
       "scope": {
-        "marketCode": "KZ",
-        "vehicleId": "chevrolet-cobalt-kz",
-        "modelYear": 2026
+        "marketCode": "MX",
+        "vehicleId": "mg5-mx",
+        "modelYear": "2026",
+        "note": "品牌官网促销价，非授权门店成交价"
       },
-      "excerptHash": "d76aeebffd131634c565a4a18d5486e456d6a32bed1481704cc45a83c504bf67"
-    },
-    {
-      "id": "evd-yaris-alj-monthly",
-      "sourceId": "sa-toyota-yaris-finance",
-      "url": "https://www.aljfinance.com/en/offers/yarisoffer",
-      "kind": "direct_page",
-      "checkedAt": "2026-10-26T20:00:00+08:00",
-      "locator": "Offer Includes 列表第 1 项",
-      "scope": {
-        "marketCode": "SA",
-        "vehicleId": "toyota-yaris-sa",
-        "variant": "Y 2026",
-        "modelYear": 2026
-      },
-      "excerptHash": "905ea5c0a99986a7a55fe3d4c273b9ca036d0d068e309bc603edd22abf4d70ee"
+      "excerptHash": "cc2dfe1f93c1f7978f76869897b60cfc0960878c93e59697c8144129cc89bf03"
     }
   ]
 }
