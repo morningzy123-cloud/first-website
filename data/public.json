@@ -1,6 +1,6 @@
 {
   "schemaVersion": "marketing-buddy-v2-public",
-  "generatedAt": "2026-11-01",
+  "generatedAt": "2026-11-08",
   "project": {
     "name": "Marketing Buddy",
     "scope": "C级 Sedan",
@@ -141,6 +141,23 @@
       }
     ],
     "highValueSignals": [
+      {
+        "id": "k3-mx-msi-nov-2026",
+        "marketCode": "MX",
+        "brand": "Kia",
+        "model": "K3 Sedán",
+        "category": "竞品促销/金融",
+        "title": "Kia 墨西哥 11 月 K3 重启最高 36 期免息，还款延至 2027 年 1 月",
+        "summary": "Kia México 公布 11 月 1 日至 30 日金融方案：K3 Sedán 2027（L TM 除外）与 K3 Hatchback 2027 最高 36 期 0% 利率、0% 贷款开办费，2027 年 1 月起开始还款；CAT 平均 12.0%（不含增值税）。",
+        "date": "2026-11-01",
+        "validTo": "2026-11-30",
+        "importance": 4,
+        "status": "confirmed",
+        "sourceIds": [
+          "mx-kia-k3-promo-oct"
+        ],
+        "verifiedAt": "2026-11-08T19:26:00+08:00"
+      },
       {
         "id": "mg-ae-iem-50000-fleet-mix-2026-10",
         "marketCode": "AE",
@@ -575,7 +592,21 @@
           }
         }
       ],
-      "financeOffers": [],
+      "financeOffers": [
+        {
+          "id": "k3-mx-msi-nov-2026",
+          "status": "confirmed",
+          "title": "K3 Sedán/Hatchback 2027：最高 36 期免息 + 0% 开户费 + 2027 年 1 月起还款",
+          "provider": "Kia México / Autoexpress Inbursa, S.A. de C.V. SOFOM (Grupo Financiero Inbursa)",
+          "conditions": "适用 Kia K3 Sedán 2027（L TM 除外）与 K3 Hatchback 2027 全系，墨西哥境内。最高 36 期 0% 利率、贷款开办费 0%、2027 年 1 月起开始还款；CAT 平均 12.0%（不含增值税，36 期，2026-10-29 测算，平均融资额 234,850 MXN、首付 30%、保险均价 19,227.08 MXN）；受信贷审批与经销商条款限制。",
+          "validFrom": "2026-11-01",
+          "validTo": "2026-11-30",
+          "sourceIds": [
+            "mx-kia-k3-promo-oct"
+          ],
+          "verifiedAt": "2026-11-08T19:26:00+08:00"
+        }
+      ],
       "aftersales": [
         {
           "id": "k3-basic-warranty",
@@ -2091,7 +2122,7 @@
             "status": "confirmed",
             "value": 0,
             "unit": "%",
-            "verifiedAt": "2026-10-26T20:00:00+08:00",
+            "verifiedAt": "2026-11-08T19:21:00+08:00",
             "sourceIds": [
               "sa-toyota-yaris-finance"
             ]
@@ -2099,21 +2130,21 @@
           "monthlyPayment": {
             "status": "confirmed",
             "currency": "SAR",
-            "amount": 1187,
+            "amount": 1249,
             "priceType": "other",
-            "condition": "Y 2026 起始月供",
+            "condition": "Y 2026 1.3 CVT 起始月供，60 期",
             "variantId": "yaris-sa-y-2026",
-            "verifiedAt": "2026-10-26T20:00:00+08:00",
+            "verifiedAt": "2026-11-08T19:21:00+08:00",
             "sourceIds": [
               "sa-toyota-yaris-finance"
             ]
           },
           "termMonths": 60,
-          "conditions": "页面展示 Y 2026 月供自 1,187 SAR 起（60 期、前 4 期由金融公司代付、零管理费、无需担保人，均受条款与审批限制）。页面未公布活动起止日期、APR、尾款与保险成本，故按协议标为待核实。",
+          "conditions": "页面展示 Y 2026 1.3 CVT 月供自 1,249 SAR 起（另有 Y LIMITED 1,300、Y PLUS 1,347 SAR），60 期、前 4 期由金融公司代付、零管理费、无需首付、无需担保人，均受条款与审批限制。页面仍未公布活动起止日期、APR、尾款与保险成本，故维持待核实。",
           "sourceIds": [
             "sa-toyota-yaris-finance"
           ],
-          "verifiedAt": "2026-10-26T20:00:00+08:00"
+          "verifiedAt": "2026-11-08T19:21:00+08:00"
         }
       ],
       "aftersales": [
@@ -2322,9 +2353,12 @@
           "price": {
             "status": "confirmed",
             "currency": "AED",
-            "amount": 56000,
+            "amount": 51126,
+            "variantId": "mg5-ae-entry-config-unspecified",
             "priceType": "manufacturer_msrp",
-            "verifiedAt": "2026-10-24T16:00:00+08:00",
+            "condition": "MG UAE 官网车型页 FROM 起售价；页面未标注对应年款、具体配置版本，也未说明是否含 5% VAT，不可与含税成交价直接比较。",
+            "observedAt": "2026-11-08",
+            "verifiedAt": "2026-11-08T19:18:00+08:00",
             "sourceIds": [
               "ae-mg5-page"
             ]
@@ -3159,13 +3193,13 @@
           "status": "confirmed",
           "title": "CrediNissan 特别价：全系下调，Sense Base 289,990 MXN 起",
           "provider": "CrediNissan / NR Finance México (NRFM)",
-          "conditions": "适用 Versa 2026 全部六个版本；仅在传统信贷（crédito tradicional）下有效，不与其他促销叠加；须经 NRFM 信贷审批，特别价取决于客户财务状况与信用表现；各版本特别价见 priceNotes。",
-          "validFrom": "2026-10-21",
-          "validTo": "2026-11-02",
+          "conditions": "适用 Versa 2026 全部六个版本；仅在传统信贷（crédito tradicional）下有效，不与其他促销叠加；须经 NRFM 信贷审批，特别价取决于客户财务状况与信用表现；各版本特别价见 priceNotes。11 月档有效期为 11 月 3 日至 11 月 30 日，特别价与 10 月档一致。",
+          "validFrom": "2026-11-03",
+          "validTo": "2026-11-30",
           "sourceIds": [
             "mx-nissan-versa-page"
           ],
-          "verifiedAt": "2026-10-28T00:40:00+08:00"
+          "verifiedAt": "2026-11-08T19:12:00+08:00"
         },
         {
           "id": "versa-2026-60-msi",
@@ -3177,7 +3211,7 @@
             "mx-nissan-versa-page",
             "mx-nissan-blog-versa"
           ],
-          "verifiedAt": "2026-10-28T00:40:00+08:00"
+          "verifiedAt": "2026-11-08T19:12:00+08:00"
         }
       ],
       "aftersales": [
@@ -3307,15 +3341,15 @@
           "vehicleId": "nissan-versa-mx",
           "eventDate": "2026-10-21",
           "title": "Versa 2026 推出 CrediNissan 特别价，全系下调约 7.5 万–9.5 万 MXN",
-          "description": "2026 年 10 月 21 日至 11 月 2 日，Versa 2026 六个版本在传统信贷下适用特别价：Sense Base 由 374,900 降至 289,990 MXN，Exclusive CVT 由 470,900 降至 386,990 MXN；特别价不与其它促销叠加。",
+          "description": "2026 年 10 月 21 日起，Versa 2026 六个版本在传统信贷下适用特别价：Sense Base 由 374,900 降至 289,990 MXN，Exclusive CVT 由 470,900 降至 386,990 MXN；特别价不与其它促销叠加。官网 11 月 3 日至 11 月 30 日续期，价格水平未变。",
           "whyItMatters": "直接用信贷渠道降价，把入门价压到 29 万 MXN 以内，同时抬高标价维持价格形象，对同价位竞品的价格锚点构成压力。",
           "status": "confirmed",
           "validFrom": "2026-10-21",
-          "validTo": "2026-11-02",
+          "validTo": "2026-11-30",
           "sourceIds": [
             "mx-nissan-versa-page"
           ],
-          "verifiedAt": "2026-10-28T00:40:00+08:00"
+          "verifiedAt": "2026-11-08T19:12:00+08:00"
         }
       ],
       "researchV2": {
@@ -5002,9 +5036,9 @@
     }
   ],
   "lastUpdate": {
-    "runId": "2026-11-01-weekly-mvxq285d",
-    "asOf": "2026-11-01",
-    "windowStart": "2026-10-25",
-    "windowEnd": "2026-11-01"
+    "runId": "2026-11-08-weekly-mw7q1qli",
+    "asOf": "2026-11-08",
+    "windowStart": "2026-11-01",
+    "windowEnd": "2026-11-08"
   }
 }

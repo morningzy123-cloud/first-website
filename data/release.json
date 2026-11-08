@@ -1,13 +1,13 @@
 {
   "schemaVersion": "marketing-buddy-weekly-release-v1",
   "run": {
-    "id": "2026-11-01-weekly-mvxq285d",
-    "asOf": "2026-11-01",
-    "windowStart": "2026-10-25",
-    "windowEnd": "2026-11-01"
+    "id": "2026-11-08-weekly-mw7q1qli",
+    "asOf": "2026-11-08",
+    "windowStart": "2026-11-01",
+    "windowEnd": "2026-11-08"
   },
-  "baseDataHash": "4823b8284dba5636291e961b33675cbc9bae0c04888396ed76900a4eeadf0015",
-  "dataHash": "e64a382f72e0d5d4e7b202bfc768609e58a9e14ec8a000416bf9c78bcdaa873a",
+  "baseDataHash": "e64a382f72e0d5d4e7b202bfc768609e58a9e14ec8a000416bf9c78bcdaa873a",
+  "dataHash": "9a5f108ffa6315d2a75bbf6bb295295199f03fa5b80350cfff9f8fab733e912a",
   "review": {
     "completed": true,
     "conflictsSeparated": true,
@@ -15,34 +15,14 @@
   },
   "changes": [
     {
-      "changeId": "mx-k3-finance-expiry-20261101",
+      "changeId": "ch-k3-mx-msi-nov-2026",
       "entity": "vehicle",
       "id": "kia-k3-mx",
       "field": "financeOffers",
-      "beforeHash": "e47e8d66bacb5da6a40bebbf3a8f78282bfae0d19ef3ae7a974e5decb3ccb040",
-      "reasonType": "expiry",
-      "reason": "K3 Sedán 10 月金融方案 validTo 为 2026-10-31，已过期；官网 11-01 仍挂旧活动、未发布 11 月新方案，故撤下该方案",
-      "afterHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-    },
-    {
-      "changeId": "mx-signal-k3-expiry-20261101",
-      "entity": "overview",
-      "id": "global",
-      "field": "highValueSignals",
-      "beforeHash": "79bbf2a59008f59288f39fe4aeae1ccbe6c045ee21c474d1aec2da18eb7a384c",
-      "reasonType": "expiry",
-      "reason": "首页 K3 免息条目 validTo 为 2026-10-31，活动已结束，从高价值信号中移除",
-      "afterHash": "4e4d199cdffa43f6cdcb63123ca2a1954aa3d7bf94b1acbb2cd01b8825ff7138"
-    },
-    {
-      "changeId": "mx-mg5-dealer-variant-split-20261101",
-      "entity": "vehicle",
-      "id": "mg5-mx",
-      "field": "researchV2.dealerOffers",
-      "beforeHash": "16acdabfd728cb25b8d11456347fd3d4a11fc7ae67630de09dbe6abe185e4d53",
-      "reason": "原合并行把 EXCITE MT/CVT 与 ELEGANCE CVT 记为单一 284,000 MXN，与官网各版本促销价不符；按官网版本卡拆为三条并修正金额",
+      "beforeHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "reason": "Kia 墨西哥 11 月 1 日起重启 K3 金融方案：最高 36 期免息、0% 开户费并延至 2027 年 1 月还款，10 月档已结束。",
       "evidenceIds": [
-        "ev-mx-mg5-promo-variants-20261101"
+        "ev-k3-msi-nov-2026"
       ],
       "review": {
         "verdict": "supported",
@@ -50,24 +30,160 @@
         "current": true,
         "conflictsResolved": true
       },
-      "afterHash": "94b3b867e6d70041f2df30f2761e73203234fe6b18a00dcb741a8aba9bfdec6c"
+      "afterHash": "75fb9936d7b3a1f59b2ed238071164c0a6073dac62ac0be48a33959924a7b6c2"
+    },
+    {
+      "changeId": "ch-versa-mx-credinissan-renew",
+      "entity": "vehicle",
+      "id": "nissan-versa-mx",
+      "field": "financeOffers",
+      "beforeHash": "1f308834ce1ba33969879758ca04d457f31ef4960e26c55c01d0bb1e7bce771a",
+      "reason": "CrediNissan 特别价续期至 11 月 3 日–30 日，六个版本特别价金额不变。",
+      "evidenceIds": [
+        "ev-versa-credinissan-nov-2026"
+      ],
+      "review": {
+        "verdict": "supported",
+        "scopeMatches": true,
+        "current": true,
+        "conflictsResolved": true
+      },
+      "afterHash": "571f1cae16582f320ec6183e2dce2801b8744af33d4862f7000e7ed3f8268685"
+    },
+    {
+      "changeId": "ch-versa-mx-event-renew",
+      "entity": "vehicle",
+      "id": "nissan-versa-mx",
+      "field": "recentEvents",
+      "beforeHash": "1f7c99c0df933bc7f8c9dec71725db917c9b9868dee38b815d8d65c0ca4954f4",
+      "reason": "Versa 特别价活动由 11 月 2 日结束改为 11 月 30 日结束，条款主体不变。",
+      "evidenceIds": [
+        "ev-versa-credinissan-nov-2026"
+      ],
+      "review": {
+        "verdict": "supported",
+        "scopeMatches": true,
+        "current": true,
+        "conflictsResolved": true
+      },
+      "afterHash": "c9aba977740530c0161e6847917531e7db4acc7a93e8d26d7df07bfef6236443"
+    },
+    {
+      "changeId": "ch-mg5-ae-from-price",
+      "entity": "vehicle",
+      "id": "mg5-ae",
+      "field": "prices",
+      "beforeHash": "f561057a9d853d4625e6ee3d090463a7e59de77675dd650696f1c8dd7a2b2d5c",
+      "reason": "MG 阿联酋官网 MG5 起售价由 56,000 AED 改为 51,126 AED。",
+      "evidenceIds": [
+        "ev-mg5-ae-from-price"
+      ],
+      "review": {
+        "verdict": "supported",
+        "scopeMatches": true,
+        "current": true,
+        "conflictsResolved": true
+      },
+      "afterHash": "c63be310b86439390cd8f0e07df010f96e7d14c3214c338ad88817db73483da2"
+    },
+    {
+      "changeId": "ch-sa-yaris-monthly",
+      "entity": "vehicle",
+      "id": "toyota-yaris-sa",
+      "field": "financeOffers",
+      "beforeHash": "40abfb1f754b69c75ed92049ffdc427a83159493aca151dca4c946ea3235139f",
+      "reason": "Yaris 2026 入门版官网月供由 1,187 SAR 起改为 1,249 SAR 起，并补充三版本月供与 60 期条件。",
+      "evidenceIds": [
+        "ev-sa-yaris-alj-nov-2026"
+      ],
+      "review": {
+        "verdict": "supported",
+        "scopeMatches": true,
+        "current": true,
+        "conflictsResolved": true
+      },
+      "afterHash": "e6072d6da98e1062000ba80bd3724af39a5c0db120396d0d24d677f5a6b1c1f9"
+    },
+    {
+      "changeId": "ch-signals-k3-nov",
+      "entity": "overview",
+      "id": "global",
+      "field": "highValueSignals",
+      "beforeHash": "4e4d199cdffa43f6cdcb63123ca2a1954aa3d7bf94b1acbb2cd01b8825ff7138",
+      "reason": "新增 Kia 墨西哥 11 月 K3 免息方案为首页高价值信号，保留仍有效的 3 条。",
+      "evidenceIds": [
+        "ev-k3-msi-nov-2026"
+      ],
+      "review": {
+        "verdict": "supported",
+        "scopeMatches": true,
+        "current": true,
+        "conflictsResolved": true
+      },
+      "afterHash": "719be81a3a4d24c17d44551a25435d60d06ec78dc16f3508bd57a06da5ab8a8e"
     }
   ],
   "evidence": [
     {
-      "id": "ev-mx-mg5-promo-variants-20261101",
-      "sourceId": "MX-S05",
-      "url": "https://www.mgmotor.com.mx/vehiculos/mg5nuevo",
+      "id": "ev-k3-msi-nov-2026",
+      "sourceId": "mx-kia-k3-promo-oct",
+      "url": "https://www.kia.com/mx/shopping-tools/promociones-new/promocion-k3-sedan-hatchback-msi.html",
       "kind": "direct_page",
-      "checkedAt": "2026-11-01T19:26:00+08:00",
-      "locator": "车型页底部四张版本卡（STYLE MT / EXCITE MT / EXCITE CVT / ELEGANCE CVT）的指导价与 “Precio especial desde” 金额",
+      "checkedAt": "2026-11-08T19:26:00+08:00",
+      "locator": "促销页标题「Kia K3 2027 | Meses」正文与脚注 (1)：适用车型、方案内容、CAT 与有效期",
       "scope": {
         "marketCode": "MX",
-        "vehicleId": "mg5-mx",
-        "modelYear": "2026",
-        "note": "品牌官网促销价，非授权门店成交价"
+        "vehicleId": "kia-k3-mx",
+        "modelYear": "2027",
+        "variant": "K3 Sedán 2027（L TM 除外）/ K3 Hatchback 2027",
+        "priceBasis": "金融方案条款，非终端成交价"
       },
-      "excerptHash": "cc2dfe1f93c1f7978f76869897b60cfc0960878c93e59697c8144129cc89bf03"
+      "excerptHash": "84e2b5ed44e0a798f7a3e466d44a019fcedeb876614fa32c2aca98b0db272bd8"
+    },
+    {
+      "id": "ev-versa-credinissan-nov-2026",
+      "sourceId": "mx-nissan-versa-page",
+      "url": "https://www.nissan.com.mx/vehiculos/todos/versa.html",
+      "kind": "direct_page",
+      "checkedAt": "2026-11-08T19:12:00+08:00",
+      "locator": "「Precios Especiales con CrediNissan」价格表下方脚注 *（有效期与适用条件）",
+      "scope": {
+        "marketCode": "MX",
+        "vehicleId": "nissan-versa-mx",
+        "modelYear": "2026",
+        "priceBasis": "CrediNissan 传统信贷特别价"
+      },
+      "excerptHash": "87d477f0b96890c207224baecda4cdf8cd8162651f289dd3bf5423a01785d089"
+    },
+    {
+      "id": "ev-mg5-ae-from-price",
+      "sourceId": "ae-mg5-page",
+      "url": "https://www.mg-uae.com/models/mg-5/",
+      "kind": "direct_page",
+      "checkedAt": "2026-11-08T19:18:00+08:00",
+      "locator": "车型页首屏价格横幅（车型名下方 FROM 价格）",
+      "scope": {
+        "marketCode": "AE",
+        "vehicleId": "mg5-ae",
+        "priceBasis": "官网起售价（未标注含税口径与对应版本）"
+      },
+      "excerptHash": "cf5518b70a39e895deb9be825f3940686f173264c4a85638eb8df51f51e3ecf9"
+    },
+    {
+      "id": "ev-sa-yaris-alj-nov-2026",
+      "sourceId": "sa-toyota-yaris-finance",
+      "url": "https://www.aljfinance.com/en/offers/yarisoffer",
+      "kind": "direct_page",
+      "checkedAt": "2026-11-08T19:21:00+08:00",
+      "locator": "Offer 页面「Enjoy these financing benefits」清单与 Offer Includes 车型月供列表（Y / Y LIMITED / Y PLUS）",
+      "scope": {
+        "marketCode": "SA",
+        "vehicleId": "toyota-yaris-sa",
+        "modelYear": "2026",
+        "variant": "Yaris SD Y 1.3 CVT",
+        "priceBasis": "融资月供起价，60 期"
+      },
+      "excerptHash": "b5c64450995af1532094b4470beab764e72e13b186255abda20098f7db7db1ff"
     }
   ]
 }
